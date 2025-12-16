@@ -1,0 +1,11 @@
+
+@import 'colors.css';
+@import 'panel.css';
+#whiskermenu-window
+{
+	border-radius: 24px;
+	/*background: #019BB5;*/
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 14px;
+}
+

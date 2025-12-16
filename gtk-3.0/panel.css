@@ -1,0 +1,60 @@
+@import 'custom_colors.css';
+.xfce4-panel
+{
+    background: @panel-colour;
+    opacity: 0.78;
+    border-radius: 8px;
+
+}
+.xfce4-panel label
+{
+    color: @text-colour;
+    font-family: "Liberation Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+.xfce4-panel button:hover 
+{
+    background: @button-hover-colour;
+    border-bottom: 2px solid @button-bottom-colour;
+}
+.xfce4-panel button:checked
+{
+    background: @button-select-colour;
+}
+
+.xfce4-panel .tasklist .toggle
+{
+    background: @tasklist-colour;
+    opacity: 0.95;
+    border-radius: 24px;
+    padding: 0 4px;
+    margin-right: 3px;
+    border: 0.5px solid #000000;
+}
+.xfce4-panel .tasklist .toggle label
+{
+    font-size: 1.1em;
+}
+.xfce4-panel .tasklist .toggle:hover
+{
+    background: @tasklist-hover-colour;
+    border-bottom: 2px solid @button-bottom-colour;
+}
+.tasklist .toggle image
+{
+    -gtk-icon-transform: scale(0.8);
+}
+.tasklist .toggle:checked image
+{
+    -gtk-icon-transform: scale(0.9);
+}
+.tasklist .toggle:checked
+{
+    padding: 0 6px;
+    border-bottom: 2px solid @button-bottom-colour;
+}
+.tasklist .toggle:checked label
+{
+    font-size: 1.17em;
+}

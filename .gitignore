@@ -1,0 +1,11 @@
+# managed by script
+nvim/
+conky/
+
+#temporary
+*~
+*.swp
+temp-*
+
+gtk-3.0/bookmarks
+gtk-3.0/settings.ini
