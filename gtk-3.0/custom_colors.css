@@ -1,5 +1,5 @@
 /*@define-color panel-colour #8b4f4f;*/
-@define-color panel-colour #335f6e;
+@define-color panel-colour #0a4e6e;
 @define-color text-colour #EFF3C1;
 @define-color tasklist-colour shade(@panel-colour, 0.85);
 @define-color tasklist-hover-colour shade(@panel-colour, 1.5);
