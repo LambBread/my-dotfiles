@@ -4,7 +4,7 @@ These are some of my dotfiles for gtk-3.0, picom, and redshift. It also gets [a 
 
 ## Installation
 
-1. Install Git, Neovim >= 0.9.0, a nerd font, Conky, Picom, and Redshift. It is also expected you are using XFCE.
+1. Install Git, Neovim >= 0.9.0, [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip), Conky, Picom, Alacritty, and Redshift. It is also expected you are using XFCE.
 
 2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
 
@@ -18,6 +18,7 @@ These are some of my dotfiles for gtk-3.0, picom, and redshift. It also gets [a 
     - `~/.config/gtk-3.0/` -> `~/.dotfiles/gtk-3.0/`
     - `~/.config/picom/` -> `~/.dotfiles/picom/`
     - `~/.config/redshift.conf` -> `~/.dotfiles/redshift.conf`
+    - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
 
 5. Add Picom, Redshift, and Conky to autostart if not done so already. Restart the XFCE panel via `xfce4-panel -r`. Open Neovim and type `:PlugInstall` to install plugins.
 
