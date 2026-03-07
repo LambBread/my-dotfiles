@@ -3,6 +3,7 @@ live_config_reload = true
 
 [window]
 opacity = 0.6
+padding = { x = 10, y = 10 }
 
 [font]
 normal = { family = "MonaspiceAr Nerd Font Mono", style = "Regular"}
@@ -11,23 +12,31 @@ size = 12
 [colors]
 draw_bold_text_with_bright_colors = true
 
+[colors.primary]
+background = "#0c1315"
+
 [colors.normal]
-black = "#000000"
+#black = "#000000"
+black = "#0c1315"
 red = "#aa0000"
 green = "#00aa00"
 yellow = "#aa5500"
-blue = "#0000aa"
+#blue = "#0000aa"
+blue = "#2c3d6f"
 magenta = "#aa00aa"
-cyan = "#00aaaa"
-white = "#aaaaaa"
+cyan = "#42a0a0"
+#white = "#aaaaaa"
+white = "#cfb793"
 
 [colors.bright]
-black = "#555555"
+black = "#61686a"
 red = "#ff5555"
 green = "#55ff55"
 yellow = "#ffff55"
-blue = "#5555ff"
+#blue = "#5555ff"
+blue = "#5895d7"
 magenta = "#ff55ff"
-cyan = "#55ffff"
-white = "#ffffff"
-
+#cyan = "#55ffff"
+cyan = "#82efef"
+#white = "#ffffff"
+white = "#f5f1e9"

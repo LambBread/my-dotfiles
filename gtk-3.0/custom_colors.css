@@ -1,6 +1,8 @@
 /*@define-color panel-colour #8b4f4f;*/
-@define-color panel-colour #0a4e6e;
-@define-color text-colour #EFF3C1;
+/*@define-color panel-colour #0a4e6e;*/
+@define-color panel-colour #245b97;
+/*@define-color text-colour #EFF3C1;*/
+@define-color text-colour shade(#cfb793, 1.5);
 @define-color tasklist-colour shade(@panel-colour, 0.85);
 @define-color tasklist-hover-colour shade(@panel-colour, 1.5);
 @define-color button-hover-colour shade(@panel-colour, 0.7);
