@@ -2,5 +2,5 @@
 #82b6b6 - teal
 #2c3d6f - indigo
 #245b97 - blue
-- #5895d7 - brighter blue
 #0c1315 - black
+#D09271 - pale red-orange
