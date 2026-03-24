@@ -9,4 +9,4 @@ rm -rf temp-conky-themes
 #git clone https://github.com/junegunn/vim-plug temp-vim-plug
 #mkdir -p nvim/autoload
 #cp temp-vim-plug/plug.vim nvim/autoload/plug.vim
-rm -rf temp-vim-plug
+#rm -rf temp-vim-plug
