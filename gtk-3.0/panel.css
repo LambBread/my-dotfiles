@@ -1,4 +1,8 @@
 @import 'custom_colors.css';
+.xfce4-panel widget grid button.flat.toggle
+{
+    font-size: 0.9em;
+}
 .xfce4-panel
 {
     background: @panel-colour;
