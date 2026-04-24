@@ -1,0 +1,29 @@
+font-family = MonaspiceAr NFM
+font-family-bold = MonaspiceAr NFM
+font-family-italic = MonaspiceAr NFM
+font-family-bold-italic = MonaspiceAr NFM
+font-size = 12
+bold-color = bright
+
+background-opacity = 0.6
+window-decoration = server
+window-padding-x = 10
+window-padding-y = 10
+background = #0c1315
+
+palette = 0=#0c1315
+palette = 1=#a93938
+palette = 2=#009700
+palette = 3=#c9b62c
+palette = 4=#2c3d6f
+palette = 5=#cd2f8c
+palette = 6=#02a4ef
+palette = 7=#cfb793
+palette = 8=#61676a
+palette = 9=#d07271
+palette = 10=#33ff33
+palette = 11=#edd584
+palette = 12=#5895d7
+palette = 13=#ff33ff
+palette = 14=#01effd
+palette = 15=#f5f1e9

@@ -1,10 +1,10 @@
 # My dotfiles
 
-These are some of my dotfiles for gtk-3.0, picom, and redshift. It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
+These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, and Redshift. It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
 
 ## Installation
 
-1. Install Git, Neovim >= 0.9.0, [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip), Conky, Picom, Alacritty, and Redshift. It is also expected you are using XFCE.
+1. Install Git, Neovim >= 0.9.4, [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip), Conky, Picom, Alacritty, Ghostty, and Redshift. It is also expected you are using XFCE.
 
 2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
 
@@ -19,9 +19,12 @@ These are some of my dotfiles for gtk-3.0, picom, and redshift. It also gets [a 
     - `~/.config/picom/` -> `~/.dotfiles/picom/`
     - `~/.config/redshift.conf` -> `~/.dotfiles/redshift.conf`
     - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
+    - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
 
-5. Add Picom, Redshift, and Conky to autostart if not done so already. Restart the XFCE panel via `xfce4-panel -r`. Open Neovim and type `:PlugInstall` to install plugins.
+5. Add Picom, Redshift, and Conky to autostart if not done so already. Restart the XFCE panel via `xfce4-panel -r`. Open Neovim and type `:Lazy install` to install plugins.
 
-6. If desired, modify panel layout, set a desktop wallpaper, change GTK/xfwm theme, change icons/cursors, etc.
+6. If desired, modify panel layout, set a desktop wallpaper, 
+change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 
+change icons/cursors ([Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) icons recommended), etc.
 
 7. Modify configuration if desired.
