@@ -1,8 +1,10 @@
 # My dotfiles
 
-These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, and Redshift. It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
+These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, Bash, and Redshift. It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
 
 ## Installation
+
+*Note: The .bashrc assumes you are using Debian, so you may want to modify it if you are not.*
 
 1. Install Git, Neovim >= 0.9.4, [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip), Conky, Picom, Alacritty, Ghostty, and Redshift. It is also expected you are using XFCE.
 
@@ -13,6 +15,8 @@ These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, and Redshift. 
 
 4. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
 
+    - `~/.bashrc` -> `~/.dotfiles/.bashrc`
+    - `~/.bash_aliases` -> `~/.dotfiles/.bash_aliases`
     - `~/.config/nvim/` -> `~/.dotfiles/nvim/`
     - `~/.config/conky/` -> `~/.dotfiles/conky/`
     - `~/.config/gtk-3.0/` -> `~/.dotfiles/gtk-3.0/`
