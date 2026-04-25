@@ -5,6 +5,9 @@ font-family-bold-italic = MonaspiceAr NFM
 font-size = 12
 bold-color = bright
 
+working-directory = home
+shell-integration = none
+
 background-opacity = 0.6
 window-decoration = server
 window-padding-x = 10
