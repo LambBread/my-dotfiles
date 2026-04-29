@@ -37,6 +37,7 @@ It is also expected you are using XFCE.
     - `~/.config/redshift.conf` -> `~/.dotfiles/redshift.conf`
     - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
     - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
+    - `~/.config/fastfetch/` -> `~/.dotfiles/fastfetch/`
 
 5. Add Picom, Redshift, and Conky to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
