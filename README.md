@@ -1,12 +1,25 @@
 # My dotfiles
 
-These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, Bash, and Redshift. It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
+These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, and Redshift. 
+It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
 
 ## Installation
 
-*Note: The .bashrc assumes you are using Debian, so you may want to modify it if you are not.*
+*Note: The .bashrc assumes you are using Debian, so you may want to modify it if you are not. The redshift.conf also 
+assumes your location is Prince George, BC, so you should modify it for your location.*
 
-1. Install Git, Neovim >= 0.9.4, [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip), Conky, Picom, Alacritty, Ghostty, and Redshift. It is also expected you are using XFCE.
+1. Install:
+    - Git
+    - Neovim >= 0.9.4
+    - [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
+    - Conky
+    - Picom
+    - Alacritty
+    - Ghostty
+    - Redshift
+    - Fastfetch
+
+It is also expected you are using XFCE.
 
 2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
 
@@ -25,7 +38,9 @@ These are some of my dotfiles for GTK, Picom, Alacritty, Ghostty, Bash, and Reds
     - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
     - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
 
-5. Add Picom, Redshift, and Conky to autostart if not done so already. Restart the XFCE panel via `xfce4-panel -r`. Open Neovim and type `:Lazy install` to install plugins.
+5. Add Picom, Redshift, and Conky to autostart if not done so already.
+Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
+Open Neovim and type `:Lazy install` to install plugins.
 
 6. If desired, modify panel layout, set a desktop wallpaper, 
 change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 

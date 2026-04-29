@@ -1,0 +1,133 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+      "separator": " "
+  },
+  "modules": [
+    "title",
+    "separator",
+    
+    {
+        "type": "os",
+        "key": " OS"
+    },
+    {
+        "type": "host",
+        "key": " Host"
+    },
+    {
+        "type": "kernel",
+        "key": " Kernel"
+    },
+    {
+        "type": "packages",
+        "key": "󰆧 Packages"
+    },
+    {
+        "type": "terminal",
+        "key": " Terminal"
+    },
+    {
+        "type": "shell",
+        "key": " Shell"
+    },
+    {
+        "type": "localip",
+        "key": " Local IP"
+    },
+    
+    "break",
+    
+    {
+        "type": "uptime",
+        "key": "󰥔 Uptime",
+        "keyColor": "yellow"
+    },
+    {
+        "type": "command",
+        "key": " OS Birthday",
+        "keyColor": "yellow",
+        "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
+    },
+
+    "break",
+    
+    {
+        "type": "battery",
+        "key": " Battery",
+        "keyColor": "green"
+    },
+    {
+        "type": "memory",
+        "key": " RAM",
+        "keyColor": "green"
+    },
+    {
+        "type": "swap",
+        "key": " Swap",
+        "keyColor": "green"
+    },
+    {
+        "type": "disk",
+        "key": "󰋊 Disk ({mountpoint})",
+        "keyColor": "green"
+    },
+    {
+        "type": "cpu",
+        "key": " CPU",
+        "keyColor": "green"
+    },
+    {
+        "type": "gpu",
+        "key": " GPU",
+        "keyColor": "green"
+    },
+    {
+        "type": "display",
+        "key": "󰍹 Display ({name})",
+        "keyColor": "green"
+    },
+
+    "break",
+    
+    {
+        "type": "de",
+        "key": " DE",
+        "keyColor": "blue"
+    },
+    {
+        "type": "wm",
+        "key": "󱂬 WM",
+        "keyColor": "blue"
+    },
+    {
+        "type": "wmtheme",
+        "key": " WM Theme",
+        "keyColor": "blue"
+    },
+    {
+        "type": "theme",
+        "key": " Theme",
+        "keyColor": "blue"
+    },
+    {
+        "type": "icons",
+        "key": " Icons",
+        "keyColor": "blue"
+    },
+    {
+        "type": "cursor",
+        "key": " Cursor",
+        "keyColor": "blue"
+    },
+    {
+        "type": "terminalfont",
+        "key": " Terminal Font",
+        "keyColor": "blue"
+    },
+    
+    "break",
+    
+    "colors"
+  ]
+}
