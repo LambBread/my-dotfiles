@@ -1,6 +1,7 @@
 # My dotfiles
 
-These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, and Redshift. 
+These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, [Cortile](https://github.com/leukipp/cortile),
+and Redshift. 
 It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
 
 ## Installation
@@ -18,12 +19,14 @@ assumes your location is Prince George, BC, so you should modify it for your loc
     - Ghostty
     - Redshift
     - Fastfetch
+    - [Cortile](https://github.com/leukipp/cortile)
 
 It is also expected you are using XFCE.
 
 2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
 
-3. Run `get_dots.sh` to acquire the [neovim config](https://github.com/LambBread/my-nvim-config) and the [conky config](https://github.com/LambBread/conky-themes).
+3. Run `get_dots.sh` to acquire the [neovim config](https://github.com/LambBread/my-nvim-config)
+and the [conky config](https://github.com/LambBread/conky-themes).
 
 
 4. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
@@ -38,6 +41,7 @@ It is also expected you are using XFCE.
     - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
     - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
     - `~/.config/fastfetch/` -> `~/.dotfiles/fastfetch/`
+    - `~/.config/cortile/` -> `~/.dotfiles/cortile/`
 
 5. Add Picom, Redshift, and Conky to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 

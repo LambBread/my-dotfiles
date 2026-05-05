@@ -6,7 +6,7 @@ font-size = 12
 bold-color = bright
 
 working-directory = home
-shell-integration = none
+window-inherit-working-directory = false
 
 background-opacity = 0.6
 window-decoration = server
