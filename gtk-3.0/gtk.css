@@ -1,11 +1,38 @@
 
 @import 'colors.css';
 @import 'panel.css';
+
 #whiskermenu-window
 {
+    opacity: 0.78;
 	border-radius: 24px;
-	/*background: #019BB5;*/
+    background-color: @tasklist-colour;
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 14px;
 }
-
+#whiskermenu-window button {
+  background-color: @tasklist-colour;
+  color: @text-colour;
+  border-radius: 12px;
+  /*border-radius: 6px;*/
+}
+#whiskermenu-window button:hover
+{
+    background-color: @tasklist-colour-shaded;
+}
+#whiskermenu-window entry
+{
+    background-color: @button-select-colour-shaded;
+}
+#whiskermenu-window .categories
+{
+    background-color: @tasklist-colour-shaded;
+}
+#whiskermenu-window .launchers
+{
+    background-color: @tasklist-colour-shaded;
+}
+#whiskermenu-window .launchers:hover
+{
+    background-color: @tasklist-hover-colour-shaded;
+}

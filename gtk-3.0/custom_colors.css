@@ -1,10 +1,15 @@
 /*@define-color panel-colour #8b4f4f;*/
 /*@define-color panel-colour #0a4e6e;*/
 @define-color panel-colour #245b97;
-/*@define-color text-colour #EFF3C1;*/
 @define-color text-colour shade(#cfb793, 1.5);
 @define-color tasklist-colour shade(@panel-colour, 0.85);
 @define-color tasklist-hover-colour shade(@panel-colour, 1.5);
 @define-color button-hover-colour shade(@panel-colour, 0.7);
 @define-color button-select-colour shade(@panel-colour, 0.55);
 @define-color button-bottom-colour shade(@panel-colour, 2);
+
+/*whisker menu cols*/
+
+@define-color tasklist-colour-shaded shade(@tasklist-colour, 0.85);
+@define-color tasklist-hover-colour-shaded shade(@tasklist-colour, 1.5);
+@define-color button-select-colour-shaded shade(@tasklist-colour, 0.55);

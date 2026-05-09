@@ -5,7 +5,8 @@
 }
 .xfce4-panel
 {
-    background: @panel-colour;
+    /*background: @panel-colour;*/
+    background-image: linear-gradient(to bottom, @panel-colour, @tasklist-colour);
     opacity: 0.78;
     border-radius: 8px;
 
