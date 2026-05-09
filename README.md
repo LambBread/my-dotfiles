@@ -31,24 +31,30 @@ and the [conky config](https://github.com/LambBread/conky-themes).
 
 4. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
 
-    - `~/.bashrc` -> `~/.dotfiles/.bashrc`
-    - `~/.bash_aliases` -> `~/.dotfiles/.bash_aliases`
+    - `~/.bashrc` -> `~/.dotfiles/bash/.bashrc`
+    - `~/.bash_aliases` -> `~/.dotfiles/bash/.bash_aliases`
     - `~/.config/nvim/` -> `~/.dotfiles/nvim/`
     - `~/.config/conky/` -> `~/.dotfiles/conky/`
     - `~/.config/gtk-3.0/` -> `~/.dotfiles/gtk-3.0/`
     - `~/.config/picom/` -> `~/.dotfiles/picom/`
-    - `~/.config/redshift.conf` -> `~/.dotfiles/redshift.conf`
+    - `~/.config/redshift/` -> `~/.dotfiles/redshift/`
     - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
     - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
     - `~/.config/fastfetch/` -> `~/.dotfiles/fastfetch/`
     - `~/.config/cortile/` -> `~/.dotfiles/cortile/`
 
-5. Add Picom, Redshift, and Conky to autostart if not done so already.
+5. Add this line to `/etc/apparmor.d/usr.bin.redshift`:
+
+`owner @{HOME}/.dotfiles/redshift/redshift.conf r`
+
+and run `sudo systemctl restart apparmor`.
+
+6. Add Picom, Redshift, and Conky to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
 Open Neovim and type `:Lazy install` to install plugins.
 
-6. If desired, modify panel layout, set a desktop wallpaper, 
+7. If desired, modify panel layout, set a desktop wallpaper, 
 change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 
 change icons/cursors ([Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) icons recommended), etc.
 
-7. Modify configuration if desired.
+8. Modify configuration if desired.
