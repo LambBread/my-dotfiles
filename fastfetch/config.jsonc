@@ -9,7 +9,8 @@
     
     {
         "type": "os",
-        "key": " OS"
+        "key": " OS",
+        "format": "{name} {version} ({codename}) {arch}"
     },
     {
         "type": "host",

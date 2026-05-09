@@ -13,6 +13,7 @@ window-decoration = server
 window-padding-x = 10
 window-padding-y = 10
 background = #0c1315
+foreground = #f5f1e9
 
 palette = 0=#0c1315
 palette = 1=#a93938
