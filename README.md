@@ -1,8 +1,7 @@
 # My dotfiles
 
 These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, [Cortile](https://github.com/leukipp/cortile),
-and Redshift. 
-It also gets [a neovim config](https://github.com/LambBread/my-nvim-config) and [a conky config](https://github.com/LambBread/conky-themes).
+Redshift, Conky, and Neovim. 
 
 ## Installation
 
@@ -25,11 +24,7 @@ It is also expected you are using XFCE.
 
 2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
 
-3. Run `get_dots.sh` to acquire the [neovim config](https://github.com/LambBread/my-nvim-config)
-and the [conky config](https://github.com/LambBread/conky-themes).
-
-
-4. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
+3. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
 
     - `~/.bashrc` -> `~/.dotfiles/bash/.bashrc`
     - `~/.bash_aliases` -> `~/.dotfiles/bash/.bash_aliases`
@@ -43,18 +38,22 @@ and the [conky config](https://github.com/LambBread/conky-themes).
     - `~/.config/fastfetch/` -> `~/.dotfiles/fastfetch/`
     - `~/.config/cortile/` -> `~/.dotfiles/cortile/`
 
-5. Add this line to `/etc/apparmor.d/usr.bin.redshift`:
+4. Add this line to `/etc/apparmor.d/usr.bin.redshift`:
 
 `owner @{HOME}/.dotfiles/redshift/redshift.conf r`
 
 and run `sudo systemctl restart apparmor`.
 
-6. Add Picom, Redshift, and Conky to autostart if not done so already.
+5. Add Picom, Redshift, and Conky to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
 Open Neovim and type `:Lazy install` to install plugins.
 
-7. If desired, modify panel layout, set a desktop wallpaper, 
+6. If desired, modify panel layout, set a desktop wallpaper, 
 change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 
 change icons/cursors ([Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) icons recommended), etc.
 
-8. Modify configuration if desired.
+7. Modify configuration if desired.
+
+## Credits
+
+The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
