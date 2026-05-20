@@ -1,17 +1,29 @@
 
-@import 'colors.css';
+/*@import 'colors.css';*/
 @import 'panel.css';
+
+calendar, GtkCalendar
+{
+    background: @custom-col-3;
+    color: @text-colour;
+    font-weight: bold;
+}
+
+calendar:selected, GtkCalendar:selected
+{
+    background: @tasklist-colour-shaded;
+}
 
 #whiskermenu-window
 {
     opacity: 0.78;
 	border-radius: 24px;
-    background-color: @tasklist-colour;
-	font-family: 'Fira Sans', sans-serif;
+    background-color: @tasklist-colour-col3;
+    font-family: 'Fira Sans', sans-serif;
 	font-size: 14px;
 }
 #whiskermenu-window button {
-  background-color: @tasklist-colour;
+  background-color: @tasklist-colour-col3;
   color: @text-colour;
   border-radius: 12px;
   /*border-radius: 6px;*/
@@ -35,4 +47,5 @@
 #whiskermenu-window .launchers:hover
 {
     background-color: @tasklist-hover-colour-shaded;
+    color: @custom-col-black;
 }

@@ -11,6 +11,15 @@
     border-radius: 8px;
 
 }
+.xfce4-panel menu
+{
+    background: @custom-col-3;
+    border-radius: 16px;
+}
+.xfce4-panel menu *:hover
+{
+    background: @tasklist-colour-shaded;
+}
 .xfce4-panel label
 {
     color: @text-colour;
