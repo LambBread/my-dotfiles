@@ -5,8 +5,9 @@ Redshift, Conky, and Neovim.
 
 ## Installation
 
-*Note: The .bashrc assumes you are using Debian, so you may want to modify it if you are not. The redshift.conf also 
-assumes your location is Prince George, BC, so you should modify it for your location.*
+*Note: The .bashrc assumes you have Emscripten installed to `/opt/emsdk/` and have a Python venv in `~/.venv/`,
+so you may want to modify it if you are not. The redshift.conf also assumes your location is Prince George, BC, 
+so you should modify it for your location.*
 
 1. Install:
     - Git
