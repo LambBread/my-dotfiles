@@ -1,6 +1,7 @@
 
 /*@import 'colors.css';*/
 @import 'panel.css';
+@import 'thunar.css';
 
 calendar, GtkCalendar
 {

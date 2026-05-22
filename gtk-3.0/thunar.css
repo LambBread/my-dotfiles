@@ -1,0 +1,68 @@
+
+.thunar .view
+{
+    background: @tasklist-colour;
+}
+
+.thunar .view .rubberband
+{
+    background: alpha(@tasklist-colour-col3, 0.50);
+    border: 0.5px solid @button-select-colour-shaded;
+}
+
+.thunar .view:selected
+{
+    background: @tasklist-colour-col3;
+}
+
+.thunar toolbar
+{
+    background: @tasklist-colour;
+}
+
+.thunar toolbar button:hover
+{
+    background: @button-select-colour;
+}
+
+.thunar toolbar button:active
+{
+    background: @button-select-colour-shaded;
+}
+
+
+.thunar toolbar *
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.thunar menubar
+{
+    background: @tasklist-colour;
+}
+
+.thunar
+{
+    background: @tasklist-colour;
+}
+
+.thunar statusbar
+{
+    background: @tasklist-colour;
+}
+.thunar toolbar entry
+{
+    background: @button-select-colour;
+}
+
+.thunar .shortcuts-pane .view
+{
+    background: @panel-colour;
+}
+
+.thunar .shortcuts-pane .view *:selected
+{
+    background: @tasklist-colour-col3;
+}
+
