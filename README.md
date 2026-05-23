@@ -58,3 +58,5 @@ change icons/cursors ([Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme)
 ## Credits
 
 The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
+The fastfetch logos are derivative works and are under the LGPLv3-or-later or CC-BY-SA 3.0 Unported. 
+See [the README](./fastfetch/logos/README.md) for details.
