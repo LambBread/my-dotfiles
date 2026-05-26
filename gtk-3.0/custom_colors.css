@@ -23,3 +23,5 @@
 @define-color tasklist-hover-colour-shaded shade(@tasklist-colour-col3, 1.5);
 @define-color button-select-colour-shaded shade(@tasklist-colour-col3, 0.55);
 @define-color theme_selected_bg_color @tasklist-colour-col3;
+@define-color theme_unfocused_selected_bg_color @tasklist-colour-col3;
+@define-color theme_text_color @text-colour;
