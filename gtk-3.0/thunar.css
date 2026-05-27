@@ -1,4 +1,15 @@
 
+.thunar tab
+{
+    background: @tasklist-colour;
+}
+
+.thunar tab:checked
+{
+    background: @tasklist-colour-shaded-blue;
+}
+
+
 .thunar .view
 {
     background: @tasklist-colour;
