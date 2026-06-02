@@ -1,7 +1,7 @@
 # My dotfiles
 
 These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, [Cortile](https://github.com/leukipp/cortile),
-Redshift, Conky, and Neovim. 
+Redshift, Conky, Neovim, and Tmux. 
 
 ## Installation
 
@@ -19,6 +19,7 @@ so you should modify it for your location.*
     - Ghostty
     - Redshift
     - Fastfetch
+    - Tmux
     - [Cortile](https://github.com/leukipp/cortile)
 
 It is also expected you are using XFCE.
@@ -27,6 +28,7 @@ It is also expected you are using XFCE.
 
 3. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
 
+    - `~/.tmux.conf` -> `~/.dotfiles/tmux/.tmux.conf`
     - `~/.bashrc` -> `~/.dotfiles/bash/.bashrc`
     - `~/.bash_aliases` -> `~/.dotfiles/bash/.bash_aliases`
     - `~/.config/nvim/` -> `~/.dotfiles/nvim/`
