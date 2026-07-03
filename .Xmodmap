@@ -1,0 +1,5 @@
+clear Lock
+keycode 66 = Hyper_L
+keycode 135 = Multi_key Menu
+remove mod4 = Hyper_L
+add mod3 = Hyper_L

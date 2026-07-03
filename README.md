@@ -31,6 +31,7 @@ It is also expected you are using XFCE.
     - `~/.tmux.conf` -> `~/.dotfiles/tmux/.tmux.conf`
     - `~/.bashrc` -> `~/.dotfiles/bash/.bashrc`
     - `~/.bash_aliases` -> `~/.dotfiles/bash/.bash_aliases`
+    - `~/.Xmodmap` -> `~/.dotfiles/.Xmodmap`
     - `~/.config/nvim/` -> `~/.dotfiles/nvim/`
     - `~/.config/conky/` -> `~/.dotfiles/conky/`
     - `~/.config/gtk-3.0/` -> `~/.dotfiles/gtk-3.0/`
