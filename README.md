@@ -24,23 +24,10 @@ so you should modify it for your location.*
 
 It is also expected you are using XFCE.
 
-2. Clone this repo into an easy-to-remember directory, such as `~/.dotfiles`.
+2. Clone this repo into `~/.dotfiles`.
 
-3. Make symbolic links in `~/.config` going to this directory. The symlinks you need are:
-
-    - `~/.tmux.conf` -> `~/.dotfiles/tmux/.tmux.conf`
-    - `~/.bashrc` -> `~/.dotfiles/bash/.bashrc`
-    - `~/.bash_aliases` -> `~/.dotfiles/bash/.bash_aliases`
-    - `~/.Xmodmap` -> `~/.dotfiles/.Xmodmap`
-    - `~/.config/nvim/` -> `~/.dotfiles/nvim/`
-    - `~/.config/conky/` -> `~/.dotfiles/conky/`
-    - `~/.config/gtk-3.0/` -> `~/.dotfiles/gtk-3.0/`
-    - `~/.config/picom/` -> `~/.dotfiles/picom/`
-    - `~/.config/redshift/` -> `~/.dotfiles/redshift/`
-    - `~/.config/alacritty/` -> `~/.dotfiles/alacritty/`
-    - `~/.config/ghostty/` -> `~/.dotfiles/ghostty/`
-    - `~/.config/fastfetch/` -> `~/.dotfiles/fastfetch/`
-    - `~/.config/cortile/` -> `~/.dotfiles/cortile/`
+3. Run `install.sh` after making it executable. If you want a laptop configuration,
+   run `install.sh laptop`.
 
 4. Add this line to `/etc/apparmor.d/usr.bin.redshift`:
 
@@ -48,7 +35,7 @@ It is also expected you are using XFCE.
 
 and run `sudo systemctl restart apparmor`.
 
-5. Add Picom, Redshift, and Conky to autostart if not done so already.
+5. Add Picom, Redshift, Conky, and `xmodmap ~/.Xmodmap` to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
 Open Neovim and type `:Lazy install` to install plugins.
 
