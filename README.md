@@ -6,37 +6,37 @@ These are some of my dotfiles.
 
 ### BSPWM/SXHKD
 
-`Hyper + T` - Ghostty
-`Hyper + E` - Thunar
-`Hyper + W` - LibreWolf
-`Hyper + L` - lock screen
-`Hyper + Q` - close program
-`Hyper + Alt + Q` - kill program
-`Hyper + Super + Q` - exit bspwm
-`Hyper + Super + R` - reload bspwm
-`Hyper + R` - reload sxhkd
-`Print` - screenshot
-`Super + M` - toggle monocle mode
-`Super + T` - tiled mode
-`Super + Shift + T` - pseudo-tiled
-`Super + S` - floating mode
-`Super + F` - fullscreen
-`Super + 1-9,0,hyphen,equals` - switch to workspace 1-12
-`Super + Shift + 1-9,0,hyphen,equals` - move window to workspace 1-12
-`Super + hjkl` - select window in that direction
-`Super + Shift + hjkl` - move window in that direction
-`Super + Ctrl + hjkl` - preselect node in that direction
-`Super + Alt + hjkl` - expand window in that direction
-`Super + Alt + Shift + hjkl` - shrink window in that direction
+- `Hyper + T` - Ghostty
+- `Hyper + E` - Thunar
+- `Hyper + W` - LibreWolf
+- `Hyper + L` - lock screen
+- `Hyper + Q` - close program
+- `Hyper + Alt + Q` - kill program
+- `Hyper + Super + Q` - exit bspwm
+- `Hyper + Super + R` - reload bspwm
+- `Hyper + R` - reload sxhkd
+- `Print` - screenshot
+- `Super + M` - toggle monocle mode
+- `Super + T` - tiled mode
+- `Super + Shift + T` - pseudo-tiled
+- `Super + S` - floating mode
+- `Super + F` - fullscreen
+- `Super + 1-9,0,hyphen,equals` - switch to workspace 1-12
+- `Super + Shift + 1-9,0,hyphen,equals` - move window to workspace 1-12
+- `Super + hjkl` - select window in that direction
+- `Super + Shift + hjkl` - move window in that direction
+- `Super + Ctrl + hjkl` - preselect node in that direction
+- `Super + Alt + hjkl` - expand window in that direction
+- `Super + Alt + Shift + hjkl` - shrink window in that direction
 
 ### Neovim
 
-`Ctrl + S` - save file
-`F2` - toggle Neo-tree
-`,x` - exit buffer
-`,j` - switch split buffer
-`,h` - previous buffer
-`,l` - next buffer
+- `Ctrl + S` - save file
+- `F2` - toggle Neo-tree
+- `,x` - exit buffer
+- `,j` - switch split buffer
+- `,h` - previous buffer
+- `,l` - next buffer
 
 
 ## Installation
