@@ -10,30 +10,37 @@ hyper + t
 hyper + r
 	pkill -USR1 -x sxhkd
 
+# file browser
 hyper + e
     thunar
 
+# web browser
+hyper + w
+    flatpak run io.gitlab.librewolf-community
+
+# lock screen
 hyper + l
     dm-tool lock
 
-# close and kill
-
+# close
 hyper + q
     bspc node -c
 
-hyper + super + q
+# kill all processes
+hyper + alt + q
     bspc node -k
 
+# close/restart bspwm
+hyper + super + {q,r}
+    bspc {quit,wm -r}
+
+# screenshot
 Print
     xfce4-screenshooter
 
 #
 # bspwm hotkeys
 #
-
-# quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
 
 
 # alternate between the tiled and monocle layout
