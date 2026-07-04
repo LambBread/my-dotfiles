@@ -1,7 +1,6 @@
 # My dotfiles
 
-These are some of my dotfiles for GTK, Picom, Alacritty, Fastfetch, Ghostty, Bash, [Cortile](https://github.com/leukipp/cortile),
-Redshift, Conky, Neovim, and Tmux. 
+These are some of my dotfiles.
 
 ## Installation
 
@@ -12,6 +11,8 @@ so you should modify it for your location.*
 1. Install:
     - Git
     - Neovim >= 0.9.4
+    - bspwm
+    - xsettingsd
     - [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
     - Conky
     - Picom
@@ -22,7 +23,7 @@ so you should modify it for your location.*
     - Tmux
     - [Cortile](https://github.com/leukipp/cortile)
 
-It is also expected you are using XFCE.
+It is also expected you have XFCE installed.
 
 2. Clone this repo into `~/.dotfiles`.
 
@@ -35,9 +36,9 @@ It is also expected you are using XFCE.
 
 and run `sudo systemctl restart apparmor`.
 
-5. Add Picom, Redshift, Conky, and `xmodmap ~/.Xmodmap` to autostart if not done so already.
+5. (Xfce) Add Picom, Redshift, Conky, and `xmodmap ~/.Xmodmap` to autostart if not done so already.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
-Open Neovim and type `:Lazy install` to install plugins.
+Open Neovim and type `:Lazy install` to install plugins. If you are on bspwm, this step is not needed.
 
 6. If desired, modify panel layout, set a desktop wallpaper, 
 change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 

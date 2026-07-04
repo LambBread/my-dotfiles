@@ -1,0 +1,37 @@
+#! /bin/sh
+
+xmodmap ~/.Xmodmap
+pgrep -x sxhkd > /dev/null || sxhkd &
+xsettingsd &
+pkill conky
+conky -p 10 -U &
+(sleep 11; xdo lower -N Conky) &
+xfce4-panel --disable-wm-check &
+nm-applet &
+blueman-applet &
+diodon &
+picom -b
+pkill redshift-gtk && pkill redshift
+(sleep 3; redshift-gtk) &
+# (sleep 3; gtk-launch proton.vpn.app.gtk) &
+# (sleep 3; whatpulse --minimized --closedwindow) &
+
+# bspc monitor DP-5 -d 1 2 3 4 5 6
+# bspc monitor HDMI-0 -d 7 8 9 10 11 12
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
+bspc config border_width         2
+bspc config window_gap          12
+bspc config presel_feedback_color '#BC9ED0'
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Chromium desktop='^6'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Xfce4-panel manage=off border=off layer=above
+#bspc rule -a Conky state=floating sticky=on layer=below
+bspc rule -a Conky manage=off
+bspc rule -a 'Wrapper-2.0' state=floating border=off focus=on
