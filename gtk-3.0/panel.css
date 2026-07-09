@@ -13,17 +13,17 @@
 }
 .xfce4-panel menu
 {
-    background: @custom-col-3;
+    background: @custom-col-1;
     border-radius: 16px;
 }
 .xfce4-panel menu *:hover
 {
-    background: @tasklist-colour-shaded;
+    background: @custom-col-3;
 }
 .xfce4-panel label
 {
     color: @text-colour;
-    font-family: "Liberation Sans", sans-serif;
+    font-family: "MonaspiceAr Nerd Font Mono", monospace;
     font-weight: bold;
     font-size: 1.15em;
 }
@@ -44,7 +44,7 @@
     border-radius: 24px;
     padding: 0 4px;
     margin-right: 3px;
-    border: 0.5px solid #000000;
+    border: 0.5px solid @custom-col-black;
 }
 .xfce4-panel .tasklist .toggle label
 {

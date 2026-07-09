@@ -3,50 +3,51 @@
 @import 'panel.css';
 @import 'thunar.css';
 
+
 calendar, GtkCalendar
 {
-    background: @custom-col-3;
+    background: @custom-col-1;
     color: @text-colour;
-    font-weight: bold;
+    font-family: "MonaspiceAr Nerd Font Mono", monospace;
 }
 
 calendar:selected, GtkCalendar:selected
 {
-    background: @tasklist-colour-shaded;
+    background: @custom-col-3;
 }
 
 #whiskermenu-window
 {
     opacity: 0.78;
 	border-radius: 24px;
-    background-color: @tasklist-colour-col3;
-    font-family: 'Fira Sans', sans-serif;
+    background-color: @panel-colour;
+    font-family: "MonaspiceAr Nerd Font Mono", monospace;
 	font-size: 14px;
 }
 #whiskermenu-window button {
-  background-color: @tasklist-colour-col3;
+  background-color: @panel-colour;
   color: @text-colour;
   border-radius: 12px;
   /*border-radius: 6px;*/
 }
 #whiskermenu-window button:hover
 {
-    background-color: @tasklist-colour-shaded;
+    background-color: @tasklist-colour;
 }
 #whiskermenu-window entry
 {
-    background-color: @button-select-colour-shaded;
+    background-color: @button-select-colour;
 }
 #whiskermenu-window .categories
 {
-    background-color: @tasklist-colour-shaded;
+    background-color: @tasklist-colour;
 }
 #whiskermenu-window .launchers
 {
-    background-color: @tasklist-colour-shaded;
+    background-color: @tasklist-colour;
 }
 #whiskermenu-window .launchers:hover
 {
-    background-color: @tasklist-hover-colour-shaded;
+    background-color: @tasklist-hover-colour;
     color: @custom-col-black;
 }
