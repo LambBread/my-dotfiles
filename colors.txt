@@ -1,8 +1,9 @@
-#cfb793 - tan
+#cfb793 - tan (****)
 #82b6b6 - teal
-#BC9ED0 - lavender
+#BC9ED0 - lavender (**)
 #9C8BA7 - darker lavender
 #2c3d6f - indigo
-#245b97 - blue
+#245b97 - blue (*)
 #0c1315 - black
 #D09271 - pale red-orange
+#f08533 - orange (***)

@@ -3,6 +3,7 @@
 @define-color custom-col-1 #245b97;
 @define-color custom-col-2 #cfb793;
 @define-color custom-col-3 #BC9ED0;
+@define-color custom-col-4 #f08533;
 @define-color custom-col-black #0c1315;
 @define-color panel-colour @custom-col-1;
 @define-color text-colour shade(@custom-col-2, 1.5);
@@ -10,7 +11,8 @@
 @define-color tasklist-hover-colour shade(@panel-colour, 1.5);
 @define-color button-hover-colour shade(@panel-colour, 0.7);
 @define-color button-select-colour shade(@panel-colour, 0.55);
-@define-color button-bottom-colour shade(@panel-colour, 2);
+/*@define-color button-bottom-colour shade(@panel-colour, 2);*/
+@define-color button-bottom-colour @custom-col-4;
 
 @define-color tasklist-colour-shaded-blue shade(@tasklist-colour, 0.85);
 @define-color tasklist-hover-colour-shaded-blue shade(@tasklist-colour, 1.5);
