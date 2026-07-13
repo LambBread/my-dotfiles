@@ -30,6 +30,10 @@ hyper + q
 hyper + alt + q
     bspc node -k
 
+# restart picom
+hyper + comma
+    pkill picom; sleep 1; picom -b
+
 # close/restart bspwm
 hyper + super + {q,r}
     bspc {quit,wm -r}
