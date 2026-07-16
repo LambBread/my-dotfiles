@@ -6,15 +6,21 @@ These are some of my dotfiles.
 
 ### BSPWM/SXHKD
 
+`Hyper` is mapped to Caps Lock in this config.
+
 - `Hyper + T` - Ghostty
 - `Hyper + E` - Thunar
 - `Hyper + W` - LibreWolf
 - `Hyper + L` - lock screen
 - `Hyper + Q` - close program
+- `Hyper + S` - open rofi (drun)
+- `Hyper + A` - open rofi (window)
+- `Hyper + R` - reload sxhkd
+- `Hyper + ,` - reload picom
+- `Hyper + .` - reload polybar
 - `Hyper + Alt + Q` - kill program
 - `Hyper + Super + Q` - exit bspwm
 - `Hyper + Super + R` - reload bspwm
-- `Hyper + R` - reload sxhkd
 - `Print` - screenshot
 - `Super + M` - toggle monocle mode
 - `Super + T` - tiled mode
@@ -41,26 +47,32 @@ These are some of my dotfiles.
 
 ## Installation
 
-*Note: The .bashrc assumes you have Emscripten installed to `/opt/emsdk/` and have a Python venv in `~/.venv/`,
-so you may want to modify it if you are not. The redshift.conf also assumes your location is Prince George, BC, 
+*Note: The desktop .bashrc assumes you have Emscripten installed to `/opt/emsdk/` and have a Python venv in `~/.venv/`,
+so you may want to use the laptop .bashrc if you are not. The redshift.conf also assumes your location is Prince George, BC, 
 so you should modify it for your location.*
 
 1. Install:
-    - Git
-    - Neovim >= 0.9.4
+    - git
+    - neovim >= 0.9.4
+    - fastfetch
+    - tmux
     - bspwm
+    - picom
     - xsettingsd
+    - polybar
+    - diodon
+    - redshift
+    - conky
+    - ghostty
+    - thunar
     - [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
-    - Conky
-    - Picom
-    - Alacritty
-    - Ghostty
-    - Redshift
-    - Fastfetch
-    - Tmux
-    - [Cortile](https://github.com/leukipp/cortile)
+    - [Qogir theme](https://github.com/vinceliuice/Qogir-theme)
+    - [Rowaita icon theme](https://github.com/4e6anenk0/Rowaita-icon-theme) 
+    - alacritty (optional)
+    - [cortile](https://github.com/leukipp/cortile) (optional, Xfce)
+    - Proton VPN (optional; if not using it, use laptop polybar and bspwm config)
+    - WhatPulse (optional; if not using it, use laptop bspwm config)
 
-It is also expected you have XFCE installed.
 
 2. Clone this repo into `~/.dotfiles`.
 
@@ -77,9 +89,7 @@ and run `sudo systemctl restart apparmor`.
 Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
 Open Neovim and type `:Lazy install` to install plugins. If you are on bspwm, this step is not needed.
 
-6. If desired, modify panel layout, set a desktop wallpaper, 
-change GTK/xfwm theme ([Qogir](https://github.com/vinceliuice/Qogir-theme) recommended), 
-change icons/cursors ([Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) icons recommended), etc.
+6. If desired, modify panel layout (Xfce), set a desktop wallpaper, etc.
 
 7. Modify configuration if desired.
 

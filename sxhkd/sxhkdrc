@@ -8,7 +8,7 @@ hyper + t
 
 # make sxhkd reload its configuration files:
 hyper + r
-	pkill -USR1 -x sxhkd
+	pkill -x sxhkd; sleep 1; sxhkd &
 
 # file browser
 hyper + e
@@ -33,6 +33,15 @@ hyper + alt + q
 # restart picom
 hyper + comma
     pkill picom; sleep 1; picom -b
+
+hyper + period
+    pkill polybar; sleep 1; polybar &
+
+hyper + a
+    rofi -show window
+
+hyper + s
+    rofi -show drun
 
 # close/restart bspwm
 hyper + super + {q,r}
