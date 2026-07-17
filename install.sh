@@ -14,6 +14,7 @@ ln -sfrn ~/.dotfiles/picom ~/.config/picom
 ln -sfrn ~/.dotfiles/redshift ~/.config/redshift
 ln -sfrn ~/.dotfiles/sxhkd ~/.config/sxhkd
 ln -sfrn ~/.dotfiles/xsettingsd ~/.config/xsettingsd
+ln -sfrn ~/.dotfiles/dunst ~/.config/dunst
 ln -sfrn ~/.dotfiles/polybar/scripts ~/.config/polybar/scripts
 ln -sfrn ~/.dotfiles/home/.bash_aliases ~/.bash_aliases
 ln -sfrn ~/.dotfiles/home/.tmux.conf ~/.tmux.conf

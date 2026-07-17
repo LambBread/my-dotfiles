@@ -15,6 +15,7 @@ picom -b
 
 xsettingsd &
 
+dunst &
 nm-applet &
 blueman-applet &
 
