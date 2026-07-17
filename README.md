@@ -57,6 +57,7 @@ so you should modify it for your location.*
     - fastfetch
     - tmux
     - bspwm
+    - dunst
     - picom
     - xsettingsd
     - polybar
