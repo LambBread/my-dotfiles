@@ -7,7 +7,7 @@ mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/polybar
 mkdir -p ~/.config/fastfetch
 mkdir -p ~/.config/fastfetch/presets
-curl https://www.socwall.com/images/wallpapers/34499-1920x1080.jpg -o ~/Pictures/wallpaper/wallpaper.jpg
+curl https://www.socwall.com/images/wallpapers/34499-1920x1200.jpg -o ~/Pictures/wallpaper/wallpaper.jpg
 
 
 ln -sfrn ~/.dotfiles/alacritty ~/.config/alacritty
