@@ -16,6 +16,7 @@ picom -b
 pkill dunst && dunst &
 xsettingsd &
 
+feh --bg-fill ~/Pictures/wallpaper/wallpaper.jpg
 nm-applet &
 blueman-applet &
 

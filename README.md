@@ -58,6 +58,7 @@ so you should modify it for your location.*
     - tmux
     - bspwm
     - dunst
+    - feh
     - picom
     - xsettingsd
     - polybar

@@ -15,9 +15,10 @@ picom -b
 
 xsettingsd &
 
-dunst &
+pkill dunst && dunst &
 nm-applet &
 blueman-applet &
+feh --bg-fill ~/Pictures/wallpaper/wallpaper.jpg
 
 # pgrep -x protonvpn-app > /dev/null || (sleep 3; gtk-launch proton.vpn.app.gtk) &
 # pgrep -x whatpulse > /dev/null || (sleep 3; whatpulse --minimized --closedwindow) &
