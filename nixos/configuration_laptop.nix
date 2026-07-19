@@ -10,34 +10,12 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./settings.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "${personal.SHORT_NAME}-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessaryn
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-  programs.nm-applet.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Vancouver";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_CA.UTF-8";
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."${personal.SHORT_NAME}" = {
@@ -47,14 +25,6 @@ in
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-  services.blueman.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -96,6 +66,11 @@ in
     feh
     pavucontrol
     xfce4-screenshooter
+    tmux
+    gcc
+    gnumake
+    ninja
+    cmake
   ];
 
 services.gnome.games.enable = true;
@@ -150,10 +125,6 @@ services.xserver = {
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
