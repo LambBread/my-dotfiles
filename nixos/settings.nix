@@ -32,8 +32,8 @@ in
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {
         TERMINAL = "ghostty";
-    }
-    xdg.terminal-exec.setting = {
+    };
+    xdg.terminal-exec.settings = {
         default = [ "com.mitchellh.ghostty.desktop" ];
     };
 }
