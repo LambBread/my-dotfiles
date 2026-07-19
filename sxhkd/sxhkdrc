@@ -16,7 +16,7 @@ mod3 + e
 
 # web browser
 mod3 + w
-    flatpak run io.gitlab.librewolf-community
+    sh -c 'command -v librewolf >/dev/null 2>&1 && librewolf || flatpak run io.gitlab.librewolf-community'
 
 # lock screen
 mod3 + l
