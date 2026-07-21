@@ -98,5 +98,6 @@ Open Neovim and type `:Lazy install` to install plugins. If you are on bspwm, th
 ## Credits
 
 The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
-The fastfetch logos are derivative works and are under the LGPLv3-or-later or CC-BY-SA 3.0 Unported. 
+The fastfetch logos are derivative works, with the Debian logos being under the LGPLv3-or-later or CC-BY-SA 3.0 Unported,
+and the Nix logos being under the CC-BY 4.0.
 See [the README](./config/fastfetch/logos/README.md) for details.

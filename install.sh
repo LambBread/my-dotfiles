@@ -23,17 +23,18 @@ ln -sfrn ~/.dotfiles/config/dunst ~/.config/dunst
 ln -sfrn ~/.dotfiles/config/polybar/scripts ~/.config/polybar/scripts
 ln -sfrn ~/.dotfiles/config/fastfetch/logos ~/.config/fastfetch/logos
 ln -sfrn ~/.dotfiles/config/fastfetch/presets/default.jsonc ~/.config/fastfetch/presets/default.jsonc
+ln -sfrn ~/.dotfiles/config/fastfetch/presets/full.jsonc ~/.config/fastfetch/presets/full.jsonc
 ln -sfrn ~/.dotfiles/home/.bash_aliases ~/.bash_aliases
 ln -sfrn ~/.dotfiles/home/.tmux.conf ~/.tmux.conf
 if [ "$1" = laptop ]; then
-    ln -sfrn ~/.dotfiles/config/fastfetch/presets/full.jsonc ~/.config/fastfetch/config.jsonc
+    ln -sfrn ~/.dotfiles/config/fastfetch/presets/nixos.jsonc ~/.config/fastfetch/config.jsonc
     ln -sfrn ~/.dotfiles/config/polybar/config_laptop.ini ~/.config/polybar/config.ini
     ln -sfrn ~/.dotfiles/config/conky/conky_laptop.conf ~/.config/conky/conky.conf
     ln -sfrn ~/.dotfiles/config/bspwm/bspwmrc_laptop ~/.config/bspwm/bspwmrc
     ln -sfrn ~/.dotfiles/home/laptop.bashrc ~/.bashrc
     ln -sfrn ~/.dotfiles/home/laptop.Xmodmap ~/.Xmodmap
 else
-    ln -sfrn ~/.dotfiles/config/fastfetch/presets/full.jsonc ~/.config/fastfetch/presets/full.jsonc
+    ln -sfrn ~/.dotfiles/config/fastfetch/presets/nixos.jsonc ~/.config/fastfetch/presets/nixos.jsonc
     ln -sfrn ~/.dotfiles/config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
     ln -sfrn ~/.dotfiles/config/polybar/config.ini ~/.config/polybar/config.ini
     ln -sfrn ~/.dotfiles/config/conky/conky.conf ~/.config/conky/conky.conf
