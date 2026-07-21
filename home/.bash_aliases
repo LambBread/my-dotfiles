@@ -13,3 +13,4 @@ alias rm="rm -v"
 alias btw='echo "I use $(. /etc/os-release; echo $NAME), Neovim, and bspwm btw"'
 alias nrs='sudo nixos-rebuild switch'
 alias nrsl='sudo nixos-rebuild switch -Inixos-config=/etc/nixos/configuration_laptop.nix'
+alias ncg='sudo nix-collect-garbage -d'
