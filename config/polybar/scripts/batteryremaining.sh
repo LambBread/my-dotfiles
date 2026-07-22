@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 connected_devices=$(bluetoothctl devices Connected | grep "Device " | awk '{print $2}')
 

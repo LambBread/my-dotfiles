@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if protonvpn status | grep -q 'Connected'; then
     echo '%{F#9fd356}%{F-}' 
