@@ -3,7 +3,7 @@
 connected_devices=$(bluetoothctl devices Connected | grep "Device " | awk '{print $2}')
 
 if [ -z "$connected_devices" ]; then
-    echo "%{F#cfb793}N/A%%{F-}"
+    echo "%{F#cfb793}%{T2}󰟎%{T1} N/A%%{F-}"
     exit 0
 fi
 
