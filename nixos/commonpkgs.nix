@@ -30,6 +30,8 @@
         bleachbit
         prismlauncher
         feh
+        vlc
+        gimp
         pavucontrol
         xfce4-screenshooter
         tmux
