@@ -1,4 +1,4 @@
-{ config, pkg, ... }:
+{ config, pkgs, ... }:
 let
     personal = import ./personal.nix;
 in
@@ -27,7 +27,29 @@ in
     enable = true;
     powerOnBoot = true;
   };
-  services.blueman.enable = true;
+    programs.thunar.enable = true;
+    services.gvfs.enable = true;
+    services.tumbler.enable = true;
+    services.pipewire.enable = false;
+    services.envfs.enable = true;
+    services.pulseaudio = {
+      enable = true;
+      support32Bit = true;
+      package = pkgs.pulseaudioFull;
+    };
+    
+    services.displayManager = {
+      defaultSession = "none+bspwm";
+    };
+    services.xserver = {
+      enable = true;
+    
+      displayManager.lightdm.enable = true;
+      windowManager.bspwm = {
+        enable = true;
+      };
+    };
+    services.blueman.enable = true;
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {

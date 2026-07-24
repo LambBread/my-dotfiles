@@ -11,6 +11,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./settings.nix
+      ./commonpkgs.nix
     ];
 
 
@@ -28,83 +29,9 @@ in
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    sxhkd
-    rofi
-    conky
-    xdo
-    (polybar.override { 
-    	pulseSupport = true;
-    })
-    dunst
-    xsettingsd
-    baobab
-    librewolf
-    libreoffice
-    fastfetch
-    wget
-    git
-    picom
-    xmodmap
-    ghostty
-    _7zz
-    xarchiver
-    qogir-theme
-    redshift
-    diodon
-    bleachbit
-    prismlauncher
-    (pkgs.thunar.override {
-    	thunarPlugins = with pkgs; [
-	  thunar-archive-plugin
-	  thunar-volman
-	];
-    })
-    file-roller
-    ffmpegthumbnailer
-    ristretto
-    feh
-    pavucontrol
-    xfce4-screenshooter
-    tmux
-    gcc
-    gnumake
-    ninja
-    cmake
-  ];
+  environment.systemPackages = with pkgs; [];
 
 services.gnome.games.enable = true;
-
-fonts.packages = with pkgs; [
-    nerd-fonts.monaspace
-];
-
-programs.neovim = {
-  enable = true;
-  defaultEditor = true;
-};
-
-programs.thunar.enable = true;
-services.gvfs.enable = true;
-services.tumbler.enable = true;
-services.pipewire.enable = false;
-services.pulseaudio = {
-  enable = true;
-  support32Bit = true;
-  package = pkgs.pulseaudioFull;
-};
-
-services.displayManager = {
-  defaultSession = "none+bspwm";
-};
-services.xserver = {
-  enable = true;
-
-  displayManager.lightdm.enable = true;
-  windowManager.bspwm = {
-    enable = true;
-  };
-};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

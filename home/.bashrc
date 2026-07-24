@@ -48,4 +48,4 @@ fi
 export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:/root/.local/share/flatpak/exports/share:/usr/share/gnome:/usr/local/share:/usr/share"
 export PATH="$PATH:$HOME/.local/bin"
 source /opt/emsdk/emsdk_env.sh &> /dev/null
-source ~/.venv/bin/activate
+# source ~/.venv/bin/activate
