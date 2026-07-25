@@ -23,6 +23,10 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.${personal.SHORT_NAME} = import ./home.nix;
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

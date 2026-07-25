@@ -12,7 +12,8 @@ in
       ./hardware-configuration.nix
       ./settings.nix
       ./commonpkgs.nix
-    ];
+      <home-manager/nixos>
+    ];``
 
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
