@@ -39,5 +39,6 @@ in
     '';
     home.file = builtins.mapAttrs (key: value: {
         source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/${value}";
+        force = true;
     }) links;
 }
