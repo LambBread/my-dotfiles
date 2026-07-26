@@ -47,14 +47,19 @@ in
     programs.git =
     {
         enable = true;
-        userName = "${personal.USERNAME}";
-        userEmail = "${personal.EMAIL}";
-        # signing.key = "${config.home.homeDirectory}/.ssh/gh_key.pub";
-        # signing.signByDefault = true;
-
-        # extraConfig = {
-        #   gpg.format = "ssh"
-        #   tag.gpgsign = true;
-        # };
+        settings =
+        {
+            user = 
+            {
+                name = "${personal.USERNAME}";
+                email = "${personal.EMAIL}";
+            };
+            # signing = 
+            # {
+            #   key = "${config.home.homeDirectory}/.ssh/gh_key.pub";
+            #   signByDefault = true;
+            #   format = "ssh";
+            # };
+        };
     };
 }
