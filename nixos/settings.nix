@@ -25,7 +25,10 @@ in
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.${personal.SHORT_NAME} = import ./home.nix;
+  home-manager.users.${personal.SHORT_NAME} = import ./home_laptop.nix;
+
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   hardware.bluetooth = {
     enable = true;
