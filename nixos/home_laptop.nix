@@ -23,6 +23,7 @@ let
         ".config/sxhkd" = "config/sxhkd";
         ".config/xsettingsd" = "config/xsettingsd";
     };
+    personal = import ./personal.nix;
 in
 {
     home.stateVersion = "26.05";
@@ -37,8 +38,23 @@ in
         run mkdir -p ${config.home.homeDirectory}/.config/fastfetch
         run mkdir -p ${config.home.homeDirectory}/.config/polybar
     '';
+
     home.file = builtins.mapAttrs (key: value: {
         source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/${value}";
         force = true;
     }) links;
+
+    programs.git =
+    {
+        enable = true;
+        userName = "${personal.USERNAME}";
+        userEmail = "${personal.EMAIL}";
+        # signing.key = "${config.home.homeDirectory}/.ssh/gh_key.pub";
+        # signing.signByDefault = true;
+
+        # extraConfig = {
+        #   gpg.format = "ssh"
+        #   tag.gpgsign = true;
+        # };
+    };
 }
