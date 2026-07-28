@@ -2,17 +2,17 @@
 
 # Will delete script after fully migrating to NixOS
 
-mkdir -p ~/Pictures
-mkdir -p ~/Pictures/wallpaper
+# mkdir -p ~/Pictures
+# mkdir -p ~/Pictures/wallpaper
 #mkdir -p ~/.config/conky
 #mkdir -p ~/.config/bspwm
 #mkdir -p ~/.config/polybar
 #mkdir -p ~/.config/fastfetch
 #mkdir -p ~/.config/fastfetch/presets
-curl https://www.socwall.com/images/wallpapers/34499-1920x1200.jpg -o ~/Pictures/wallpaper/wallpaper_old.jpg
+# curl https://www.socwall.com/images/wallpapers/34499-1920x1200.jpg -o ~/Pictures/wallpaper/wallpaper_old.jpg
 
 # https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/
-curl https://i.redd.it/szhyd7ryld0h1.png -o ~/Pictures/wallpaper/wallpaper.png
+# curl https://i.redd.it/szhyd7ryld0h1.png -o ~/Pictures/wallpaper/wallpaper.png
 
 
 # ln -sfrn ~/.dotfiles/config/alacritty ~/.config/alacritty
