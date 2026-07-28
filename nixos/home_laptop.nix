@@ -24,6 +24,24 @@ in
         force = true;
     }) links;
 
+    programs.ssh = {
+        enable = true;
+        matchBlocks = 
+        {
+            "github.com" = 
+            {
+                hostname = "github.com";
+                user = "git";
+                identityFile = "~/.ssh/gh_key2";
+            };
+        };
+        extraConfig = 
+''
+Host github.com
+    IdentitiesOnly yes
+'';
+    };
+
     programs.git =
     {
         enable = true;
