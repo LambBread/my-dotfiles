@@ -3,8 +3,8 @@
 xmodmap ~/.Xmodmap
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-pgrep -x conky > /dev/null || conky -p 5 &
-(sleep 6; xdo lower -N Conky) &
+pgrep -x conky > /dev/null || conky -p 7 &
+(sleep 8; xdo lower -N Conky) &
 
 pgrep -x diodon > /dev/null || diodon &
 pgrep -x redshift-gtk > /dev/null || (sleep 3; redshift-gtk) &
@@ -16,7 +16,7 @@ picom -b
 pkill dunst && dunst &
 xsettingsd &
 
-feh --bg-fill ~/Pictures/wallpaper/wallpaper.jpg
+feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
 nm-applet &
 blueman-applet &
 
