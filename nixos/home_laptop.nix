@@ -26,20 +26,17 @@ in
 
     programs.ssh = {
         enable = true;
-        matchBlocks = 
+        enableDefaultConfig = false;
+        settings = 
         {
             "github.com" = 
             {
-                hostname = "github.com";
-                user = "git";
-                identityFile = "~/.ssh/gh_key2";
+                HostName = "github.com";
+                User = "git";
+                IdentityFile = "~/.ssh/gh_key2";
+                IdentitiesOnly = "yes";
             };
         };
-        extraConfig = 
-''
-Host github.com
-    IdentitiesOnly yes
-'';
     };
 
     programs.git =
