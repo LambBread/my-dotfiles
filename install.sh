@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Will delete script after fully migrating to NixOS
+
 mkdir -p ~/Pictures
 mkdir -p ~/Pictures/wallpaper
 mkdir -p ~/.config/conky

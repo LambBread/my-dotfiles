@@ -44,12 +44,12 @@
         "keyColor": "yellow"
     },
     {
-        "type": "disk",
+        "type": "command",
         "key": " OS Birthday",
         "keyColor": "yellow",
-        "folders": "/",
-        "format": "{create-time:10} ({days} days)"
-        //"text": "date -d @$(stat -c %W /) '+%d %B %Y'"
+        //"folders": "/",
+        //"format": "{create-time:10} ({days} days)"
+        "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
     },
 
     "break",
