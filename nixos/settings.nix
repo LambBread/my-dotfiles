@@ -80,7 +80,7 @@ in
                 name = "Adwaita";
                 package = pkgs.gnome-themes-extra;
             };
-            extraSettings = 
+            extraConfig = 
 ''
 font-name = MonaspiceAr Nerd Font Mono 12
 clock-format = %Y-%m-%d %H:%M:%S
