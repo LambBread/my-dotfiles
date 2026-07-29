@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 let
     personal = import ./personal.nix;
+    backgroundImg = pkgs.fetchurl
+    {
+      url = "https://i.redd.it/szhyd7ryld0h1.png";
+      sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
+    };
 in
 {
   # Bootloader.
@@ -22,6 +27,11 @@ in
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  systemd.tmpfiles.rules = 
+  [
+    "L+ /srv/background.png - - - - ${backgroundImg}"
+  ];
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -51,7 +61,23 @@ in
     services.xserver = {
       enable = true;
     
-      displayManager.lightdm.enable = true;
+      displayManager.lightdm = 
+      {
+        enable = true;
+        greeters.slick =
+        {
+            background = "/srv/background.png";
+            backgroundColor = "#245b97";
+            theme = "Qogir-Dark";
+            iconTheme = "Adwaita-Dark";
+            font = "MonaspiceAr Nerd Font Mono 11";
+            cursorTheme.name = "Adwaita";
+            showClock = true;
+            showPower = true;
+            showKeyboard = true;
+            showHostname = true;
+        };
+      };
       windowManager.bspwm = {
         enable = true;
       };

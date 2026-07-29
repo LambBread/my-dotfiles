@@ -6,6 +6,8 @@
         rofi
         conky
         xdo
+        xdotool
+        libnotify
         (polybar.override { 
         	pulseSupport = true;
         })
@@ -46,7 +48,6 @@
         file-roller
         ffmpegthumbnailer
         ristretto
-        libnotify
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace

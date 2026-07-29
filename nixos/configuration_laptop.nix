@@ -5,11 +5,6 @@
 { config, pkgs, ... }:
 let
   personal = import ./personal.nix;
-  backgroundImg = pkgs.fetchurl
-  {
-    url = "https://i.redd.it/szhyd7ryld0h1.png";
-    sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
-  };
 in
 {
   imports =
@@ -23,10 +18,6 @@ in
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  systemd.tmpfiles.rules = 
-  [
-    "L+ /srv/background.png - - - - ${backgroundImg}"
-  ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."${personal.SHORT_NAME}" = {
