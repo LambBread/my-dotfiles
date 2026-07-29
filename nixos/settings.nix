@@ -66,16 +66,11 @@ in
         enable = true;
         greeters.slick =
         {
-            background = "/srv/background.png";
-            backgroundColor = "#245b97";
-            theme = "Qogir-Dark";
-            iconTheme = "Adwaita-Dark";
-            font = "MonaspiceAr Nerd Font Mono 11";
-            cursorTheme.name = "Adwaita";
-            showClock = true;
-            showPower = true;
-            showKeyboard = true;
-            showHostname = true;
+            draw-user-backgrounds = true;
+            theme.name = "Qogir-Dark";
+            icon-theme.name = "Adwaita-Dark";
+            font.name = "MonaspiceAr Nerd Font Mono 11";
+            cursor-theme.name = "Adwaita";
         };
       };
       windowManager.bspwm = {
