@@ -67,13 +67,14 @@ in
         greeters.gtk.enable = false;
         greeters.slick =
         {
+            enable = true;
             theme.name = "Qogir-Dark";
             iconTheme.name = "Adwaita-Dark";
             font.name = "MonaspiceAr Nerd Font Mono 11";
             cursorTheme.name = "Adwaita";
             extraConfig = 
 ''
-background=/srv/background.png
+background=${backgroundImg}
 background-color=#245b97
 '';
         };
