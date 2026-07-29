@@ -80,6 +80,11 @@ in
                 name = "Adwaita";
                 package = pkgs.gnome-themes-extra;
             };
+            extraSettings = 
+''
+font-name = MonaspiceAr Nerd Font Mono 12
+clock-format = %Y-%m-%d %H:%M:%S
+'';
         };
       };
       windowManager.bspwm = {
