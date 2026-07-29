@@ -64,6 +64,7 @@ in
       displayManager.lightdm = 
       {
         enable = true;
+        background = "${backgroundImg}";
         greeters.gtk = 
         {
             enable = true;
@@ -79,7 +80,6 @@ in
                 name = "Adwaita";
                 package = pkgs.gnome-themes-extra;
             };
-            background = "${backgroundImg}";
         };
       };
       windowManager.bspwm = {
