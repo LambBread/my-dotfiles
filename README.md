@@ -8,16 +8,22 @@ These are some of my dotfiles.
 
 `Hyper` is mapped to Caps Lock in this config.
 
-- `Hyper + T` - Ghostty
-- `Hyper + E` - Thunar
-- `Hyper + W` - LibreWolf
-- `Hyper + L` - lock screen
 - `Hyper + Q` - close program
-- `Hyper + S` - open rofi (drun)
-- `Hyper + A` - open rofi (window)
+- `Hyper + W` - LibreWolf
+- `Hyper + E` - Thunar
 - `Hyper + R` - reload sxhkd
+- `Hyper + T` - Ghostty
+- `Hyper + A` - open rofi (window)
+- `Hyper + S` - open rofi (drun)
+- `Hyper + L` - lock screen
+- `Hyper + Z` - left click
+- `Hyper + X` - right click
+- `Hyper + C` - middle click
 - `Hyper + ,` - reload picom
 - `Hyper + .` - reload polybar
+- `Hyper + arrow keys` - move mouse (coarse)
+- `Hyper + Ctrl + arrow keys` - move mouse (fine)
+- `Hyper + Shift + arrow keys` - scroll mouse
 - `Hyper + Alt + Q` - kill program
 - `Hyper + Super + Q` - exit bspwm
 - `Hyper + Super + R` - reload bspwm
@@ -34,6 +40,7 @@ These are some of my dotfiles.
 - `Super + Ctrl + hjkl` - preselect node in that direction
 - `Super + Alt + hjkl` - expand window in that direction
 - `Super + Alt + Shift + hjkl` - shrink window in that direction
+- `Super + arrow keys` - move floating window
 
 ### Neovim
 
@@ -45,7 +52,7 @@ These are some of my dotfiles.
 - `,l` - next buffer
 
 
-## Installation
+## Installation (Non-NixOS)
 
 *Note: The desktop .bashrc assumes you have Emscripten installed to `/opt/emsdk/` and have a Python venv in `~/.venv/`,
 so you may want to use the laptop .bashrc if you are not. The redshift.conf also assumes your location is Prince George, BC, 

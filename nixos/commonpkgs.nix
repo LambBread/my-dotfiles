@@ -46,6 +46,7 @@
         file-roller
         ffmpegthumbnailer
         ristretto
+        libnotify
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace

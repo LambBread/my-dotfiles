@@ -2,33 +2,39 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-mod3 + t
-	ghostty
-
-# make sxhkd reload its configuration files:
-mod3 + r
-	pkill -x sxhkd; sleep 1; sxhkd &
-
-# file browser
-mod3 + e
-    thunar
+# close
+mod3 + q
+    bspc node -c
 
 # web browser
 mod3 + w
     sh -c 'command -v librewolf >/dev/null 2>&1 && librewolf || flatpak run io.gitlab.librewolf-community'
 
+# file browser
+mod3 + e
+    thunar
+
+# make sxhkd reload its configuration files:
+mod3 + r
+	pkill -x sxhkd; sleep 1; sxhkd &
+
+# terminal emulator
+mod3 + t
+    ghostty
+    
+
+mod3 + a
+    rofi -show window
+
+mod3 + s
+    rofi -show drun
+
 # lock screen
 mod3 + l
     dm-tool lock
 
-# close
-mod3 + q
-    bspc node -c
-
-# kill all processes
-mod3 + alt + q
-    bspc node -k
+mod3 + {z,x,c}
+    xdotool click {1,3,2} 
 
 # restart picom
 mod3 + comma
@@ -37,15 +43,23 @@ mod3 + comma
 mod3 + period
     pkill polybar; sleep 1; polybar &
 
-mod3 + a
-    rofi -show window
+mod3 + {Left,Down,Up,Right}
+    xdotool mousemove_relative {-- -40 0, 0 40, 0 -40, 40 0}
 
-mod3 + s
-    rofi -show drun
+mod3 + ctrl + {Left,Down,Up,Right}
+    xdotool mousemove_relative {-- -5 0, 0 5, 0 -5, 5 0}
+
+# kill all processes
+mod3 + alt + q
+    bspc node -k
+
+mod3 + shift + {Up,Down,Left,Right}
+    xdotool click {4,5,6,7}
 
 # close/restart bspwm
 mod3 + super + {q,r}
     bspc {quit,wm -r}
+
 
 # screenshot
 Print
