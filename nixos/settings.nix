@@ -64,13 +64,18 @@ in
       displayManager.lightdm = 
       {
         enable = true;
+        greeters.gtk.enable = false;
         greeters.slick =
         {
-            draw-user-backgrounds = true;
             theme.name = "Qogir-Dark";
-            icon-theme.name = "Adwaita-Dark";
+            iconTheme.name = "Adwaita-Dark";
             font.name = "MonaspiceAr Nerd Font Mono 11";
-            cursor-theme.name = "Adwaita";
+            cursorTheme.name = "Adwaita";
+            extraConfig = 
+''
+background=/srv/background.png
+background-color=#245b97
+'';
         };
       };
       windowManager.bspwm = {
