@@ -64,19 +64,22 @@ in
       displayManager.lightdm = 
       {
         enable = true;
-        greeters.gtk.enable = false;
-        greeters.slick =
+        greeters.gtk = 
         {
             enable = true;
-            theme.name = "Qogir-Dark";
-            iconTheme.name = "Adwaita-Dark";
-            font.name = "MonaspiceAr Nerd Font Mono 11";
-            cursorTheme.name = "Adwaita";
-            extraConfig = 
-''
-background=${backgroundImg}
-background-color=#245b97
-'';
+            theme = {
+                name = "Qogir-Dark";
+                package = pkgs.qogir-theme;
+            };
+            iconTheme = {
+                name = "Adwaita-Dark";
+                package = pkgs.gnome-themes-extra;
+            };
+            cursorTheme = {
+                name = "Adwaita";
+                package = pkgs.gnome-themes-extra;
+            };
+            background = "${backgroundImg}";
         };
       };
       windowManager.bspwm = {
