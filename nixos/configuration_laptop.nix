@@ -10,8 +10,8 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./settings.nix
-      ./commonpkgs.nix
+      ./modules/settings.nix
+      ./modules/commonpkgs.nix
       <home-manager/nixos>
     ];
 

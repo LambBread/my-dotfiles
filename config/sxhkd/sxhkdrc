@@ -49,12 +49,19 @@ mod3 + {Left,Down,Up,Right}
 mod3 + ctrl + {Left,Down,Up,Right}
     xdotool mousemove_relative {-- -5 0, 0 5, 0 -5, 5 0}
 
+mod3 + shift + {Up,Down,Left,Right}
+    xdotool click {4,5,6,7}
+
+mod3 + shift + {z,x,c}
+    xdotool mousedown {1,3,2}
+
+mod3 + ctrl + {z,x,c}
+    xdotool mouseup {1,3,2}
+
 # kill all processes
 mod3 + alt + q
     bspc node -k
 
-mod3 + shift + {Up,Down,Left,Right}
-    xdotool click {4,5,6,7}
 
 # close/restart bspwm
 mod3 + super + {q,r}

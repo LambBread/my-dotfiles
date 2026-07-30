@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 let
-    personal = import ./personal.nix;
+    personal = import ../personal.nix;
     backgroundImg = pkgs.fetchurl
     {
+    # https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/
       url = "https://i.redd.it/szhyd7ryld0h1.png";
       sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
     };

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
     homeLinks = import ./home_links.nix;
-    personal = import ./personal.nix;
+    personal = import ../personal.nix;
     dotfilesDir = "${config.home.homeDirectory}/.dotfiles";
     links = homeLinks.commonLinks // homeLinks.laptopLinks;
 in
