@@ -93,41 +93,6 @@ require("lazy").setup({
               "nvim-tree/nvim-web-devicons"
           },
           opts = {
-            highlights = 
-            {
-                background = 
-                {
-                    bg = colors.color_white,
-                    fg = colors.dark_col1
-                },
-                buffer_selected = 
-                {
-                    bg = colors.color_black,
-                    fg = colors.color_1
-                },
-                separator = 
-                {
-                    fg = colors.color_white
-                },
-                close_button_selected =
-                {
-                    fg = colors.color_white,
-                    bg = colors.color_black
-                },
-                modified_selected = 
-                {
-                    fg = colors.color_red,
-                    bg = colors.color_white
-                },
-                modified = 
-                {
-                    fg = colors.color_red,
-                    bg = colors.color_white
-                },
-                fill = {
-                    fg = colors.dark_col1
-                },
-              },
               options = {
                   color_icons = true
               }
