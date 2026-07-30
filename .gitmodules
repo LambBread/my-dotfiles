@@ -1,3 +1,0 @@
-[submodule "nvim"]
-	path = config/nvim
-	url = https://github.com/LambBread/my-nvim-config

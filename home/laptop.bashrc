@@ -1,8 +1,5 @@
 
-eval "$(/nix/store/yvzyrsv7fl33zmi2a1nx730hsz7qyyia-coreutils-9.11/bin/dircolors -b )"
-
 if shopt -q progcomp &>/dev/null; then
-  . "/nix/store/4j5ac4npgfj9mdcvns5h5x46r6i6zy4g-bash-completion-2.17.0/etc/profile.d/bash_completion.sh"
   nullglobStatus=$(shopt -p nullglob)
   shopt -s nullglob
   for p in $NIX_PROFILES; do
