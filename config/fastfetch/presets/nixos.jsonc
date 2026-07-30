@@ -1,11 +1,20 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "display": {
-      "separator": " "
+      "separator": " ",
+      "color":
+      {
+            "keys": "magenta",
+            "title": "magenta"
+      }
   },
   "logo": {
         "type": "auto",
-        "source": "~/.config/fastfetch/logos/nix_trans.png"
+        "source": "~/.config/fastfetch/logos/nix_trans.png",
+        "color": 
+        {
+            "1": "magenta"
+        }
   },
   "modules": [
     "title",
@@ -45,12 +54,12 @@
     {
         "type": "uptime",
         "key": "󰥔 Uptime",
-        "keyColor": "yellow"
+        "keyColor": "blue"
     },
     {
         "type": "command",
         "key": " OS Birthday",
-        "keyColor": "yellow",
+        "keyColor": "blue",
         //"folders": "/",
         //"format": "{create-time:10} ({days} days)",
         "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
@@ -99,37 +108,37 @@
     {
         "type": "de",
         "key": " DE",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "wm",
         "key": "󱂬 WM",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "wmtheme",
         "key": " WM Theme",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "theme",
         "key": " Theme",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "icons",
         "key": " Icons",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "cursor",
         "key": " Cursor",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     {
         "type": "terminalfont",
         "key": " Terminal Font",
-        "keyColor": "blue"
+        "keyColor": "red"
     },
     
     "break",
