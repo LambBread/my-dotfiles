@@ -6,6 +6,11 @@ let
     links = homeLinks.commonLinks // homeLinks.laptopLinks;
 in
 {
+    imports = 
+    [
+        ./home_shared.nix;
+    ];
+
     home.stateVersion = "26.05";
     home.packages = with pkgs;
     [
@@ -28,20 +33,6 @@ in
         force = true;
     }) links;
 
-    programs.ssh = {
-        enable = true;
-        enableDefaultConfig = false;
-        settings = 
-        {
-            "github.com" = 
-            {
-                HostName = "github.com";
-                User = "git";
-                IdentityFile = "~/.ssh/gh_key2";
-                IdentitiesOnly = "yes";
-            };
-        };
-    };
 
     programs.git =
     {
