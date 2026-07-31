@@ -76,7 +76,7 @@ so you should modify it for your location.*
     - thunar
     - [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
     - [Qogir theme](https://github.com/vinceliuice/Qogir-theme)
-    - [Rowaita icon theme](https://github.com/4e6anenk0/Rowaita-icon-theme) 
+    - [Rowaita icon theme (my fork)](https://github.com/LambBread/Rowaita-icon-theme) 
     - alacritty (optional)
     - [cortile](https://github.com/leukipp/cortile) (optional, Xfce)
     - Proton VPN (optional; if not using it, use laptop polybar and bspwm config)
