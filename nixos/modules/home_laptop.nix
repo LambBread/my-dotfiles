@@ -8,7 +8,7 @@ in
 {
     imports = 
     [
-        ./home_shared.nix;
+        ./home_shared.nix
     ];
 
     home.stateVersion = "26.05";
