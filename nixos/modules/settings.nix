@@ -38,6 +38,13 @@ in
   home-manager.useUserPackages = true;
   home-manager.users.${personal.SHORT_NAME} = import ./home_laptop.nix;
 
+  xdg.portal = 
+  {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "*";
+  };
+
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
@@ -93,6 +100,7 @@ clock-format = %Y-%m-%d %H:%M:%S
       };
     };
     services.blueman.enable = true;
+    services.dbus.enable = true;
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {
