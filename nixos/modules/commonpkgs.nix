@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+    rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
+in
 {
     environment.systemPackages = with pkgs;
     [

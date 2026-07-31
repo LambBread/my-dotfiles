@@ -7,7 +7,6 @@
 *.swp
 temp-*
 
-gtk-3.0/bookmarks
-gtk-3.0/settings.ini
+config/gtk-3.0/bookmarks
 nixos/personal.nix
 nixos/hardware-configuration.nix

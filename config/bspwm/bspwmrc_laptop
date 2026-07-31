@@ -13,7 +13,7 @@ pgrep -x redshift-gtk > /dev/null || (sleep 3; redshift-gtk) &
 pgrep -x polybar > /dev/null || polybar &
 picom -b
 
-xsettingsd &
+# xsettingsd &
 
 pkill dunst && dunst &
 nm-applet &
