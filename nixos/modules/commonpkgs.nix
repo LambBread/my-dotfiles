@@ -30,6 +30,7 @@ in
         zip
         unzip
         qogir-theme
+        rowaita-icon-theme
         redshift
         diodon
         bleachbit
