@@ -54,10 +54,6 @@ These are some of my dotfiles.
 
 ## Installation (Non-NixOS)
 
-*Note: The desktop .bashrc assumes you have Emscripten installed to `/opt/emsdk/` and have a Python venv in `~/.venv/`,
-so you may want to use the laptop .bashrc if you are not. The redshift.conf also assumes your location is Prince George, BC, 
-so you should modify it for your location.*
-
 1. Install:
     - git
     - neovim >= 0.9.4

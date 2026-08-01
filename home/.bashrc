@@ -1,51 +1,17 @@
-case $- in
-    *i*) ;;
-      *) return;;
-esac
 
-HISTCONTROL=ignoreboth
-shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-shopt -s checkwinsize
-
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    color_prompt=yes
-else
-    color_prompt=
-fi
-if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[00;95m\]\[\033[00;01;105m\] \u\[\033[00;95;44m\]\[\033[00;01;44m\] \w \[\033[00;34;47m\]\[\033[37;102m\]\[\033[92;101m\]\[\033[91;41m\]\[\033[00;01;41m\]  \A\[\033[00;31m\] \[\033[00m\] '
-else
-    PS1='\u@\h:\w\$ '
-fi
-unset color_prompt
-
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if shopt -q progcomp &>/dev/null; then
+  nullglobStatus=$(shopt -p nullglob)
+  shopt -s nullglob
+  for p in $NIX_PROFILES; do
+    for m in "$p/etc/bash_completion.d/"*; do
+      . "$m"
+    done
+  done
+  eval "$nullglobStatus"
+  unset nullglobStatus p m
 fi
 
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+. ~/.bash_aliases
 
-export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:/root/.local/share/flatpak/exports/share:/usr/share/gnome:/usr/local/share:/usr/share"
-export PATH="$PATH:$HOME/.local/bin"
-source /opt/emsdk/emsdk_env.sh &> /dev/null
-# source ~/.venv/bin/activate
+
+PS1='\[\033[00;95m\]\[\033[00;01;105m\] \u\[\033[00;95;44m\]\[\033[00;01;44m\] \w \[\033[00;34;47m\]\[\033[37;102m\]\[\033[92;101m\]\[\033[91;41m\]\[\033[00;01;41m\]  \A\[\033[00;31m\] \[\033[00m\] '

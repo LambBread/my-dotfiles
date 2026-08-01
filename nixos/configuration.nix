@@ -7,6 +7,7 @@ let
   personal = import ./personal.nix;
 in
 {
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -18,6 +19,7 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
 
@@ -25,20 +27,43 @@ in
   users.users."${personal.SHORT_NAME}" = {
     isNormalUser = true;
     description = "${personal.LONG_NAME}";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "input"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "input" "libvirtd"];
     packages = with pkgs; [];
   };
 
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    inkscape
+    freecad
+    simplescreenrecorder
+    proton-vpn-cli
+    proton-vpn
+    dnsmasq
+  ];
 
-services.gnome.games.enable = true;
+  networking.firewall.checkReversePath = false;
+  services.flatpak.enable = true;
+
+  programs.steam.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = 
+  {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.${personal.SHORT_NAME} = import ./modules/home_laptop.nix;
+  home-manager.users.${personal.SHORT_NAME} = import ./modules/home.nix;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
