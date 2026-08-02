@@ -32,12 +32,21 @@ in
             {
                 name = "${personal.USERNAME}";
                 email = "${personal.EMAIL}";
+                signingkey = "${config.home.homeDirectory}/.ssh/gh_key.pub";
             };
             signing = 
             {
               key = "${config.home.homeDirectory}/.ssh/gh_key.pub";
               signByDefault = true;
               format = "ssh";
+            };
+            commit = 
+            {
+                gpgSign = true;
+            };
+            gpg = 
+            {
+                format = "ssh";
             };
         };
     };

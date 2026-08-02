@@ -46,7 +46,8 @@ services.gnome.games.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;
-  # };
+  #   pinentryFlavor = "tty";
+  #};
 
   # List services that you want to enable:
 
