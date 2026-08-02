@@ -31,6 +31,13 @@ in
     packages = with pkgs; [];
   };
 
+  fileSystems."/mnt/stuff" =
+  {
+    device = "/dev/disk/by-uuid/49de2a1b-812d-4a23-add5-fd01fd09d78f";
+    fsType = "ext4";
+    options = ["defaults" "nofail"];
+  };
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -64,7 +71,7 @@ in
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.${personal.SHORT_NAME} = import ./modules/home.nix;
+  home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

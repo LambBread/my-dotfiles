@@ -38,7 +38,7 @@ services.gnome.games.enable = true;
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.${personal.SHORT_NAME} = import ./modules/home_laptop.nix;
+  home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

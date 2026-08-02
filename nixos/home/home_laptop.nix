@@ -16,17 +16,6 @@ in
     [
 
     ];
-    home.activation.makeDirectories = ''
-        run mkdir -p ${config.home.homeDirectory}/Pictures
-        run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
-        run mkdir -p ${config.home.homeDirectory}/.config
-        run mkdir -p ${config.home.homeDirectory}/.config/bspwm
-        run mkdir -p ${config.home.homeDirectory}/.config/conky
-        run mkdir -p ${config.home.homeDirectory}/.config/fastfetch
-        run mkdir -p ${config.home.homeDirectory}/.config/polybar
-        run ln -sf /srv/background.png \
-        ${config.home.homeDirectory}/Pictures/wallpaper/wallpaper.png
-    '';
 
     home.file = builtins.mapAttrs (key: value: {
         source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/${value}";
