@@ -15,6 +15,7 @@ These are some of my dotfiles.
 - `Hyper + T` - Ghostty
 - `Hyper + A` - open rofi (window)
 - `Hyper + S` - open rofi (drun)
+- `Hyper + D` - open clipboard history
 - `Hyper + L` - lock screen
 - `Hyper + Z,X,C` - left, right, middle click
 - `Hyper + ,` - reload picom

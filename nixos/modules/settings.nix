@@ -49,8 +49,14 @@ in
     powerOnBoot = true;
   };
     programs.thunar.enable = true;
+    programs.dconf.enable = true;
+    # services.zeitgeist.enable = true;
     services.gvfs.enable = true;
+    services.greenclip.enable = true;
     services.tumbler.enable = true;
+    services.udisks2.enable = true;
+    security.polkit.enable = true;
+    services.envfs.enable = true;
     services.pipewire =
     {
         enable = true;
@@ -58,7 +64,6 @@ in
         alsa.support32Bit = true;
         pulse.enable = true;
     };
-    services.envfs.enable = true;
     services.pulseaudio = {
       enable = false;
       support32Bit = false;
@@ -103,6 +108,7 @@ clock-format = %Y-%m-%d %H:%M:%S
     };
     services.blueman.enable = true;
     services.dbus.enable = true;
+    # services.dbus.packages = [ pkgs.diodon pkgs.zeitgeist ];
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {

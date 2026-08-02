@@ -32,9 +32,9 @@ in
         qogir-theme
         rowaita-icon-theme
         redshift
-        diodon
-        clipmenu
-        dmenu
+        # diodon
+        # clipmenu
+        # dmenu
         bleachbit
         prismlauncher
         feh
@@ -54,6 +54,7 @@ in
         file-roller
         ffmpegthumbnailer
         ristretto
+        lxqt.lxqt-policykit
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace

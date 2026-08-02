@@ -2,11 +2,13 @@
 
 xmodmap ~/.Xmodmap
 pgrep -x sxhkd > /dev/null || sxhkd &
+lxqt-policykit-agent &
+pgrep -x greenclip || greenclip daemon &
 
 pgrep -x conky > /dev/null || conky -p 7 &
 (sleep 8; xdo lower -N Conky) &
 
-pgrep -x diodon > /dev/null || diodon &
+# pgrep -x diodon > /dev/null || diodon &
 pgrep -x redshift-gtk > /dev/null || (sleep 3; redshift-gtk) &
 
 # xfce4-panel --disable-wm-check &

@@ -29,6 +29,9 @@ mod3 + a
 mod3 + s
     rofi -show drun
 
+mod3 + d
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 # lock screen
 mod3 + l
     dm-tool lock
