@@ -33,6 +33,8 @@ in
         rowaita-icon-theme
         redshift
         diodon
+        clipmenu
+        dmenu
         bleachbit
         prismlauncher
         feh

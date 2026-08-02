@@ -42,6 +42,7 @@ in
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
+  services.gnome.gnome-keyring.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -50,11 +51,17 @@ in
     programs.thunar.enable = true;
     services.gvfs.enable = true;
     services.tumbler.enable = true;
-    services.pipewire.enable = false;
+    services.pipewire =
+    {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+    };
     services.envfs.enable = true;
     services.pulseaudio = {
-      enable = true;
-      support32Bit = true;
+      enable = false;
+      support32Bit = false;
       package = pkgs.pulseaudioFull;
     };
     
