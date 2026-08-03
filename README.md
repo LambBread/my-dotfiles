@@ -133,6 +133,7 @@ Example:
 ## Credits
 
 The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
+The rofi config was created by [Prayag2](https://github.com/Prayag2/dotfiles).
 The fastfetch logos are derivative works, with the Debian logos being under the LGPLv3-or-later or CC-BY-SA 3.0 Unported,
 and the Nix logos being under the CC-BY 4.0.
 See [the README](./config/fastfetch/logos/README.md) for details.

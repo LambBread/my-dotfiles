@@ -1,5 +1,6 @@
 #! /bin/sh
 
+xrandr --output DP-5 --primary --output HDMI-0 --right-of DP-5
 xmodmap ~/.Xmodmap
 pgrep -x sxhkd > /dev/null || sxhkd &
 lxqt-policykit-agent &

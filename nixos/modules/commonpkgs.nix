@@ -54,6 +54,7 @@ in
         file-roller
         ffmpegthumbnailer
         ristretto
+        atril
         lxqt.lxqt-policykit
     ];
     fonts.packages = with pkgs; [

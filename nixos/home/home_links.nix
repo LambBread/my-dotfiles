@@ -11,6 +11,7 @@
         ".config/picom" = "config/picom";
         ".config/redshift" = "config/redshift";
         ".config/sxhkd" = "config/sxhkd";
+        ".config/rofi" = "config/rofi";
         ".config/xsettingsd" = "config/xsettingsd";
         ".config/fastfetch/config.jsonc" = "config/fastfetch/config.jsonc";
         ".config/fastfetch/presets" = "config/fastfetch/presets";

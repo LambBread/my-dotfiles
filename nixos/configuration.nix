@@ -57,6 +57,7 @@ in
 
   services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.dpi = 96;
+  services.thermald.enable = true;
   hardware.nvidia = 
   {
     modesetting.enable = true;
