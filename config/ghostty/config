@@ -8,7 +8,7 @@ bold-color = bright
 working-directory = home
 window-inherit-working-directory = false
 
-background-opacity = 0.6
+background-opacity = 0.55
 window-decoration = server
 window-padding-x = 10
 window-padding-y = 10

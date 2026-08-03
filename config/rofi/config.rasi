@@ -31,7 +31,7 @@ configuration {
     vertical-align: 0.5;
     
     // Colors
-    bg: #245b97CC;
+    bg: #245b9760;
     fg: #ECE3D5;
     selection: #bc9ed0c0;
     transparent: #00000000;
