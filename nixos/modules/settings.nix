@@ -26,6 +26,8 @@ in
     variant = "";
   };
 
+    nix.settings.auto-optimise-store = true;
+
   
   systemd.tmpfiles.rules = 
   [

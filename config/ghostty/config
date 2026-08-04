@@ -16,20 +16,51 @@ background = #412853
 foreground = #ece3d5
 
 palette = 0=#0c1315
-palette = 1=#f08533
-palette = 2=#659226
-palette = 3=#c9b62c
-palette = 4=#245b97
-palette = 5=#9768B6
-palette = 6=#00ccff
-palette = 7=#cfb793
-palette = 8=#61676a
-palette = 9=#d07271
+# black
+
+palette = 1=#f08533 
+# orange
+
+palette = 2=#659226 
+# shade of green
+
+palette = 3=#AEAC1E 
+# shade of yellow
+
+palette = 4=#245b97 
+# blue
+
+palette = 5=#9768B6 
+# shade of lavender
+
+palette = 6=#0dbcef 
+# light blue
+
+palette = 7=#cfb793 
+# beige
+
+palette = 8=#3C5E68 
+# shade of black
+
+palette = 9=#d07271 
+# light red
+
 # palette = 9=#E3977F
 # palette = 9=#DD8A7A
-palette = 10=#9FD356
-palette = 11=#edd584
-palette = 12=#6BA1DB
-palette = 13=#bc9ed0
-palette = 14=#88ffff
-palette = 15=#ECE3D5
+palette = 10=#9FD356 
+# yellow-green
+
+palette = 11=#E0DE4B 
+# yellow
+
+palette = 12=#6BA1DB 
+# shade of blue
+
+palette = 13=#bc9ed0 
+# lavender
+
+palette = 14=#8BDFF9 
+# shade of light blue
+
+palette = 15=#ECE3D5 
+# shade of tan

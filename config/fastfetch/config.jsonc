@@ -136,6 +136,11 @@
         "keyColor": "red"
     },
     {
+        "type": "font",
+        "key": " Font",
+        "keyColor": "red"
+    },
+    {
         "type": "terminalfont",
         "key": " Terminal Font",
         "keyColor": "red"

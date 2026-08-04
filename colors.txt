@@ -1,9 +1,17 @@
 #245b97 - blue (*)
+    - #6ba1db (lighter blue)
 #BC9ED0 - lavender (**)
+    - #9768b6 (darker lavender)
+    - #412853 (very dark lavender)
 #f08533 - orange (***)
 #cfb793 - tan (****)
+    - #ece3d5 (lighter tan, white)
 #9FD356 - yellow-green (*****)
-#D07271 - pale red-orange
-#9C8BA7 - darker lavender
-#2c3d6f - indigo
+    - #659226 (darker green)
+#D07271 - red
 #0c1315 - black
+    - #3c5e68 (gray)
+#0dbcef - cyan
+    - #8bdff9 (lighter cyan)
+#e0de4b - yellow
+    - #aeac1e (darker yellow)
