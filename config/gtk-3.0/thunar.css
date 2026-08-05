@@ -9,7 +9,6 @@
     background: @tasklist-colour-shaded-blue;
 }
 
-
 .thunar .view
 {
     background: @tasklist-colour;
@@ -39,6 +38,11 @@
 .thunar toolbar button:active
 {
     background: @button-select-colour-shaded;
+}
+
+.thunar toolbar button:checked
+{
+    background: @tasklist-colour-col3;
 }
 
 

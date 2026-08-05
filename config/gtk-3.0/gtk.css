@@ -3,6 +3,24 @@
 @import 'panel.css';
 @import 'thunar.css';
 
+menu, .menu
+{
+    background-color: @custom-col-1;
+    color: @text-colour;
+    padding: 4px;
+}
+
+menuitem, .menuitem
+{
+    padding: 8px 4px;
+    transition: all 200ms ease;
+}
+
+menuitem:hover, .menuitem:hover
+{
+    background-color: @tasklist-colour-col3;
+}
+
 
 calendar, GtkCalendar
 {

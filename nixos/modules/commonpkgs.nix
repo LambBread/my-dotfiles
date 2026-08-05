@@ -3,16 +3,15 @@ let
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
 in
 {
-    environment.systemPackages = with pkgs;
-    [
+    environment.systemPackages = with pkgs; [
         sxhkd
         rofi
         conky
         xdo
         xdotool
         libnotify
-        (polybar.override { 
-        	pulseSupport = true;
+        (polybar.override {
+            pulseSupport = true;
         })
         dunst
         xsettingsd
@@ -43,26 +42,25 @@ in
         pavucontrol
         xfce4-screenshooter
         tmux
-        (thunar.override
-        {
-        	thunarPlugins = with pkgs;
-            [
-	            thunar-archive-plugin
-	            thunar-volman
-	        ];
+        (thunar.override {
+            thunarPlugins = with pkgs; [
+                thunar-archive-plugin
+                thunar-volman
+            ];
         })
-        file-roller
+        # file-roller
         ffmpegthumbnailer
         ristretto
         atril
         lxqt.lxqt-policykit
+        nixfmt
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
     ];
-    
+
     programs.neovim = {
-      enable = true;
-      defaultEditor = true;
+        enable = true;
+        defaultEditor = true;
     };
 }
