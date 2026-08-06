@@ -13,9 +13,9 @@
     '';
 
     home.activation.configureThunar = ''
-        ${pkgs.xfce.xfconf}/bin/xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
-        ${pkgs.xfce.xfconf}/bin/xfconf-query --channel thunar --property /last-icon-view-zoom-level --create --type string --set THUNAR_ZOOM_LEVEL_75_PERCENT
-        ${pkgs.xfce.xfconf}/bin/xfconf-query --channel thunar --property /last-menubar-visible --create --type bool --set false
+        ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
+        ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-icon-view-zoom-level --create --type string --set THUNAR_ZOOM_LEVEL_75_PERCENT
+        ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-menubar-visible --create --type bool --set false
     '';
 
     programs.ssh = {

@@ -37,6 +37,17 @@ in
         config.common.default = "*";
     };
 
+    nix.gc = {
+        automatic = true;
+        dates = "02:00";
+        options = "--delete-older-than 14d";
+    };
+
+    nix.optimise = {
+        automatic = true;
+        dates = "03:00";
+    };
+
     programs.appimage.enable = true;
     programs.appimage.binfmt = true;
     services.gnome.gnome-keyring.enable = true;
