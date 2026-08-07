@@ -107,6 +107,16 @@ require("lazy").setup({
           "nvim-lualine/lualine.nvim",
           dependencies = { "nvim-tree/nvim-web-devicons" },
           config = true
+      },
+      {
+          "uga-rosa/ccc.nvim",
+          opts = {
+              highlighter = {
+                  auto_enable = true,
+                  lsp = true
+              }
+          } 
+
       }
       --{"ojroques/nvim-hardline", config = true},
   },

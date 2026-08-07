@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 let
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
+    qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
 in
 {
     environment.systemPackages = with pkgs; [
@@ -24,11 +25,11 @@ in
         picom
         xmodmap
         ghostty
-        _7zz
+        p7zip
         xarchiver
         zip
         unzip
-        qogir-theme
+        qogir-theme-fork
         rowaita-icon-theme
         redshift
         # diodon

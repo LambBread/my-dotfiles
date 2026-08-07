@@ -6,6 +6,8 @@ let
         url = "https://i.redd.it/szhyd7ryld0h1.png";
         sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
     };
+    rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
+    qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
 in
 {
     # Bootloader.
@@ -89,12 +91,12 @@ in
             greeters.gtk = {
                 enable = true;
                 theme = {
-                    name = "Qogir-Dark";
-                    package = pkgs.qogir-theme;
+                    name = "Qogir-Custom-Dark";
+                    package = qogir-theme-fork;
                 };
                 iconTheme = {
-                    name = "Adwaita-Dark";
-                    package = pkgs.gnome-themes-extra;
+                    name = "Rowaita-Lavender-Dark";
+                    package = rowaita-icon-theme;
                 };
                 cursorTheme = {
                     name = "Adwaita";
