@@ -114,7 +114,7 @@ Example:
 {
     SHORT_NAME = "name";
     LONG_NAME = "Full Name";
-    DESK_TYPE = "desktop";
+    DESK_NAME = "desktop";
     USERNAME = "MyGithubUsername";
     EMAIL = "my.email@example.com";
 }
