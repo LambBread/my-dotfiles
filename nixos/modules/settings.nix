@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    lib,
+    ...
+}:
 let
     personal = import ../personal.nix;
     backgroundImg = pkgs.fetchurl {
@@ -13,6 +18,7 @@ in
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.kernel.sysctl."vm.swappiness" = 30;
     networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
     # Enable networking
     networking.networkmanager.enable = true;
@@ -99,8 +105,8 @@ in
                     package = rowaita-icon-theme;
                 };
                 cursorTheme = {
-                    name = "Adwaita";
-                    package = pkgs.gnome-themes-extra;
+                    name = "Simp1e-Adw-Dark";
+                    package = pkgs.simp1e-cursors;
                 };
                 extraConfig = ''
                     font-name = MonaspiceAr Nerd Font Mono 12
@@ -119,7 +125,11 @@ in
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {
         TERMINAL = "ghostty";
+        # XCURSOR_THEME = "Adwaita";
     };
+    #environment.variables = {
+    #    XCURSOR_PATH = lib.mkForce "$HOME/.icons:$HOME/.local/share/icons:/run/current-system/sw/share/icons";
+    #};
     xdg.terminal-exec.settings = {
         default = [ "com.mitchellh.ghostty.desktop" ];
     };

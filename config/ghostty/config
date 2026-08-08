@@ -10,8 +10,8 @@ window-inherit-working-directory = false
 
 background-opacity = 0.55
 window-decoration = server
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 15
+window-padding-y = 15
 background = #412853
 foreground = #ece3d5
 

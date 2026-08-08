@@ -31,6 +31,7 @@ in
         unzip
         qogir-theme-fork
         rowaita-icon-theme
+        simp1e-cursors
         redshift
         # diodon
         # clipmenu

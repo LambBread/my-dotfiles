@@ -59,7 +59,12 @@ in
     networking.firewall.checkReversePath = false;
     services.flatpak.enable = true;
 
-    programs.steam.enable = true;
+    programs.steam = {
+        enable = true;
+        extraPackages = with pkgs; [
+            simp1e-cursors
+        ];
+    };
 
     services.xserver.videoDrivers = [ "nvidia" ];
     services.xserver.dpi = 96;
