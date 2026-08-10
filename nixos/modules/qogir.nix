@@ -6,11 +6,11 @@ stdenv.mkDerivation rec {
     src = fetchzip
     {
         url = "https://github.com/LambBread/Qogir-theme/releases/download/2026-08-06/Qogir-Custom-Dark.zip";
-        sha256 = "sha256-OubkMKL5iqDNE2vTjJ05QK83S81Zjytjkj2WX9D75cI=";
+        sha256 = "sha256-hB5sgXfQuA+GI+v2ywKC3jNlSXTLrhzo0f8lTUq4hbs=";
         stripRoot = false;
     };
     installPhase = ''
-        mkdir -p $out/share/themes/Qogir-Custom-Dark
-        cp -r . $out/share/themes/Qogir-Custom-Dark/
+        mkdir -p $out/share/themes
+        cp -r Qogir-Custom-Dark $out/share/themes
     '';
 }

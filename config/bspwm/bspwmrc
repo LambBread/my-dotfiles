@@ -27,7 +27,7 @@ blueman-applet &
 
 # pgrep -x protonvpn-app > /dev/null || (sleep 3; gtk-launch proton.vpn.app.gtk) &
 protonvpn connect &
-pgrep -x whatpulse > /dev/null || (sleep 3; whatpulse --minimized --closedwindow) &
+pgrep -x whatpulse > /dev/null || (sleep 3; flatpak run org.whatpulse.WhatPulse --minimized --closedwindow) &
 
 bspc monitor DP-5 -d 󰇊 󰇋 󰇌 󰇍 󰇎 󰇏
 bspc monitor HDMI-0 -d 󱅊 󱅋 󱅌 󱅍 󱅎 󱅏
