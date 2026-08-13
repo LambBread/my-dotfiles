@@ -15,8 +15,9 @@ local colors =
     color_2 = "#f08533",
     color_3 = "#cfb793",
     color_4 = "#9FD356",
-    dark_col0 = "#5b97d7",
+    light_col0 = "#5b97d7",
     dark_col1 = "#9768B6",
+    verydark_col1 = "#412853",
     color_red = "#d07271",
     color_black = "#0c1315",
     color_white = "#ece3d5",
@@ -27,17 +28,19 @@ vim.api.nvim_set_hl(0, "String", {fg = colors.color_3})
 vim.api.nvim_set_hl(0, "Special", {fg = colors.color_red})
 vim.api.nvim_set_hl(0, "PreProc", {fg = colors.color_1})
 vim.api.nvim_set_hl(0, "Statement", {fg = colors.color_2, bold = true})
-vim.api.nvim_set_hl(0, "Identifier", {fg = colors.dark_col0})
+vim.api.nvim_set_hl(0, "Identifier", {fg = colors.light_col0})
 vim.api.nvim_set_hl(0, "Directory", {fg = colors.color_1})
 vim.api.nvim_set_hl(0, "Type", {fg = colors.color_4, bold = true})
 vim.api.nvim_set_hl(0, "Constant", {fg = colors.color_2})
-vim.api.nvim_set_hl(0, "Changed", {fg = colors.color_yellow})
+vim.api.nvim_set_hl(0, "Changed", {fg = colors.color_yellow, italic = true})
 vim.api.nvim_set_hl(0, "Pmenu", {bg = colors.color_1})
 vim.api.nvim_set_hl(0, "WarningMsg", {fg = colors.color_red, italic = true})
 vim.api.nvim_set_hl(0, "LineNr", {fg = colors.color_4, bold = true, italic = true})
 vim.api.nvim_set_hl(0, "NonText", {fg = colors.dark_col1})
-vim.api.nvim_set_hl(0, "CursorLine", {fg = colors.color_2, bold = true})
+vim.api.nvim_set_hl(0, "CursorLine", {bg = colors.verydark_col1, bold = true})
 vim.api.nvim_set_hl(0, "Visual", { bg = colors.color_3, fg = colors.color_black})
+vim.api.nvim_set_hl(0, "Todo", {bg = colors.color_2, fg = colors.color_white, bold = true, italic = true})
+-- vim.api.nvim_set_hl(0, "Normal", {fg = colors.color_white})
 
 vim.api.nvim_set_hl(0, "DevIconC", {fg = colors.color_1})
 vim.api.nvim_set_hl(0, "DevIconH", {fg = colors.dark_col1})

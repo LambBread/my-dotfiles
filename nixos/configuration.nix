@@ -54,6 +54,7 @@ in
         proton-vpn-cli
         proton-vpn
         dnsmasq
+        luckybackup
     ];
 
     networking.firewall.checkReversePath = false;
