@@ -15,8 +15,9 @@ window-padding-y = 15
 background = #412853
 foreground = #ece3d5
 
-palette = 0=#0c1315
-# black
+# palette = 0=#0c1315
+palette = 0=#412853
+# shade of lavender
 
 palette = 1=#f08533 
 # orange
@@ -33,14 +34,16 @@ palette = 4=#245b97
 palette = 5=#9768B6 
 # shade of lavender
 
-palette = 6=#0dbcef 
+# palette = 6=#0dbcef 
+palette = 6=#03AD91
 # light blue
 
 palette = 7=#cfb793 
 # beige
 
-palette = 8=#3C5E68 
-# shade of black
+# palette = 8=#3C5E68 
+palette = 8=#72647C
+# based off background
 
 palette = 9=#d07271 
 # light red
@@ -59,7 +62,8 @@ palette = 12=#6BA1DB
 palette = 13=#bc9ed0 
 # lavender
 
-palette = 14=#8BDFF9 
+# palette = 14=#8BDFF9 
+palette = 14=#36FCDB
 # shade of light blue
 
 palette = 15=#ECE3D5 

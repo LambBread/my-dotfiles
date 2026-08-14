@@ -10,6 +10,8 @@ alias grep="grep --color=auto"
 alias sl="ls -a --color=auto"
 alias fastfetch="printf '\n' && fastfetch"
 alias rm="rm -v"
+alias cp="cp -v"
+alias mv="mv -v"
 alias btw='echo "I use $(. /etc/os-release; echo $NAME), Neovim, and bspwm btw"'
 alias nrs='sudo nixos-rebuild switch'
 alias nrsl='sudo nixos-rebuild switch -Inixos-config=/etc/nixos/configuration_laptop.nix'

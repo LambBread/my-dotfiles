@@ -38,7 +38,7 @@ vim.api.nvim_set_hl(0, "WarningMsg", {fg = colors.color_red, italic = true})
 vim.api.nvim_set_hl(0, "LineNr", {fg = colors.color_4, bold = true, italic = true})
 vim.api.nvim_set_hl(0, "NonText", {fg = colors.dark_col1})
 vim.api.nvim_set_hl(0, "CursorLine", {bg = colors.verydark_col1, bold = true})
-vim.api.nvim_set_hl(0, "Visual", { bg = colors.color_3, fg = colors.color_black})
+vim.api.nvim_set_hl(0, "Visual", { bg = colors.color_3, fg = colors.verydark_col1})
 vim.api.nvim_set_hl(0, "Todo", {bg = colors.color_2, fg = colors.color_white, bold = true, italic = true})
 -- vim.api.nvim_set_hl(0, "Normal", {fg = colors.color_white})
 

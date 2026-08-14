@@ -4,7 +4,7 @@
 @define-color custom-col-2 #cfb793;
 @define-color custom-col-3 #BC9ED0;
 @define-color custom-col-4 #f08533;
-@define-color custom-col-black #0c1315;
+@define-color custom-col-black #412853;
 @define-color panel-colour @custom-col-1;
 @define-color text-colour shade(@custom-col-2, 1.5);
 @define-color tasklist-colour shade(@panel-colour, 0.85);

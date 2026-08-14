@@ -9,9 +9,7 @@
 #9FD356 - yellow-green (*****)
     - #659226 (darker green)
 #D07271 - red
-#0c1315 - black
-    - #3c5e68 (gray)
-#0dbcef - cyan
-    - #8bdff9 (lighter cyan)
+#03AD91 - cyan
+    - #36FCDB (lighter cyan)
 #e0de4b - yellow
     - #aeac1e (darker yellow)
