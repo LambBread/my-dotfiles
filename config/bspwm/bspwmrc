@@ -31,8 +31,8 @@ pgrep -x whatpulse > /dev/null || (sleep 3; flatpak run org.whatpulse.WhatPulse 
 
 bspc monitor DP-5 -d 󰇊 󰇋 󰇌 󰇍 󰇎 󰇏
 bspc monitor HDMI-0 -d 󱅊 󱅋 󱅌 󱅍 󱅎 󱅏
-bspc config border_width        6
-bspc config window_gap          6
+bspc config border_width        4
+bspc config window_gap          8
 
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true

@@ -15,6 +15,13 @@ vim.api.nvim_create_autocmd("FileType", {
     command = "setlocal filetype=cpp.doxygen"
 })
 
+-- vim.api.nvim_create_autocmd('FileType', {
+--      pattern = '*',
+--  callback = function()
+--   pcall(vim.treesitter.start)
+--  end,
+--})
+
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         if vim.fn.argc() == 0 then

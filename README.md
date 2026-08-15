@@ -57,7 +57,7 @@ These are some of my dotfiles.
 
 1. Install:
     - git
-    - neovim >= 0.9.4
+    - neovim >= 0.12.0
     - fastfetch
     - tmux
     - bspwm
