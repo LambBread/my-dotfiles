@@ -29,6 +29,7 @@ in
         xarchiver
         zip
         unzip
+        gsimplecal
         qogir-theme-fork
         rowaita-icon-theme
         simp1e-cursors
@@ -59,6 +60,7 @@ in
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
+        noto-fonts-color-emoji
     ];
 
     programs.neovim = {

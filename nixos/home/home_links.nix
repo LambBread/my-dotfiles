@@ -16,6 +16,7 @@
         ".config/fastfetch/presets" = "config/fastfetch/presets";
         ".config/fastfetch/logos" = "config/fastfetch/logos";
         ".config/polybar/scripts" = "config/polybar/scripts";
+        ".config/gsimplecal" = "config/gsimplecal";
     };
     laptopLinks = {
         ".Xmodmap" = "home/laptop.Xmodmap";
