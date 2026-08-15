@@ -10,7 +10,15 @@
   },
   "logo": {
         "type": "auto",
-        "source": "~/.config/fastfetch/logos/nix_trans.png"
+        "source": "~/.config/fastfetch/logos/nix_trans.png",
+        "color": {
+            "1": "94",
+            "2": "96",
+            "3": "94",
+            "4": "96",
+            "5": "94",
+            "6": "96"
+        }
   },
   "modules": [
     "title",

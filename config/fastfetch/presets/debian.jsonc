@@ -5,15 +5,16 @@
         "source": "~/.config/fastfetch/logos/debian_trans.png",
         "color": 
         {
-            "1": "magenta"
+            "1": "magenta",
+            "2": "97"
         }
   },
   "display": {
       "separator": " ",
       "color":
       {
-            "keys": "magenta",
-            "title": "magenta"
+            "keys": "95",
+            "title": "95"
       }
   },
   "modules": [
@@ -55,12 +56,12 @@
     {
         "type": "uptime",
         "key": "󰥔 Uptime",
-        "keyColor": "blue"
+        "keyColor": "92"
     },
     {
         "type": "command",
         "key": " OS Birthday",
-        "keyColor": "blue",
+        "keyColor": "92",
         //"folders": "/",
         //"format": "{create-time:10} ({days} days)",
         "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
@@ -71,37 +72,37 @@
     {
         "type": "battery",
         "key": " Battery",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "memory",
         "key": " RAM",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "swap",
         "key": " Swap",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "disk",
         "key": "󰋊 Disk ({mountpoint})",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "cpu",
         "key": " CPU",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "gpu",
         "key": " GPU",
-        "keyColor": "green"
+        "keyColor": "white"
     },
     {
         "type": "display",
         "key": "󰍹 Display ({name})",
-        "keyColor": "green"
+        "keyColor": "white"
     },
 
     "break",
@@ -109,37 +110,42 @@
     {
         "type": "de",
         "key": " DE",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     {
         "type": "wm",
         "key": "󱂬 WM",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     {
         "type": "wmtheme",
         "key": " WM Theme",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     {
         "type": "theme",
         "key": " Theme",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     {
         "type": "icons",
         "key": " Icons",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     {
         "type": "cursor",
         "key": " Cursor",
-        "keyColor": "red"
+        "keyColor": "94"
+    },
+    {
+        "type": "font",
+        "key": " Font",
+        "keyColor": "94"
     },
     {
         "type": "terminalfont",
         "key": " Terminal Font",
-        "keyColor": "red"
+        "keyColor": "94"
     },
     
     "break",
