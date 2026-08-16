@@ -3,6 +3,7 @@
         ".bash_aliases" = "home/.bash_aliases";
         ".tmux.conf" = "home/.tmux.conf";
         ".bashrc" = "home/.bashrc";
+        ".dircolors" = "home/.dircolors";
         ".config/dunst" = "config/dunst";
         ".config/ghostty" = "config/ghostty";
         ".config/gtk-3.0" = "config/gtk-3.0";
