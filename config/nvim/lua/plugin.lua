@@ -120,15 +120,13 @@ require("lazy").setup({
       },
       {
         "nvim-treesitter/nvim-treesitter",
-        branch = "master",
+        branch = "main",
         build = ":TSUpdate",
         config = function()
-            require("nvim-treesitter.configs").setup({
-                ensure_installed = { "lua", "python", "javascript", "c", "cpp", "markdown", "doxygen" },
-                highlight = { enable = true },
-            })
+            require("nvim-treesitter").setup()
+            require("nvim-treesitter").install({"lua", "python", "javascript", "c", "cpp", "doxygen", "markdown", "cmake"})
         end,
-}
+      }
       --{"ojroques/nvim-hardline", config = true},
   },
   install = { colorscheme = { "habamax" } },

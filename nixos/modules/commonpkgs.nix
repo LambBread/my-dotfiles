@@ -57,6 +57,7 @@ in
         atril
         lxqt.lxqt-policykit
         nixfmt
+        tree-sitter
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
