@@ -66,6 +66,14 @@
         //"format": "{create-time:10} ({days} days)",
         "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
     },
+    {
+        "type": "command",
+        "key": "󰖕 Weather",
+        "keyColor": "92",
+        "text": "curl https://wttr.in/Prince+George?format=%C%t"
+        //"location": "Prince George",
+        //"timeout": 3000
+    },
 
     "break",
     

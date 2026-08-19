@@ -56,6 +56,65 @@ in
         dates = "03:00";
     };
 
+    services.kmscon = {
+        enable = true;
+        hwRender = true;
+        # config = {
+        #     hwaccel = true;
+        #     font-name = "MonaspiceAr Nerd Font Mono";
+        #     font-size = 14;
+        #     palette = "custom";
+        #     palette-background = "65,40,83";
+        #     palette-foreground = "236,227,213";
+
+        #     palette-black = "65,40,83";
+        #     palette-red = "240,133,51";
+        #     palette-green = "101,146,38";
+        #     palette-yellow = "174,172,30";
+        #     palette-blue = "36,91,151";
+        #     palette-magenta = "151,104,182";
+        #     palette-cyan = "3,173,145";
+        #     palette-white = "207,183,147";
+
+        #     palette-light-black = "114,100,124";
+        #     palette-light-red = "208,114,113";
+        #     palette-light-green = "159,211,86";
+        #     palette-light-yellow = "224,222,75";
+        #     palette-light-blue = "107,151,219";
+        #     palette-light-magenta = "188,158,208";
+        #     palette-light-cyan = "54,252,219";
+        #     palette-light-white = "236,227,213";
+        # }
+        extraOptions = "--term xterm-256color";
+        extraConfig = ''
+            font-name=MonaspiceAr Nerd Font Mono
+            font-size=14
+            
+            palette=custom
+
+            palette-background=65,40,83
+            palette-foreground=236,227,213
+
+            palette-black=65,40,83
+            palette-red=240,133,51
+            palette-green=101,146,38
+            palette-yellow=174,172,30
+            palette-blue=36,91,151
+            palette-magenta=151,104,182
+            palette-cyan=3,173,145
+            palette-white=207,183,147
+
+            palette-light-black=114,100,124
+            palette-light-red=208,114,113
+            palette-light-green=159,211,86
+            palette-light-yellow=224,222,75
+            palette-light-blue=107,151,219
+            palette-light-magenta=188,158,208
+            palette-light-cyan=54,252,219
+            palette-light-white=236,227,213
+        '';
+    };
+
     programs.appimage.enable = true;
     programs.appimage.binfmt = true;
     services.gnome.gnome-keyring.enable = true;
