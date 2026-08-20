@@ -85,7 +85,7 @@ in
         #     palette-light-cyan = "54,252,219";
         #     palette-light-white = "236,227,213";
         # }
-        extraOptions = "--term xterm-256color";
+        extraOptions = "--term xterm-256color --seats seat0";
         extraConfig = ''
             font-name=MonaspiceAr Nerd Font Mono
             font-size=14
@@ -114,6 +114,8 @@ in
             palette-light-white=236,227,213
         '';
     };
+    
+    systemd.services."kmscon@tty7".enable = false;
 
     programs.appimage.enable = true;
     programs.appimage.binfmt = true;
@@ -172,6 +174,12 @@ in
                     clock-format = %Y-%m-%d %H:%M:%S
                 '';
             };
+            extraConfig = ''
+                logind-check-graphical=true
+                [LightDM]
+                minimum-vt=7
+
+            '';
         };
         windowManager.bspwm = {
             enable = true;

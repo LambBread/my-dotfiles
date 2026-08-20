@@ -70,6 +70,9 @@ mod3 + alt + q
 mod3 + super + {q,r}
     bspc {quit,wm -r}
 
+mod3 + super + w
+    ghostty --command='sudo pkill kmscon'
+
 
 # screenshot
 Print
