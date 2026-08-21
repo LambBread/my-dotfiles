@@ -72,7 +72,7 @@
         "type": "command",
         "key": "󰖕 Weather",
         "keyColor": "92",
-        "text": "curl https://wttr.in/Prince+George?format=%C%20%t"
+        "text": "curl 'https://wttr.in/Prince+George?format=%C%20%t&m'"
         //"location": "Prince George",
         //"timeout": 3000
     },

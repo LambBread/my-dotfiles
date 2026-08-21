@@ -25,6 +25,7 @@ in
         picom
         xmodmap
         ghostty
+        tty-clock
         p7zip
         xarchiver
         zip
