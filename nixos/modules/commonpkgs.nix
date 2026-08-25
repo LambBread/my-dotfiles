@@ -15,6 +15,7 @@ in
         redshift
         xmodmap
         gsimplecal
+        gowall
         (polybar.override {
             pulseSupport = true;
         })

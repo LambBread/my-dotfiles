@@ -11,6 +11,39 @@ let
         url = "https://i.redd.it/szhyd7ryld0h1.png";
         sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
     };
+    gowallTheme = pkgs.writeText "gowall-config.yml" 
+    ''
+themes:
+  - name: "my-custom"
+    colors:
+      - "#412853" 
+      - "#f08533"  
+      - "#659226"  
+      - "#AEAC1E"  
+      - "#245b97"  
+      - "#9768B6"  
+      - "#03AD91" 
+      - "#cfb793"  
+      - "#72647C" 
+      - "#d07271"  
+      - "#9FD356"  
+      - "#E0DE4B"  
+      - "#6BA1DB"  
+      - "#bc9ed0"  
+      - "#36FCDB" 
+      - "#ECE3D5"'';
+
+    processedBackground = pkgs.runCommand "processed-background.png"
+    {
+        nativeBuildInputs = [pkgs.gowall];
+    }
+    ''
+    export HOME=$NIX_BUILD_TOP
+    mkdir -p $HOME/.config/gowall
+    cp ${gowallTheme} $HOME/.config/gowall/config.yml
+    gowall convert ${backgroundImg} --output $out -t my-custom --preview false
+    '';
+
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
     qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
 in
@@ -36,7 +69,7 @@ in
     # nix.settings.auto-optimise-store = true;
 
     systemd.tmpfiles.rules = [
-        "L+ /srv/background.png - - - - ${backgroundImg}"
+        "L+ /srv/background.png - - - - ${processedBackground}"
     ];
 
     xdg.portal = {
@@ -160,7 +193,7 @@ in
 
         displayManager.lightdm = {
             enable = true;
-            background = "${backgroundImg}";
+            background = "${processedBackground}";
             greeters.gtk = {
                 enable = true;
                 theme = {
