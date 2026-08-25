@@ -18,8 +18,11 @@
       }
   },
   "modules": [
-    "title",
-    "separator",
+      {
+          "type": "custom",
+          "key": "{#95}{#0}{#105}{#30}{#1}        SYSTEM         {#0}{#95}"
+      },
+    "break",
     
     {
         "type": "os",
@@ -36,7 +39,8 @@
     },
     {
         "type": "packages",
-        "key": "󰆧 Packages"
+        "key": "󰆧 Packages",
+        "combined": true
     },
     {
         "type": "terminal",
@@ -51,6 +55,11 @@
         "key": " Local IP"
     },
     
+    "break",
+    {
+        "type": "custom",
+        "key": "{#92}{#0}{#102}{#30}{#1}         MISC          {#0}{#92}"
+    },
     "break",
     
     {
@@ -76,6 +85,11 @@
     },
 
     "break",
+      {
+          "type": "custom",
+          "key": "{#37}{#0}{#47}{#30}{#1}       HARDWARE        {#0}{#37}"
+      },
+      "break",
     
     {
         "type": "battery",
@@ -114,6 +128,11 @@
     },
 
     "break",
+      {
+          "type": "custom",
+          "key": "{#94}{#0}{#104}{#30}{#1}        THEME          {#0}{#94}"
+      },
+      "break",
     
     {
         "type": "de",
@@ -158,6 +177,13 @@
     
     "break",
     
-    "colors"
+    {
+        "type": "custom",
+        "key": "{#30} {#31} {#32} {#33} {#34} {#35} {#36} {#37}"
+    },
+    { 
+        "type": "custom",
+        "key": "{#90} {#91} {#92} {#93} {#94} {#95} {#96} {#97}"
+    }
   ]
 }

@@ -55,6 +55,8 @@ in
         proton-vpn
         dnsmasq
         luckybackup
+        ungoogled-chromium
+        pince
     ];
 
     networking.firewall.checkReversePath = false;
