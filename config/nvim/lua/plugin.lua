@@ -124,7 +124,13 @@ require("lazy").setup({
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter").setup()
-            require("nvim-treesitter").install({"lua", "python", "javascript", "c", "cpp", "doxygen", "markdown", "cmake"})
+            require("nvim-treesitter").install({
+                    "lua", "python", "javascript", "c", "cpp", 
+                    "doxygen", "markdown", "cmake", "css", "html",
+                    "latex", "scss", "svelte", "tsx", "typst",
+                    "vue", "nix", "regex"
+                }
+            )
         end,
       }
       --{"ojroques/nvim-hardline", config = true},

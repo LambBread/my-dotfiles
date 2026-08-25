@@ -8,57 +8,62 @@ in
         sxhkd
         rofi
         conky
-        xdo
-        xdotool
-        libnotify
+        dunst
+        xsettingsd
+        picom
+        feh
+        redshift
+        xmodmap
+        gsimplecal
         (polybar.override {
             pulseSupport = true;
         })
-        dunst
-        xsettingsd
-        baobab
-        librewolf
-        libreoffice
-        fastfetch
-        wget
-        git
-        picom
-        xmodmap
-        ghostty
-        tty-clock
-        p7zip
-        xarchiver
-        zip
-        unzip
-        gsimplecal
+    
         qogir-theme-fork
         rowaita-icon-theme
         simp1e-cursors
-        redshift
-        # diodon
-        # clipmenu
-        # dmenu
+        
+        xdo
+        xdotool
+        libnotify
+
+        librewolf
+        libreoffice
+        ghostty
+        vlc
+        ristretto
+        gimp
+        xarchiver
+        atril
+        baobab
         bleachbit
         prismlauncher
-        feh
-        vlc
-        gimp
         pavucontrol
         xfce4-screenshooter
-        tmux
-        # (thunar.override {
-        #     thunarPlugins = with pkgs; [
-        #         thunar-archive-plugin
-        #         thunar-volman
-        #     ];
-        # })
-        # file-roller
-        ffmpegthumbnailer
-        ristretto
-        atril
-        lxqt.lxqt-policykit
+
+        fastfetch
+        tty-clock
+        vifm
+        wget
+        git
+        zip
+        unzip
+        p7zip
+        trash-cli
+        ripgrep
+        lazygit
+        fd
         nixfmt
+
+        tmux
+        imagemagick
+        tectonic
+        mermaid-cli
+        ghostscript
         tree-sitter
+        
+        ffmpegthumbnailer
+        lxqt.lxqt-policykit
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace

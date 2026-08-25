@@ -57,6 +57,7 @@ in
         luckybackup
         ungoogled-chromium
         pince
+        orca-slicer
     ];
 
     networking.firewall.checkReversePath = false;

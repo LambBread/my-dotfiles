@@ -4,8 +4,20 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = "conky.conf",
+    pattern = {"conky.conf", "conky_laptop.conf"},
     command = "set filetype=lua"
+})
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"},
+{
+    pattern = {"config"},
+    command = "set filetype=conf"
+})
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"},
+{
+    pattern = {"dunstrc", "redshift.conf"},
+    command = "set filetype=dosini"
 })
 
 vim.cmd("syntax enable")
