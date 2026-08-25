@@ -125,7 +125,13 @@ in
         enable = true;
         powerOnBoot = true;
     };
-    programs.thunar.enable = true;
+    programs.thunar = {
+        enable = true;
+        plugins = with pkgs; [
+            thunar-archive-plugin
+            thunar-volman
+        ];
+    };
     programs.dconf.enable = true;
     # services.zeitgeist.enable = true;
     services.gvfs.enable = true;

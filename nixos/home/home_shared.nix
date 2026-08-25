@@ -17,6 +17,19 @@
         ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-icon-view-zoom-level --create --type string --set THUNAR_ZOOM_LEVEL_75_PERCENT
         ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-menubar-visible --create --type bool --set false
     '';
+    xdg.configFile."mimeapps.list".force = true;
+    xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+          "text/html" = "librewolf.desktop";
+          "x-scheme-handler/http" = "librewolf.desktop";
+          "x-scheme-handler/https" = "librewolf.desktop";
+          "x-scheme-handler/about" = "librewolf.desktop";
+          "x-scheme-handler/unknown" = "librewolf.desktop";
+          "application/zip" = [ "xarchiver.desktop" ];
+          "application/x-zip-compressed" = [ "xarchiver.desktop" ];
+        };
+  };
 
     programs.ssh = {
         enable = true;

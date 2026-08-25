@@ -46,12 +46,12 @@ in
         pavucontrol
         xfce4-screenshooter
         tmux
-        (thunar.override {
-            thunarPlugins = with pkgs; [
-                thunar-archive-plugin
-                thunar-volman
-            ];
-        })
+        # (thunar.override {
+        #     thunarPlugins = with pkgs; [
+        #         thunar-archive-plugin
+        #         thunar-volman
+        #     ];
+        # })
         # file-roller
         ffmpegthumbnailer
         ristretto
