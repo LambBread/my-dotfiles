@@ -65,7 +65,7 @@ These are some of my dotfiles.
     - feh
     - picom
     - xsettingsd
-    - polybar
+    - polybar >= 3.6.0
     - diodon
     - redshift
     - conky

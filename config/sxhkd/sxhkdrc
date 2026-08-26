@@ -44,7 +44,7 @@ mod3 + comma
     pkill picom; sleep 1; picom -b
 
 mod3 + period
-    pkill polybar; sleep 1; polybar &
+    pkill polybar; sleep 1; polybar top &
 
 mod3 + {Left,Down,Up,Right}
     xdotool mousemove_relative {-- -40 0, 0 40, 0 -40, 40 0}

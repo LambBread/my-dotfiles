@@ -16,6 +16,7 @@
         ".config/nvim" = "config/nvim";
         ".config/picom" = "config/picom";
         ".config/polybar/scripts" = "config/polybar/scripts";
+        ".config/polybar/modules" = "config/polybar/modules";
         ".config/redshift" = "config/redshift";
         ".config/rofi" = "config/rofi";
         ".config/sxhkd" = "config/sxhkd";
