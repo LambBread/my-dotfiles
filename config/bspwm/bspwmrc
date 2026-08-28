@@ -52,6 +52,7 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Xfce4-panel manage=off border=off layer=above
 #bspc rule -a Conky state=floating sticky=on layer=below
+bspc rule -a Gsimplecal sticky=on
 bspc rule -a Conky manage=off
 bspc rule -a 'Wrapper-2.0' state=floating border=off focus=on
 

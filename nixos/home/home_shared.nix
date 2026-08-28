@@ -21,20 +21,20 @@
     xdg.mimeApps = {
         enable = true;
         defaultApplications = {
-          "text/html" = "librewolf.desktop";
-          "x-scheme-handler/http" = "librewolf.desktop";
-          "x-scheme-handler/https" = "librewolf.desktop";
-          "x-scheme-handler/about" = "librewolf.desktop";
-          "x-scheme-handler/unknown" = "librewolf.desktop";
-          "application/zip" = [ "xarchiver.desktop" ];
-          "application/x-zip-compressed" = [ "xarchiver.desktop" ];
-          "image/jpeg" = "org.xfce.ristretto.desktop";
-          "image/png" = "org.xfce.ristretto.desktop";
-          "image/gif" = "org.xfce.ristretto.desktop";
-          "image/webp" = "org.xfce.ristretto.desktop";
-          "image/svg+xml" = "org.xfce.ristretto.desktop";
+            "text/html" = "librewolf.desktop";
+            "x-scheme-handler/http" = "librewolf.desktop";
+            "x-scheme-handler/https" = "librewolf.desktop";
+            "x-scheme-handler/about" = "librewolf.desktop";
+            "x-scheme-handler/unknown" = "librewolf.desktop";
+            "application/zip" = [ "xarchiver.desktop" ];
+            "application/x-zip-compressed" = [ "xarchiver.desktop" ];
+            "image/jpeg" = "org.xfce.ristretto.desktop";
+            "image/png" = "org.xfce.ristretto.desktop";
+            "image/gif" = "org.xfce.ristretto.desktop";
+            "image/webp" = "org.xfce.ristretto.desktop";
+            "image/svg+xml" = "org.xfce.ristretto.desktop";
         };
-  };
+    };
 
     programs.ssh = {
         enable = true;

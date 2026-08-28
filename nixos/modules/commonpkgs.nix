@@ -19,11 +19,11 @@ in
         (polybar.override {
             pulseSupport = true;
         })
-    
+
         qogir-theme-fork
         rowaita-icon-theme
         simp1e-cursors
-        
+
         xdo
         xdotool
         libnotify
@@ -62,7 +62,7 @@ in
         mermaid-cli
         ghostscript
         tree-sitter
-        
+
         ffmpegthumbnailer
         lxqt.lxqt-policykit
     ];

@@ -11,38 +11,38 @@ let
         url = "https://i.redd.it/szhyd7ryld0h1.png";
         sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
     };
-    gowallTheme = pkgs.writeText "gowall-config.yml" 
-    ''
-themes:
-  - name: "my-custom"
-    colors:
-      - "#412853" 
-      - "#f08533"  
-      - "#659226"  
-      - "#AEAC1E"  
-      - "#245b97"  
-      - "#9768B6"  
-      - "#03AD91" 
-      - "#cfb793"  
-      - "#72647C" 
-      - "#d07271"  
-      - "#9FD356"  
-      - "#E0DE4B"  
-      - "#6BA1DB"  
-      - "#bc9ed0"  
-      - "#36FCDB" 
-      - "#ECE3D5"'';
+    gowallTheme = pkgs.writeText "gowall-config.yml" ''
+        themes:
+          - name: "my-custom"
+            colors:
+              - "#412853" 
+              - "#f08533"  
+              - "#659226"  
+              - "#AEAC1E"  
+              - "#245b97"  
+              - "#9768B6"  
+              - "#03AD91" 
+              - "#cfb793"  
+              - "#72647C" 
+              - "#d07271"  
+              - "#9FD356"  
+              - "#E0DE4B"  
+              - "#6BA1DB"  
+              - "#bc9ed0"  
+              - "#36FCDB" 
+              - "#ECE3D5"'';
 
-    processedBackground = pkgs.runCommand "processed-background.png"
-    {
-        nativeBuildInputs = [pkgs.gowall];
-    }
-    ''
-    export HOME=$NIX_BUILD_TOP
-    mkdir -p $HOME/.config/gowall
-    cp ${gowallTheme} $HOME/.config/gowall/config.yml
-    gowall convert ${backgroundImg} --output $out -t my-custom --preview false
-    '';
+    processedBackground =
+        pkgs.runCommand "processed-background.png"
+            {
+                nativeBuildInputs = [ pkgs.gowall ];
+            }
+            ''
+                export HOME=$NIX_BUILD_TOP
+                mkdir -p $HOME/.config/gowall
+                cp ${gowallTheme} $HOME/.config/gowall/config.yml
+                gowall convert ${backgroundImg} --output $out -t my-custom --preview false
+            '';
 
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
     qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
@@ -122,7 +122,7 @@ in
         extraConfig = ''
             font-name=MonaspiceAr Nerd Font Mono
             font-size=14
-            
+
             palette=custom
 
             palette-background=65,40,83
@@ -147,7 +147,7 @@ in
             palette-light-white=236,227,213
         '';
     };
-    
+
     systemd.services."kmscon@tty7".enable = false;
 
     programs.appimage.enable = true;
