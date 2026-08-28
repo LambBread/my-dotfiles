@@ -1,9 +1,9 @@
 {
     commonLinks = {
         # ".bash_aliases" = "home/.bash_aliases";
-        ".tmux.conf" = "home/.tmux.conf";
+        # ".tmux.conf" = "home/.tmux.conf";
         # ".bashrc" = "home/.bashrc";
-        ".dircolors" = "home/.dircolors";
+        # ".dircolors" = "home/.dircolors";
         ".config/dunst" = "config/dunst";
         ".config/fastfetch/config.jsonc" = "config/fastfetch/config.jsonc";
         ".config/fastfetch/presets" = "config/fastfetch/presets";

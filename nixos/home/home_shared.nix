@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+    colors = import ../modules/colors.nix;
+in
 {
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures
@@ -17,6 +20,8 @@
         ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-icon-view-zoom-level --create --type string --set THUNAR_ZOOM_LEVEL_75_PERCENT
         ${pkgs.xfconf}/bin/xfconf-query --channel thunar --property /last-menubar-visible --create --type bool --set false
     '';
+
+    home.file.".dircolors".source = ./.dircolors;
 
     xdg.userDirs = {
         enable = true;
@@ -105,6 +110,29 @@
         initExtra = ''
             eval "$(dircolors -b ~/.dircolors)"
             PS1='\[\033[00;95m\]\[\033[00;01;105m\] \u\[\033[00;95;44m\]\[\033[00;01;44m\] \w \[\033[00;34;47m\]\[\033[37;102m\]\[\033[92;101m\]\[\033[91;41m\]\[\033[00;01;41m\]  \A\[\033[00;31m\] \[\033[00m\] '
+        '';
+    };
+
+    programs.tmux = {
+        enable = true;
+        terminal = "xterm-256color";
+        escapeTime = 0;
+        mouse = true;
+        prefix = "<C-a>";
+        baseIndex = 0;
+        extraConfig = ''
+            set -as terminal-overrides ",xterm*:colors=256"
+            set -ag terminal-overrides ",xterm*:Tc"
+            set -as terminal-features ",xterm*:RGB"
+            set -g allow-passthrough on
+            set -g status-style "bg=#${colors.blue}"
+            set -g message-style "fg=black bg=#${colors.l_magenta}"
+            set -g default-command "''${SHELL}"
+            bind | split-window -h
+            bind - split-window -v
+            bind r source-file ~/.config/tmux/tmux.conf
+            unbind %
+            unbind '"'
         '';
     };
 
