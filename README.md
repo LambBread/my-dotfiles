@@ -53,51 +53,6 @@ These are some of my dotfiles.
 - `,l` - next buffer
 
 
-## Installation (Non-NixOS)
-
-1. Install:
-    - git
-    - neovim >= 0.12.0
-    - fastfetch
-    - tmux
-    - bspwm
-    - dunst
-    - feh
-    - picom
-    - xsettingsd
-    - polybar >= 3.6.0
-    - diodon
-    - redshift
-    - conky
-    - ghostty
-    - thunar
-    - [MonaspiceAr Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
-    - [Qogir theme](https://github.com/vinceliuice/Qogir-theme)
-    - [Rowaita icon theme (my fork)](https://github.com/LambBread/Rowaita-icon-theme) 
-    - alacritty (optional)
-    - [cortile](https://github.com/leukipp/cortile) (optional, Xfce)
-    - Proton VPN (optional; if not using it, use laptop polybar and bspwm config)
-    - WhatPulse (optional; if not using it, use laptop bspwm config)
-
-
-2. Clone this repo into `~/.dotfiles`.
-
-3. Make symlinks from `~/.dotfiles` into `~/.config`.
-
-4. Add this line to `/etc/apparmor.d/usr.bin.redshift`:
-
-`owner @{HOME}/.dotfiles/redshift/redshift.conf r`
-
-and run `sudo systemctl restart apparmor`.
-
-5. (Xfce) Add Picom, Redshift, Conky, and `xmodmap ~/.Xmodmap` to autostart if not done so already.
-Make Ghostty (or Alacritty) your default terminal. Restart the XFCE panel via `xfce4-panel -r`. 
-Open Neovim and type `:Lazy install` to install plugins. If you are on bspwm, this step is not needed.
-
-6. If desired, modify panel layout (Xfce), set a desktop wallpaper, etc.
-
-7. Modify configuration if desired.
-
 ## Installation (NixOS)
 
 1. Install Git and add home-manager as a Nix channel.

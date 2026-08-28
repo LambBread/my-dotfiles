@@ -49,6 +49,16 @@
         };
     };
 
+    services.xsettingsd = {
+        enable = true;
+        settings = {
+            "Net/ThemeName" = "Qogir-Custom-Dark";
+            "Net/IconThemeName" = "Rowaita-Lavender-Dark";
+            "Gtk/CursorThemeName" = "Simp1e-Adw-Dark";
+            "Gtk/FontName" = "MonaspiceAr Nerd Font Mono 11";
+        };
+    };
+
     xdg.userDirs = {
         enable = true;
         createDirectories = true;
@@ -63,6 +73,12 @@
             XDG_SCREENSHOTS_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
         };
     };
+
+    xdg.configFile."gsimplecal/config".text = ''
+        show_week_numbers = 1
+        mainwindow_yoffset = 90
+        close_on_unfocus = 1
+    '';
 
     xdg.configFile."Thunar/uca.xml".text = ''
         <?xml version="1.0" encoding="UTF-8"?>

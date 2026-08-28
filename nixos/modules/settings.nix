@@ -6,6 +6,7 @@
 }:
 let
     personal = import ../personal.nix;
+    colors = import ./colors.nix;
     backgroundImg = pkgs.fetchurl {
         # https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/
         url = "https://i.redd.it/szhyd7ryld0h1.png";
@@ -15,22 +16,22 @@ let
         themes:
           - name: "my-custom"
             colors:
-              - "#412853" 
-              - "#f08533"  
-              - "#659226"  
-              - "#AEAC1E"  
-              - "#245b97"  
-              - "#9768B6"  
-              - "#03AD91" 
-              - "#cfb793"  
-              - "#72647C" 
-              - "#d07271"  
-              - "#9FD356"  
-              - "#E0DE4B"  
-              - "#6BA1DB"  
-              - "#bc9ed0"  
-              - "#36FCDB" 
-              - "#ECE3D5"'';
+              - "#${colors.black}" 
+              - "#${colors.red}"  
+              - "#${colors.green}"  
+              - "#${colors.yellow}"  
+              - "#${colors.blue}"  
+              - "#${colors.magenta}"  
+              - "#${colors.cyan}" 
+              - "#${colors.white}"  
+              - "#${colors.l_black}" 
+              - "#${colors.l_red}"  
+              - "#${colors.l_green}"  
+              - "#${colors.l_yellow}"  
+              - "#${colors.l_blue}"  
+              - "#${colors.l_magenta}"  
+              - "#${colors.l_cyan}" 
+              - "#${colors.l_white}"'';
 
     processedBackground =
         pkgs.runCommand "processed-background.png"
@@ -125,26 +126,26 @@ in
 
             palette=custom
 
-            palette-background=65,40,83
-            palette-foreground=236,227,213
+            palette-background=${colors.hexToRgbStr "${colors.black}"}
+            palette-foreground=${colors.hexToRgbStr "${colors.l_white}"}
 
-            palette-black=65,40,83
-            palette-red=240,133,51
-            palette-green=101,146,38
-            palette-yellow=174,172,30
-            palette-blue=36,91,151
-            palette-magenta=151,104,182
-            palette-cyan=3,173,145
-            palette-white=207,183,147
+            palette-black=${colors.hexToRgbStr "${colors.black}"}
+            palette-red=${colors.hexToRgbStr "${colors.red}"}
+            palette-green=${colors.hexToRgbStr "${colors.green}"}
+            palette-yellow=${colors.hexToRgbStr "${colors.yellow}"}
+            palette-blue=${colors.hexToRgbStr "${colors.blue}"}
+            palette-magenta=${colors.hexToRgbStr "${colors.magenta}"}
+            palette-cyan=${colors.hexToRgbStr "${colors.cyan}"}
+            palette-white=${colors.hexToRgbStr "${colors.white}"}
 
-            palette-light-black=114,100,124
-            palette-light-red=208,114,113
-            palette-light-green=159,211,86
-            palette-light-yellow=224,222,75
-            palette-light-blue=107,151,219
-            palette-light-magenta=188,158,208
-            palette-light-cyan=54,252,219
-            palette-light-white=236,227,213
+            palette-light-black=${colors.hexToRgbStr "${colors.l_black}"}
+            palette-light-red=${colors.hexToRgbStr "${colors.l_red}"}
+            palette-light-green=${colors.hexToRgbStr "${colors.l_green}"}
+            palette-light-yellow=${colors.hexToRgbStr "${colors.l_yellow}"}
+            palette-light-blue=${colors.hexToRgbStr "${colors.l_blue}"}
+            palette-light-magenta=${colors.hexToRgbStr "${colors.l_magenta}"}
+            palette-light-cyan=${colors.hexToRgbStr "${colors.l_cyan}"}
+            palette-light-white=${colors.hexToRgbStr "${colors.l_white}"}
         '';
     };
 
