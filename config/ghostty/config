@@ -8,6 +8,10 @@ font-size = 12
 working-directory = home
 window-inherit-working-directory = false
 
+custom-shader = shaders/cursor_warp.glsl
+custom-shader = shaders/bloom.glsl
+# custom-shader = shaders/crt.glsl
+
 background-opacity = 0.55
 window-decoration = server
 window-padding-x = 15

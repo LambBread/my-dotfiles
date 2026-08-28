@@ -31,7 +31,6 @@ local colors = require('settings')
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-      { "tikhomirov/vim-glsl" },
       { "mattn/emmet-vim" },
       { "mg979/vim-visual-multi" },
       {
@@ -128,21 +127,13 @@ require("lazy").setup({
                     "lua", "python", "javascript", "c", "cpp", 
                     "doxygen", "markdown", "cmake", "css", "html",
                     "latex", "scss", "svelte", "tsx", "typst",
-                    "vue", "nix", "regex"
+                    "vue", "nix", "regex", "glsl"
                 }
             )
         end,
       }
-      --{"ojroques/nvim-hardline", config = true},
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true }, -- auto check for plugin updates
 })
 
---vim.cmd([[
---call plug#begin('~/.local/share/nvim/plugged')
---Plug 'nvim-lua/plenary.nvim'
---Plug 'windwp/nvim-autopairs'
---Plug 'ojroques/nvim-hardline'
---call plug#end()
---]])

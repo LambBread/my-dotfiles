@@ -135,7 +135,9 @@ Example:
 The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
 The rofi config was created by [Prayag2](https://github.com/Prayag2/dotfiles).
 The fastfetch logos are derivative works, with the Debian logos being under the LGPLv3-or-later or CC-BY-SA 3.0 Unported,
-and the Nix logos being under the CC-BY 4.0.
+and the Nix logos being under the CC-BY 4.0. The ghostty shaders were created by 
+[sahaj-b](https://github.com/sahaj-b/ghostty-cursor-shaders) (MIT license) and 
+[qwerasd205](https://github.com/0xhckr/ghostty-shaders/blob/main/bloom.glsl).
 See [the README](./config/fastfetch/logos/README.md) for details.
 
 The default wallpaper fetched in the NixOS config was made by Reddit user u/FaithlessnessDue2763, 
