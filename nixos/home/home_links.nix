@@ -1,8 +1,8 @@
 {
     commonLinks = {
-        ".bash_aliases" = "home/.bash_aliases";
+        # ".bash_aliases" = "home/.bash_aliases";
         ".tmux.conf" = "home/.tmux.conf";
-        ".bashrc" = "home/.bashrc";
+        # ".bashrc" = "home/.bashrc";
         ".dircolors" = "home/.dircolors";
         ".config/dunst" = "config/dunst";
         ".config/fastfetch/config.jsonc" = "config/fastfetch/config.jsonc";
@@ -19,13 +19,13 @@
         ".config/sxhkd" = "config/sxhkd";
     };
     laptopLinks = {
-        ".Xmodmap" = "home/laptop.Xmodmap";
+        # ".Xmodmap" = "home/laptop.Xmodmap";
         ".config/bspwm/bspwmrc" = "config/bspwm/bspwmrc_laptop";
         ".config/conky/conky.conf" = "config/conky/conky_laptop.conf";
         ".config/polybar/config.ini" = "config/polybar/config_laptop.ini";
     };
     desktopLinks = {
-        ".Xmodmap" = "home/.Xmodmap";
+        # ".Xmodmap" = "home/.Xmodmap";
         ".config/bspwm/bspwmrc" = "config/bspwm/bspwmrc";
         ".config/conky/conky.conf" = "config/conky/conky.conf";
         ".config/polybar/config.ini" = "config/polybar/config.ini";

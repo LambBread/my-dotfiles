@@ -43,8 +43,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec3 s = samples[i];
     vec4 c = texture(iChannel0, uv + s.xy * step);
     float l = lum(c);
-    if (l > 0.04) {
-      color += l * s.z * c * 0.04;
+    if (l > 0.08) {
+      color += l * s.z * c * 0.08;
     }
   }
 

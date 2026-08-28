@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    lib,
+    ...
+}:
 let
     homeLinks = import ./home_links.nix;
     personal = import ../personal.nix;
@@ -15,10 +20,23 @@ in
 
     ];
 
-    home.file = builtins.mapAttrs (key: value: {
-        source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/${value}";
-        force = true;
-    }) links;
+    home.file = lib.mkMerge [
+        (builtins.mapAttrs (key: value: {
+            source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/${value}";
+            force = true;
+        }) links)
+
+        {
+            ".Xmodmap".text = ''
+                clear Lock
+                keycode 66 = Hyper_L
+                keycode 171 = Caps_Lock XF86AudioNext
+                keycode 108 = Multi_key Alt_R
+                remove mod4 = Hyper_L
+                add mod3 = Hyper_L
+            '';
+        }
+    ];
 
     programs.git = {
         enable = true;
