@@ -23,8 +23,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set leaders before loading anything
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- vim.g.mapleader = " "
+-- vim.g.maplocalleader = "\\"
 
 local colors = require('settings')
 

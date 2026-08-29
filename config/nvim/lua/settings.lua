@@ -49,6 +49,7 @@ vim.api.nvim_set_hl(0, "DevIconH", { fg = colors.dark_col1 })
 vim.api.nvim_set_hl(0, "NeoTreeDotfile", { fg = colors.dark_col1, italic = true })
 
 vim.api.nvim_set_hl(0, "Changed", {fg = colors.color_yellow, italic = true})
+vim.api.nvim_set_hl(0, "Removed", {fg = colors.color_red, italic = true})
 vim.api.nvim_set_hl(0, "Todo", { bg = colors.color_2, fg = colors.color_black, bold = true, italic = true })
 vim.api.nvim_set_hl(0, "Search", {bg = colors.color_4, fg = colors.color_black})
 vim.api.nvim_set_hl(0, "CursorLine", { bg = colors.verydark_col1 })

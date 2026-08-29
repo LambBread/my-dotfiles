@@ -1,6 +1,6 @@
 
-/*@import 'colors.css';*/
-@import 'panel.css';
+@import 'custom_colors.css';
+/*@import 'panel.css';*/
 @import 'thunar.css';
 
 menu, .menu
@@ -32,40 +32,4 @@ calendar, GtkCalendar
 calendar:selected, GtkCalendar:selected
 {
     background: @custom-col-3;
-}
-
-#whiskermenu-window
-{
-    opacity: 0.78;
-	border-radius: 24px;
-    background-color: @panel-colour;
-    font-family: "MonaspiceAr Nerd Font Mono", monospace;
-	font-size: 14px;
-}
-#whiskermenu-window button {
-  background-color: @panel-colour;
-  color: @text-colour;
-  border-radius: 12px;
-  /*border-radius: 6px;*/
-}
-#whiskermenu-window button:hover
-{
-    background-color: @tasklist-colour;
-}
-#whiskermenu-window entry
-{
-    background-color: @button-select-colour;
-}
-#whiskermenu-window .categories
-{
-    background-color: @tasklist-colour;
-}
-#whiskermenu-window .launchers
-{
-    background-color: @tasklist-colour;
-}
-#whiskermenu-window .launchers:hover
-{
-    background-color: @tasklist-hover-colour;
-    color: @custom-col-black;
 }

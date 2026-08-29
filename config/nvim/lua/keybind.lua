@@ -9,7 +9,7 @@ vim.keymap.set("n", "<C-S>", ":w<CR>", { silent = true })
 vim.keymap.set("n", "<Find>", "0")
 vim.keymap.set("n", "<Select>", "$")
 vim.keymap.set("i", "<C-S>", "<C-o>:w<CR>")
-vim.keymap.set("i", "<F2>", "<C-o>:Neotree toggle")
+vim.keymap.set("i", "<F2>", "<C-o>:Neotree toggle<CR>")
 vim.keymap.set("i", "<Find>", "<C-o>0")
 vim.keymap.set("i", "<Select>", "<C-o>$")
 
