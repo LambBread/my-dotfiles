@@ -12,7 +12,7 @@ custom-shader = shaders/cursor_warp.glsl
 custom-shader = shaders/bloom.glsl
 # custom-shader = shaders/crt.glsl
 
-background-opacity = 0.55
+background-opacity = 0.67
 window-decoration = server
 window-padding-x = 15
 window-padding-y = 15

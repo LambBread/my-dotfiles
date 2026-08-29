@@ -11,11 +11,11 @@
         ".config/ghostty" = "config/ghostty";
         ".config/gtk-3.0" = "config/gtk-3.0";
         ".config/nvim" = "config/nvim";
-        ".config/picom" = "config/picom";
+        # ".config/picom" = "config/picom";
         ".config/polybar/scripts" = "config/polybar/scripts";
         ".config/polybar/modules" = "config/polybar/modules";
         # ".config/redshift" = "config/redshift";
-        ".config/rofi" = "config/rofi";
+        # ".config/rofi" = "config/rofi";
         # ".config/sxhkd" = "config/sxhkd";
     };
     laptopLinks = {

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
-    colors = import ../modules/colors.nix;
-    personal = import ../personal.nix;
+    colors = import ../../modules/colors.nix;
+    personal = import ../../personal.nix;
 in
 {
     home.file.".dircolors".source = ./.dircolors;

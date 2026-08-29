@@ -1,16 +1,24 @@
+{config, pkgs, ...}:
+let
+    colors = import ../../modules/colors.nix;
+in
+{
+    xdg.configFile."rofi/config.rasi".text =
+    ''
+    
 configuration {
 		show-icons: true;
 		modi: "drun,window";
 		show: "drun";
-        font: "MonaspiceAr Nerd Font Mono";
-        icon-theme: "Rowaita-Lavender-Dark";
+        font: "${colors.font}";
+        icon-theme: "${colors.icon_theme}";
         drun {
             fallback-icon: "package-x-generic";
         }
 }
 
 configuration {
-    font: "MonaspiceAr Nerd Font Mono 12";
+    font: "${colors.font} 12";
     line-margin: 10;
 
     display-ssh:    "";
@@ -31,9 +39,9 @@ configuration {
     vertical-align: 0.5;
     
     // Colors
-    bg: #245b9790;
-    fg: #ECE3D5;
-    selection: #bc9ed0c0;
+    bg: #${colors.blue}90;
+    fg: #${colors.l_white};
+    selection: #${colors.l_magenta}c0;
     transparent: #00000000;
 }
 window {
@@ -93,4 +101,6 @@ message {
 }
 textbox {
     color: @fg;
+}
+    '';
 }
