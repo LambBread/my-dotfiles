@@ -4,7 +4,7 @@
         # ".tmux.conf" = "home/.tmux.conf";
         # ".bashrc" = "home/.bashrc";
         # ".dircolors" = "home/.dircolors";
-        ".config/dunst" = "config/dunst";
+        # ".config/dunst" = "config/dunst";
         ".config/fastfetch/config.jsonc" = "config/fastfetch/config.jsonc";
         ".config/fastfetch/presets" = "config/fastfetch/presets";
         ".config/fastfetch/logos" = "config/fastfetch/logos";
@@ -14,9 +14,9 @@
         ".config/picom" = "config/picom";
         ".config/polybar/scripts" = "config/polybar/scripts";
         ".config/polybar/modules" = "config/polybar/modules";
-        ".config/redshift" = "config/redshift";
+        # ".config/redshift" = "config/redshift";
         ".config/rofi" = "config/rofi";
-        ".config/sxhkd" = "config/sxhkd";
+        # ".config/sxhkd" = "config/sxhkd";
     };
     laptopLinks = {
         # ".Xmodmap" = "home/laptop.Xmodmap";

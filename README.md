@@ -72,6 +72,11 @@ Example:
     DESK_NAME = "desktop";
     USERNAME = "MyGithubUsername";
     EMAIL = "my.email@example.com";
+    LOCATION =
+    {
+        lat = "-50";
+        lon = "-120";
+    };
 }
 ```
 

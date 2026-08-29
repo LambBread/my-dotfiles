@@ -15,6 +15,10 @@ rec {
     l_magenta = "bc9ed0";
     l_cyan = "36fcdb";
     l_white = "ece3d5";
+    theme = "Qogir-Custom-Dark";
+    icon_theme = "Rowaita-Lavender-Dark";
+    cursor_theme = "Simp1e-Adw-Dark";
+    font = "MonaspiceAr Nerd Font Mono";
 
     hexMap = {
         "0" = 0;

@@ -121,7 +121,7 @@ in
         # }
         extraOptions = "--term xterm-256color --seats seat0";
         extraConfig = ''
-            font-name=MonaspiceAr Nerd Font Mono
+            font-name=${colors.font}
             font-size=14
 
             palette=custom
@@ -197,20 +197,11 @@ in
             background = "${processedBackground}";
             greeters.gtk = {
                 enable = true;
-                theme = {
-                    name = "Qogir-Custom-Dark";
-                    package = qogir-theme-fork;
-                };
-                iconTheme = {
-                    name = "Rowaita-Lavender-Dark";
-                    package = rowaita-icon-theme;
-                };
-                cursorTheme = {
-                    name = "Simp1e-Adw-Dark";
-                    package = pkgs.simp1e-cursors;
-                };
+                theme.name = "${colors.theme}";
+                iconTheme.name = "${colors.icon_theme}";
+                cursorTheme.name = "${colors.cursor_theme}";
                 extraConfig = ''
-                    font-name = MonaspiceAr Nerd Font Mono 12
+                    font-name = ${colors.font} 12
                     clock-format = %Y-%m-%d %H:%M:%S
                 '';
             };
