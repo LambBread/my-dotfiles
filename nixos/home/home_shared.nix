@@ -11,6 +11,8 @@ in
         ./config/picom.nix
         ./config/rofi.nix
         ./config/thunar.nix
+        ./config/ghostty.nix
+        ./config/gtk.nix
     ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
@@ -21,7 +23,6 @@ in
         run ln -sf /srv/background.png \
         ${config.home.homeDirectory}/Pictures/wallpaper/wallpaper.png
     '';
-
 
     xdg.userDirs = {
         enable = true;
