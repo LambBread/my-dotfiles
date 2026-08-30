@@ -52,7 +52,7 @@ in
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernel.sysctl."vm.swappiness" = 20;
+    boot.kernel.sysctl."vm.swappiness" = 40;
     networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
     # Enable networking
     networking.networkmanager.enable = true;
@@ -82,7 +82,7 @@ in
     nix.gc = {
         automatic = true;
         dates = "02:00";
-        options = "--delete-older-than 14d";
+        options = "--delete-older-than 7d";
     };
 
     nix.optimise = {
