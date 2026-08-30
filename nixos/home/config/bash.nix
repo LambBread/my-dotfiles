@@ -5,6 +5,10 @@ let
 in
 {
     home.file.".dircolors".source = ./.dircolors;
+    xdg.configFile."fastfetch" = {
+        source = ./fastfetch;
+        recursive = true;
+    };
     programs.bash = {
         enable = true;
         enableCompletion = true;

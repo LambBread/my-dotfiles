@@ -8,17 +8,16 @@ in
     imports = [
         ./config/bash.nix
         ./config/bspwm.nix
+        ./config/conky.nix
+        ./config/ghostty.nix
+        ./config/gtk.nix
         ./config/picom.nix
         ./config/rofi.nix
         ./config/thunar.nix
-        ./config/ghostty.nix
-        ./config/gtk.nix
     ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
         run mkdir -p ${config.home.homeDirectory}/.config/bspwm
-        run mkdir -p ${config.home.homeDirectory}/.config/conky
-        run mkdir -p ${config.home.homeDirectory}/.config/fastfetch
         run mkdir -p ${config.home.homeDirectory}/.config/polybar
         run ln -sf /srv/background.png \
         ${config.home.homeDirectory}/Pictures/wallpaper/wallpaper.png
@@ -71,6 +70,8 @@ in
         };
     };
 
+    services.blueman-applet.enable = true;
+    services.lxqt-policykit-agent.enable = true;
     services.xsettingsd = {
         enable = true;
         settings = {

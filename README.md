@@ -99,7 +99,7 @@ Example:
   [qwerasd205](https://github.com/0xhckr/ghostty-shaders/blob/main/bloom.glsl).
 
 The fastfetch logos are derivative works under the CC-BY 4.0. 
-See [the README](./config/fastfetch/logos/README.md) for details.
+See [the README](./nixos/home/config/fastfetch/logos/README.md) for details.
 
 The default wallpaper fetched in the NixOS config was made by Reddit user u/FaithlessnessDue2763, 
 on their post ["Blue city"](https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/).

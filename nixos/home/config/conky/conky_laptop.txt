@@ -1,61 +1,3 @@
---[[
-    Author:             Arturo Aguilar Lagunas
-    Description:        Dark theme for a single monitor (1366 x 768)
-]]
-
-conky.config = {
-    -- window
-    alignment = 'top_right',
-    gap_x = 0,
-    gap_y = 0,
-    minimum_height = 768,
-    minimum_width = 400,
-    maximum_width = 400,
-    background = false,
-    border_width = 1,
-    own_window = true,
-    own_window_class = 'Conky',
-    own_window_type = 'normal',
-    -- Colors
-    font = 'MonaspiceAr Nerd Font Mono:size=11',
-    font1 = 'MonaspiceAr Nerd Font Mono:size=11',
-    color1 = '#cfb793',                        -- accent
-    -- color2 = '#f6bb8d',                        -- shade of col3
-    color2 = "#f08533",
-    color3 = '#BC9ED0',
-    own_window_transparent = false,            -- transparency
-    own_window_argb_visual = true,             -- transparency
-    own_window_argb_value = 85,               -- transparency [0 -255]
-    own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
-    -- own_window_colour = '#121214',             -- bg color [comment to full transparency]
-    own_window_colour = '#245b97',
-    default_color = 'white',                   -- default colors
-    default_outline_color = 'white',           -- default colors
-    default_shade_color = 'white',             -- default colors
-    double_buffer = true,                      -- removes flickering
-    draw_borders = false,                      -- borders (window)
-    draw_graph_borders = true,                 -- borders (graphs)
-    draw_outline = false,                      -- border (text)
-    draw_shades = false,                       -- shades
-    extra_newline = false,                     -- extra newline at the end when writing to stdout
-    -- other
-    update_interval = 0.5,
-    cpu_avg_samples = 4,
-    net_avg_samples = 4,
-    no_buffers = true,
-    out_to_console = false,
-    out_to_ncurses = false,
-    out_to_stderr = false,
-    out_to_x = true,
-    show_graph_range = false,
-    show_graph_scale = false,
-    stippled_borders = 0,
-    uppercase = false,
-    use_spacer = 'none',
-    use_xft = true,
-}
-
-conky.text = [[
 ${voffset 0}
 
 ${goto 24}${color1}${font1}󰉖 File system ${voffset 8}${font}  
@@ -88,5 +30,4 @@ ${goto 24} Network:
 ${goto 24}${color1}SSID: ${color2}${wireless_essid wlo1}${alignr}${color1}IP: ${color2}${addr wlo1}  
 ${goto 24}${color1}Total Up: ${color2}${totalup wlo1} ${alignr}${color1}Total Down: ${color2}${totaldown wlo1}  
 ${goto 24}${color1}Speed Up: ${color2}${upspeed wlo1} ${alignr}${color1}Speed Down: ${color2}${downspeed wlo1}${voffset 8}  
-${goto 24}${color1}${upspeedgraph wlo1 30, 200} ${alignr}${downspeedgraph wlo1 30, 200} 
-]]
+${goto 24}${color3}${upspeedgraph wlo1 30, 200} ${alignr}${downspeedgraph wlo1 30, 200} 

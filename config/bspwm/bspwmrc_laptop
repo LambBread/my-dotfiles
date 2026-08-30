@@ -2,11 +2,11 @@
 
 xmodmap ~/.Xmodmap
 # pgrep -x sxhkd > /dev/null || sxhkd &
-lxqt-policykit-agent &
+# lxqt-policykit-agent &
 pgrep -x greenclip || greenclip daemon &
 
-pgrep -x conky > /dev/null || conky -p 7 &
-(sleep 8; xdo lower -N Conky) &
+# pgrep -x conky > /dev/null || conky -p 7 &
+(sleep 3; xdo lower -N Conky) &
 
 # pgrep -x diodon > /dev/null || diodon &
 # pgrep -x redshift-gtk > /dev/null || (sleep 3; redshift-gtk) &
@@ -19,7 +19,7 @@ pgrep -x polybar > /dev/null || polybar top &
 
 # pkill dunst && dunst &
 nm-applet &
-blueman-applet &
+# blueman-applet &
 feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
 
 # pgrep -x protonvpn-app > /dev/null || (sleep 3; gtk-launch proton.vpn.app.gtk) &
