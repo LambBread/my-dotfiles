@@ -13,7 +13,7 @@ in
         ./hardware-configuration.nix
         ./modules/settings.nix
         ./modules/commonpkgs.nix
-        <home-manager/nixos>
+        #<home-manager/nixos>
     ];
 
     # Allow unfree packages
@@ -84,9 +84,9 @@ in
     programs.virt-manager.enable = true;
     virtualisation.spiceUSBRedirection.enable = true;
 
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
-    home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
+    # home-manager.useGlobalPkgs = true;
+    # home-manager.useUserPackages = true;
+    # home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

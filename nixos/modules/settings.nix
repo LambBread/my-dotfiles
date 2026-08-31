@@ -90,6 +90,11 @@ in
         dates = "03:00";
     };
 
+    nix.settings.experimental-features = [
+        "nix-command"
+        "flakes"
+    ];
+
     services.kmscon = {
         enable = true;
         hwRender = true;

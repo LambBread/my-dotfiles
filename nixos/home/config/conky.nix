@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+    config,
+    lib,
+    pkgs,
+    ...
+}:
 let
     colors = import ../../modules/colors.nix;
     personal = import ../../personal.nix;
