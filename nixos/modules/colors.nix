@@ -15,11 +15,13 @@ rec {
     l_magenta = "bc9ed0";
     l_cyan = "36fcdb";
     l_white = "ece3d5";
-    black_alt = "0c1315";
+    black_alt = "0c1315"; # old black
+    blue_alt = "205083"; # shaded blue
     theme = "Qogir-Custom-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
     font = "MonaspiceAr Nerd Font Mono";
+    emoji_font = "Noto Color Emoji";
 
     hexMap = {
         "0" = 0;

@@ -12,13 +12,12 @@ in
         ./config/ghostty.nix
         ./config/gtk.nix
         ./config/picom.nix
+        ./config/polybar.nix
         ./config/rofi.nix
         ./config/thunar.nix
     ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
-        run mkdir -p ${config.home.homeDirectory}/.config/bspwm
-        run mkdir -p ${config.home.homeDirectory}/.config/polybar
         run ln -sf /srv/background.png \
         ${config.home.homeDirectory}/Pictures/wallpaper/wallpaper.png
     '';

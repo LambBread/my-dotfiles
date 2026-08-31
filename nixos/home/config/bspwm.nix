@@ -1,7 +1,71 @@
-{ config, pkgs, ... }:
+{
+    home,
+    config,
+    pkgs,
+    ...
+}:
 let
     colors = import ../../modules/colors.nix;
     personal = import ../../personal.nix;
+    desktop = {
+        monitors = {
+            "DP-5" = [
+                "󰇊"
+                "󰇋"
+                "󰇌"
+                "󰇍"
+                "󰇎"
+                "󰇏"
+            ];
+            "HDMI-0" = [
+                "󱅊"
+                "󱅋"
+                "󱅌"
+                "󱅍"
+                "󱅎"
+                "󱅏"
+            ];
+        };
+        extra = ''
+            xrandr --output DP-5 --primary --output HDMI-0 --right-of DP-5
+            xmodmap ~/.Xmodmap
+            pgrep -x greenclip || greenclip daemon &
+            (sleep 3; xdo lower -N Conky) &
+            pgrep -x polybar > /dev/null || polybar top &
+            feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
+            nm-applet &
+            protonvpn connect &
+            pgrep -x whatpulse > /dev/null || (sleep 3; flatpak run org.whatpulse.WhatPulse --minimized --closedwindow) &
+        '';
+    };
+    laptop = {
+        monitors = {
+            "${home.config.username}" = [
+                "󰇊"
+                "󰇋"
+                "󰇌"
+                "󰇍"
+                "󰇎"
+                "󰇏"
+                "󱅊"
+                "󱅋"
+                "󱅌"
+                "󱅍"
+                "󱅎"
+                "󱅏"
+            ];
+        };
+        extra = ''
+            xmodmap ~/.Xmodmap
+            pgrep -x greenclip || greenclip daemon &
+            (sleep 3; xdo lower -N Conky) &
+            pgrep -x polybar > /dev/null || polybar top &
+            feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
+            nm-applet &
+        '';
+    };
+    monitors = if personal.DESK_NAME == "desktop" then desktop.monitors else laptop.monitors;
+    extraConfigEarly = if personal.DESK_NAME == "desktop" then desktop.extra else laptop.extra;
 in
 {
     services.dunst = {
@@ -21,6 +85,42 @@ in
                 timeout = 5;
             };
         };
+    };
+
+    xsession.windowManager.bspwm = {
+        enable = true;
+        inherit monitors;
+        inherit extraConfigEarly;
+        settings = {
+            border_width = 4;
+            window_gap = 12;
+            split_ratio = 0.5;
+            borderless_monocle = true;
+            gapless_monocle = false;
+            automatic_scheme = "longest_side";
+            pointer_follows_focus = true;
+            top_padding = 44;
+            presel_feedback_color = "#${colors.white}";
+            focused_border_color = "#${colors.red}";
+            normal_border_color = "#${colors.blue}";
+            active_border_color = "#${colors.l_magenta}";
+        };
+        rules = {
+
+            "mplayer2".state = "floating";
+            "Kupfer.py".focus = true;
+            "Screenkey".manage = false;
+            "Xfce4-panel" = {
+                manage = false;
+                border = false;
+                layer = "above";
+            };
+            "Gsimplecal".sticky = true;
+            "Conky".manage = false;
+        };
+        extraConfig = ''
+            notify-send "bspwm" "Configuration loaded";
+        '';
     };
 
     services.sxhkd = {
