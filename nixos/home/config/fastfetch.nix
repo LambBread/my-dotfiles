@@ -1,3 +1,47 @@
+{config, pkgs, ...}:
+let
+    personal = import ../../personal.nix;
+in
+{
+    xdg.configFile."fastfetch/presets/default.jsonc".text = ''
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "locale",
+    "break",
+    "colors"
+  ]
+}
+    '';
+
+    xdg.configFile."fastfetch/config.jsonc".text =
+    ''
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "display": {
@@ -72,17 +116,13 @@
         "type": "command",
         "key": " OS Birthday",
         "keyColor": "92",
-        //"folders": "/",
-        //"format": "{create-time:10} ({days} days)",
         "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
     },
     {
         "type": "command",
         "key": "󰖕 Weather",
         "keyColor": "92",
-        "text": "curl 'https://wttr.in/Prince+George?format=%C%20%t&m'"
-        //"location": "Prince George",
-        //"timeout": 3000
+        "text": "curl 'https://wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%C%20%t&m'"
     },
 
     "break",
@@ -187,4 +227,11 @@
         "key": "{#90} {#91} {#92} {#93} {#94} {#95} {#96} {#97}"
     }
   ]
+}
+    '';
+    
+    xdg.configFile."fastfetch/logos" = {
+        source = ./fastfetch/logos;
+        recursive = true;
+    };
 }

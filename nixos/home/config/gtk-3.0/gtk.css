@@ -5,7 +5,7 @@
 
 menu, .menu
 {
-    /*background-color: @custom-col-1;*/
+    background-color: @custom-col-black;
     color: @text-colour;
     padding: 4px;
 }

@@ -9,6 +9,7 @@ in
         ./config/bash.nix
         ./config/bspwm.nix
         ./config/conky.nix
+        ./config/fastfetch.nix
         ./config/ghostty.nix
         ./config/gtk.nix
         ./config/picom.nix

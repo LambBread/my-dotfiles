@@ -1,5 +1,4 @@
 {
-    home,
     config,
     pkgs,
     ...
@@ -9,7 +8,7 @@ let
     personal = import ../../personal.nix;
     desktop = {
         monitors = {
-            "DP-5" = [
+            "${builtins.elemAt personal.MONITORS 0}" = [
                 "󰇊"
                 "󰇋"
                 "󰇌"
@@ -17,7 +16,7 @@ let
                 "󰇎"
                 "󰇏"
             ];
-            "HDMI-0" = [
+            "${builtins.elemAt personal.MONITORS 1}" = [
                 "󱅊"
                 "󱅋"
                 "󱅌"
@@ -27,10 +26,12 @@ let
             ];
         };
         extra = ''
-            xrandr --output DP-5 --primary --output HDMI-0 --right-of DP-5
+            xrandr --output ${builtins.elemAt personal.MONITORS 0} --primary --output \
+            ${builtins.elemAt personal.MONITORS 1} --right-of ${builtins.elemAt personal.MONITORS 0}
             xmodmap ~/.Xmodmap
             pgrep -x greenclip || greenclip daemon &
-            (sleep 3; xdo lower -N Conky) &
+            pkill conky
+            (sleep 5; xdo lower -N Conky) &
             pgrep -x polybar > /dev/null || polybar top &
             feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
             nm-applet &
@@ -40,7 +41,7 @@ let
     };
     laptop = {
         monitors = {
-            "${home.config.username}" = [
+            "${personal.SHORT_NAME}" = [
                 "󰇊"
                 "󰇋"
                 "󰇌"
@@ -58,7 +59,8 @@ let
         extra = ''
             xmodmap ~/.Xmodmap
             pgrep -x greenclip || greenclip daemon &
-            (sleep 3; xdo lower -N Conky) &
+            pkill conky
+            (sleep 5; xdo lower -N Conky) &
             pgrep -x polybar > /dev/null || polybar top &
             feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
             nm-applet &

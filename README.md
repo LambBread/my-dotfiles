@@ -74,21 +74,28 @@ Example:
     EMAIL = "my.email@example.com";
     LOCATION =
     {
-        lat = "-50";
+        lat = "50";
         lon = "-120";
     };
+    WEATHER_LINK = "https://weather.com";
+    MONITORS = [
+        "DP-5" "HDMI-0"
+    ]; # only required for desktops
 }
 ```
 
 5. Symlink `~/.dotfiles/nixos/` to `/etc/nixos`.
 
-6. Run `sudo nixos-rebuild switch`, or if on laptop, 
+6. If on desktop, modify any user-specific details such as the default of
+NVIDIA drivers with a multi-monitor setup.
+
+7. Run `sudo nixos-rebuild switch`, or if on laptop, 
 `sudo nixos-rebuild switch -Inixos-config=/etc/nixos/configuration_laptop.nix`.
 
-7. If on desktop, setup SSH keys for GitHub named
+8. If on desktop, setup SSH keys for GitHub named
 `~/.ssh/gh_key` (signing) and `~/.ssh/gh_key2` (authentication).
 
-8. Modify configuration if desired.
+9. Modify configuration if desired.
 
 ## Credits
 

@@ -89,7 +89,7 @@ in
             elif [ "$battery_info" -le "40" ]; then
                 echo "%{F#${colors.red}}%{T2}󰥀%{F-}%{T1} $battery_info%"
             elif [ "$battery_info" -le "60" ]; then
-                echo "%{F#${colors.l_magenta}]}%{T2}󰥂%{F-}%{T1} $battery_info%"
+                echo "%{F#${colors.l_magenta}}%{T2}󰥂%{F-}%{T1} $battery_info%"
             elif [ "$battery_info" -le "80" ]; then
                 echo "%{F#${colors.l_magenta}}%{T2}󰥄%{F-}%{T1} $battery_info%"
             else
@@ -182,7 +182,7 @@ in
         exec = curl -s "wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%20%c%t&m"
         interval = 120
         exec-if = ping -c 1 wttr.in
-        click-left = xdg-open "https://www.theweathernetwork.com/en/city/ca/british-columbia/prince-george/current"
+        click-left = xdg-open "${personal.WEATHER_LINK}"
         label-underline = ''${colors.secondary}
 
         [module/nixbtw]

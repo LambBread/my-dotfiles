@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
     colors = import ../../modules/colors.nix;
     personal = import ../../personal.nix;
@@ -21,7 +21,6 @@ in
         extraConfig = ''
             conky.config = {
                 alignment = 'top_right',
-                gap_x = 0,
                 gap_y = 0,
                 minimum_height = ${selectedConfig.minimum_height},
                 minimum_width = ${selectedConfig.width},
