@@ -13,6 +13,7 @@ in
         ./hardware-configuration.nix
         ./modules/settings.nix
         ./modules/commonpkgs.nix
+        ./modules/nixvim.nix
         #<home-manager/nixos>
     ];
 

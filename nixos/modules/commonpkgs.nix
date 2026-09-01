@@ -71,8 +71,8 @@ in
         noto-fonts-color-emoji
     ];
 
-    programs.neovim = {
-        enable = true;
-        defaultEditor = true;
-    };
+    # programs.neovim = {
+    #     enable = true;
+    #     defaultEditor = true;
+    # };
 }

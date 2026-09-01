@@ -26,8 +26,8 @@ in
             "cp" = "cp -v";
             "mv" = "mv -v";
             "btw" = "echo \"I use $(. /etc/os-release; echo $NAME), Neovim, and bspwm btw\"";
-            "nrs" = "sudo nixos-rebuild switch";
-            "nrsl" = "sudo nixos-rebuild switch -Inixos-config=/etc/nixos/configuration_laptop.nix";
+            "nrs" = "sudo nixos-rebuild switch --flake /etc/nixos/#desktop";
+            "nrsl" = "sudo nixos-rebuild switch --flake /etc/nixos/#laptop";
             "ncg" = "sudo nix-collect-garbage";
         };
         initExtra = ''

@@ -36,7 +36,6 @@ let
             feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
             nm-applet &
             protonvpn connect &
-            pgrep -x whatpulse > /dev/null || (sleep 3; flatpak run org.whatpulse.WhatPulse --minimized --closedwindow) &
         '';
     };
     laptop = {

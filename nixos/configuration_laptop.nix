@@ -12,7 +12,8 @@ in
         ./hardware-configuration.nix
         ./modules/settings.nix
         ./modules/commonpkgs.nix
-        <home-manager/nixos>
+        ./modules/nixvim.nix
+        # <home-manager/nixos>
     ];
 
     # Allow unfree packages
@@ -40,9 +41,9 @@ in
 
     services.gnome.games.enable = true;
 
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
-    home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
+    # home-manager.useGlobalPkgs = true;
+    # home-manager.useUserPackages = true;
+    # home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

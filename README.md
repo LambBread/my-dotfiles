@@ -55,7 +55,7 @@ These are some of my dotfiles.
 
 ## Installation (NixOS)
 
-1. Install Git and add home-manager as a Nix channel.
+1. Install Git and enable flakes in your existing configuration.
 
 2. Clone this repo into `~/.dotfiles`.
 
@@ -84,18 +84,27 @@ Example:
 }
 ```
 
-5. Symlink `~/.dotfiles/nixos/` to `/etc/nixos`.
+5. Delete or move `/etc/nixos` and symlink `~/.dotfiles/nixos/` to `/etc/nixos`.
 
 6. If on desktop, modify any user-specific details such as the default of
 NVIDIA drivers with a multi-monitor setup.
 
-7. Run `sudo nixos-rebuild switch`, or if on laptop, 
-`sudo nixos-rebuild switch -Inixos-config=/etc/nixos/configuration_laptop.nix`.
+7. Add `personal.nix` and `hardware-configuration.nix` to Git using `--intent-to-add`.
 
-8. If on desktop, setup SSH keys for GitHub named
+```bash
+git add -N -f nixos/personal.nix
+git add -N -f nixos/hardware-configuration.nix
+git update-index --skip-worktree nixos/personal.nix
+git update-index --skip-worktree nixos/hardware-configuration.nix
+```
+
+8. Run `sudo nixos-rebuild switch --flake /etc/nixos/#desktop`, or if on laptop, 
+`sudo nixos-rebuild switch --flake /etc/nixos/#laptop`.
+
+9. If on desktop, setup SSH keys for GitHub named
 `~/.ssh/gh_key` (signing) and `~/.ssh/gh_key2` (authentication).
 
-9. Modify configuration if desired.
+10. Modify configuration if desired.
 
 ## Credits
 
