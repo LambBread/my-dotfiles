@@ -102,9 +102,10 @@ in
             pointer_follows_focus = true;
             top_padding = 44;
             presel_feedback_color = "#${colors.white}";
-            focused_border_color = "#${colors.red}";
-            normal_border_color = "#${colors.blue}";
+            focused_border_color = "#${colors.blue}";
+            normal_border_color = "#${colors.black}";
             active_border_color = "#${colors.l_magenta}";
+            urgent_border_color = "#${colors.red}";
         };
         rules = {
 

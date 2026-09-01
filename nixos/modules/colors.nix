@@ -17,6 +17,25 @@ rec {
     l_white = "ece3d5";
     black_alt = "0c1315"; # old black
     blue_alt = "205083"; # shaded blue
+    #black = "402030";
+    #red = "ff5874";
+    #green = "23d18b";
+    #yellow = "f1fa8c";
+    #blue = "61afef";
+    #magenta = "bd93f9";
+    #cyan = "8be9fd";
+    #white = "f8f8f2";
+    #l_black = "6272a4";
+    #l_red = "ff79c6";
+    #l_green = "50fa7b";
+    #l_yellow = "ffb86c";
+    #l_blue = "b4f0ff";
+    #l_magenta = "ff79c6";
+    #l_cyan = "a4ffff";
+    #l_white = "ffffff";
+    #black_alt = "0f111a";
+    #blue_alt = "245b97";
+
     theme = "Qogir-Custom-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";

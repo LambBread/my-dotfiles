@@ -73,7 +73,7 @@
 
 .thunar .shortcuts-pane .view
 {
-    background: @panel-colour;
+    background: @custom-col-1;
 }
 
 .thunar .shortcuts-pane .view *:selected
