@@ -4,27 +4,27 @@
     fetchzip,
 }:
 let
-    colors = import ./colors.nix;
-    gowallTheme = pkgs.writeText "gowall-config.yml" ''
-        themes:
-          - name: "my-custom"
-            colors:
-              - "#${colors.black}" 
-              - "#${colors.red}"  
-              - "#${colors.green}"  
-              - "#${colors.yellow}"  
-              - "#${colors.blue}"  
-              - "#${colors.magenta}"  
-              - "#${colors.cyan}" 
-              - "#${colors.white}"  
-              - "#${colors.l_black}" 
-              - "#${colors.l_red}"  
-              - "#${colors.l_green}"  
-              - "#${colors.l_yellow}"  
-              - "#${colors.l_blue}"  
-              - "#${colors.l_magenta}"  
-              - "#${colors.l_cyan}" 
-              - "#${colors.l_white}"'';
+    colors = import ./colors.nix { inherit pkgs; };
+    #gowallTheme = pkgs.writeText "gowall-config.yml" ''
+    #    themes:
+    #      - name: "my-custom"
+    #        colors:
+    #          - "#${colors.black}"
+    #          - "#${colors.red}"
+    #          - "#${colors.green}"
+    #          - "#${colors.yellow}"
+    #          - "#${colors.blue}"
+    #          - "#${colors.magenta}"
+    #          - "#${colors.cyan}"
+    #          - "#${colors.white}"
+    #          - "#${colors.l_black}"
+    #          - "#${colors.l_red}"
+    #          - "#${colors.l_green}"
+    #          - "#${colors.l_yellow}"
+    #          - "#${colors.l_blue}"
+    #          - "#${colors.l_magenta}"
+    #          - "#${colors.l_cyan}"
+    #          - "#${colors.l_white}"'';
 in
 stdenv.mkDerivation rec {
     pname = "qogir-theme-fork";
@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
     installPhase = ''
         export HOME=$NIX_BUILD_TOP
         mkdir -p $HOME/.config/gowall
-        cp ${gowallTheme} $HOME/.config/gowall/config.yml
+        cp ${colors.gowallTheme} $HOME/.config/gowall/config.yml
         mkdir -p $out/share/themes
         cp -r Qogir-Custom-Dark $out/share/themes
         find . -type f -name "*.png" -exec gowall convert {} -t my-custom --output {} --preview false \;

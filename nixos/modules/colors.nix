@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 rec {
     black = "412853";
     red = "f08533";
@@ -41,6 +42,26 @@ rec {
     cursor_theme = "Simp1e-Adw-Dark";
     font = "MonaspiceAr Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
+    gowallTheme = pkgs.writeText "gowall-config.yml" ''
+        themes:
+          - name: "my-custom"
+            colors:
+              - "#${black}" 
+              - "#${red}"  
+              - "#${green}"  
+              - "#${yellow}"  
+              - "#${blue}"  
+              - "#${magenta}"  
+              - "#${cyan}" 
+              - "#${white}"  
+              - "#${l_black}" 
+              - "#${l_red}"  
+              - "#${l_green}"  
+              - "#${l_yellow}"  
+              - "#${l_blue}"  
+              - "#${l_magenta}"  
+              - "#${l_cyan}" 
+              - "#${l_white}"'';
 
     hexMap = {
         "0" = 0;

@@ -1,6 +1,36 @@
-{ config, pkgs, ... }:
+{
+    config,
+    lib,
+    pkgs,
+    ...
+}:
 let
     personal = import ../../personal.nix;
+    colors = import ../../modules/colors.nix { inherit pkgs; };
+    fastfetch_logos = {
+        nix = ./fastfetch/logos/nix.png;
+        nix_bi = ./fastfetch/logos/nix_bi.png;
+        nix_pan = ./fastfetch/logos/nix_pan.png;
+        nix_trans = ./fastfetch/logos/nix_trans.png;
+    };
+    processed_logos =
+        pkgs.runCommand "processed-logos"
+            {
+                nativeBuildInputs = [ pkgs.gowall ];
+            }
+            ''
+                mkdir -p $out
+                export HOME=$NIX_BUILD_TOP
+                mkdir -p $HOME/.config/gowall
+                cp ${colors.gowallTheme} $HOME/.config/gowall/config.yml
+
+                ${lib.concatStringsSep "\n" (
+                    lib.mapAttrsToList (name: path: ''
+                        gowall convert ${path} --output $out/${name}.png -t my-custom --preview false
+                    '') fastfetch_logos
+                )}
+            '';
+
 in
 {
     xdg.configFile."fastfetch/presets/default.jsonc".text = ''
@@ -229,8 +259,13 @@ in
         }
     '';
 
-    xdg.configFile."fastfetch/logos" = {
-        source = ./fastfetch/logos;
-        recursive = true;
-    };
+    xdg.configFile."fastfetch/logos".source = processed_logos;
+    #xdg.configFile."fastfetch/logos/nix.png".text = processed_logos.nix_png;
+    #xdg.configFile."fastfetch/logos/nix_bi.png".text = processed_logos.nix_bi_png;
+    #xdg.configFile."fastfetch/logos/nix_pan.png".text = processed_logos.nix_pan_png;
+    #xdg.configFile."fastfetch/logos/nix_trans.png".text = processed_logos.nix_trans_png;
+
+    #    source = ./fastfetch/logos;
+    #    recursive = true;
+    #};
 }

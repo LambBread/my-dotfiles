@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-    colors = import ../../modules/colors.nix;
+    colors = import ../../modules/colors.nix { inherit pkgs; };
     personal = import ../../personal.nix;
 in
 {

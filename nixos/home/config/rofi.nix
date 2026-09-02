@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-    colors = import ../../modules/colors.nix;
+    colors = import ../../modules/colors.nix { inherit pkgs; };
 in
 {
     xdg.configFile."rofi/config.rasi".text = ''

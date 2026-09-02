@@ -6,32 +6,32 @@
 }:
 let
     personal = import ../personal.nix;
-    colors = import ./colors.nix;
+    colors = import ./colors.nix { inherit pkgs; };
     backgroundImg = pkgs.fetchurl {
         # https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/
         url = "https://i.redd.it/szhyd7ryld0h1.png";
         sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
     };
-    gowallTheme = pkgs.writeText "gowall-config.yml" ''
-        themes:
-          - name: "my-custom"
-            colors:
-              - "#${colors.black}" 
-              - "#${colors.red}"  
-              - "#${colors.green}"  
-              - "#${colors.yellow}"  
-              - "#${colors.blue}"  
-              - "#${colors.magenta}"  
-              - "#${colors.cyan}" 
-              - "#${colors.white}"  
-              - "#${colors.l_black}" 
-              - "#${colors.l_red}"  
-              - "#${colors.l_green}"  
-              - "#${colors.l_yellow}"  
-              - "#${colors.l_blue}"  
-              - "#${colors.l_magenta}"  
-              - "#${colors.l_cyan}" 
-              - "#${colors.l_white}"'';
+    # gowallTheme = pkgs.writeText "gowall-config.yml" ''
+    #     themes:
+    #       - name: "my-custom"
+    #         colors:
+    #           - "#${colors.black}"
+    #           - "#${colors.red}"
+    #           - "#${colors.green}"
+    #           - "#${colors.yellow}"
+    #           - "#${colors.blue}"
+    #           - "#${colors.magenta}"
+    #           - "#${colors.cyan}"
+    #           - "#${colors.white}"
+    #           - "#${colors.l_black}"
+    #           - "#${colors.l_red}"
+    #           - "#${colors.l_green}"
+    #           - "#${colors.l_yellow}"
+    #           - "#${colors.l_blue}"
+    #           - "#${colors.l_magenta}"
+    #           - "#${colors.l_cyan}"
+    #           - "#${colors.l_white}"'';
 
     processedBackground =
         pkgs.runCommand "processed-background.png"
@@ -41,7 +41,7 @@ let
             ''
                 export HOME=$NIX_BUILD_TOP
                 mkdir -p $HOME/.config/gowall
-                cp ${gowallTheme} $HOME/.config/gowall/config.yml
+                cp ${colors.gowallTheme} $HOME/.config/gowall/config.yml
                 gowall convert ${backgroundImg} --output $out -t my-custom --preview false
             '';
 

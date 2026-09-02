@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 let
-    colors = import ./colors.nix;
+    colors = import ./colors.nix { inherit pkgs; };
 in
 {
     programs.nixvim = {

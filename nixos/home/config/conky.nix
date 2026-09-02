@@ -5,7 +5,7 @@
     ...
 }:
 let
-    colors = import ../../modules/colors.nix;
+    colors = import ../../modules/colors.nix { inherit pkgs; };
     personal = import ../../personal.nix;
     desktop = {
         minimum_height = "1080";

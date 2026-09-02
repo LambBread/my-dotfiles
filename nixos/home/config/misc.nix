@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
     personal = import ../../personal.nix;
-    colors = import ../../modules/colors.nix;
+    colors = import ../../modules/colors.nix { inherit pkgs; };
 in
 {
     programs.ssh = {
