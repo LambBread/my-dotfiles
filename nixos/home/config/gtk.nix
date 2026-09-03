@@ -19,6 +19,7 @@ in
         @define-color custom-col-1 #${colors.blue};
         @define-color custom-col-3 #${colors.l_magenta};
         @define-color custom-col-black #${colors.black};
+        @define-color custom-col-l-black #${colors.l_black};
         @define-color text-colour #${colors.l_white};
         @define-color tasklist-colour shade(@custom-col-1, 0.85);
         @define-color button-select-colour shade(@custom-col-1, 0.55);

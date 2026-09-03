@@ -1,23 +1,23 @@
 
 .thunar tab
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
 }
 
 .thunar tab:checked
 {
-    background: @tasklist-colour-shaded-blue;
+    background: @tasklist-colour-col3;
 }
 
 .thunar .view
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
 }
 
 .thunar .view .rubberband
 {
     background: alpha(@tasklist-colour-col3, 0.50);
-    border: 0.5px solid @button-select-colour-shaded;
+    border: 1px solid @tasklist-colour-col3;
 }
 
 .thunar .view:selected
@@ -27,17 +27,17 @@
 
 .thunar toolbar
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
 }
 
 .thunar toolbar button:hover
 {
-    background: @button-select-colour;
+    background: @custom-col-black;
 }
 
 .thunar toolbar button:active
 {
-    background: @button-select-colour-shaded;
+    background: @tasklist-colour-col3;
 }
 
 .thunar toolbar button:checked
@@ -54,26 +54,29 @@
 
 .thunar menubar
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
+    text-align: center;
 }
 
 .thunar
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
 }
 
 .thunar statusbar
 {
-    background: @tasklist-colour;
+    background: @custom-col-black;
 }
 .thunar toolbar entry
 {
-    background: @button-select-colour;
+    background: @custom-col-black;
 }
 
 .thunar .shortcuts-pane .view
 {
-    background: @custom-col-1;
+    background: @custom-col-black;
+    text-align: center;
+    padding: 5px;
 }
 
 .thunar .shortcuts-pane .view *:selected

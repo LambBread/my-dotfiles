@@ -66,8 +66,8 @@ rec {
     theme = "Qogir-Custom-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
-    # font = "MonaspiceAr Nerd Font Mono";
-    font = "0xProto Nerd Font Mono";
+    font = "MonaspiceKr Nerd Font Mono";
+    # font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
     gowallTheme = pkgs.writeText "gowall-config.yml" ''
         themes:
