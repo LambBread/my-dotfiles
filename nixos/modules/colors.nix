@@ -1,5 +1,7 @@
 { pkgs, ... }:
 rec {
+    # typical
+
     black = "412853";
     red = "f08533";
     green = "659226";
@@ -18,29 +20,54 @@ rec {
     l_white = "ece3d5";
     black_alt = "0c1315"; # old black
     blue_alt = "205083"; # shaded blue
-    #black = "402030";
-    #red = "ff5874";
-    #green = "23d18b";
-    #yellow = "f1fa8c";
-    #blue = "61afef";
-    #magenta = "bd93f9";
-    #cyan = "8be9fd";
-    #white = "f8f8f2";
-    #l_black = "6272a4";
-    #l_red = "ff79c6";
-    #l_green = "50fa7b";
-    #l_yellow = "ffb86c";
-    #l_blue = "b4f0ff";
-    #l_magenta = "ff79c6";
-    #l_cyan = "a4ffff";
-    #l_white = "ffffff";
-    #black_alt = "0f111a";
-    #blue_alt = "245b97";
+
+    # vga
+
+    # black = "000000";
+    # red = "aa0000";
+    # green = "00aa00";
+    # yellow = "aa5500";
+    # blue = "0000aa";
+    # magenta = "aa00aa";
+    # cyan = "00aaaa";
+    # white = "aaaaaa";
+    # l_black = "555555";
+    # l_red = "ff5555";
+    # l_green = "55ff55";
+    # l_yellow = "ffff55";
+    # l_blue = "5555ff";
+    # l_magenta = "ff55ff";
+    # l_cyan = "55ffff";
+    # l_white = "ffffff";
+    # black_alt = "000000";
+    # blue_alt = "000080";
+
+    # vscode
+
+    # black = "000000";
+    # red = "cd3131";
+    # green = "0dbc79";
+    # yellow = "e5e510";
+    # blue = "2472c8";
+    # magenta = "bc3fbc";
+    # cyan = "11a8cd";
+    # white = "e5e5e5";
+    # l_black = "666666";
+    # l_red = "f14c4c";
+    # l_green = "23d187";
+    # l_yellow = "f5f543";
+    # l_blue = "3b8eea";
+    # l_magenta = "d670d6";
+    # l_cyan = "29d8b8";
+    # l_white = "e5e5e5";
+    # black_alt = "000000";
+    # blue_alt = "000097";
 
     theme = "Qogir-Custom-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
-    font = "MonaspiceAr Nerd Font Mono";
+    # font = "MonaspiceAr Nerd Font Mono";
+    font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
     gowallTheme = pkgs.writeText "gowall-config.yml" ''
         themes:
