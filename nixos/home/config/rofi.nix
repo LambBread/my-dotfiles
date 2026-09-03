@@ -38,7 +38,7 @@ in
             vertical-align: 0.5;
             
             // Colors
-            bg: #${colors.black}90;
+            bg: #${colors.blue}aa;
             fg: #${colors.l_white};
             selection: #${colors.magenta}c0;
             transparent: #00000000;

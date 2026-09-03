@@ -5,7 +5,7 @@
         backend = "glx";
         vSync = true;
         shadow = true;
-        inactiveOpacity = 1;
+        inactiveOpacity = 1.0;
         activeOpacity = 1;
         menuOpacity = 0.8;
         fade = true;
@@ -76,6 +76,7 @@
         opacityRules = [
 
             "67:class_g = 'Thunar'"
+            "80:class_g = 'Gsimplecal'"
             "80:class_g ?= 'xfwm4' && argb"
         ];
         settings = {
@@ -92,6 +93,7 @@
             ];
             blur-method = "dual_kawase";
             blur-strength = 10;
+            inactive-dim = 0.1;
 
             blur-kern = "9x9gaussian";
 

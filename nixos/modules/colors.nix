@@ -19,7 +19,6 @@ rec {
     l_cyan = "36fcdb";
     l_white = "ece3d5";
     black_alt = "0c1315"; # old black
-    blue_alt = "205083"; # shaded blue
 
     # vga
 
@@ -40,7 +39,6 @@ rec {
     # l_cyan = "55ffff";
     # l_white = "ffffff";
     # black_alt = "000000";
-    # blue_alt = "000080";
 
     # vscode
 
@@ -61,12 +59,11 @@ rec {
     # l_cyan = "29d8b8";
     # l_white = "e5e5e5";
     # black_alt = "000000";
-    # blue_alt = "000097";
 
     theme = "Qogir-Custom-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
-    font = "MonaspiceKr Nerd Font Mono";
+    font = "MonaspiceAr Nerd Font Mono";
     # font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
     gowallTheme = pkgs.writeText "gowall-config.yml" ''

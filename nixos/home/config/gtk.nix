@@ -51,14 +51,14 @@ in
 
         calendar, GtkCalendar
         {
-            background: @custom-col-black;
+            background: @custom-col-blue;
             color: @custom-col-l-white;
             font-family: "${colors.font}", monospace;
         }
 
         calendar:selected, GtkCalendar:selected
         {
-            background: @custom-col-l-magenta;
+            background: @custom-col-magenta;
         }
     '';
     xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;

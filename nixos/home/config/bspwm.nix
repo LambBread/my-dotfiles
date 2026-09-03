@@ -75,13 +75,13 @@ in
             global = {
                 icon_theme = "${colors.icon_theme}";
                 enable_recursive_icon_lookup = true;
-                background = "#${colors.black}";
+                background = "#${colors.blue}";
                 font = "${colors.font} 11";
                 frame_width = 0;
                 sort = true;
                 padding = 6;
                 horizontal_padding = 12;
-                transparency = 20;
+                transparency = 33;
                 alignment = "center";
                 timeout = 5;
             };
@@ -102,7 +102,7 @@ in
             pointer_follows_focus = true;
             top_padding = 44;
             presel_feedback_color = "#${colors.white}";
-            focused_border_color = "#${colors.blue}";
+            focused_border_color = "#${colors.l_blue}";
             normal_border_color = "#${colors.l_black}";
             active_border_color = "#${colors.l_magenta}";
             urgent_border_color = "#${colors.red}";

@@ -27,7 +27,7 @@ in
         include-file = ~/.config/polybar/modules/modules.ini
 
         [bar/top]
-        background = ''${colors.black}
+        background = ''${colors.blue}
         foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
@@ -136,17 +136,18 @@ in
     xdg.configFile."polybar/modules/modules.ini".text = ''
            
         [colors]
-        black = #90${colors.black}
+        black = #aa${colors.black}
         red = #${colors.red}
-        magenta = #90${colors.magenta}
+        magenta = #aa${colors.magenta}
         white = #${colors.white}
+        blue = #aa${colors.blue}
         l-green = #${colors.l_green}
         l-blue = #${colors.l_blue}
         l-magenta = #${colors.l_magenta}
         l-white = #${colors.l_white}
 
         [bar/fly]
-        background = ''${colors.black}
+        background = ''${colors.blue}
         foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
@@ -198,7 +199,7 @@ in
         exec = ~/.config/polybar/scripts/batteryremaining.sh
         interval = 10
         label = %output%
-        format-background = ''${colors.black}
+        format-background = ''${colors.blue}
         format-foreground = ''${colors.l-white}
 
         [module/proton-status]
@@ -207,7 +208,7 @@ in
         interval = 7
         label = %output%
         label-font = 2
-        format-background = ''${colors.black}
+        format-background = ''${colors.blue}
         format-foreground = ''${colors.l-white}
         click-left = ~/.config/polybar/scripts/toggle-proton.sh
 
@@ -264,7 +265,7 @@ in
         [module/xwindow]
         type = internal/xwindow
         format = <label>
-        format-background = ''${colors.black}
+        format-background = ''${colors.blue}
         format-foreground = ''${colors.l-white}
         format-padding = 2
         label = %title%
