@@ -27,8 +27,8 @@ in
         include-file = ~/.config/polybar/modules/modules.ini
 
         [bar/top]
-        background = ''${colors.primary}
-        foreground = ''${colors.white}
+        background = ''${colors.black}
+        foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
         font-2 = "${colors.font}:size=14:weight=bold;2"
@@ -58,7 +58,7 @@ in
         ramp-signal-3 = 󰤨
         ${selectedConfig.format-connected}
         label-connected = ${selectedConfig.label-connected}
-        label-connected-underline = ''${colors.secondary}
+        label-connected-underline = ''${colors.l-magenta}
         label-disconnected = %{T3}${selectedConfig.disconnected-symbol}%{T1} %{F#${colors.white}}Disconnected
     '';
 
@@ -136,17 +136,18 @@ in
     xdg.configFile."polybar/modules/modules.ini".text = ''
            
         [colors]
-        primary = #90${colors.blue}
-        primary-darkened = #90${colors.blue_alt}
-        secondary = #${colors.l_magenta}
-        tertiary = #${colors.red}
-        fourth = #${colors.white}
-        fifth = #${colors.l_green}
-        white = #${colors.l_white}
+        black = #90${colors.black}
+        red = #${colors.red}
+        magenta = #90${colors.magenta}
+        white = #${colors.white}
+        l-green = #${colors.l_green}
+        l-blue = #${colors.l_blue}
+        l-magenta = #${colors.l_magenta}
+        l-white = #${colors.l_white}
 
         [bar/fly]
-        background = ''${colors.primary}
-        foreground = ''${colors.white}
+        background = ''${colors.black}
+        foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
         font-2 = "${colors.font}:size=14:weight=bold;2"
@@ -175,7 +176,7 @@ in
         hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
         label = %{T3}%{T1} %temperature-c%
         label-warn = %{T3}%{T1} %temperature-c%
-        label-warn-foreground = ''${colors.tertiary}
+        label-warn-foreground = ''${colors.red}
 
         [module/weather]
         type = custom/script
@@ -183,13 +184,13 @@ in
         interval = 120
         exec-if = ping -c 1 wttr.in
         click-left = xdg-open "${personal.WEATHER_LINK}"
-        label-underline = ''${colors.secondary}
+        label-underline = ''${colors.l-magenta}
 
         [module/nixbtw]
         type = custom/text
         label = ""
         label-font = 6
-        label-foreground = #${colors.l_blue}
+        label-foreground = ''${colors.l-blue}
 
 
         [module/bluetooth-battery]
@@ -197,8 +198,8 @@ in
         exec = ~/.config/polybar/scripts/batteryremaining.sh
         interval = 10
         label = %output%
-        format-background = ''${colors.primary}
-        format-foreground = ''${colors.white}
+        format-background = ''${colors.black}
+        format-foreground = ''${colors.l-white}
 
         [module/proton-status]
         type = custom/script
@@ -206,21 +207,21 @@ in
         interval = 7
         label = %output%
         label-font = 2
-        format-background = ''${colors.primary}
-        format-foreground = ''${colors.white}
+        format-background = ''${colors.black}
+        format-foreground = ''${colors.l-white}
         click-left = ~/.config/polybar/scripts/toggle-proton.sh
 
 
         [module/date]
         type = internal/date
         date = %{A1: gsimplecal &:}%{T2}%{T1} %Y-%m-%d%{A}
-        label-underline = ''${colors.secondary}
+        label-underline = ''${colors.l-magenta}
         # click-left = gsimplecal
 
         [module/time]
         type = internal/date
         date = %{A1: ghostty --command='tty-clock -C 5 -s -c' &:}%{T3}%{T1} %H:%M:%S%{A}
-        label-underline = ''${colors.secondary}
+        label-underline = ''${colors.l-magenta}
         # click-left = ghostty --command='tty-clock -C 5 -s -c'
 
         [module/tray]
@@ -263,35 +264,35 @@ in
         [module/xwindow]
         type = internal/xwindow
         format = <label>
-        format-background = ''${colors.primary}
-        format-foreground = ''${colors.white}
+        format-background = ''${colors.black}
+        format-foreground = ''${colors.l-white}
         format-padding = 2
         label = %title%
-        label-underline = ''${colors.secondary}
+        label-underline = ''${colors.l-magenta}
         label-maxlen = 15
         label-empty = Desktop
-        label-empty-foreground = ''${colors.fourth}
+        label-empty-foreground = ''${colors.white}
 
         [module/bspwm]
         type = internal/bspwm
         pin-workspaces = false
         enable-click = true
         label-focused = "%{T4} %{T1}%name%%{T4} %{T1}"
-        label-focused-background = ''${colors.primary-darkened}
-        label-focused-foreground = ''${colors.secondary}
-        label-focused-underline = ''${colors.secondary}
+        label-focused-background = ''${colors.magenta}
+        label-focused-foreground = ''${colors.l-blue}
+        label-focused-underline = ''${colors.l-magenta}
 
         label-occupied = "%{T4} %{T1}%name%%{T4} %{T1}"
 
         label-dimmed = "%{T4} %{T1}%name%%{T4} %{T1}"
-        label-dimmed-foreground = ''${colors.fourth}
+        label-dimmed-foreground = ''${colors.white}
 
 
         label-urgent = "%{T4} %{T1}%name%%{T4} %{T1}"
-        label-urgent-background = ''${colors.tertiary}
+        label-urgent-background = ''${colors.red}
 
         label-empty = "%{T4} %{T1}%name%%{T4} %{T1}"
-        label-empty-foreground = ''${colors.fifth}
+        label-empty-foreground = ''${colors.l-green}
 
         [module/pulseaudio]
         type = internal/pulseaudio
@@ -302,21 +303,21 @@ in
         ramp-volume-2 = %{T2}󰕾%{T1}
         format-volume = <ramp-volume> <label-volume>
         label-muted = %{T2}%{T1} muted
-        format-volume-underline = ''${colors.secondary}
+        format-volume-underline = ''${colors.l-magenta}
         click-right = pavucontrol
 
         bar-volume-width = 10
-        bar-volume-foreground-0 = ''${colors.secondary}
-        bar-volume-foreground-1 = ''${colors.secondary}
-        bar-volume-foreground-2 = ''${colors.fifth}
-        bar-volume-foreground-3 = ''${colors.fifth}
-        bar-volume-foreground-4 = ''${colors.tertiary}
+        bar-volume-foreground-0 = ''${colors.l-magenta}
+        bar-volume-foreground-1 = ''${colors.l-magenta}
+        bar-volume-foreground-2 = ''${colors.l-green}
+        bar-volume-foreground-3 = ''${colors.l-green}
+        bar-volume-foreground-4 = ''${colors.red}
         bar-volume-gradient = true
         bar-volume-indicator = ┃
         bar-volume-fill = ━
         bar-volume-fill-font = 1
         bar-volume-empty = -
         bar-volume-empty-font = 1
-        bar-volume-empty-foreground = ''${colors.fourth}
+        bar-volume-empty-foreground = ''${colors.white}
     '';
 }

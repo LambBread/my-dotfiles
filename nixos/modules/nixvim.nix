@@ -88,7 +88,7 @@ in
                 italic = true;
                 bold = true;
             };
-            "Title".fg = "#${colors.red}";
+            "Title".fg = "#${colors.l_black}";
             "Title".bold = true;
         };
 
@@ -248,6 +248,7 @@ in
                     close_button_visible.fg = "#${colors.magenta}";
                     close_button.fg = "#${colors.magenta}";
                     close_button_selected.fg = "#${colors.l_magenta}";
+                    trunc_marker.fg = "#${colors.magenta}";
                 };
             };
             nvim-autopairs.enable = true;

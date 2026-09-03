@@ -46,7 +46,7 @@ in
                 own_window_argb_value = 85,               -- transparency [0 -255]
                 own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
                 -- own_window_colour = '#121214',             -- bg color [comment to full transparency]
-                own_window_colour = '#${colors.blue}',
+                own_window_colour = '#${colors.black}',
                 default_color = 'white',                   -- default colors
                 default_outline_color = 'white',           -- default colors
                 default_shade_color = 'white',             -- default colors

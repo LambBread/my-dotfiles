@@ -6,7 +6,7 @@
 
 .thunar tab:checked
 {
-    background: @tasklist-colour-col3;
+    background: @custom-col-magenta;
 }
 
 .thunar .view
@@ -16,13 +16,13 @@
 
 .thunar .view .rubberband
 {
-    background: alpha(@tasklist-colour-col3, 0.50);
-    border: 1px solid @tasklist-colour-col3;
+    background: alpha(@custom-col-magenta, 0.50);
+    border: 1px solid @custom-col-magenta;
 }
 
 .thunar .view:selected
 {
-    background: @tasklist-colour-col3;
+    background: @custom-col-magenta;
 }
 
 .thunar toolbar
@@ -37,12 +37,12 @@
 
 .thunar toolbar button:active
 {
-    background: @tasklist-colour-col3;
+    background: @custom-col-magenta;
 }
 
 .thunar toolbar button:checked
 {
-    background: @tasklist-colour-col3;
+    background: @custom-col-magenta;
 }
 
 
@@ -75,12 +75,17 @@
 .thunar .shortcuts-pane .view
 {
     background: @custom-col-black;
-    text-align: center;
-    padding: 5px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.thunar notebook treeview button
+{
+    background: @custom-col-black;
 }
 
 .thunar .shortcuts-pane .view *:selected
 {
-    background: @tasklist-colour-col3;
+    background: @custom-col-magenta;
 }
 

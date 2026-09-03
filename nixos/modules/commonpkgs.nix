@@ -68,7 +68,7 @@ in
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
-        nerd-fonts._0xproto
+        # nerd-fonts._0xproto
         noto-fonts-color-emoji
     ];
 
