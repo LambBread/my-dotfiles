@@ -355,6 +355,7 @@ in
                     regex
                     glsl
                     bash
+                    yuck
                 ];
             };
         };

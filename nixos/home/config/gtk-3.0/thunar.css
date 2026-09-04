@@ -73,14 +73,14 @@
 
 .thunar .shortcuts-pane
 {
-    background: @thunar-colour;
+    background: @custom-col-blue;
 }
 
 .thunar .shortcuts-pane .view
 {
     background: @custom-col-blue;
     padding: 3px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .thunar notebook treeview button

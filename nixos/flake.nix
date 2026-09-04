@@ -8,7 +8,11 @@
         };
         nixvim = {
             url = "github:nix-community/nixvim/nixos-26.05";
-            #inputs.nixpkgs.follows = "nixpkgs";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        firefox-addons = {
+            url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+            inputs.nixpkgs.follows = "nixpkgs";
         };
     };
     outputs =
@@ -17,6 +21,7 @@
             nixpkgs,
             home-manager,
             nixvim,
+            firefox-addons,
             ...
         }@inputs:
         let
@@ -32,6 +37,8 @@
                     {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
+                        home-manager.backupFileExtension = "bak";
+                        home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
                     }
                     nixvim.nixosModules.nixvim
@@ -46,8 +53,11 @@
                     {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
+                        home-manager.backupFileExtension = "bak";
+                        home-manager.extraSpecialArgs = { inherit inputs; };
                         home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
                     }
+                    nixvim.nixosModules.nixvim
                 ];
             };
         };

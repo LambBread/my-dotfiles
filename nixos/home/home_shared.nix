@@ -1,4 +1,10 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    inputs,
+    lib,
+    ...
+}:
 {
 
     imports = [
@@ -14,6 +20,7 @@
         ./config/rofi.nix
         ./config/thunar.nix
         ./config/xdg.nix
+        ./config/librewolf.nix
     ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
