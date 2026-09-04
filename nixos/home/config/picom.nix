@@ -75,8 +75,7 @@
         ];
         opacityRules = [
 
-            "67:class_g = 'Thunar'"
-            "80:class_g = 'Gsimplecal'"
+            "80:class_g = 'Thunar'"
             "80:class_g ?= 'xfwm4' && argb"
         ];
         settings = {

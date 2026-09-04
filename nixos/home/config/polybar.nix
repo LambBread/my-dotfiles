@@ -136,11 +136,11 @@ in
     xdg.configFile."polybar/modules/modules.ini".text = ''
            
         [colors]
-        black = #aa${colors.black}
+        black = #90${colors.black}
         red = #${colors.red}
-        magenta = #aa${colors.magenta}
+        magenta = #90${colors.magenta}
         white = #${colors.white}
-        blue = #aa${colors.blue}
+        blue = #90${colors.blue}
         l-green = #${colors.l_green}
         l-blue = #${colors.l_blue}
         l-magenta = #${colors.l_magenta}

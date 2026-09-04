@@ -8,12 +8,12 @@ let
     colors = import ../../modules/colors.nix { inherit pkgs; };
     personal = import ../../personal.nix;
     desktop = {
-        minimum_height = "1024";
+        minimum_height = "1036";
         width = "460";
         text = builtins.readFile ./conky/conky.txt;
     };
     laptop = {
-        minimum_height = "712";
+        minimum_height = "724";
         width = "400";
         text = builtins.readFile ./conky/conky_laptop.txt;
     };
@@ -26,8 +26,8 @@ in
         extraConfig = ''
             conky.config = {
                 alignment = 'top_right',
-                gap_x = 24,
-                gap_y = 56,
+                gap_x = 0,
+                gap_y = 44,
                 minimum_height = ${selectedConfig.minimum_height},
                 minimum_width = ${selectedConfig.width},
                 maximum_width = ${selectedConfig.width},
@@ -38,13 +38,13 @@ in
                 own_window_type = 'normal',
                 font = '${colors.font}:size=11',
                 font1 = '${colors.font}:size=11',
-                color1 = '#${colors.l_white}',                        -- accent
+                color1 = '#${colors.white}',                        -- accent
                 -- color2 = '#f6bb8d',                        -- shade of col3
                 color2 = '#${colors.red}',
                 color3 = '#${colors.l_magenta}',
                 own_window_transparent = false,            -- transparency
                 own_window_argb_visual = true,             -- transparency
-                own_window_argb_value = 170,               -- transparency [0 -255]
+                own_window_argb_value = 85,               -- transparency [0 -255]
                 own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
                 -- own_window_colour = '#121214',             -- bg color [comment to full transparency]
                 own_window_colour = '#${colors.blue}',

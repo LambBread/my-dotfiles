@@ -22,6 +22,9 @@ in
         @define-color custom-col-l-black #${colors.l_black};
         @define-color custom-col-l-magenta #${colors.l_magenta};
         @define-color custom-col-l-white #${colors.l_white};
+        @define-color thunar-colour shade(@custom-col-blue, 0.85);
+        @define-color dark-thunar-colour shade(@thunar-colour, 0.85);
+        @define-color black-thunar-colour shade(@thunar-colour, 0.6);
         @define-color theme_selected_bg_color @custom-col-magenta;
         @define-color theme_unfocused_selected_bg_color @custom-col-magenta;
         @define-color theme_text_color @custom-col-l-white;
@@ -32,7 +35,7 @@ in
 
         menu, .menu
         {
-            background-color: @custom-col-black;
+            /*background-color: @custom-col-black;*/
             color: @custom-col-l-white;
             padding: 4px;
         }

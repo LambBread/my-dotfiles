@@ -1,7 +1,7 @@
 
 .thunar tab
 {
-    background: @custom-col-black;
+    background: @thunar-colour;
 }
 
 .thunar tab:checked
@@ -11,7 +11,7 @@
 
 .thunar .view
 {
-    background: @custom-col-black;
+    background: @thunar-colour;
 }
 
 .thunar .view .rubberband
@@ -27,12 +27,12 @@
 
 .thunar toolbar
 {
-    background: @custom-col-black;
+    background: @dark-thunar-colour;
 }
 
 .thunar toolbar button:hover
 {
-    background: @custom-col-black;
+    background: @thunar-colour;
 }
 
 .thunar toolbar button:active
@@ -54,34 +54,38 @@
 
 .thunar menubar
 {
-    background: @custom-col-black;
-    text-align: center;
+    background: @thunar-colour;
 }
 
 .thunar
 {
-    background: @custom-col-black;
+    background: @thunar-colour;
 }
 
 .thunar statusbar
 {
-    background: @custom-col-black;
+    background: @thunar-colour;
 }
 .thunar toolbar entry
 {
-    background: @custom-col-black;
+    background: @black-thunar-colour;
+}
+
+.thunar .shortcuts-pane
+{
+    background: @thunar-colour;
 }
 
 .thunar .shortcuts-pane .view
 {
-    background: @custom-col-black;
-    padding: 4px;
+    background: @custom-col-blue;
+    padding: 3px;
     border-radius: 10px;
 }
 
 .thunar notebook treeview button
 {
-    background: @custom-col-black;
+    background: @dark-thunar-colour;
 }
 
 .thunar .shortcuts-pane .view *:selected
