@@ -26,19 +26,4 @@ in
         add mod3 = Hyper_L
     '';
 
-    programs.git = {
-        enable = true;
-        settings = {
-            user = {
-                name = "${personal.USERNAME}";
-                email = "${personal.EMAIL}";
-            };
-            # signing =
-            # {
-            #   key = "${config.home.homeDirectory}/.ssh/gh_key.pub";
-            #   signByDefault = true;
-            #   format = "ssh";
-            # };
-        };
-    };
 }

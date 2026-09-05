@@ -41,7 +41,7 @@ in
         terminal = "xterm-256color";
         escapeTime = 0;
         mouse = true;
-        prefix = "<C-a>";
+        prefix = "C-a";
         baseIndex = 0;
         extraConfig = ''
             set -as terminal-overrides ",xterm*:colors=256"

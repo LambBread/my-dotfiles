@@ -14,13 +14,13 @@
         ./config/fastfetch.nix
         ./config/ghostty.nix
         ./config/gtk.nix
+        ./config/librewolf.nix
         ./config/misc.nix
         ./config/picom.nix
         ./config/polybar.nix
         ./config/rofi.nix
         ./config/thunar.nix
         ./config/xdg.nix
-        ./config/librewolf.nix
     ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper

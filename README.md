@@ -101,7 +101,7 @@ git update-index --skip-worktree nixos/hardware-configuration.nix
 8. Run `sudo nixos-rebuild switch --flake /etc/nixos/#desktop`, or if on laptop, 
 `sudo nixos-rebuild switch --flake /etc/nixos/#laptop`.
 
-9. If on desktop, setup SSH keys for GitHub named
+9. Setup SSH keys for GitHub named
 `~/.ssh/gh_key` (signing) and `~/.ssh/gh_key2` (authentication).
 
 10. Modify configuration if desired.

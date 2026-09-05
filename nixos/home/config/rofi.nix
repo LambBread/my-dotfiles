@@ -38,7 +38,7 @@ in
             vertical-align: 0.5;
             
             // Colors
-            bg: #${colors.blue}90;
+            bg: #${colors.blue}aa;
             fg: #${colors.l_white};
             selection: #${colors.magenta}c0;
             transparent: #00000000;
@@ -75,10 +75,11 @@ in
             scrollbar: false;
         }
         element, message {
-            padding: 3px;
+            padding: 7px;
         }
         element selected.normal, element normal.active, element selected.active {
             background-color: @selection;
+            border-radius: 7px;
         }
         element normal.normal, element alternate.normal, scrollbar {
             background-color: @transparent;
@@ -91,7 +92,8 @@ in
             padding: 0 8px 0 0;
         }
         scrollbar {
-            handle-color: @fg;
+            handle-color: @selection;
+            border-radius: 7px;
         }
 
         // Message

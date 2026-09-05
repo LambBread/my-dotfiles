@@ -163,7 +163,7 @@ in
         module-margin-left = 2
         module-margin-right = 0
         radius = 20
-        offset-y = 56
+        offset-y = 44
         offset-x = 10
         override-redirect = true
 

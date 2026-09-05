@@ -25,7 +25,7 @@ in
         enable = true;
         extraConfig = ''
             conky.config = {
-                alignment = 'top_right',
+                alignment = 'top_left',
                 gap_x = 0,
                 gap_y = 44,
                 minimum_height = ${selectedConfig.minimum_height},

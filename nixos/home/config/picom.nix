@@ -90,6 +90,9 @@
                 "window_type = 'desktop'"
                 "class_g = 'Polybar'"
             ];
+            corner-radius-rules = [
+                "40:class_g = 'Conky'"
+            ];
             blur-method = "dual_kawase";
             blur-strength = 10;
             inactive-dim = 0.1;
