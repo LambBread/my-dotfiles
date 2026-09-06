@@ -75,7 +75,7 @@
         ];
         opacityRules = [
 
-            "80:class_g = 'Thunar'"
+            "67:class_g = 'Thunar'"
             "80:class_g ?= 'xfwm4' && argb"
         ];
         settings = {
@@ -133,20 +133,20 @@
               triggers = ["open", "show"];
               preset = "appear";
               direction = "up";
-              duration = 0.2;
-              scale = 0.8;
+              duration = 0.3;
+              scale = 0.6;
             },
             {
                 triggers = ["close", "hide"];
                 preset = "disappear";
                 direction = "up";
-                duration = 0.2;
-                scale = 0.8;
+                duration = 0.3;
+                scale = 0.6;
             },
             {
                 triggers = ["geometry"];
                 preset = "geometry-change";
-                duration = 0.2;
+                duration = 0.3;
             });
 
         '';

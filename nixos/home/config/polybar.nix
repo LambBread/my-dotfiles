@@ -27,7 +27,7 @@ in
         include-file = ~/.config/polybar/modules/modules.ini
 
         [bar/top]
-        background = ''${colors.blue}
+        background = ''${colors.black}
         foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
@@ -147,7 +147,7 @@ in
         l-white = #${colors.l_white}
 
         [bar/fly]
-        background = ''${colors.blue}
+        background = ''${colors.black}
         foreground = ''${colors.l-white}
         font-0 = "${colors.font}:size=11:weight=bold"
         font-1 = "${colors.font}:size=18:weight=bold;3"
@@ -164,7 +164,7 @@ in
         module-margin-right = 0
         radius = 20
         offset-y = 44
-        offset-x = 10
+        offset-x = 12
         override-redirect = true
 
         [module/nixbtw-fly]
@@ -199,7 +199,7 @@ in
         exec = ~/.config/polybar/scripts/batteryremaining.sh
         interval = 10
         label = %output%
-        format-background = ''${colors.blue}
+        format-background = ''${colors.black}
         format-foreground = ''${colors.l-white}
 
         [module/proton-status]
@@ -208,7 +208,7 @@ in
         interval = 7
         label = %output%
         label-font = 2
-        format-background = ''${colors.blue}
+        format-background = ''${colors.black}
         format-foreground = ''${colors.l-white}
         click-left = ~/.config/polybar/scripts/toggle-proton.sh
 
@@ -232,7 +232,7 @@ in
         type = internal/memory
         interval = 0.5
         format = <label>
-        label = %{T2}%{T1} %used%/%total%
+        label = %{T2}%{T1} %used%
 
         [module/battery]
         type = internal/battery
@@ -265,7 +265,7 @@ in
         [module/xwindow]
         type = internal/xwindow
         format = <label>
-        format-background = ''${colors.blue}
+        format-background = ''${colors.black}
         format-foreground = ''${colors.l-white}
         format-padding = 2
         label = %title%
@@ -306,19 +306,5 @@ in
         label-muted = %{T2}%{T1} muted
         format-volume-underline = ''${colors.l-magenta}
         click-right = pavucontrol
-
-        bar-volume-width = 10
-        bar-volume-foreground-0 = ''${colors.l-magenta}
-        bar-volume-foreground-1 = ''${colors.l-magenta}
-        bar-volume-foreground-2 = ''${colors.l-green}
-        bar-volume-foreground-3 = ''${colors.l-green}
-        bar-volume-foreground-4 = ''${colors.red}
-        bar-volume-gradient = true
-        bar-volume-indicator = ┃
-        bar-volume-fill = ━
-        bar-volume-fill-font = 1
-        bar-volume-empty = -
-        bar-volume-empty-font = 1
-        bar-volume-empty-foreground = ''${colors.white}
     '';
 }

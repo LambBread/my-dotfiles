@@ -75,7 +75,7 @@ in
             global = {
                 icon_theme = "${colors.icon_theme}";
                 enable_recursive_icon_lookup = true;
-                background = "#${colors.blue}";
+                background = "#${colors.black}";
                 font = "${colors.font} 11";
                 frame_width = 0;
                 sort = true;

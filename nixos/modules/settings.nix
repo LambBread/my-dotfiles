@@ -9,11 +9,16 @@ let
     colors = import ./colors.nix { inherit pkgs; };
     backgroundImg = pkgs.fetchurl {
         # https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/
-        url = "https://i.redd.it/szhyd7ryld0h1.png";
-        sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
+        # url = "https://i.redd.it/szhyd7ryld0h1.png";
+        # sha256 = "1dgsza18k6n5jjkphzzwyrg3sqdy1ln6smnvh724x15n9yflx9ff";
+
         # https://www.reddit.com/r/wallpapers/comments/1w3h8ik/starry_sky_2560x1440/
         # url = "https://i.redd.it/liz4vv6ybqmh1.jpeg";
         # hash = "sha256-VmrZZLi8wRW14kL7nCcmr7uCn0567ZIpv39u/H/oHBI=";
+
+        # https://www.reddit.com/r/wallpapers/comments/1vmryqi/reflection_of_a_thousand_blossoms/
+        url = "https://i.redd.it/bmlzwcuym0jh1.jpeg";
+        sha256 = "sha256-xkC47XmheqYp8kIyixn+3WFIkGW2AP5jSfUNRa+ZrZs=";
     };
     # gowallTheme = pkgs.writeText "gowall-config.yml" ''
     #     themes:

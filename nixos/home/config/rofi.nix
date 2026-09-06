@@ -38,7 +38,7 @@ in
             vertical-align: 0.5;
             
             // Colors
-            bg: #${colors.blue}aa;
+            bg: #${colors.black}aa;
             fg: #${colors.l_white};
             selection: #${colors.magenta}c0;
             transparent: #00000000;
@@ -76,6 +76,7 @@ in
         }
         element, message {
             padding: 7px;
+            margin: 0 20px;
         }
         element selected.normal, element normal.active, element selected.active {
             background-color: @selection;

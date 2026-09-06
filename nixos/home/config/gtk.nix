@@ -19,6 +19,7 @@ in
         @define-color custom-col-black #${colors.black};
         @define-color custom-col-blue #${colors.blue};
         @define-color custom-col-magenta #${colors.magenta};
+        @define-color custom-col-white #${colors.white};
         @define-color custom-col-l-black #${colors.l_black};
         @define-color custom-col-l-magenta #${colors.l_magenta};
         @define-color custom-col-l-white #${colors.l_white};
@@ -26,8 +27,12 @@ in
         @define-color dark-thunar-colour shade(@thunar-colour, 0.85);
         @define-color black-thunar-colour shade(@thunar-colour, 0.6);
         @define-color theme_selected_bg_color @custom-col-magenta;
+        @define-color theme_selected_fg_color @custom-col-l-white;
         @define-color theme_unfocused_selected_bg_color @custom-col-magenta;
+        @define-color theme_base_color @custom-col-black
         @define-color theme_text_color @custom-col-l-white;
+        @define-color theme_fg_color @custom-col-l-white;
+        @define-color theme_bg_color @custom-col-black;
     '';
     xdg.configFile."gtk-3.0/gtk.css".text = ''
         @import 'custom_colors.css';
@@ -35,7 +40,7 @@ in
 
         menu, .menu
         {
-            /*background-color: @custom-col-black;*/
+            background-color: @custom-col-black;
             color: @custom-col-l-white;
             padding: 4px;
         }
@@ -54,7 +59,7 @@ in
 
         calendar, GtkCalendar
         {
-            background: @custom-col-blue;
+            background: @custom-col-black;
             color: @custom-col-l-white;
             font-family: "${colors.font}", monospace;
         }
@@ -63,6 +68,27 @@ in
         {
             background: @custom-col-magenta;
         }
+
+        /*
+        window
+        {
+            background: @theme_bg_color;
+            color: @theme_fg_color;
+        }
+
+        button
+        {
+            background: @theme_bg_color;
+            color: @theme_fg_color;
+            border-radius: 6px;
+            border: 1px solid @theme_selected_bg_color;
+            padding: 6px 12px;
+        }
+
+        button:hover
+        {
+            background: @theme_selected_bg_color;
+        }*/
     '';
     xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;
 }
