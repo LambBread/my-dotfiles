@@ -60,7 +60,7 @@ rec {
     # l_white = "e5e5e5";
     # black_alt = "000000";
 
-    theme = "Qogir-Custom-Dark";
+    theme = "Qogir-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
     font = "MonaspiceAr Nerd Font Mono";

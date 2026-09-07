@@ -1,7 +1,13 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    inputs,
+    ...
+}:
 let
+    colors = import ./colors.nix { inherit pkgs; };
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
-    qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
+    # qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
 in
 {
     environment.systemPackages = with pkgs; [
@@ -20,7 +26,16 @@ in
             pulseSupport = true;
         })
 
-        qogir-theme-fork
+        # qogir-theme-fork
+        (inputs.qogir-theme-fork.lib.mkTheme {
+            black = "#${colors.black}";
+            red = "#${colors.red}";
+            magenta = "#${colors.magenta}";
+            l_red = "#${colors.l_red}";
+            l_green = "#${colors.l_green}";
+            l_white = "#${colors.l_white}";
+        }).${pkgs.stdenv.hostPlatform.system}
+
         rowaita-icon-theme
         simp1e-cursors
 

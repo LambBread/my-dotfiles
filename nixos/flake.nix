@@ -14,6 +14,10 @@
             url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        qogir-theme-fork = {
+            url = "github:LambBread/Qogir-theme";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
     outputs =
         {
@@ -22,6 +26,7 @@
             home-manager,
             nixvim,
             firefox-addons,
+            qogir-theme-fork,
             ...
         }@inputs:
         let

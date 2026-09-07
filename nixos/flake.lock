@@ -103,12 +103,33 @@
         "type": "github"
       }
     },
+    "qogir-theme-fork": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788809686,
+        "narHash": "sha256-t1lTsafmle1IwceVLdzhvE3r7QAIyv4DAgiyrlILO9Y=",
+        "owner": "LambBread",
+        "repo": "Qogir-theme",
+        "rev": "48535a9d98b1ab6be94b4303481a96409cc77102",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LambBread",
+        "repo": "Qogir-theme",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "qogir-theme-fork": "qogir-theme-fork"
       }
     },
     "systems": {
