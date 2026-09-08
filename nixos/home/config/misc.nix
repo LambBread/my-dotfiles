@@ -54,7 +54,6 @@ in
     xdg.configFile."gsimplecal/config".text = ''
         show_week_numbers = 1
         mainwindow_yoffset = 78
-        close_on_unfocus = 1
     '';
 
     services.redshift = {
