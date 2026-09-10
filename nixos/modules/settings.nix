@@ -20,26 +20,6 @@ let
         url = "https://i.redd.it/bmlzwcuym0jh1.jpeg";
         sha256 = "sha256-xkC47XmheqYp8kIyixn+3WFIkGW2AP5jSfUNRa+ZrZs=";
     };
-    # gowallTheme = pkgs.writeText "gowall-config.yml" ''
-    #     themes:
-    #       - name: "my-custom"
-    #         colors:
-    #           - "#${colors.black}"
-    #           - "#${colors.red}"
-    #           - "#${colors.green}"
-    #           - "#${colors.yellow}"
-    #           - "#${colors.blue}"
-    #           - "#${colors.magenta}"
-    #           - "#${colors.cyan}"
-    #           - "#${colors.white}"
-    #           - "#${colors.l_black}"
-    #           - "#${colors.l_red}"
-    #           - "#${colors.l_green}"
-    #           - "#${colors.l_yellow}"
-    #           - "#${colors.l_blue}"
-    #           - "#${colors.l_magenta}"
-    #           - "#${colors.l_cyan}"
-    #           - "#${colors.l_white}"'';
 
     processedBackground =
         pkgs.runCommand "processed-background.png"
@@ -61,6 +41,17 @@ in
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernel.sysctl."vm.swappiness" = 40;
+    boot.plymouth = {
+        enable = true;
+        theme = "nixos-bgrt";
+        themePackages = with pkgs;
+        [
+            nixos-bgrt-plymouth
+        ];
+    };
+
+    boot.kernelParams = ["quiet" "splash" "boot.shell_on_fail" "loglevel=3"
+    "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3"];
     networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
     # Enable networking
     networking.networkmanager.enable = true;
@@ -74,6 +65,7 @@ in
         layout = "us";
         variant = "";
     };
+
 
     # nix.settings.auto-optimise-store = true;
 

@@ -99,6 +99,15 @@ in
                     }
                 }
 
+                @-moz-document url-prefix("https://discord.com")
+                {
+                    #app-mount, .theme-dark, .theme-light
+                    {
+                        --font-primary: "${colors.font}" !important;
+                        --font-display: "${colors.font}" !important;
+                    }
+                }
+
                 :root
                 {
                     --theme-code-font-size: 14px !important;
@@ -125,7 +134,7 @@ in
                 .CodeMirror,
                 .prism
                 {
-                    font-family: #${colors.font}, monospace !important;
+                    font-family: "${colors.font}", monospace !important;
                 }
 
             '';
@@ -142,6 +151,8 @@ in
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 "browser.toolbars.bookmarks.visibility" = "always";
                 "browser.bookmarks.showOtherBookmarks" = true;
+                "devtools.debugger.remote-enabled" = true;
+                "devtools.chrome.enabled" = true;
             };
 
             extensions = {
