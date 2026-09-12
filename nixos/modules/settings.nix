@@ -44,14 +44,20 @@ in
     boot.plymouth = {
         enable = true;
         theme = "nixos-bgrt";
-        themePackages = with pkgs;
-        [
+        themePackages = with pkgs; [
             nixos-bgrt-plymouth
         ];
     };
 
-    boot.kernelParams = ["quiet" "splash" "boot.shell_on_fail" "loglevel=3"
-    "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3"];
+    boot.kernelParams = [
+        "quiet"
+        "splash"
+        "boot.shell_on_fail"
+        "loglevel=3"
+        "rd.systemd.show_status=false"
+        "rd.udev.log_level=3"
+        "udev.log_priority=3"
+    ];
     networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
     # Enable networking
     networking.networkmanager.enable = true;
@@ -65,7 +71,6 @@ in
         layout = "us";
         variant = "";
     };
-
 
     # nix.settings.auto-optimise-store = true;
 

@@ -75,13 +75,14 @@ in
             scrollbar: false;
         }
         element, message {
-            padding: 7px;
+            padding: 7px 10px;
             margin: 0 20px;
+            border-radius: 20px;
         }
         element selected.normal, element normal.active, element selected.active {
             background-color: @selection;
-            border-radius: 7px;
         }
+
         element normal.normal, element alternate.normal, scrollbar {
             background-color: @transparent;
         }
@@ -91,6 +92,10 @@ in
         }
         element-icon {
             padding: 0 8px 0 0;
+            size: 32px;
+        }
+        element-text {
+            vertical-align: 0.5;
         }
         scrollbar {
             handle-color: @selection;

@@ -116,14 +116,17 @@ git update-index --skip-worktree nixos/hardware-configuration.nix
 
 ## Credits
 
-- The conky config was created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
-- The rofi config was created by [Prayag2](https://github.com/Prayag2/dotfiles).
-- The ghostty shaders were created by 
+- The conky config was originally created by [AguilarLagunasAturo](https://github.com/AguilarLagunasArturo/conky-themes).
+- The rofi config was originally created by [Prayag2](https://github.com/Prayag2/dotfiles).
+- The ghostty shaders were originally created by 
   [sahaj-b](https://github.com/sahaj-b/ghostty-cursor-shaders) (MIT license) and 
   [qwerasd205](https://github.com/0xhckr/ghostty-shaders/blob/main/bloom.glsl).
 
-The fastfetch logos are derivative works under the CC-BY 4.0. 
+The fastfetch logos are derivative works of the Nix logo and are under the CC-BY 4.0. 
 See [the README](./nixos/home/config/fastfetch/logos/README.md) for details.
 
-The default wallpaper fetched in the NixOS config was made by Reddit user u/FaithlessnessDue2763, 
-on their post ["Blue city"](https://www.reddit.com/r/VaporwaveAesthetics/comments/1t9j5ya/blue_city/).
+The default wallpaper fetched in the NixOS config was made by Reddit user u/Beginning-Advance336, 
+on their post ["Reflection of a Thousand Blossoms"](https://www.reddit.com/r/wallpapers/comments/1vmryqi/reflection_of_a_thousand_blossoms/).
+
+A fork of the GTK theme [Qogir](https://github.com/vinceliuice/Qogir-theme) and a fork of the icon theme
+[Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) are used in the NixOS config.
