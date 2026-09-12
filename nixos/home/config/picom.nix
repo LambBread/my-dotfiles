@@ -74,7 +74,8 @@
             "_NET_WM_WINDOW_TYPE *= '_KDE_NET_WM_WINDOW_TYPE_OVERRIDE'"
         ];
         opacityRules = [
-
+            "100:class_g = 'LibreWolf' && !focused"
+            "100:class_g = 'LibreWolf' && focused"
             "67:class_g = 'Thunar'"
             "80:class_g ?= 'xfwm4' && argb"
         ];

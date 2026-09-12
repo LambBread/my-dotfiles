@@ -40,7 +40,7 @@ in
                 font1 = '${colors.font}:size=11',
                 color1 = '#${colors.white}',                        -- accent
                 -- color2 = '#f6bb8d',                        -- shade of col3
-                color2 = '#${colors.red}',
+                color2 = '#${colors.l_green}',
                 color3 = '#${colors.l_magenta}',
                 own_window_transparent = false,            -- transparency
                 own_window_argb_visual = true,             -- transparency

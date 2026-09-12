@@ -2,6 +2,14 @@
 
 These are some of my dotfiles.
 
+## Preview
+
+*2026-09-11*
+
+![Preview 1](./preview/screenshot1.png)
+
+![Preview 2](./preview/screenshot2.png)
+
 ## Important keybinds
 
 ### BSPWM/SXHKD
