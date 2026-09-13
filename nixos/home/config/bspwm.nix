@@ -40,7 +40,7 @@ let
     };
     laptop = {
         monitors = {
-            "${personal.SHORT_NAME}" = [
+            "${builtins.elemAt personal.MONITORS 0}" = [
                 "󰇊"
                 "󰇋"
                 "󰇌"

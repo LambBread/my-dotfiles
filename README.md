@@ -88,7 +88,7 @@ Example:
     WEATHER_LINK = "https://weather.com";
     MONITORS = [
         "DP-5" "HDMI-0"
-    ]; # only required for desktops
+    ];
 }
 ```
 
