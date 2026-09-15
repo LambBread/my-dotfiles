@@ -29,7 +29,7 @@ in
         @define-color theme_selected_bg_color @custom-col-magenta;
         @define-color theme_selected_fg_color @custom-col-l-white;
         @define-color theme_unfocused_selected_bg_color @custom-col-magenta;
-        @define-color theme_base_color @custom-col-black
+        @define-color theme_base_color @custom-col-black;
         @define-color theme_text_color @custom-col-l-white;
         @define-color theme_fg_color @custom-col-l-white;
         @define-color theme_bg_color @custom-col-black;
