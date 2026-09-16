@@ -26,6 +26,8 @@ let
             ];
         };
         extra = ''
+            xset +dpms
+            xset dpms 300 300 300
             xrandr --output ${builtins.elemAt personal.MONITORS 0} --primary --output \
             ${builtins.elemAt personal.MONITORS 1} --right-of ${builtins.elemAt personal.MONITORS 0}
             xmodmap ~/.Xmodmap
@@ -56,6 +58,8 @@ let
             ];
         };
         extra = ''
+            xset +dpms
+            xset dpms 300 300 300
             xmodmap ~/.Xmodmap
             pgrep -x greenclip || greenclip daemon &
             pkill conky

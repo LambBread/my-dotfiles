@@ -45,7 +45,7 @@ in
 
         librewolf
         libreoffice
-        discord
+        # discord
         ghostty
         vlc
         ristretto
