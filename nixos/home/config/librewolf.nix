@@ -101,10 +101,31 @@ in
 
                 @-moz-document url-prefix("https://discord.com")
                 {
-                    #app-mount, .theme-dark, .theme-light
+                    #app-mount, .theme-dark, .theme-light, :root
                     {
                         --font-primary: "${colors.font}" !important;
                         --font-display: "${colors.font}" !important;
+                        --background-primary: #${colors.black} !important;
+                        --background-secondary: #${colors.black} !important;
+                        --background-tertiary: #${colors.black} !important;
+                        --background-header: #${colors.black} !important;
+                        --text-normal: #${colors.l_white} !important;
+                        --text-muted: #${colors.white} !important;
+                        --text-link: #${colors.l_magenta} !important;
+                        --brand-experiment: #${colors.magenta} !important;
+                        --brand-experiment-500: #${colors.magenta} !important;
+
+                    }
+                }
+
+                @-moz-document domain("reddit.com")
+                {
+                    body, p, div, span, a
+                    {
+                        font-family: "${colors.font}", monospace !important;
+                        font-size: 15px !important;
+                        /*background-color: #${colors.black} !important;
+                        color: #${colors.l_white} !important;*/
                     }
                 }
 
