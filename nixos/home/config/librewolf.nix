@@ -105,15 +105,13 @@ in
                     {
                         --font-primary: "${colors.font}" !important;
                         --font-display: "${colors.font}" !important;
-                        --background-primary: #${colors.black} !important;
-                        --background-secondary: #${colors.black} !important;
-                        --background-tertiary: #${colors.black} !important;
-                        --background-header: #${colors.black} !important;
-                        --text-normal: #${colors.l_white} !important;
+                        --background-base-lowest: #${colors.black_alt} !important;
+                        --background-base-lower: #${colors.black_alt} !important;
+                        --background-base-low: #${colors.black_alt} !important;
+                        --text-default: #${colors.l_white} !important;
                         --text-muted: #${colors.white} !important;
                         --text-link: #${colors.l_magenta} !important;
-                        --brand-experiment: #${colors.magenta} !important;
-                        --brand-experiment-500: #${colors.magenta} !important;
+                        --background-brand: #${colors.magenta} !important;
 
                     }
                 }
