@@ -60,7 +60,6 @@ in
         proton-vpn-cli
         proton-vpn
         dnsmasq
-        luckybackup
         ungoogled-chromium
         pince
         orca-slicer

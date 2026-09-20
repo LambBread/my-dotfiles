@@ -54,6 +54,7 @@ in
         atril
         baobab
         bleachbit
+        luckybackup
         prismlauncher
         pavucontrol
         xfce4-screenshooter
