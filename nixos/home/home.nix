@@ -2,11 +2,9 @@
     config,
     pkgs,
     lib,
+    personal,
     ...
 }:
-let
-    personal = import ../personal.nix;
-in
 {
     imports = [
         ./home_shared.nix

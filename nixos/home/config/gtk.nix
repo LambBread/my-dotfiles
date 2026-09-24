@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-in
+{
+    config,
+    pkgs,
+    colors,
+    ...
+}:
 {
     gtk = {
         enable = true;

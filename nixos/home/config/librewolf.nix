@@ -2,11 +2,9 @@
     pkgs,
     inputs,
     lib,
+    colors,
     ...
 }:
-let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-in
 {
     programs.librewolf = {
         enable = true;

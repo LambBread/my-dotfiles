@@ -1,11 +1,11 @@
 {
     config,
     pkgs,
+    colors,
+    personal,
     ...
 }:
 let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-    personal = import ../../personal.nix;
     desktop = {
         monitors = {
             "${builtins.elemAt personal.MONITORS 0}" = [

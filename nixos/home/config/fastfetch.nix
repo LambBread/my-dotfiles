@@ -2,11 +2,11 @@
     config,
     lib,
     pkgs,
+    colors,
+    personal,
     ...
 }:
 let
-    personal = import ../../personal.nix;
-    colors = import ../../modules/colors.nix { inherit pkgs; };
     fastfetch_logos = {
         nix = ./fastfetch/logos/nix.png;
         nix_bi = ./fastfetch/logos/nix_bi.png;

@@ -1,7 +1,9 @@
-{ pkgs, config, ... }:
-let
-    colors = import ./colors.nix { inherit pkgs; };
-in
+{
+    pkgs,
+    config,
+    colors,
+    ...
+}:
 {
     programs.nixvim = {
         enable = true;

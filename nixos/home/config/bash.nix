@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
-let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-    personal = import ../../personal.nix;
-in
+{
+    config,
+    pkgs,
+    colors,
+    personal,
+    ...
+}:
 {
     home.file.".dircolors".source = ./.dircolors;
     # xdg.configFile."fastfetch" = {

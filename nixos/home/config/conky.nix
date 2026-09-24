@@ -2,11 +2,11 @@
     config,
     lib,
     pkgs,
+    colors,
+    personal,
     ...
 }:
 let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-    personal = import ../../personal.nix;
     desktop = {
         minimum_height = "1036";
         width = "460";

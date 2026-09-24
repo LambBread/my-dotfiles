@@ -6,11 +6,9 @@
     config,
     pkgs,
     inputs,
+    personal,
     ...
 }:
-let
-    personal = import ./personal.nix;
-in
 {
 
     imports = [

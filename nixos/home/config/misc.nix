@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
-let
-    personal = import ../../personal.nix;
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-in
+{
+    config,
+    pkgs,
+    colors,
+    personal,
+    ...
+}:
 {
     programs.ssh = {
         enable = true;

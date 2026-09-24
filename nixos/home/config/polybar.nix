@@ -1,7 +1,11 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    colors,
+    personal,
+    ...
+}:
 let
-    colors = import ../../modules/colors.nix { inherit pkgs; };
-    personal = import ../../personal.nix;
     desktop = {
         right-modules = "battery weather temperature memory";
         left-modules = "nixbtw-fly proton-status tray";

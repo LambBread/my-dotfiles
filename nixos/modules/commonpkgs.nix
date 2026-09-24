@@ -2,12 +2,11 @@
     config,
     pkgs,
     inputs,
+    colors,
     ...
 }:
 let
-    colors = import ./colors.nix { inherit pkgs; };
     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
-    # qogir-theme-fork = pkgs.callPackage ./qogir.nix { };
 in
 {
     environment.systemPackages = with pkgs; [

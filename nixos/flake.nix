@@ -31,11 +31,20 @@
         }@inputs:
         let
             personal = import ./personal.nix;
+            pkgs = import nixpkgs {
+                system = "x86_64-linux";
+            };
+
+            colors = import ./modules/colors.nix { inherit pkgs; };
         in
         {
             nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = {
+                    inherit inputs;
+                    inherit personal;
+                    inherit colors;
+                };
                 modules = [
                     ./configuration.nix
                     home-manager.nixosModules.home-manager
@@ -43,7 +52,11 @@
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
                         home-manager.backupFileExtension = "bak";
-                        home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.extraSpecialArgs = {
+                            inherit inputs;
+                            inherit personal;
+                            inherit colors;
+                        };
                         home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
                     }
                     nixvim.nixosModules.nixvim
@@ -59,7 +72,11 @@
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
                         home-manager.backupFileExtension = "bak";
-                        home-manager.extraSpecialArgs = { inherit inputs; };
+                        home-manager.extraSpecialArgs = {
+                            inherit inputs;
+                            inherit personal;
+                            inherit colors;
+                        };
                         home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
                     }
                     nixvim.nixosModules.nixvim
