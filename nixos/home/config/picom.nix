@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, colors, ... }:
 {
     services.picom = {
         enable = true;
@@ -85,14 +85,14 @@
             shadow-radius = 35;
             frame-opacity = 0.8;
             inactive-opacity-override = false;
-            corner-radius = 20;
+            corner-radius = colors.corner_radius;
             round-borders = 1;
             rounded-corners-exclude = [
                 "window_type = 'desktop'"
                 "class_g = 'Polybar'"
             ];
             corner-radius-rules = [
-                "40:class_g = 'Conky'"
+                "${builtins.toString (2 * colors.corner_radius)}:class_g = 'Conky'"
             ];
             blur-method = "dual_kawase";
             blur-strength = 10;

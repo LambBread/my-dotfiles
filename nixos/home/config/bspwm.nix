@@ -97,14 +97,14 @@ in
         inherit monitors;
         inherit extraConfigEarly;
         settings = {
-            border_width = 4;
-            window_gap = 12;
+            border_width = colors.border_width;
+            window_gap = colors.window_gap;
             split_ratio = 0.5;
             borderless_monocle = true;
             gapless_monocle = false;
             automatic_scheme = "longest_side";
             pointer_follows_focus = true;
-            top_padding = 44;
+            top_padding = colors.bar_width + colors.window_gap;
             presel_feedback_color = "#${colors.white}";
             focused_border_color = "#${colors.l_green}";
             normal_border_color = "#${colors.l_black}";

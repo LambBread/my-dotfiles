@@ -259,13 +259,5 @@ in
         }
     '';
 
-    xdg.configFile."fastfetch/logos".source = processed_logos;
-    #xdg.configFile."fastfetch/logos/nix.png".text = processed_logos.nix_png;
-    #xdg.configFile."fastfetch/logos/nix_bi.png".text = processed_logos.nix_bi_png;
-    #xdg.configFile."fastfetch/logos/nix_pan.png".text = processed_logos.nix_pan_png;
-    #xdg.configFile."fastfetch/logos/nix_trans.png".text = processed_logos.nix_trans_png;
-
-    #    source = ./fastfetch/logos;
-    #    recursive = true;
-    #};
+    xdg.configFile."fastfetch/logos".source = ./fastfetch/logos;
 }

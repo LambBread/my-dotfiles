@@ -66,6 +66,10 @@ rec {
     font = "MonaspiceAr Nerd Font Mono";
     # font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
+    corner_radius = 16;
+    window_gap = 12;
+    border_width = 3;
+    bar_width = 32;
     gowallTheme = pkgs.writeText "gowall-config.yml" ''
         themes:
           - name: "my-custom"

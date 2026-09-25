@@ -9,7 +9,7 @@ let
     desktop = {
         right-modules = "battery weather temperature memory";
         left-modules = "nixbtw-fly proton-status tray";
-        width = "1896"; # 1920 - 24
+        width = "${builtins.toString (1920 - (2 * colors.window_gap))}"; # 1920 - 24
         interface-type = "wired";
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
         format-connected = "";
@@ -18,7 +18,7 @@ let
     laptop = {
         right-modules = "battery weather memory";
         left-modules = "nixbtw-fly tray";
-        width = "1342"; # 1366 - 24
+        width = "${builtins.toString (1366 - (2 * colors.window_gap))}"; # 1366 - 24
         interface-type = "wireless";
         label-connected = "%local_ip%";
         format-connected = "format-connected = %{T3}<ramp-signal>%{T1} <label-connected>";
@@ -44,13 +44,13 @@ in
         modules-center = bspwm
         underline-size = 2
         padding = 2
-        height = 32
+        height = ${builtins.toString colors.bar_width}
         width = ${selectedConfig.width}
         module-margin-left = 2
         module-margin-right = 0
-        radius = 20
-        offset-y = 12
-        offset-x = 12
+        radius = ${builtins.toString colors.corner_radius}
+        offset-y = ${builtins.toString colors.window_gap}
+        offset-x = ${builtins.toString colors.window_gap}
 
         [module/network]
         type = internal/network
@@ -162,13 +162,13 @@ in
         modules-center = xwindow date time bluetooth-battery pulseaudio
         underline-size = 2
         padding = 2
-        height = 32
+        height = ${builtins.toString colors.bar_width}
         width = 600
         module-margin-left = 2
         module-margin-right = 0
-        radius = 20
-        offset-y = 44
-        offset-x = 12
+        radius = ${builtins.toString colors.corner_radius}
+        offset-y = ${builtins.toString (colors.bar_width + colors.window_gap)}
+        offset-x = ${builtins.toString colors.window_gap}
         override-redirect = true
 
         [module/nixbtw-fly]
