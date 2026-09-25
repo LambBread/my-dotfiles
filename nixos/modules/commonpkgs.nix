@@ -59,6 +59,7 @@ in
         xfce4-screenshooter
 
         fastfetch
+        hyfetch
         tty-clock
         vifm
         wget

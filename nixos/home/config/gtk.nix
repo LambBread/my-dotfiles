@@ -92,5 +92,5 @@
             background: @theme_selected_bg_color;
         }*/
     '';
-    xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;
+    #xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;
 }

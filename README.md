@@ -122,9 +122,6 @@ git update-index --skip-worktree nixos/hardware-configuration.nix
   [sahaj-b](https://github.com/sahaj-b/ghostty-cursor-shaders) (MIT license) and 
   [qwerasd205](https://github.com/0xhckr/ghostty-shaders/blob/main/bloom.glsl).
 
-The fastfetch logos are derivative works of the Nix logo and are under the CC-BY 4.0. 
-See [the README](./nixos/home/config/fastfetch/logos/README.md) for details.
-
 The default wallpaper fetched in the NixOS config was made by Reddit user u/Beginning-Advance336, 
 on their post ["Reflection of a Thousand Blossoms"](https://www.reddit.com/r/wallpapers/comments/1vmryqi/reflection_of_a_thousand_blossoms/).
 

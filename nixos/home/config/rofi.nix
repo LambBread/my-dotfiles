@@ -79,7 +79,7 @@
         element, message {
             padding: 7px 10px;
             margin: 0 20px;
-            border-radius: 20px;
+            border-radius: ${builtins.toString colors.corner_radius}px;
         }
         element selected.normal, element normal.active, element selected.active {
             background-color: @selection;

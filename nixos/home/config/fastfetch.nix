@@ -7,29 +7,29 @@
     ...
 }:
 let
-    fastfetch_logos = {
-        nix = ./fastfetch/logos/nix.png;
-        nix_bi = ./fastfetch/logos/nix_bi.png;
-        nix_pan = ./fastfetch/logos/nix_pan.png;
-        nix_trans = ./fastfetch/logos/nix_trans.png;
-    };
-    processed_logos =
-        pkgs.runCommand "processed-logos"
-            {
-                nativeBuildInputs = [ pkgs.gowall ];
-            }
-            ''
-                mkdir -p $out
-                export HOME=$NIX_BUILD_TOP
-                mkdir -p $HOME/.config/gowall
-                cp ${colors.gowallTheme} $HOME/.config/gowall/config.yml
+    # fastfetch_logos = {
+    #     nix = ./fastfetch/logos/nix.png;
+    #     nix_bi = ./fastfetch/logos/nix_bi.png;
+    #     nix_pan = ./fastfetch/logos/nix_pan.png;
+    #     nix_trans = ./fastfetch/logos/nix_trans.png;
+    # };
+    # processed_logos =
+    #     pkgs.runCommand "processed-logos"
+    #         {
+    #             nativeBuildInputs = [ pkgs.gowall ];
+    #         }
+    #         ''
+    #             mkdir -p $out
+    #             export HOME=$NIX_BUILD_TOP
+    #             mkdir -p $HOME/.config/gowall
+    #             cp ${colors.gowallTheme} $HOME/.config/gowall/config.yml
 
-                ${lib.concatStringsSep "\n" (
-                    lib.mapAttrsToList (name: path: ''
-                        gowall convert ${path} --output $out/${name}.png -t my-custom --preview false
-                    '') fastfetch_logos
-                )}
-            '';
+    #             ${lib.concatStringsSep "\n" (
+    #                 lib.mapAttrsToList (name: path: ''
+    #                     gowall convert ${path} --output $out/${name}.png -t my-custom --preview false
+    #                 '') fastfetch_logos
+    #             )}
+    #         '';
 
 in
 {
@@ -81,18 +81,18 @@ in
                     "title": "95"
               }
           },
-          "logo": {
-                "type": "auto",
-                "source": "~/.config/fastfetch/logos/nix_trans.png",
-                "color": {
-                    "1": "94",
-                    "2": "96",
-                    "3": "94",
-                    "4": "96",
-                    "5": "94",
-                    "6": "96"
-                }
-          },
+          // "logo": {
+          //       "type": "auto",
+          //       "source": "~/.config/fastfetch/logos/nix_trans.png",
+          //       "color": {
+          //           "1": "94",
+          //           "2": "96",
+          //           "3": "94",
+          //           "4": "96",
+          //           "5": "94",
+          //           "6": "96"
+          //       }
+          // },
           "modules": [
               {
                   "type": "custom",
@@ -259,5 +259,27 @@ in
         }
     '';
 
-    xdg.configFile."fastfetch/logos".source = ./fastfetch/logos;
+    xdg.configFile."hyfetch.json".text = ''
+        {
+            "preset": "transgender",
+            "mode": "rgb",
+            "auto_detect_light_dark": true,
+            "light_dark": "dark",
+            "lightness": 0.65,
+            "color_align": {
+                "mode": "horizontal"
+            },
+            "backend": "fastfetch",
+            "args": null,
+            "distro": null,
+            "pride_month_disable": false,
+            "custom_ascii_path": null,
+            "custom_presets": null,
+            "palette_glyph": null,
+            "palette_type": null
+        }
+
+    '';
+
+    # xdg.configFile."fastfetch/logos".source = ./fastfetch/logos;
 }

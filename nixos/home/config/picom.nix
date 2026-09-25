@@ -1,4 +1,9 @@
-{ config, pkgs, colors, ... }:
+{
+    config,
+    pkgs,
+    colors,
+    ...
+}:
 {
     services.picom = {
         enable = true;

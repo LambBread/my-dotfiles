@@ -23,7 +23,8 @@
             "ls" = "ls -a --color=auto";
             "grep" = "grep --color=auto";
             "sl" = "ls -a --color=auto";
-            "fastfetch" = "printf '\\n' && fastfetch";
+            "fetch" = "hyfetch";
+            #"fastfetch" = "printf '\\n' && fastfetch";
             "rm" = "rm -v";
             "cp" = "cp -v";
             "mv" = "mv -v";
