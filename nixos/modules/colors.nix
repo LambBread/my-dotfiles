@@ -1,15 +1,26 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 rec {
     # typical
 
-    black = "412853";
-    red = "f08533";
-    green = "659226";
-    yellow = "aeac1e";
-    blue = "245b97";
-    magenta = "9768b6";
-    cyan = "03ad91";
-    white = "cfb793";
+    #black = "412853";
+    #red = "f08533";
+    #green = "659226";
+    #yellow = "aeac1e";
+    # magenta = "9768b6";
+    # cyan = "03ad91";
+    # white = "cfb793";
+    #blue = "245b97";
+    # black_alt = "0c1315"; # old black
+
+    black = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.4);
+    black_alt = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.8);
+    red = "AB510D";
+    green = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_green}" 0.2);
+    yellow = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_yellow}" 0.2);
+    blue = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_blue}" 0.2);
+    magenta = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.2);
+    cyan = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_cyan}" 0.2);
+    white = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_white}" 0.2);
     l_black = "72647c";
     l_red = "d07271";
     l_green = "9fd356";
@@ -18,7 +29,6 @@ rec {
     l_magenta = "bc9ed0";
     l_cyan = "36fcdb";
     l_white = "ece3d5";
-    black_alt = "0c1315"; # old black
 
     # vga
 
