@@ -55,7 +55,7 @@
 
     xdg.configFile."gsimplecal/config".text = ''
         show_week_numbers = 1
-        mainwindow_yoffset = 78
+        mainwindow_yoffset = ${builtins.toString ((colors.bar_width * 2) + colors.window_gap + 2)}
     '';
 
     services.redshift = {

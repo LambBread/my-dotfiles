@@ -13,14 +13,14 @@ rec {
     # black_alt = "0c1315"; # old black
 
     black = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.4);
-    black_alt = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.8);
-    red = "AB510D";
-    green = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_green}" 0.2);
-    yellow = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_yellow}" 0.2);
-    blue = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_blue}" 0.2);
-    magenta = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.2);
-    cyan = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_cyan}" 0.2);
-    white = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_white}" 0.2);
+    black_alt = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.5);
+    red = makeDarkShade "#${l_red}";
+    green = makeDarkShade "#${l_green}";
+    yellow = makeDarkShade "#${l_yellow}";
+    blue = makeDarkShade "#${l_blue}";
+    magenta = makeDarkShade "#${l_magenta}";
+    cyan = makeDarkShade "#${l_cyan}";
+    white = makeDarkShade "#${l_white}";
     l_black = "72647c";
     l_red = "d07271";
     l_green = "9fd356";
@@ -85,6 +85,7 @@ rec {
           - name: "my-custom"
             colors:
               - "#${black}" 
+              - "#${black_alt}"
               - "#${red}"  
               - "#${green}"  
               - "#${yellow}"  
@@ -136,25 +137,43 @@ rec {
 
     # conversion function
     hexToRgb =
-        hexStr:
-        let
-            # strip leading '#' if present
-            cleanHex =
-                if builtins.substring 0 1 hexStr == "#" then
-                    builtins.substring 1 (builtins.stringLength hexStr - 1) hexStr
-                else
-                    hexStr;
+        hexStr: 
+        let 
+            conved = inputs.nix-colorizer.hex.to.srgb hexStr;
         in
         {
-            r = hexPairToInt (builtins.substring 0 2 cleanHex);
-            g = hexPairToInt (builtins.substring 2 2 cleanHex);
-            b = hexPairToInt (builtins.substring 4 2 cleanHex);
+            r = builtins.floor (conved.r * 256);
+            g = builtins.floor (conved.g * 256);
+            b = builtins.floor (conved.b * 256);
         };
+        #hexStr:
+        #let
+        #    # strip leading '#' if present
+        #    cleanHex =
+        #        if builtins.substring 0 1 hexStr == "#" then
+        #            builtins.substring 1 (builtins.stringLength hexStr - 1) hexStr
+        #        else
+        #            hexStr;
+        #in
+        #{
+        #    r = hexPairToInt (builtins.substring 0 2 cleanHex);
+        #    g = hexPairToInt (builtins.substring 2 2 cleanHex);
+        #    b = hexPairToInt (builtins.substring 4 2 cleanHex);
+        #};
 
     hexToRgbStr =
         hexStr:
+        separator:
         let
             rgb = hexToRgb hexStr;
         in
-        "${toString rgb.r},${toString rgb.g},${toString rgb.b}";
+        "${toString rgb.r}${separator}${toString rgb.g}${separator}${toString rgb.b}";
+
+    makeDarkShade = 
+        hexCode:
+        let
+            inOklch = inputs.nix-colorizer.hex.to.oklch hexCode;
+            saturated = inOklch // { C = inOklch.C + 0.03; };
+        in
+        pkgs.lib.removePrefix "#" (inputs.nix-colorizer.oklch.to.hex (inputs.nix-colorizer.oklch.darken saturated 0.15));
 }

@@ -254,9 +254,14 @@ in
             { 
                 "type": "custom",
                 "key": "{#90} {#91} {#92} {#93} {#94} {#95} {#96} {#97}"
+            },
+            {
+                "type": "custom",
+                "key": "{#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}}"
             }
           ]
         }
+        //${colors.black_alt}
     '';
 
     xdg.configFile."hyfetch.json".text = ''
