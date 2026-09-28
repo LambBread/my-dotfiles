@@ -37,10 +37,10 @@
             "Comment".italic = true;
 
             "String".fg = "#${colors.white}";
-            "Constant".fg = "#${colors.red}";
+            "Constant".fg = "#${colors.l_cyan}";
             "Character".fg = "#${colors.white}";
-            "Number".fg = "#${colors.red}";
-            "Boolean".fg = "#${colors.red}";
+            "Number".fg = "#${colors.l_cyan}";
+            "Boolean".fg = "#${colors.l_cyan}";
             "Boolean".bold = true;
             "Special".fg = "#${colors.l_red}";
             "PreProc".fg = "#${colors.l_magenta}";
