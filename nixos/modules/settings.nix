@@ -193,7 +193,7 @@ in
 
             palette-background=${colors.hexToRgbStr "#${colors.black}" ","}
             palette-foreground=${colors.hexToRgbStr "#${colors.l_white}" ","}
- 
+
             palette-black=${colors.hexToRgbStr "#${colors.black}" ","}
             palette-red=${colors.hexToRgbStr "#${colors.red}" ","}
             palette-green=${colors.hexToRgbStr "#${colors.green}" ","}

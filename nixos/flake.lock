@@ -8,11 +8,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1788494578,
-        "narHash": "sha256-u++Hq1RJDYMvQw2WEBFlW029n5Y9RimOpYrsdK8V/EY=",
+        "lastModified": 1790497510,
+        "narHash": "sha256-0T3eZTD8zw3cEZflN066yGST6CNtO7qm9mMkMN0asRc=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "f6f8cd6a1d31925cbf0e0e8b6420321b9bd5790e",
+        "rev": "f91d27101fb8ef07a714f63dd5e7eecb3d84e9cd",
         "type": "gitlab"
       },
       "original": {
@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785627969,
-        "narHash": "sha256-4dtXQk/NMePegK/nWp5NSeuZKLATItOq61lpEvmXqGw=",
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "427bf4bd9435fdf21321c8cc628c24efc14c0f7a",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
         "type": "github"
       },
       "original": {
@@ -104,11 +104,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1787536726,
-        "narHash": "sha256-aBh5Yk9tX8ZV4k10BJr2fvTq0/+iWGegaCMUOU7YKas=",
+        "lastModified": 1789959143,
+        "narHash": "sha256-9oBHyJtUyunZL+6v0Ub8Y759cXcejQiTHpXtGcx5RLs=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "e2c3f9f36326d07340626847543c557e2b95fb50",
+        "rev": "4836e77b1798cd42e2de28593bec4c1788da08f5",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788809686,
-        "narHash": "sha256-t1lTsafmle1IwceVLdzhvE3r7QAIyv4DAgiyrlILO9Y=",
+        "lastModified": 1790553269,
+        "narHash": "sha256-neJvOKVcpVfcW2rHdJ6nZBEqMSjCq7t0pdXQMgowMns=",
         "owner": "LambBread",
         "repo": "Qogir-theme",
-        "rev": "48535a9d98b1ab6be94b4303481a96409cc77102",
+        "rev": "d292e080a16378ed9d95ae2e0dbfd0c707b68e8e",
         "type": "github"
       },
       "original": {
@@ -145,7 +145,31 @@
         "nix-colorizer": "nix-colorizer",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "qogir-theme-fork": "qogir-theme-fork"
+        "qogir-theme-fork": "qogir-theme-fork",
+        "rowaita-icon-theme": "rowaita-icon-theme"
+      }
+    },
+    "rowaita-icon-theme": {
+      "inputs": {
+        "nix-colorizer": [
+          "nix-colorizer"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790554398,
+        "narHash": "sha256-AOgEyNDdacmGOie4NdTQAxxFhXPx2M2H0upy7qv+4tM=",
+        "owner": "LambBread",
+        "repo": "rowaita-icon-theme",
+        "rev": "9f50dc9a3f9b56d5a603597536744901e6bcee80",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LambBread",
+        "repo": "rowaita-icon-theme",
+        "type": "github"
       }
     },
     "systems": {

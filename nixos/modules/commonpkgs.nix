@@ -5,9 +5,9 @@
     colors,
     ...
 }:
-let
-    rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
-in
+# let
+#     rowaita-icon-theme = pkgs.callPackage ./rowaita.nix { };
+# in
 {
     environment.systemPackages = with pkgs; [
         sxhkd
@@ -35,7 +35,12 @@ in
             l_white = "#${colors.l_white}";
         }).${pkgs.stdenv.hostPlatform.system}
 
-        rowaita-icon-theme
+        (inputs.rowaita-icon-theme.lib.mkTheme {
+            magenta = "#${colors.magenta}";
+            l_magenta = "#${colors.l_magenta}";
+            l_white = "#${colors.l_white}";
+        }).${pkgs.stdenv.hostPlatform.system}
+
         simp1e-cursors
 
         xdo

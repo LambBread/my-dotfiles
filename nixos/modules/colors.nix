@@ -27,7 +27,8 @@ rec {
     l_yellow = "e0de4b";
     l_blue = "6ba1db";
     l_magenta = "bc9ed0";
-    l_cyan = "36fcdb";
+    # l_cyan = "36fcdb";
+    l_cyan = "9BF2E4";
     l_white = "ece3d5";
 
     # vga
@@ -137,8 +138,8 @@ rec {
 
     # conversion function
     hexToRgb =
-        hexStr: 
-        let 
+        hexStr:
+        let
             conved = inputs.nix-colorizer.hex.to.srgb hexStr;
         in
         {
@@ -146,34 +147,37 @@ rec {
             g = builtins.floor (conved.g * 256);
             b = builtins.floor (conved.b * 256);
         };
-        #hexStr:
-        #let
-        #    # strip leading '#' if present
-        #    cleanHex =
-        #        if builtins.substring 0 1 hexStr == "#" then
-        #            builtins.substring 1 (builtins.stringLength hexStr - 1) hexStr
-        #        else
-        #            hexStr;
-        #in
-        #{
-        #    r = hexPairToInt (builtins.substring 0 2 cleanHex);
-        #    g = hexPairToInt (builtins.substring 2 2 cleanHex);
-        #    b = hexPairToInt (builtins.substring 4 2 cleanHex);
-        #};
+    #hexStr:
+    #let
+    #    # strip leading '#' if present
+    #    cleanHex =
+    #        if builtins.substring 0 1 hexStr == "#" then
+    #            builtins.substring 1 (builtins.stringLength hexStr - 1) hexStr
+    #        else
+    #            hexStr;
+    #in
+    #{
+    #    r = hexPairToInt (builtins.substring 0 2 cleanHex);
+    #    g = hexPairToInt (builtins.substring 2 2 cleanHex);
+    #    b = hexPairToInt (builtins.substring 4 2 cleanHex);
+    #};
 
     hexToRgbStr =
-        hexStr:
-        separator:
+        hexStr: separator:
         let
             rgb = hexToRgb hexStr;
         in
         "${toString rgb.r}${separator}${toString rgb.g}${separator}${toString rgb.b}";
 
-    makeDarkShade = 
+    makeDarkShade =
         hexCode:
         let
             inOklch = inputs.nix-colorizer.hex.to.oklch hexCode;
-            saturated = inOklch // { C = inOklch.C + 0.03; };
+            saturated = inOklch // {
+                C = inOklch.C + 0.03;
+            };
         in
-        pkgs.lib.removePrefix "#" (inputs.nix-colorizer.oklch.to.hex (inputs.nix-colorizer.oklch.darken saturated 0.15));
+        pkgs.lib.removePrefix "#" (
+            inputs.nix-colorizer.oklch.to.hex (inputs.nix-colorizer.oklch.darken saturated 0.15)
+        );
 }

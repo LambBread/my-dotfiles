@@ -19,6 +19,11 @@
             url = "github:LambBread/Qogir-theme";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        rowaita-icon-theme = {
+            url = "github:LambBread/rowaita-icon-theme";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.nix-colorizer.follows = "nix-colorizer";
+        };
     };
     outputs =
         {
@@ -29,6 +34,7 @@
             firefox-addons,
             qogir-theme-fork,
             nix-colorizer,
+            rowaita-icon-theme,
             ...
         }@inputs:
         let
