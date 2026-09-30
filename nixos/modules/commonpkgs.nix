@@ -69,9 +69,15 @@
         vifm
         wget
         git
+
         zip
         unzip
         p7zip
+        gnutar
+        gzip
+        bzip2
+        xz
+
         trash-cli
         ripgrep
         lazygit
@@ -92,6 +98,24 @@
         nerd-fonts.monaspace
         # nerd-fonts._0xproto
         noto-fonts-color-emoji
+    ];
+    programs.thunar = {
+        enable = true;
+        plugins = with pkgs; [
+            thunar-archive-plugin
+            thunar-volman
+        ];
+    };
+
+    nixpkgs.overlays = [
+        (final: prev: {
+            thunar-archive-plugin = prev.thunar-archive-plugin.overrideAttrs (old: {
+                postInstall = (old.postInstall or "") + ''
+                    mkdir -p $out/libexec/thunar-archive-plugin
+                    cp ${final.xarchiver}/libexec/thunar-archive-plugin/xarchiver.tap $out/libexec/thunar-archive-plugin/
+                '';
+            });
+        })
     ];
 
     # programs.neovim = {

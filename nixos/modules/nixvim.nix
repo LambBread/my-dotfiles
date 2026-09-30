@@ -7,6 +7,7 @@
 {
     programs.nixvim = {
         enable = true;
+        nixpkgs.pkgs = pkgs;
         defaultEditor = true;
         opts = {
             termguicolors = true;
