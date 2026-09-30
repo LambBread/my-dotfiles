@@ -99,13 +99,6 @@
         enableSSHSupport = true;
     };
 
-    zramSwap = {
-        enable = true;
-        algorithm = "zstd";
-        memoryPercent = 50;
-    };
-    systemd.oomd.enable = true;
-
     # List services that you want to enable:
 
     # Enable the OpenSSH daemon.

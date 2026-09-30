@@ -38,7 +38,12 @@ in
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernel.sysctl."vm.swappiness" = 40;
+    boot.kernel.sysctl = {
+        "vm.swappiness" = 150;
+        "vm.watermark_boost_factor" = 0;
+        "vm.watermark_scale_factor" = 125;
+        "vm.page-cluster" = 0;
+    };
     boot.plymouth = {
         enable = true;
         theme = "nixos-bgrt";
@@ -56,6 +61,15 @@ in
         "rd.udev.log_level=3"
         "udev.log_priority=3"
     ];
+
+    zramSwap = {
+        enable = true;
+        algorithm = "zstd";
+        memoryPercent = 100;
+        priority = 100;
+    };
+    systemd.oomd.enable = true;
+
     networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
     # Enable networking
     networking.networkmanager.enable = true;
