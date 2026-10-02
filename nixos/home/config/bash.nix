@@ -15,8 +15,11 @@
         enable = true;
         enableCompletion = true;
         shellAliases = {
+            ".." = "cd ..";
             "cdu" = "cd ..";
+            "..." = "cd ../..";
             "cdp" = "cd -";
+            "-" = "cd -";
             "vim" = "nvim";
             "py3" = "python3";
             "clear" = "reset";
@@ -24,6 +27,8 @@
             "grep" = "grep --color=auto";
             "sl" = "ls -a --color=auto";
             "fetch" = "hyfetch";
+            "fastfetch" = "hyfetch";
+            "ffetch" = "fastfetch";
             #"fastfetch" = "printf '\\n' && fastfetch";
             "rm" = "rm -v";
             "cp" = "cp -v";
@@ -35,7 +40,8 @@
         };
         initExtra = ''
             eval "$(dircolors -b ~/.dircolors)"
-            PS1='\[\033[00;35m\]\[\033[00;01;45m\] \u\[\033[00;35;44m\]\[\033[00;01;44m\] \w \[\033[00;34;47m\]\[\033[37;102m\]\[\033[92;101m\]\[\033[91;105m\]\[\033[95;46m\]\[\033[00;01;46m\]  \A\[\033[00;36m\] \[\033[00m\] '
+            PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; \
+            PS1='\[\033[00;35m\]\[\033[00;01;45m\] \u\[\033[00;35;44m\]\[\033[00;01;44m\] \w \[\033[00;34;101m\]\[\033[00;01;101m\]  ''${PS1_CMD1} \[\033[91;102m\]\[\033[92;47m\]\[\033[37;105m\]\[\033[95;46m\]\[\033[00;01;46m\] \[\033[00;36m\] \[\033[00m\] '
         '';
     };
 
