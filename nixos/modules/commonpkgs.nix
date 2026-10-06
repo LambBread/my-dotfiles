@@ -98,6 +98,7 @@
         nerd-fonts.monaspace
         # nerd-fonts._0xproto
         noto-fonts-color-emoji
+        corefonts
     ];
     programs.thunar = {
         enable = true;
