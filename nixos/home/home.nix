@@ -12,7 +12,11 @@
 
     home.stateVersion = "26.05";
     home.packages = with pkgs; [
-
+        inkscape
+        freecad
+        orca-slicer
+        ungoogled-chromium
+        simplescreenrecorder
     ];
 
     home.file.".Xmodmap".text = ''

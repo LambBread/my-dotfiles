@@ -22,6 +22,25 @@
         ./config/thunar.nix
         ./config/xdg.nix
     ];
+    home.packages = with pkgs; [
+        gsimplecal
+        xmodmap
+        rofi
+        feh
+        (polybar.override {
+            pulseSupport = true;
+        })
+        libreoffice
+        vlc
+        ristretto
+        gimp
+        atril
+        prismlauncher
+        fastfetch
+        hyfetch
+        tty-clock
+
+    ];
     home.activation.makeDirectories = ''
         run mkdir -p ${config.home.homeDirectory}/Pictures/wallpaper
         run ln -sf /srv/background.png \

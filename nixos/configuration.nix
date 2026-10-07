@@ -52,15 +52,15 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        inkscape
-        freecad
-        simplescreenrecorder
+        #inkscape
+        #freecad
+        #simplescreenrecorder
         proton-vpn-cli
         proton-vpn
         dnsmasq
-        ungoogled-chromium
+        # ungoogled-chromium
         pince
-        orca-slicer
+        #orca-slicer
     ];
 
     networking.firewall.checkReversePath = false;

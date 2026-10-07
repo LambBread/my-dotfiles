@@ -11,21 +11,17 @@
 {
     environment.systemPackages = with pkgs; [
         sxhkd
-        rofi
-        conky
-        dunst
-        xsettingsd
-        picom
-        feh
-        redshift
-        xmodmap
-        gsimplecal
+        # rofi
+        # conky
+        # dunst
+        # xsettingsd
+        # picom
+        # feh
+        # redshift
+        # xmodmap
+        # gsimplecal
         gowall
-        (polybar.override {
-            pulseSupport = true;
-        })
 
-        # qogir-theme-fork
         (inputs.qogir-theme-fork.lib.mkTheme {
             black = "#${colors.black}";
             red = "#${colors.red}";
@@ -47,25 +43,24 @@
         xdotool
         libnotify
 
-        librewolf
-        libreoffice
-        # discord
-        ghostty
-        vlc
-        ristretto
-        gimp
+        #librewolf
+        #libreoffice
+        #ghostty
+        #vlc
+        #ristretto
+        #gimp
         xarchiver
-        atril
+        #atril
         baobab
         bleachbit
         luckybackup
-        prismlauncher
+        # prismlauncher
         pavucontrol
         xfce4-screenshooter
 
-        fastfetch
-        hyfetch
-        tty-clock
+        #fastfetch
+        #hyfetch
+        #tty-clock
         vifm
         wget
         git
@@ -84,7 +79,7 @@
         fd
         nixfmt
 
-        tmux
+        # tmux
         imagemagick
         tectonic
         mermaid-cli
