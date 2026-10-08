@@ -11,15 +11,7 @@
 {
     environment.systemPackages = with pkgs; [
         sxhkd
-        # rofi
-        # conky
-        # dunst
-        # xsettingsd
-        # picom
-        # feh
-        # redshift
-        # xmodmap
-        # gsimplecal
+        xmodmap
         gowall
 
         (inputs.qogir-theme-fork.lib.mkTheme {
@@ -43,24 +35,13 @@
         xdotool
         libnotify
 
-        #librewolf
-        #libreoffice
-        #ghostty
-        #vlc
-        #ristretto
-        #gimp
         xarchiver
-        #atril
         baobab
         bleachbit
         luckybackup
-        # prismlauncher
         pavucontrol
         xfce4-screenshooter
 
-        #fastfetch
-        #hyfetch
-        #tty-clock
         vifm
         wget
         git
@@ -79,7 +60,6 @@
         fd
         nixfmt
 
-        # tmux
         imagemagick
         tectonic
         mermaid-cli

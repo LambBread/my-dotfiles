@@ -89,9 +89,9 @@ in
 
         if [ -n "$battery_info" ]; then
             if [ "$battery_info" -le "20" ]; then
-                echo "%{F#${colors.red}}%{T2}󰥇%{F-}%{T1} $battery_info%"
+                echo "%{F#${colors.l_red}}%{T2}󰥇%{F-}%{T1} $battery_info%"
             elif [ "$battery_info" -le "40" ]; then
-                echo "%{F#${colors.red}}%{T2}󰥀%{F-}%{T1} $battery_info%"
+                echo "%{F#${colors.l_red}}%{T2}󰥀%{F-}%{T1} $battery_info%"
             elif [ "$battery_info" -le "60" ]; then
                 echo "%{F#${colors.l_magenta}}%{T2}󰥂%{F-}%{T1} $battery_info%"
             elif [ "$battery_info" -le "80" ]; then
@@ -119,7 +119,7 @@ in
         if protonvpn status | grep -q 'Connected'; then
             echo '%{F#${colors.l_green}}%{F-}' 
         else
-            echo '%{F#${colors.red}}%{F-}'
+            echo '%{F#${colors.l_red}}%{F-}'
         fi
     '';
 
@@ -145,6 +145,7 @@ in
         magenta = #90${colors.magenta}
         white = #${colors.white}
         blue = #90${colors.blue}
+        l-red = #${colors.l_red}
         l-green = #${colors.l_green}
         l-blue = #${colors.l_blue}
         l-magenta = #${colors.l_magenta}
@@ -179,9 +180,9 @@ in
         type = internal/temperature
         interval = 0.5
         hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-        label = %{T3}%{T1} %temperature-c%
-        label-warn = %{T3}%{T1} %temperature-c%
-        label-warn-foreground = ''${colors.red}
+        label = %{T3}%{T1} %temperature-c%
+        label-warn = %{T3}%{T1} %temperature-c%
+        label-warn-foreground = ''${colors.l-red}
 
         [module/weather]
         type = custom/script

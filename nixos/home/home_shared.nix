@@ -24,7 +24,6 @@
     ];
     home.packages = with pkgs; [
         gsimplecal
-        xmodmap
         rofi
         feh
         (polybar.override {

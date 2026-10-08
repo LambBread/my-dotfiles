@@ -27,7 +27,6 @@
             "grep" = "grep --color=auto";
             "sl" = "ls -a --color=auto";
             "fetch" = "hyfetch";
-            "fastfetch" = "hyfetch";
             "ffetch" = "fastfetch";
             #"fastfetch" = "printf '\\n' && fastfetch";
             "rm" = "rm -v";
