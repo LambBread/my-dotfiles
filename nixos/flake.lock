@@ -159,11 +159,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790554398,
-        "narHash": "sha256-AOgEyNDdacmGOie4NdTQAxxFhXPx2M2H0upy7qv+4tM=",
+        "lastModified": 1791504429,
+        "narHash": "sha256-nS+Jfc0UbmswK3Pp4fwitFEHhI+fxgcX9MHJ8Nu8RXs=",
         "owner": "LambBread",
         "repo": "rowaita-icon-theme",
-        "rev": "9f50dc9a3f9b56d5a603597536744901e6bcee80",
+        "rev": "0b7b435709e97541de334963f9f46b4bdeaa1b8b",
         "type": "github"
       },
       "original": {
