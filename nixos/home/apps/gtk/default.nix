@@ -5,6 +5,10 @@
     ...
 }:
 {
+    imports = [
+        ./thunar.nix
+        ./xdg.nix
+    ];
     gtk = {
         enable = true;
         font = {

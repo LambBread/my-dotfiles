@@ -6,6 +6,9 @@
     ...
 }:
 {
+    imports = [
+        ./fastfetch.nix
+    ];
     home.file.".dircolors".source = ./.dircolors;
     # xdg.configFile."fastfetch" = {
     #     source = ./fastfetch;

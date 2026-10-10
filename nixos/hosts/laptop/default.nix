@@ -13,14 +13,10 @@
     imports = [
         # Include the results of the hardware scan.
         ./hardware-configuration.nix
-        ./modules/settings.nix
-        ./modules/commonpkgs.nix
-        ./modules/nixvim.nix
-        # <home-manager/nixos>
+        ../../modules
+        #../../modules/commonpkgs.nix
+        #../../modules/nixvim.nix
     ];
-
-    # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
 
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -43,10 +39,6 @@
     environment.systemPackages = with pkgs; [ ];
 
     services.gnome.games.enable = true;
-
-    # home-manager.useGlobalPkgs = true;
-    # home-manager.useUserPackages = true;
-    # home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

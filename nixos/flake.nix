@@ -43,7 +43,7 @@
                 system = "x86_64-linux";
             };
 
-            colors = import ./modules/colors.nix {
+            colors = import ./colors.nix {
                 inherit pkgs;
                 inherit inputs;
             };
@@ -57,7 +57,7 @@
                     inherit colors;
                 };
                 modules = [
-                    ./configuration.nix
+                    ./hosts/desktop
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;
@@ -68,7 +68,7 @@
                             inherit personal;
                             inherit colors;
                         };
-                        home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
+                        home-manager.users.${personal.SHORT_NAME} = import ./hosts/desktop/home.nix;
                     }
                     nixvim.nixosModules.nixvim
                 ];
@@ -77,7 +77,7 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ./configuration_laptop.nix
+                    ./hosts/laptop
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;
@@ -88,7 +88,7 @@
                             inherit personal;
                             inherit colors;
                         };
-                        home-manager.users.${personal.SHORT_NAME} = import ./home/home_laptop.nix;
+                        home-manager.users.${personal.SHORT_NAME} = import ./hosts/laptop/home.nix;
                     }
                     nixvim.nixosModules.nixvim
                 ];

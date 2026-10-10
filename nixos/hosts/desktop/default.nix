@@ -14,14 +14,11 @@
     imports = [
         # Include the results of the hardware scan.
         ./hardware-configuration.nix
-        ./modules/settings.nix
-        ./modules/commonpkgs.nix
-        ./modules/nixvim.nix
-        #<home-manager/nixos>
+        ../../modules
+        # ../../modules/settings.nix
+        # ../../modules/commonpkgs.nix
+        # ../../modules/nixvim.nix
     ];
-
-    # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
 
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -49,18 +46,11 @@
         ];
     };
 
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
     environment.systemPackages = with pkgs; [
-        #inkscape
-        #freecad
-        #simplescreenrecorder
         proton-vpn-cli
         proton-vpn
         dnsmasq
-        # ungoogled-chromium
         pince
-        #orca-slicer
     ];
 
     networking.firewall.checkReversePath = false;
@@ -86,18 +76,6 @@
     virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
     virtualisation.spiceUSBRedirection.enable = true;
-
-    # home-manager.useGlobalPkgs = true;
-    # home-manager.useUserPackages = true;
-    # home-manager.users.${personal.SHORT_NAME} = import ./home/home.nix;
-
-    # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
-    # programs.mtr.enable = true;
-    programs.gnupg.agent = {
-        enable = true;
-        enableSSHSupport = true;
-    };
 
     # List services that you want to enable:
 

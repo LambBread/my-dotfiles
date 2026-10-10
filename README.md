@@ -67,7 +67,7 @@ These are some of my dotfiles.
 
 2. Clone this repo into `~/.dotfiles`.
 
-3. Copy `/etc/nixos/hardware-configuration.nix` to `~/.dotfiles/nixos/`.
+3. Replace the `hardware-configuration.nix` in `~/.dotfiles/nixos/hosts/` with your `/etc/nixos/hardware-configuration.nix`.
 
 4. Make a file in `~/.dotfiles/nixos/` named `personal.nix`.
 
@@ -97,13 +97,11 @@ Example:
 6. If on desktop, modify any user-specific details such as the default of
 NVIDIA drivers with a multi-monitor setup.
 
-7. Add `personal.nix` and `hardware-configuration.nix` to Git using `--intent-to-add`.
+7. Add `personal.nix` to Git using `--intent-to-add`.
 
 ```bash
 git add -N -f nixos/personal.nix
-git add -N -f nixos/hardware-configuration.nix
 git update-index --skip-worktree nixos/personal.nix
-git update-index --skip-worktree nixos/hardware-configuration.nix
 ```
 
 8. Run `sudo nixos-rebuild switch --flake /etc/nixos/#desktop`, or if on laptop, 

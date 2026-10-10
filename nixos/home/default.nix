@@ -8,19 +8,13 @@
 {
 
     imports = [
-        ./config/bash.nix
-        ./config/bspwm.nix
-        ./config/conky.nix
-        ./config/fastfetch.nix
-        ./config/ghostty.nix
-        ./config/gtk.nix
-        ./config/librewolf.nix
-        ./config/misc.nix
-        ./config/picom.nix
-        ./config/polybar.nix
-        ./config/rofi.nix
-        ./config/thunar.nix
-        ./config/xdg.nix
+        ./apps/bash
+        ./apps/conky
+        ./apps/ghostty
+        ./apps/gtk
+        ./apps/bspwm
+        ./apps/librewolf.nix
+        ./apps/misc.nix
     ];
     home.packages = with pkgs; [
         gsimplecal

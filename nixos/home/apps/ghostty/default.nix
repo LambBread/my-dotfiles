@@ -6,7 +6,7 @@
 }:
 {
     xdg.configFile."ghostty/shaders" = {
-        source = ./ghostty/shaders;
+        source = ./shaders;
         recursive = true;
     };
     programs.ghostty = {

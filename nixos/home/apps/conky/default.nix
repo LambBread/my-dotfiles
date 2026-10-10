@@ -10,12 +10,12 @@ let
     desktop = {
         minimum_height = "1036";
         width = "460";
-        text = builtins.readFile ./conky/conky.txt;
+        text = builtins.readFile ./conky.txt;
     };
     laptop = {
         minimum_height = "724";
         width = "400";
-        text = builtins.readFile ./conky/conky_laptop.txt;
+        text = builtins.readFile ./conky_laptop.txt;
     };
 
     selectedConfig = if personal.DESK_NAME == "laptop" then laptop else desktop;
