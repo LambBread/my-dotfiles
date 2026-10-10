@@ -14,7 +14,7 @@
     imports = [
         # Include the results of the hardware scan.
         ./hardware-configuration.nix
-        ../../modules
+        # ../../modules
         # ../../modules/settings.nix
         # ../../modules/commonpkgs.nix
         # ../../modules/nixvim.nix

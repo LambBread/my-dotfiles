@@ -23,7 +23,7 @@ ${goto 24}${color1}${alignr}PID    MiB    CPU${voffset 8}
 ${goto 24}${color1}󰄷  ${top name 1}${color2}${alignr}${top pid 1} ${top mem 1} ${top cpu 1}  
 ${goto 24}${color1}󰄷  ${top name 2}${color2}${alignr}${top pid 2} ${top mem 2} ${top cpu 2}  
 ${goto 24}${color1}󰄷  ${top name 3}${color2}${alignr}${top pid 3} ${top mem 3} ${top cpu 3}${voffset 8}  
-${goto 24}${color3}${cpugraph 16, 364}  
+${goto 24}${color3}${cpugraph 16, 364}  ${goto 24}${color1}${font1}
 
 ${goto 24} Network:  
 ${goto 24}${color1}SSID: ${color2}${wireless_essid wlo1}${alignr}${color1}IP: ${color2}${addr wlo1}  

@@ -123,5 +123,12 @@ git update-index --skip-worktree nixos/personal.nix
 The default wallpaper fetched in the NixOS config was made by Reddit user u/Beginning-Advance336, 
 on their post ["Reflection of a Thousand Blossoms"](https://www.reddit.com/r/wallpapers/comments/1vmryqi/reflection_of_a_thousand_blossoms/).
 
+> “NixOS Logo” by [Simon Frankau](https://github.com/simon-frankau),
+> [Tim Cuthbertson](https://github.com/timbertson),
+> and [Daniel Baker](https://github.com/djacu)
+> (maintained by the [NixOS Marketing Team](https://nixos.org/community/teams/marketing/)),
+> from [nixos/branding](https://github.com/NixOS/branding),
+> licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 A fork of the GTK theme [Qogir](https://github.com/vinceliuice/Qogir-theme) and a fork of the icon theme
 [Rowaita](https://github.com/4e6anenk0/Rowaita-icon-theme) are used in the NixOS config.

@@ -1,0 +1,25 @@
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+background_image = Image("background.png");
+
+background_scaled = background_image.Scale(screen_width, screen_height);
+background_sprite = Sprite(background_scaled);
+
+background_sprite.SetZ(-10);
+
+logo_image = Image("nix-logo.png");
+logo_sprite = Sprite(logo_image);
+
+logo_width = logo_image.GetWidth();
+logo_height = logo_image.GetHeight();
+
+logo_sprite.SetX((screen_width / 2) - (logo_width / 2));
+logo_sprite.SetY((screen_height / 2) - (logo_height / 2));
+logo_sprite.SetZ(10);
+
+fun message_callback(text) {
+
+}
+
+Plymouth.SetDefaultMessageFunction(message_callback);

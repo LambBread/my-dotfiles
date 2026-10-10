@@ -58,6 +58,7 @@
                 };
                 modules = [
                     ./hosts/desktop
+                    ./modules
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;
@@ -75,9 +76,14 @@
             };
             nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = {
+                    inherit inputs;
+                    inherit personal;
+                    inherit colors;
+                };
                 modules = [
                     ./hosts/laptop
+                    ./modules
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;

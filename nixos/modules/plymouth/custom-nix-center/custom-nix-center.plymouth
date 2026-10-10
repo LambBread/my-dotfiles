@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Custom Nix Center
+Description=Custom plymouth theme with background image and Nix logo centered
+ModuleName=script
+
+[script]
+ImageDir=/etc/plymouth/themes/custom-nix-center
+ScriptFile=/etc/plymouth/themes/custom-nix-center/custom-nix-center.script

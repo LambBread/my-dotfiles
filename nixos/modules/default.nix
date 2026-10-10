@@ -33,6 +33,22 @@ let
                 gowall convert ${backgroundImg} --output $out -t my-custom --preview false
             '';
 
+    nixLogo = ./plymouth/custom-nix-center/nix-logo.png;
+    plymouthScript = ./plymouth/custom-nix-center/custom-nix-center.script;
+    plymouthConfig = ./plymouth/custom-nix-center/custom-nix-center.plymouth;
+
+    customNixCenter = pkgs.stdenv.mkDerivation {
+        name = "custom-nix-center";
+        src = ./plymouth/custom-nix-center;
+        installPhase = ''
+            mkdir -p $out/share/plymouth/themes/custom-nix-center
+            cp ${plymouthScript} $out/share/plymouth/themes/custom-nix-center/custom-nix-center.script
+            cp ${plymouthConfig} $out/share/plymouth/themes/custom-nix-center/custom-nix-center.plymouth
+            cp ${processedBackground} $out/share/plymouth/themes/custom-nix-center/background.png
+            cp ${nixLogo} $out/share/plymouth/themes/custom-nix-center/nix-logo.png
+        '';
+    };
+
 in
 {
     imports = [
@@ -72,9 +88,10 @@ in
     };
     boot.plymouth = {
         enable = true;
-        theme = "nixos-bgrt";
+        theme = "custom-nix-center";
         themePackages = with pkgs; [
             nixos-bgrt-plymouth
+            customNixCenter
         ];
     };
 
@@ -88,6 +105,8 @@ in
         "vt.global_cursor_default=0"
         "udev.log_priority=3"
     ];
+
+    boot.initrd.systemd.enable = true;
 
     zramSwap = {
         enable = true;
