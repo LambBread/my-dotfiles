@@ -1,12 +1,9 @@
-# managed by script
-# nvim/
-# conky/
-
 #temporary
 *~
 *.swp
 temp-*
 
-config/gtk-3.0/bookmarks
+result
+*.qcow2
+
 nixos/personal.nix
-nixos/hardware-configuration.nix

@@ -32,6 +32,7 @@
             "input"
         ];
         packages = with pkgs; [ ];
+        initialPassword = "password123";
     };
 
     # List packages installed in system profile. To search, run:

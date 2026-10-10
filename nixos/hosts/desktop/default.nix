@@ -35,6 +35,7 @@
             "libvirtd"
         ];
         packages = with pkgs; [ ];
+        initialPassword = "password123";
     };
 
     fileSystems."/mnt/stuff" = {
