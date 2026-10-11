@@ -110,11 +110,11 @@
                 "class_g = 'Pensela'"
                 "class_g ?= 'xfce4-screenshooter'"
                 "name = 'Drawing Board'"
-                "window_type = 'dock'"
+                #"window_type = 'dock'"
                 "window_type = 'dropdown_menu'"
                 "window_type = 'combo'"
                 "window_type = 'popup_menu'"
-                "window_type = 'utility'"
+                #"window_type = 'utility'"
                 "window_type = 'desktop'"
                 "_GTK_FRAME_EXTENTS@"
             ];
