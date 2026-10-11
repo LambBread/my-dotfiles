@@ -8,12 +8,12 @@
 }:
 let
     desktop = {
-        minimum_height = "1036";
+        minimum_height = "${builtins.toString (1080 - (colors.bar_width + colors.window_gap))}";
         width = "460";
         text = builtins.readFile ./conky.txt;
     };
     laptop = {
-        minimum_height = "724";
+        minimum_height = "${builtins.toString (768 - (colors.bar_width + colors.window_gap))}";
         width = "400";
         text = builtins.readFile ./conky_laptop.txt;
     };

@@ -107,6 +107,16 @@
                     "BufNewFile"
                 ];
                 pattern = [
+                    "*.script"
+                ];
+                command = "set filetype=javascript";
+            }
+            {
+                event = [
+                    "BufRead"
+                    "BufNewFile"
+                ];
+                pattern = [
                     "conky.conf"
                     "conky_laptop.conf"
                 ];
@@ -128,6 +138,7 @@
                 pattern = [
                     "dunstrc"
                     "redshift.conf"
+                    "*.plymouth"
                 ];
                 command = "set filetype=dosini";
             }

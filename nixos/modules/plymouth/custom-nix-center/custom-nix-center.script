@@ -1,5 +1,7 @@
 screen_width = Window.GetWidth();
 screen_height = Window.GetHeight();
+last_width = Window.GetWidth();
+last_height = Window.GetHeight();
 
 background_image = Image("background.png");
 
@@ -22,4 +24,30 @@ fun message_callback(text) {
 
 }
 
+time = 0.0;
+
+fun refresh_callback()
+{
+    time += 0.05;
+    screen_width = Window.GetWidth();
+    screen_height = Window.GetHeight();
+    if(screen_width != last_width || screen_height != last_height)
+    {
+        last_width = screen_width;
+        last_height = screen_height;
+
+        background_scaled = background_image.Scale(screen_width, screen_height);
+        background_sprite.SetImage(background_scaled);
+
+        logo_width = logo_image.GetWidth();
+        logo_height = logo_image.GetHeight();
+        logo_sprite.SetX((screen_width / 2) - (logo_width / 2));
+        logo_sprite.SetY((screen_height / 2) - (logo_height / 2));
+    }
+
+    opacity = (Math.Sin(time) + 1) / 2 * 0.8 + 0.2;
+    logo_sprite.SetOpacity(opacity);
+}
+
 Plymouth.SetDefaultMessageFunction(message_callback);
+Plymouth.SetRefreshFunction(refresh_callback);
