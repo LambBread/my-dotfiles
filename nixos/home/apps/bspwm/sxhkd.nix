@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 {
+    systemd.user.services.sxhkd = {
+        Unit = {
+            ConditionEnvironment = "!WAYLAND_DISPLAY";
+            PartOf = ["bspwm-session.target"];
+        };
+    };
     services.sxhkd = {
         enable = true;
         keybindings = {

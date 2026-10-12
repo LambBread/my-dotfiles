@@ -23,6 +23,11 @@ in
 {
     services.conky = {
         enable = true;
+
+        package = pkgs.conky.override {
+            waylandSupport = true;
+        };
+
         extraConfig = ''
             conky.config = {
                 alignment = 'top_left',
@@ -65,7 +70,7 @@ in
                 out_to_console = false,
                 out_to_ncurses = false,
                 out_to_stderr = false,
-                out_to_x = true,
+                -- out_to_x = true,
                 show_graph_range = false,
                 show_graph_scale = false,
                 stippled_borders = 0,

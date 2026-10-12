@@ -58,13 +58,16 @@
         mainwindow_yoffset = ${builtins.toString ((colors.bar_width * 2) + colors.window_gap + 2)}
     '';
 
-    services.redshift = {
+    services.gammastep = {
         enable = true;
         temperature = {
             day = 6400;
             night = 3600;
         };
         provider = "manual";
+        settings.general = {
+            adjustment-method = "randr";
+        };
         latitude = "${personal.LOCATION.lat}";
         longitude = "${personal.LOCATION.lon}";
         tray = true;
