@@ -48,14 +48,9 @@
     };
 
     environment.systemPackages = with pkgs; [
-        proton-vpn-cli
-        proton-vpn
-        dnsmasq
         pince
     ];
 
-    networking.firewall.checkReversePath = false;
-    services.flatpak.enable = true;
 
     programs.steam = {
         enable = true;

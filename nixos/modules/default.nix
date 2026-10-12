@@ -144,6 +144,7 @@ in
     # Enable networking
     networking.networkmanager.enable = true;
     programs.nm-applet.enable = true;
+    networking.firewall.checkReversePath = false;
 
     programs.appimage.enable = true;
     programs.appimage.binfmt = true;

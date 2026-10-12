@@ -17,7 +17,7 @@ let
     };
     laptop = {
         right-modules = "battery weather memory";
-        left-modules = "nixbtw-fly tray";
+        left-modules = "nixbtw-fly proton-status tray";
         width = "${builtins.toString (1366 - (2 * colors.window_gap))}"; # 1366 - 24
         interface-type = "wireless";
         label-connected = "%local_ip%";

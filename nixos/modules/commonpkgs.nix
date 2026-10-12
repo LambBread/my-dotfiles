@@ -68,6 +68,10 @@
 
         ffmpegthumbnailer
         lxqt.lxqt-policykit
+
+        proton-vpn-cli
+        proton-vpn
+        dnsmasq
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
@@ -82,6 +86,7 @@
             thunar-volman
         ];
     };
+    services.flatpak.enable = true;
 
     nixpkgs.overlays = [
         (final: prev: {
