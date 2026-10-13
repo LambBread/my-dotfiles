@@ -3,7 +3,7 @@
     systemd.user.services.sxhkd = {
         Unit = {
             ConditionEnvironment = "!WAYLAND_DISPLAY";
-            PartOf = ["bspwm-session.target"];
+            PartOf = [ "bspwm-session.target" ];
         };
     };
     services.sxhkd = {

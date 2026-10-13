@@ -4,11 +4,17 @@ These are some of my dotfiles.
 
 ## Preview
 
-*2026-09-11*
+### 2026-10-14
 
-![Preview 1](./preview/screenshot1.png)
+![Preview 1](./preview/screenshot1_20261013.png)
 
-![Preview 2](./preview/screenshot2.png)
+![Preview 2](./preview/screenshot2_20261013.png)
+
+### 2026-09-11
+
+![Preview 1](./preview/screenshot1_20260911.png.png)
+
+![Preview 2](./preview/screenshot2_20260911.png.png)
 
 ## Important keybinds
 

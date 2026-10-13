@@ -9,7 +9,7 @@
     systemd.user.services.picom = {
         Unit = {
             ConditionEnvironment = "!WAYLAND_DISPLAY";
-            PartOf = ["bspwm-session.target"];
+            PartOf = [ "bspwm-session.target" ];
         };
     };
     services.picom = {

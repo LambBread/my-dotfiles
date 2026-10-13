@@ -51,7 +51,6 @@
         pince
     ];
 
-
     programs.steam = {
         enable = true;
         extraPackages = with pkgs; [
