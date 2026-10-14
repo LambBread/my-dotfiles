@@ -55,7 +55,7 @@ in
         ./clean.nix
         ./commonpkgs.nix
         ./kmscon.nix
-        ./nixvim.nix
+        ./nixvim
     ];
 
     nix.settings.experimental-features = [

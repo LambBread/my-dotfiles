@@ -106,10 +106,25 @@
                         --background-base-lowest: #${colors.black_alt} !important;
                         --background-base-lower: #${colors.black_alt} !important;
                         --background-base-low: #${colors.black_alt} !important;
+                        --chat-background-default: #${colors.black};
                         --text-default: #${colors.l_white} !important;
                         --text-muted: #${colors.white} !important;
+                        --text-subtle: #${colors.white} !important;
+                        --text-strong: #${colors.l_white} !important;
+                        --icon-muted: #${colors.white} !important;
+                        --icon-subtle: #${colors.white} !important;
                         --text-link: #${colors.l_magenta} !important;
                         --background-brand: #${colors.magenta} !important;
+                        --control-primary-background-default: #${colors.magenta} !important;
+                        --control-primary-background-hover: #${colors.magenta} !important;
+                        --icon-voice-muted: #${colors.l_red} !important;
+                        --interactive-text-default: #${colors.white} !important;
+                        --interactive-text-hover: #${colors.l_white} !important;
+                        --interactive-text-active: #${colors.l_white} !important;
+                        --channels-default: #${colors.white} !important;
+                        --channel-icon: #${colors.white} !important;
+                        --chat-text-muted: #${colors.white} !important;
+                        --radius-sm: ${builtins.toString colors.corner_radius}px;
 
                     }
                 }
@@ -135,9 +150,9 @@
                     --theme-highlight-red: #${colors.l_red} !important;
                     --theme-highlight-purple: #${colors.l_magenta} !important;
                     --console-warning-color: #${colors.l_yellow} !important;
-                    --console-error-color: #${colors.red} !important;
+                    --console-error-color: #${colors.l_red} !important;
                     --theme-icon-warning-color: #${colors.l_yellow} !important;
-                    --theme-icon-error-color: #${colors.red} !important;
+                    --theme-icon-error-color: #${colors.l_red} !important;
                     --theme-body-background: #${colors.black} !important;
                     --theme-selection-background: #${colors.magenta} !important;
                     --theme-toolbar-background: #${colors.black} !important;

@@ -12,9 +12,9 @@ These are some of my dotfiles.
 
 ### 2026-09-11
 
-![Preview 1](./preview/screenshot1_20260911.png.png)
+![Preview 1](./preview/screenshot1_20260911.png)
 
-![Preview 2](./preview/screenshot2_20260911.png.png)
+![Preview 2](./preview/screenshot2_20260911.png)
 
 ## Important keybinds
 
