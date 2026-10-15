@@ -84,6 +84,14 @@
                     background-color: #${colors.black} !important;
                 }*/
 
+                @moz-document url-prefix("about:")
+                {
+                    :root
+                    {
+                        --color-accent-primary: #${colors.magenta} !important;
+                    }
+                }
+
                 @-moz-document url("about:newtab"), url("about:home")
                 {
                     .search-wrapper, #newtab-search-container, .search-inner-wrapper
@@ -115,7 +123,7 @@
                         --icon-subtle: #${colors.white} !important;
                         --text-link: #${colors.l_magenta} !important;
                         --background-brand: #${colors.magenta} !important;
-                        --control-primary-background-default: #${colors.magenta} !important;
+                        --control-primary-background-default: #${colors.black} !important;
                         --control-primary-background-hover: #${colors.magenta} !important;
                         --icon-voice-muted: #${colors.l_red} !important;
                         --interactive-text-default: #${colors.white} !important;
@@ -131,6 +139,41 @@
 
                 @-moz-document domain("reddit.com")
                 {
+                    *
+                    {
+                        --color-neutral-background: #${colors.black_alt} !important;
+                        --color-neutral-background-strong: #${colors.black} !important;
+                        --color-neutral-background-weak: #${colors.black_alt} !important;
+                        --color-neutral-background-hover: #${colors.black} !important;
+                        --color-neutral-background-selected: #${colors.black} !important;
+                        --color-neutral-content: #${colors.l_white} !important;
+                        --color-neutral-content-weak: #${colors.white} !important;
+                        --color-neutral-content-strong: #${colors.l_white} !important;
+                        --color-button-secondary-background: #${colors.black} !important;
+                        --color-button-secondary-background-focus: #${colors.black} !important;
+                        --color-button-secondary-background-activated: #${colors.magenta} !important;
+                        --color-button-secondary-background-hover: #${colors.magenta} !important;
+                        --color-button-secondary-text: #${colors.l_white} !important;
+                        --color-button-secondary-text-activated: #${colors.l_white} !important;
+                        --color-secondary-weak: #${colors.white} !important;
+                        --color-secondary-background: #${colors.black} !important;
+                        --color-secondary-background-hover: #${colors.black} !important;
+                        --color-secondary-background-activated: #${colors.black} !important;
+                        --color-secondary-plain: #${colors.l_white} !important;
+                        --color-secondary-plain-weak: #${colors.white} !important;
+                        --color-a-default: #${colors.l_magenta} !important;
+                        --color-ui-canvas: #${colors.black} !important;
+                    }
+
+                    games-section-badge-controller, 
+                    #subreddit_typeahead_section ~ search-telemetry-tracker,
+                    #subreddit_typeahead_section,
+                    #section_0_pipeline_1_trending_query,
+                    #section_0_pipeline_1_trending_query ~ li
+                    {
+                        display: none !important;
+                    }
+
                     body, p, div, span, a
                     {
                         font-family: "${colors.font}", monospace !important;
