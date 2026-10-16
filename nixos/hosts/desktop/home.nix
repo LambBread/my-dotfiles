@@ -11,13 +11,7 @@
     ];
 
     home.stateVersion = "26.05";
-    home.packages = with pkgs; [
-        inkscape
-        freecad
-        orca-slicer
-        ungoogled-chromium
-        simplescreenrecorder
-    ];
+    home.packages = with pkgs; [ ];
 
     home.file.".Xmodmap".text = ''
         clear Lock

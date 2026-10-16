@@ -6,6 +6,18 @@
     ...
 }:
 {
+    qt = {
+        enable = true;
+        platformTheme.name = "kvantum";
+        style.name = "kvantum";
+    };
+
+    xdg.configFile."Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
+    xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+        [General]
+        theme=ArcDark
+    '';
+
     programs.ssh = {
         enable = true;
         enableDefaultConfig = false;
@@ -42,7 +54,8 @@
     };
 
     services.blueman-applet.enable = true;
-    services.lxqt-policykit-agent.enable = true;
+    #services.lxqt-policykit-agent.enable = true;
+    services.polkit-gnome.enable = true;
     services.xsettingsd = {
         enable = true;
         settings = {

@@ -13,7 +13,7 @@
         ./apps/ghostty
         ./apps/gtk
         ./apps/bspwm
-        ./apps/librewolf.nix
+        ./apps/librewolf
         ./apps/misc.nix
     ];
     home.packages = with pkgs; [
@@ -24,10 +24,20 @@
             pulseSupport = true;
         })
         libreoffice
+        ungoogled-chromium
+
         vlc
-        ristretto
         gimp
+        inkscape
+
+        ristretto
         atril
+
+        freecad
+        blender
+        orca-slicer
+
+        simplescreenrecorder
         prismlauncher
         fastfetch
         hyfetch

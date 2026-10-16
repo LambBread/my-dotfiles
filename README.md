@@ -1,6 +1,6 @@
 # My dotfiles
 
-These are some of my dotfiles.
+These are my NixOS dotfiles for a riced bspwm setup.
 
 ## Preview
 

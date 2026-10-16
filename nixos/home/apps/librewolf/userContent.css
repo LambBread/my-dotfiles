@@ -1,0 +1,128 @@
+
+@moz-document url-prefix("about:")
+{
+    :root
+    {
+        --color-accent-primary: #9768b6 !important;
+    }
+}
+
+@-moz-document url("about:newtab"), url("about:home")
+{
+    .search-wrapper, #newtab-search-container, .search-inner-wrapper
+    {
+        display: none !important;
+    }
+
+    body
+    {
+        background-color: #412853 !important;
+    }
+}
+
+@-moz-document url-prefix("https://discord.com")
+{
+    #app-mount, .theme-dark, .theme-light, :root
+    {
+        --font-primary: "MonaspiceAr Nerd Font Mono" !important;
+        --font-display: "MonaspiceAr Nerd Font Mono" !important;
+        --background-base-lowest: #0c1315 !important;
+        --background-base-lower: #0c1315 !important;
+        --background-base-low: #0c1315 !important;
+        --chat-background-default: #412853;
+        --text-default: #ece3d5 !important;
+        --text-muted: #cfb793 !important;
+        --text-subtle: #cfb793 !important;
+        --text-strong: #ece3d5 !important;
+        --icon-muted: #cfb793 !important;
+        --icon-subtle: #cfb793 !important;
+        --text-link: #bc9ed0 !important;
+        --background-brand: #9768b6 !important;
+        --control-primary-background-default: #412853 !important;
+        --control-primary-background-hover: #9768b6 !important;
+        --icon-voice-muted: #d07271 !important;
+        --interactive-text-default: #cfb793 !important;
+        --interactive-text-hover: #ece3d5 !important;
+        --interactive-text-active: #ece3d5 !important;
+        --channels-default: #cfb793 !important;
+        --channel-icon: #cfb793 !important;
+        --chat-text-muted: #cfb793 !important;
+        --radius-sm: 16px;
+
+        }
+    }
+
+@-moz-document domain("reddit.com")
+{
+    *
+    {
+        --color-neutral-background: #0c1315 !important;
+        --color-neutral-background-strong: #412853 !important;
+        --color-neutral-background-weak: #0c1315 !important;
+        --color-neutral-background-hover: #412853 !important;
+        --color-neutral-background-selected: #412853 !important;
+        --color-neutral-content: #ece3d5 !important;
+        --color-neutral-content-weak: #cfb793 !important;
+        --color-neutral-content-strong: #ece3d5 !important;
+        --color-button-secondary-background: #412853 !important;
+        --color-button-secondary-background-focus: #412853 !important;
+        --color-button-secondary-background-activated: #9768b6 !important;
+        --color-button-secondary-background-hover: #9768b6 !important;
+        --color-button-secondary-text: #ece3d5 !important;
+        --color-button-secondary-text-activated: #ece3d5 !important;
+        --color-secondary-weak: #cfb793 !important;
+        --color-secondary-background: #412853 !important;
+        --color-secondary-background-hover: #412853 !important;
+        --color-secondary-background-activated: #412853 !important;
+        --color-secondary-plain: #ece3d5 !important;
+        --color-secondary-plain-weak: #cfb793 !important;
+        --color-a-default: #bc9ed0 !important;
+        --color-ui-canvas: #412853 !important;
+    }
+
+    games-section-badge-controller, 
+    #subreddit_typeahead_section ~ search-telemetry-tracker,
+    #subreddit_typeahead_section,
+    #section_0_pipeline_1_trending_query,
+    #section_0_pipeline_1_trending_query ~ li
+    {
+        display: none !important;
+    }
+
+    body, p, div, span, a
+    {
+        font-family: "MonaspiceAr Nerd Font Mono", monospace !important;
+        font-size: 15px !important;
+        /*background-color: #412853 !important;
+        color: #ece3d5 !important;*/
+        }
+    }
+
+    :root
+    {
+    --theme-code-font-size: 14px !important;
+    --theme-body-font-size: 13px !important;
+    --theme-highlight-keyword: #bc9ed0 !important;
+    --theme-highlight-blue: #6ba1db !important;
+    --theme-highlight-green: #9fd356 !important;
+    --theme-highlight-red: #d07271 !important;
+    --theme-highlight-purple: #bc9ed0 !important;
+    --console-warning-color: #e0de4b !important;
+    --console-error-color: #d07271 !important;
+    --theme-icon-warning-color: #e0de4b !important;
+    --theme-icon-error-color: #d07271 !important;
+    --theme-body-background: #412853 !important;
+    --theme-selection-background: #9768b6 !important;
+    --theme-toolbar-background: #412853 !important;
+    --theme-background: #9768b6 !important;
+    --theme-tab-toolbar-background #412853 !important;
+    --theme-sidebar-background: #412853 !important;
+    --theme-comment: #9768b6 !important;
+    }
+
+.devtools-monospace,
+.CodeMirror,
+.prism
+{
+    font-family: "MonaspiceAr Nerd Font Mono", monospace !important;
+}

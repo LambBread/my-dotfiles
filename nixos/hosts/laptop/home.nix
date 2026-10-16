@@ -11,9 +11,7 @@
     ];
 
     home.stateVersion = "26.05";
-    home.packages = with pkgs; [
-
-    ];
+    home.packages = with pkgs; [ ];
 
     home.file.".Xmodmap".text = ''
         clear Lock

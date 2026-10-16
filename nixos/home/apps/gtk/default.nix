@@ -20,6 +20,9 @@
         iconTheme.name = "${colors.icon_theme}";
         cursorTheme.name = "${colors.cursor_theme}";
     };
+
+    # TODO: Move to separate file
+
     xdg.configFile."gtk-3.0/custom_colors.css".text = ''
 
         @define-color custom-col-black #${colors.black};

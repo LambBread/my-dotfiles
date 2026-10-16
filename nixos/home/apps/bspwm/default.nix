@@ -28,8 +28,8 @@ let
         extra = ''
             xset +dpms
             xset dpms 300 300 300
-            xrandr --output ${builtins.elemAt personal.MONITORS 0} --mode 1920x1080 --rate 75.00 --primary --output
-            xrandr --output ${builtins.elemAt personal.MONITORS 1} --mode 1920x1080 --rate 60.00 --right-of ${builtins.elemAt personal.MONITORS 0}
+            xrandr --output ${builtins.elemAt personal.MONITORS 0} --primary --output \
+            ${builtins.elemAt personal.MONITORS 1} --right-of ${builtins.elemAt personal.MONITORS 0}
             xmodmap ~/.Xmodmap
             pgrep -x greenclip || greenclip daemon &
             pkill conky

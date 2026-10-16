@@ -1,0 +1,37 @@
+
+ #TabsToolbar
+ {
+     visibility: collapse !important;
+ }
+
+ .titlebar-buttonbox-container
+ {
+     display: none !important;
+ }
+
+ #urlbar-background
+ {
+     background-color: #412853 !important;
+ }
+
+ .tab-text
+ {
+     font-size: 14px !important;
+     font-weight: bold !important;
+ }
+
+ #PersonalToolbar
+ {
+     --uc-bm-height: 24px;
+     max-height: 0px !important;
+     min-height: 0px !important;
+     padding-block: 0px !important;
+     opacity: 0 !important;
+     transition: opacity 0.15s ease, max-height 0.15s ease !important;
+ }
+
+ #navigator-toolbox:hover #PersonalToolbar
+ {
+     max-height: var(--uc-bm-height) !important;
+     opacity: 1 !important;
+ }

@@ -30,6 +30,9 @@
         }).${pkgs.stdenv.hostPlatform.system}
 
         simp1e-cursors
+        arc-kde-theme
+        libsForQt5.qtstyleplugin-kvantum
+        kdePackages.qtstyleplugin-kvantum
 
         xdo
         xdotool
@@ -67,7 +70,8 @@
         tree-sitter
 
         ffmpegthumbnailer
-        lxqt.lxqt-policykit
+        #lxqt.lxqt-policykit
+        polkit_gnome
 
         proton-vpn-cli
         proton-vpn

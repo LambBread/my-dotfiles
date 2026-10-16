@@ -204,6 +204,8 @@ in
     hardware.graphics.enable32Bit = true;
     environment.sessionVariables = {
         TERMINAL = "ghostty";
+        QT_QPA_PLATFORMTHEME = "kvantum";
+        QT_STYLE_OVERRIDE = "kvantum";
         # XCURSOR_THEME = "Adwaita";
     };
     xdg.terminal-exec.settings = {
