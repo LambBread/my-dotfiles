@@ -77,7 +77,6 @@ in
         ./dunst.nix
         ./picom.nix
         ./polybar.nix
-        ./rofi.nix
         ./sxhkd.nix
     ];
     xsession.windowManager.bspwm = {
