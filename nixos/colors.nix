@@ -14,11 +14,13 @@ rec {
 
     black = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.4);
     black_alt = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.5);
+    m_magenta = makeDarkShade "#${magenta}";
+    magenta = makeDarkShade "#${l_magenta}";
+    l_magenta = "bc9ed0";
     red = makeDarkShade "#${l_red}";
     green = makeDarkShade "#${l_green}";
     yellow = makeDarkShade "#${l_yellow}";
     blue = makeDarkShade "#${l_blue}";
-    magenta = makeDarkShade "#${l_magenta}";
     cyan = makeDarkShade "#${l_cyan}";
     white = makeDarkShade "#${l_white}";
     l_black = "72647c";
@@ -26,7 +28,7 @@ rec {
     l_green = "9fd356";
     l_yellow = "e0de4b";
     l_blue = "6ba1db";
-    l_magenta = "bc9ed0";
+    # l_magenta = "d09eba";
     # l_cyan = "36fcdb";
     l_cyan = "9BF2E4";
     l_white = "ece3d5";

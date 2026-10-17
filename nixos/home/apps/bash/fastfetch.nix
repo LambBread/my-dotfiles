@@ -249,12 +249,16 @@ in
             
             {
                 "type": "custom",
-                "key": "{#30} {#31} {#32} {#33} {#34} {#35} {#36} {#37} {#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}}"
+                "key": "{#90} {#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}} {#30} {#38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}} {#35} {#95}"
             },
-            { 
+            {
                 "type": "custom",
-                "key": "{#90} {#91} {#92} {#93} {#94} {#95} {#96} {#97}"
+                "key": "{#31} {#32} {#33} {#34} {#36} {#37}"
             },
+            {
+                "type": "custom",
+                "key": "{#91} {#92} {#93} {#94} {#96} {#97}"
+            }
             //{
             //    "type": "custom",
             //    "key": "{#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}}"
