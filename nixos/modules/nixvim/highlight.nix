@@ -45,7 +45,7 @@
         "Removed".fg = "#${colors.l_red}";
         "Removed".italic = true;
         "Added".fg = "#${colors.l_green}";
-        "DiffChange".bg = "#${colors.magenta}";
+        "DiffChange".bg = "#${colors.m_magenta}";
         "TodoBgTODO" = {
             bg = "#${colors.l_cyan}";
             fg = "#${colors.black_alt}";

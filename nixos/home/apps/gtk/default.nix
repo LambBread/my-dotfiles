@@ -42,7 +42,14 @@
         @define-color theme_bg_color @custom-col-black;
     '';
     xdg.configFile."gtk-3.0/gtk.css".text =
-        builtins.replaceStrings [ "MonaspiceAr Nerd Font Mono" ] [ "${colors.font}" ]
+        builtins.replaceStrings
+            [ "MonaspiceAr Nerd Font Mono" "16px" "4px" "8px" ]
+            [
+                "${colors.font}"
+                "${builtins.toString colors.corner_radius}px"
+                "${builtins.toString (colors.window_gap / 3.0)}px"
+                "${builtins.toString ((colors.window_gap * 2.0) / 3.0)}px"
+            ]
             (builtins.readFile ./gtk.css);
     #xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;
 }

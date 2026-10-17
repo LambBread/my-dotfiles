@@ -48,8 +48,8 @@
             window-inherit-working-directory = false;
             background-opacity = 0.67;
             window-decoration = "server";
-            window-padding-x = 15;
-            window-padding-y = 15;
+            window-padding-x = builtins.floor (1.5 * colors.window_gap);
+            window-padding-y = builtins.floor (1.5 * colors.window_gap);
 
             custom-shader = [
                 "shaders/cursor_warp.glsl"

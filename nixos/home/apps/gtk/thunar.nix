@@ -12,7 +12,9 @@
     '';
 
     xdg.configFile."gtk-3.0/thunar.css".text =
-        builtins.replaceStrings [ "16px" ] [ "${builtins.toString colors.corner_radius}px" ]
+        builtins.replaceStrings
+            [ "16px" "4px" ]
+            [ "${builtins.toString colors.corner_radius}px" "${builtins.toString (colors.window_gap / 3.0)}px" ]
             (builtins.readFile ./thunar.css);
 
     xdg.configFile."Thunar/uca.xml".text = ''

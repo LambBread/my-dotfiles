@@ -12,9 +12,9 @@ rec {
     #blue = "245b97";
     # black_alt = "0c1315"; # old black
 
-    black = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.4);
     black_alt = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.5);
-    m_magenta = makeDarkShade "#${magenta}";
+    black = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_magenta}" 0.4);
+    m_magenta = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${magenta}" 0.15);
     magenta = makeDarkShade "#${l_magenta}";
     l_magenta = "bc9ed0";
     red = makeDarkShade "#${l_red}";
@@ -79,21 +79,23 @@ rec {
     font = "MonaspiceAr Nerd Font Mono";
     # font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
-    corner_radius = 16;
     window_gap = 12;
-    border_width = 3;
+    corner_radius = 16;
+    border_width = 2;
     bar_width = 32;
     gowallTheme = pkgs.writeText "gowall-config.yml" ''
         themes:
           - name: "my-custom"
             colors:
-              - "#${black}" 
               - "#${black_alt}"
+              - "#${black}"
+              - "#${m_magenta}"
+              - "#${magenta}"  
+              - "#${l_magenta}"  
               - "#${red}"  
               - "#${green}"  
               - "#${yellow}"  
               - "#${blue}"  
-              - "#${magenta}"  
               - "#${cyan}" 
               - "#${white}"  
               - "#${l_black}" 
@@ -101,7 +103,6 @@ rec {
               - "#${l_green}"  
               - "#${l_yellow}"  
               - "#${l_blue}"  
-              - "#${l_magenta}"  
               - "#${l_cyan}" 
               - "#${l_white}"'';
 

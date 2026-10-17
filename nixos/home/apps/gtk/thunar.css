@@ -78,7 +78,7 @@
 .thunar .shortcuts-pane .view
 { 
     background: @custom-col-black;
-    padding: 3px;
+    padding: 4px;
     border-radius: 16px;
 } 
 

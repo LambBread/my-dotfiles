@@ -67,7 +67,7 @@
         --color-button-secondary-background: #412853 !important;
         --color-button-secondary-background-focus: #412853 !important;
         --color-button-secondary-background-activated: #9768b5 !important;
-        --color-button-secondary-background-hover: #9768b6 !important;
+        --color-button-secondary-background-hover: #9768b5 !important;
         --color-button-secondary-text: #ece3d5 !important;
         --color-button-secondary-text-activated: #ece3d5 !important;
         --color-secondary-weak: #cfb793 !important;
@@ -77,6 +77,8 @@
         --color-secondary-plain: #ece3d5 !important;
         --color-secondary-plain-weak: #cfb793 !important;
         --color-a-default: #bc9ed0 !important;
+        --color-a-visited: #bc9ed0 !important;
+        --color-a-hover: #9768b6 !important;
         --color-ui-canvas: #412853 !important;
     }
 
@@ -100,24 +102,24 @@
 
     :root
     {
-    --theme-code-font-size: 14px !important;
-    --theme-body-font-size: 13px !important;
-    --theme-highlight-keyword: #bc9ed0 !important;
-    --theme-highlight-blue: #6ba1db !important;
-    --theme-highlight-green: #9fd356 !important;
-    --theme-highlight-red: #d07271 !important;
-    --theme-highlight-purple: #bc9ed0 !important;
-    --console-warning-color: #e0de4b !important;
-    --console-error-color: #d07271 !important;
-    --theme-icon-warning-color: #e0de4b !important;
-    --theme-icon-error-color: #d07271 !important;
-    --theme-body-background: #412853 !important;
-    --theme-selection-background: #9768b6 !important;
-    --theme-toolbar-background: #412853 !important;
-    --theme-background: #9768b6 !important;
-    --theme-tab-toolbar-background #412853 !important;
-    --theme-sidebar-background: #412853 !important;
-    --theme-comment: #9768b6 !important;
+        --theme-code-font-size: 14px !important;
+        --theme-body-font-size: 13px !important;
+        --theme-highlight-keyword: #bc9ed0 !important;
+        --theme-highlight-blue: #6ba1db !important;
+        --theme-highlight-green: #9fd356 !important;
+        --theme-highlight-red: #d07271 !important;
+        --theme-highlight-purple: #bc9ed0 !important;
+        --console-warning-color: #e0de4b !important;
+        --console-error-color: #d07271 !important;
+        --theme-icon-warning-color: #e0de4b !important;
+        --theme-icon-error-color: #d07271 !important;
+        --theme-body-background: #412853 !important;
+        --theme-selection-background: #9768b6 !important;
+        --theme-toolbar-background: #412853 !important;
+        --theme-background: #9768b6 !important;
+        --theme-tab-toolbar-background #412853 !important;
+        --theme-sidebar-background: #412853 !important;
+        --theme-comment: #9768b6 !important;
     }
 
 .devtools-monospace,

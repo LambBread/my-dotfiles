@@ -5,10 +5,12 @@ menu, .menu
     background-color: @custom-col-black;
     color: @custom-col-l-white;
     padding: 4px;
+    border-radius: 16px;
 }
 menuitem, .menuitem
 {
     padding: 8px 4px;
+    border-radius: 16px;
     transition: all 200ms ease;
 }
 menuitem:hover, .menuitem:hover
