@@ -43,7 +43,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec3 s = samples[i];
     vec4 c = texture(iChannel0, uv + s.xy * step);
     float l = lum(c);
-    const float BLOOM_STRENGTH = 0.05;
+    const float BLOOM_STRENGTH = 0.03;
     if (l > BLOOM_STRENGTH) {
       color += l * s.z * c * BLOOM_STRENGTH;
     }
