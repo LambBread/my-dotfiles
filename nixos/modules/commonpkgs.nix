@@ -91,6 +91,37 @@
         ];
     };
     services.flatpak.enable = true;
+    services.flatpak.remotes = [
+        {
+            name = "flathub";
+            location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+        }
+    ];
+
+    services.flatpak.packages = [
+        "org.gtk.Gtk3theme.Adwaita-dark"
+        {
+            appId = "io.github.crealityofficial.CrealityPrint";
+            sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+            bundle = "${pkgs.fetchurl {
+                url = "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v7.3.0/CrealityPrint-Linux-flatpak_V7.3.0-Release_x86_64.flatpak";
+                sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+            }}";
+        }
+    ];
+
+    services.flatpak.overrides.global = {
+        Context = {
+            filesystems = [
+                "/nix/store:ro"
+                "xdg-themes:ro"
+                "xdg-icons:ro"
+            ];
+        };
+        Environment = {
+            GTK_THEME = "Adwaita-dark";
+        };
+    };
 
     nixpkgs.overlays = [
         (final: prev: {
