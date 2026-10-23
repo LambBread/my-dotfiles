@@ -29,7 +29,7 @@
         --background-base-lowest: #0c1315 !important;
         --background-base-lower: #0c1315 !important;
         --background-base-low: #0c1315 !important;
-        --chat-background-default: #412853;
+        --chat-background-default: #412853 !important;
         --text-default: #ece3d5 !important;
         --text-muted: #cfb793 !important;
         --text-subtle: #cfb793 !important;
@@ -47,6 +47,7 @@
         --channels-default: #cfb793 !important;
         --channel-icon: #cfb793 !important;
         --chat-text-muted: #cfb793 !important;
+        --control-secondary-text-default: #ece3d5 !important;
         --radius-sm: 16px;
 
         }
@@ -97,8 +98,8 @@
         font-size: 15px !important;
         /*background-color: #412853 !important;
         color: #ece3d5 !important;*/
-        }
     }
+}
 
     :root
     {
@@ -113,12 +114,12 @@
         --console-error-color: #d07271 !important;
         --theme-icon-warning-color: #e0de4b !important;
         --theme-icon-error-color: #d07271 !important;
-        --theme-body-background: #412853 !important;
+        /*--theme-body-background: #412853 !important;
         --theme-selection-background: #9768b6 !important;
         --theme-toolbar-background: #412853 !important;
         --theme-background: #9768b6 !important;
         --theme-tab-toolbar-background #412853 !important;
-        --theme-sidebar-background: #412853 !important;
+        --theme-sidebar-background: #412853 !important;*/
         --theme-comment: #9768b6 !important;
     }
 
