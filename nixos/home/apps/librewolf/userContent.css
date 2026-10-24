@@ -62,6 +62,8 @@
         --color-neutral-background-weak: #0c1315 !important;
         --color-neutral-background-hover: #412853 !important;
         --color-neutral-background-selected: #412853 !important;
+        --color-neutral-background-strong-hover: #9768b5 !important;
+        --color-neutral-background-highlighted-strong: #412853 !important;
         --color-neutral-content: #ece3d5 !important;
         --color-neutral-content-weak: #cfb793 !important;
         --color-neutral-content-strong: #ece3d5 !important;
@@ -71,6 +73,8 @@
         --color-button-secondary-background-hover: #9768b5 !important;
         --color-button-secondary-text: #ece3d5 !important;
         --color-button-secondary-text-activated: #ece3d5 !important;
+        --color-primary-background: #ece3d5 !important;
+        --color-primary-background-highlighted: #cfb793 !important;
         --color-secondary-weak: #cfb793 !important;
         --color-secondary-background: #412853 !important;
         --color-secondary-background-hover: #412853 !important;
@@ -81,6 +85,15 @@
         --color-a-visited: #bc9ed0 !important;
         --color-a-hover: #9768b6 !important;
         --color-ui-canvas: #412853 !important;
+        --color-scrim-background: #0c131599 !important;
+        --color-scrim-background-strong: #0c1315cc !important;
+        --color-upvote-background: #6ba1db !important;
+        --color-upvote-background-hover: #245b97 !important;
+        --color-upvote-plain-weaker: #6ba1db !important;
+        --color-downvote-background: #9fd356 !important;
+        --color-downvote-plain-weaker: #9fd356 !important;
+        --color-downvote-background-hover: #659226 !important;
+
     }
 
     games-section-badge-controller, 

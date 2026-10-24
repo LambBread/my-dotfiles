@@ -41,6 +41,7 @@
         prismlauncher
         fastfetch
         hyfetch
+        blesh
         tty-clock
 
     ];

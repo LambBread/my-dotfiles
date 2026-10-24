@@ -35,14 +35,24 @@
             "rm" = "rm -v";
             "cp" = "cp -v";
             "mv" = "mv -v";
-            "btw" = "echo \"I use $(. /etc/os-release; echo $NAME), Neovim, and bspwm btw\"";
+            "btw" = "echo \"I use NixOS, Neovim, and bspwm btw\"";
             "nrs" = "sudo nixos-rebuild switch --flake /etc/nixos/#desktop";
             "nrsl" = "sudo nixos-rebuild switch --flake /etc/nixos/#laptop";
             "ncg" = "sudo nix-collect-garbage";
         };
         initExtra = ''
             eval "$(dircolors -b ~/.dircolors)"
-            PS1='\[\033[00;35m\]\[\033[00;01;45m\] \u\[\033[00;35;44m\]\[\033[00;01;44m\] \w \[\033[00;34;47m\]\[\033[37;102m\]\[\033[92;101m\]\[\033[91;105m\]\[\033[95;46m\]\[\033[00;01;46m\]  \A\[\033[00;36m\] \[\033[00m\] '
+            PS1='\[\033[00;94m\]\[\033[00;01;104m\] \u\
+            \[\033[00;94;105m\]\[\033[00;01;105m\] \w \
+            \[\033[00;95;45m\]\[\033[35;48;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}m\]\
+            \[\033[38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"};40m\]\
+            \[\033[30;48;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}m\]\
+            \[\033[38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"};106m\]\
+            \[\033[00;01;03;106;30m\]  \A\[\033[00;96m\] \[\033[00m\] '
+
+            if [[ $- == *i* ]]; then
+                source ${pkgs.blesh}/share/blesh/ble.sh
+            fi
         '';
     };
 

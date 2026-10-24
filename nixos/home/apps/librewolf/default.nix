@@ -58,6 +58,8 @@
                         "9fd356"
                         "e0de4b"
                         "9768b5"
+                        "245b97"
+                        "649226"
                     ]
                     [
                         "${colors.magenta}"
@@ -73,6 +75,8 @@
                         "${colors.l_green}"
                         "${colors.l_yellow}"
                         "${colors.m_magenta}"
+                        "${colors.blue}"
+                        "${colors.green}"
                     ]
                     (builtins.readFile ./userContent.css);
 
