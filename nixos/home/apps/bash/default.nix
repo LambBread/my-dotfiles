@@ -10,7 +10,7 @@
         ./fastfetch.nix
     ];
     home.file.".dircolors".source = ./.dircolors;
-    home.file.".blerc".source = ./.dircolors;
+    home.file.".blerc".source = ./.blerc;
     # xdg.configFile."fastfetch" = {
     #     source = ./fastfetch;
     #     recursive = true;
