@@ -79,6 +79,7 @@
         --color-secondary-background: #412853 !important;
         --color-secondary-background-hover: #412853 !important;
         --color-secondary-background-activated: #412853 !important;
+        --color-secondary-background-selected: #412853 !important;
         --color-secondary-plain: #ece3d5 !important;
         --color-secondary-plain-weak: #cfb793 !important;
         --color-a-default: #bc9ed0 !important;
@@ -87,9 +88,9 @@
         --color-ui-canvas: #412853 !important;
         --color-scrim-background: #0c131599 !important;
         --color-scrim-background-strong: #0c1315cc !important;
-        --color-upvote-background: #6ba1db !important;
-        --color-upvote-background-hover: #245b97 !important;
-        --color-upvote-plain-weaker: #6ba1db !important;
+        --color-upvote-background: #d07271 !important;
+        --color-upvote-background-hover: #f08533 !important;
+        --color-upvote-plain-weaker: #d07271 !important;
         --color-downvote-background: #9fd356 !important;
         --color-downvote-plain-weaker: #9fd356 !important;
         --color-downvote-background-hover: #659226 !important;
