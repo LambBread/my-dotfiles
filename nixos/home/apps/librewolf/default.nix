@@ -38,7 +38,7 @@
             name = "default";
             isDefault = true;
 
-            userChrome = builtins.replaceStrings [ "412853" ] [ "${colors.black}" ] (
+            userChrome = builtins.replaceStrings [ "412853" "9768b6" "bc9ed0"] [ "${colors.black}" "${colors.magenta}" "${colors.l_magenta}"] (
                 builtins.readFile ./userChrome.css
             );
 

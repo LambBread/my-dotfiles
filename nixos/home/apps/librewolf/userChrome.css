@@ -1,3 +1,6 @@
+:root {
+    --tabpanel-background-color: #412853 !important;
+}
 
  #TabsToolbar
  {
@@ -9,10 +12,10 @@
      display: none !important;
  }
 
- #urlbar-background
+ /*#urlbar-background
  {
      background-color: #412853 !important;
- }
+ }*/
 
  .tab-text
  {

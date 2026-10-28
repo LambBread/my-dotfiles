@@ -16,7 +16,7 @@
 
     body
     {
-        background-color: #412853 !important;
+        background-color: #0c1315 !important;
     }
 }
 
@@ -94,6 +94,8 @@
         --color-downvote-background: #9fd356 !important;
         --color-downvote-plain-weaker: #9fd356 !important;
         --color-downvote-background-hover: #659226 !important;
+        --color-online: #9fd356 !important;
+        --color-success-content: #9fd356 !important;
 
     }
 
@@ -115,27 +117,35 @@
     }
 }
 
-    :root
-    {
-        --theme-code-font-size: 14px !important;
-        --theme-body-font-size: 13px !important;
-        --theme-highlight-keyword: #bc9ed0 !important;
-        --theme-highlight-blue: #6ba1db !important;
-        --theme-highlight-green: #9fd356 !important;
-        --theme-highlight-red: #d07271 !important;
-        --theme-highlight-purple: #bc9ed0 !important;
-        --console-warning-color: #e0de4b !important;
-        --console-error-color: #d07271 !important;
-        --theme-icon-warning-color: #e0de4b !important;
-        --theme-icon-error-color: #d07271 !important;
-        /*--theme-body-background: #412853 !important;
-        --theme-selection-background: #9768b6 !important;
-        --theme-toolbar-background: #412853 !important;
-        --theme-background: #9768b6 !important;
-        --theme-tab-toolbar-background #412853 !important;
-        --theme-sidebar-background: #412853 !important;*/
-        --theme-comment: #9768b6 !important;
-    }
+:root
+{
+    --theme-code-font-size: 14px !important;
+    --theme-body-font-size: 13px !important;
+    --theme-highlight-keyword: #bc9ed0 !important;
+    --theme-highlight-blue: #6ba1db !important;
+    --theme-highlight-green: #9fd356 !important;
+    --theme-highlight-red: #d07271 !important;
+    --theme-highlight-purple: #bc9ed0 !important;
+    --console-warning-color: #e0de4b !important;
+    --console-error-color: #d07271 !important;
+    --theme-icon-warning-color: #e0de4b !important;
+    --theme-icon-error-color: #d07271 !important;
+    --theme-toolbar-color: #cfb793 !important;
+    --theme-toolbar-selected-color: #ece3d5 !important;
+    --theme-splitter-color: #245b97 !important;
+    --markup-hidden-tag-color: #cfb793 !important;
+    --markup-hidden-attr-color: #ece3d5 !important;
+    --theme-selection-color: #ece3d5 !important;
+    --theme-selection-background: #9768b6 !important;
+    --theme-icon-dimmed-color: #cfb793 !important;
+    --theme-body-color: #ece3d5 !important;
+    --theme-text-color-inactive: #cfb793 !important;
+    --theme-toolbar-background: #0c1315 !important;
+    --theme-tab-toolbar-background: #0c1315 !important;
+    --theme-sidebar-background: #0c1315 !important;
+    --theme-body-background: #0c1315 !important;
+    --theme-comment: #9768b6 !important;
+}
 
 .devtools-monospace,
 .CodeMirror,
