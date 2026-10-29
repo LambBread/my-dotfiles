@@ -172,6 +172,7 @@ in
     services.displayManager = {
         defaultSession = "none+bspwm";
     };
+    security.pam.services.lightdm.enableGnomeKeyring = true;
     services.xserver = {
         enable = true;
 

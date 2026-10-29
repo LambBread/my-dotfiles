@@ -38,9 +38,17 @@
             name = "default";
             isDefault = true;
 
-            userChrome = builtins.replaceStrings [ "412853" "9768b6" "bc9ed0"] [ "${colors.black}" "${colors.magenta}" "${colors.l_magenta}"] (
-                builtins.readFile ./userChrome.css
-            );
+            userChrome =
+                builtins.replaceStrings
+                    [ "412853" "9768b6" "bc9ed0" "9768b5" "ece3d5" ]
+                    [
+                        "${colors.black}"
+                        "${colors.magenta}"
+                        "${colors.l_magenta}"
+                        "${colors.m_magenta}"
+                        "${colors.l_white}"
+                    ]
+                    (builtins.readFile ./userChrome.css);
 
             userContent =
                 builtins.replaceStrings
@@ -96,6 +104,7 @@
                 "browser.bookmarks.showOtherBookmarks" = true;
                 "devtools.debugger.remote-enabled" = true;
                 "devtools.chrome.enabled" = true;
+                "browser.tabs.inTitlebar" = 2;
             };
 
             extensions = {

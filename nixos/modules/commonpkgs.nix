@@ -72,10 +72,13 @@
         ffmpegthumbnailer
         #lxqt.lxqt-policykit
         polkit_gnome
+        seahorse
+        libsecret
 
         proton-vpn-cli
         proton-vpn
         dnsmasq
+
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace

@@ -53,6 +53,15 @@
         };
     };
 
+    services.gnome-keyring = {
+        enable = true;
+        components = [
+            "pkcs11"
+            "secrets"
+            "ssh"
+        ];
+    };
+
     services.blueman-applet.enable = true;
     #services.lxqt-policykit-agent.enable = true;
     services.polkit-gnome.enable = true;

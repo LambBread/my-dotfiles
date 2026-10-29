@@ -12,13 +12,21 @@
      display: none !important;
  }
 
- /*#urlbar-background
- {
-     background-color: #412853 !important;
- }*/
+#navigator-toolbox, #sidebar-container {
+  background-color: #412853 !important;
+}
+
+.tab-background {
+  background-color: #9768b5 !important;
+}
+
+.tab-background[selected=""] {
+  background-color: #9768b6 !important;
+}
 
  .tab-text
  {
+     color: #ece3d5 !important;
      font-size: 14px !important;
      font-weight: bold !important;
  }
