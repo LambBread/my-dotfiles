@@ -40,13 +40,14 @@
 
             userChrome =
                 builtins.replaceStrings
-                    [ "412853" "9768b6" "bc9ed0" "9768b5" "ece3d5" ]
+                    [ "412853" "9768b6" "bc9ed0" "9768b5" "ece3d5" "0c1315" ]
                     [
                         "${colors.black}"
                         "${colors.magenta}"
                         "${colors.l_magenta}"
                         "${colors.m_magenta}"
                         "${colors.l_white}"
+                        "${colors.black_alt}"
                     ]
                     (builtins.readFile ./userChrome.css);
 
@@ -69,6 +70,7 @@
                         "245b97"
                         "649226"
                         "f08533"
+                        "ece3d4"
                     ]
                     [
                         "${colors.magenta}"
@@ -87,6 +89,7 @@
                         "${colors.blue}"
                         "${colors.green}"
                         "${colors.red}"
+                        "${colors.m_white}"
                     ]
                     (builtins.readFile ./userContent.css);
 

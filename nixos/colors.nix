@@ -23,6 +23,7 @@ rec {
     blue = makeDarkShade "#${l_blue}";
     cyan = makeDarkShade "#${l_cyan}";
     white = makeDarkShade "#${l_white}";
+    m_white = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_white}" 0.15);
     l_black = "72647c";
     l_red = "d07271";
     l_green = "9fd356";
@@ -98,6 +99,7 @@ rec {
               - "#${blue}"  
               - "#${cyan}" 
               - "#${white}"  
+              - "#${m_white}"
               - "#${l_black}" 
               - "#${l_red}"  
               - "#${l_green}"  

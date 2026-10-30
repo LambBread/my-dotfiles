@@ -53,6 +53,36 @@
         }
     }
 
+@-moz-document domain("github.com")
+{
+    *
+    {
+        --bgColor-default: #0c1315 !important;
+        --bgColor-inset: #0c1315 !important;
+        --bgColor-muted: #0c1315 !important;
+        --bgColor-accent-emphasis: #9768b6 !important;
+        --fgColor-default: #ece3d5 !important;
+        --fgColor-muted: #ece3d4 !important;
+        --fgColor-accent: #bc9ed0 !important;
+        --button-default-bgColor-rest: #412853 !important;
+        --button-default-bgColor-hover: #9768b5 !important;
+        --button-inactive-bgColor: #0c1315 !important;
+        --button-inactive-fgColor: #cfb793 !important;
+        --contribution-default-bgColor-0: #0c1315 !important;
+        --contribution-default-bgColor-1: #412853 !important;
+        --contribution-default-bgColor-2: #9768b5 !important;
+        --contribution-default-bgColor-3: #9768b6 !important;
+        --contribution-default-bgColor-4: #bc9ed0 !important;
+        --bgColor-danger-emphasis: #d07271 !important;
+        --overlay-bgColor: #0c1315 !important;
+    }
+
+    .Progress-item
+    {
+        background-color: #9768b6 !important;
+    }
+}
+
 @-moz-document domain("reddit.com")
 {
     *
