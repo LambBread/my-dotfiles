@@ -17,12 +17,6 @@
         ./apps/misc.nix
     ];
     home.packages = with pkgs; [
-        gsimplecal
-        rofi
-        feh
-        (polybar.override {
-            pulseSupport = true;
-        })
         libreoffice
         ungoogled-chromium
 

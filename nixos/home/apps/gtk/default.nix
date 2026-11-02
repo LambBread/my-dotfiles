@@ -30,6 +30,7 @@
         @define-color custom-col-l-black #${colors.l_black};
         @define-color custom-col-l-magenta #${colors.l_magenta};
         @define-color custom-col-l-white #${colors.l_white};
+        @define-color custom-col-m-magenta #${colors.m_magenta};
         @define-color thunar-colour shade(@custom-col-blue, 0.85);
         @define-color dark-thunar-colour shade(@thunar-colour, 0.85);
         @define-color black-thunar-colour shade(@thunar-colour, 0.6);

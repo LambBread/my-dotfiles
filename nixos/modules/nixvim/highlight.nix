@@ -40,6 +40,10 @@
         "NeoTreeFileStatsHeader".fg = "#${colors.l_black}";
         "NeoTreeFileStatsHeader".italic = true;
         "NeoTreeFileStatsHeader".bold = true;
+        "NeoTreeGitConflict".bold = true;
+        "NeoTreeGitConflict".italic = true;
+        "NeoTreeGitConflict".fg = "#${colors.l_red}";
+
         "Changed".fg = "#${colors.l_yellow}";
         "Changed".italic = true;
         "Removed".fg = "#${colors.l_red}";

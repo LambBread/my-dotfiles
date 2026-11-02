@@ -5,7 +5,7 @@
 
 .thunar tab:checked
 { 
-    background: @custom-col-magenta;
+    background: @custom-col-m-magenta;
 } 
 
 .thunar .view

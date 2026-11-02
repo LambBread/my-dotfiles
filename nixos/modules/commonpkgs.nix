@@ -3,6 +3,7 @@
     pkgs,
     inputs,
     colors,
+    qogir-theme-pkg,
     ...
 }:
 # let
@@ -13,15 +14,25 @@
         sxhkd
         xmodmap
         gowall
+        gsimplecal
+        rofi
+        feh
+        conky
+        picom
+        dunst
+        (polybar.override {
+            pulseSupport = true;
+        })
 
-        (inputs.qogir-theme-fork.lib.mkTheme {
-            black = "#${colors.black}";
-            red = "#${colors.red}";
-            magenta = "#${colors.magenta}";
-            l_red = "#${colors.l_red}";
-            l_green = "#${colors.l_green}";
-            l_white = "#${colors.l_white}";
-        }).${pkgs.stdenv.hostPlatform.system}
+        qogir-theme-pkg
+        #(inputs.qogir-theme-fork.lib.mkTheme {
+        #    black = "#${colors.black}";
+        #    red = "#${colors.red}";
+        #    magenta = "#${colors.magenta}";
+        #    l_red = "#${colors.l_red}";
+        #    l_green = "#${colors.l_green}";
+        #    l_white = "#${colors.l_white}";
+        #}).${pkgs.stdenv.hostPlatform.system}
 
         (inputs.rowaita-icon-theme.lib.mkTheme {
             magenta = "#${colors.magenta}";
@@ -102,7 +113,7 @@
     ];
 
     services.flatpak.packages = [
-        "org.gtk.Gtk3theme.Adwaita-dark"
+        #"org.gtk.Gtk3theme.Adwaita-dark"
         {
             appId = "io.github.crealityofficial.CrealityPrint";
             sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
@@ -117,12 +128,14 @@
         Context = {
             filesystems = [
                 "/nix/store:ro"
+                "/run/current-system/sw/share/themes:ro"
+                "~/.themes:ro"
                 "xdg-themes:ro"
                 "xdg-icons:ro"
             ];
         };
         Environment = {
-            GTK_THEME = "Adwaita-dark";
+            GTK_THEME = "${colors.theme}";
         };
     };
 

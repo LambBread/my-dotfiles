@@ -49,6 +49,16 @@
                 inherit pkgs;
                 inherit inputs;
             };
+
+            qogir-theme-pkg =
+                (qogir-theme-fork.lib.mkTheme {
+                    black = "#${colors.black}";
+                    red = "#${colors.red}";
+                    magenta = "#${colors.magenta}";
+                    l_red = "#${colors.l_red}";
+                    l_green = "#${colors.l_green}";
+                    l_white = "#${colors.l_white}";
+                }).${pkgs.stdenv.hostPlatform.system};
         in
         {
             nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
@@ -57,6 +67,7 @@
                     inherit inputs;
                     inherit personal;
                     inherit colors;
+                    inherit qogir-theme-pkg;
                 };
                 modules = [
                     ./hosts/desktop
@@ -70,6 +81,7 @@
                             inherit inputs;
                             inherit personal;
                             inherit colors;
+                            inherit qogir-theme-pkg;
                         };
                         home-manager.users.${personal.SHORT_NAME} = import ./hosts/desktop/home.nix;
                     }
@@ -83,6 +95,7 @@
                     inherit inputs;
                     inherit personal;
                     inherit colors;
+                    inherit qogir-theme-pkg;
                 };
                 modules = [
                     ./hosts/laptop
@@ -96,6 +109,7 @@
                             inherit inputs;
                             inherit personal;
                             inherit colors;
+                            inherit qogir-theme-pkg;
                         };
                         home-manager.users.${personal.SHORT_NAME} = import ./hosts/laptop/home.nix;
                     }

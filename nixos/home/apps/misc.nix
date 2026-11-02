@@ -3,6 +3,7 @@
     pkgs,
     colors,
     personal,
+    qogir-theme-pkg,
     ...
 }:
 {
@@ -30,6 +31,8 @@
             };
         };
     };
+
+    home.file.".themes/${colors.theme}".source = "${qogir-theme-pkg}/share/themes/${colors.theme}";
 
     programs.git = {
         enable = true;

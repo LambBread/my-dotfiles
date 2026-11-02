@@ -22,6 +22,8 @@ calendar, GtkCalendar
     background: @custom-col-black;
     color: @custom-col-l-white;
     font-family: "MonaspiceAr Nerd Font Mono", monospace;
+    font-weight: bold;
+    padding: 8px;
 }
 calendar:selected, GtkCalendar:selected
 {
