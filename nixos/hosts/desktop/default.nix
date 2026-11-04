@@ -49,6 +49,7 @@
 
     environment.systemPackages = with pkgs; [
         pince
+        distrobox
     ];
 
     programs.steam = {
@@ -70,6 +71,11 @@
 
     virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
+    virtualisation.podman = {
+        enable = true;
+        dockerCompat = true;
+        defaultNetwork.settings.dns_enabled = true;
+    };
     virtualisation.spiceUSBRedirection.enable = true;
 
     # List services that you want to enable:

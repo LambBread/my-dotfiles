@@ -114,12 +114,20 @@
 
     services.flatpak.packages = [
         #"org.gtk.Gtk3theme.Adwaita-dark"
+        #{
+        #    appId = "io.github.crealityofficial.CrealityPrint";
+        #    sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+        #    bundle = "${pkgs.fetchurl {
+        #        url = "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v7.3.0/CrealityPrint-Linux-flatpak_V7.3.0-Release_x86_64.flatpak";
+        #        sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+        #    }}";
+        #}
         {
-            appId = "io.github.crealityofficial.CrealityPrint";
-            sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+            appId = "io.github.Bowserinator.LSPaint";
+            sha256 = "sha256-Y549q/DpS8VVzIKortBFuJSebM+sfPRjSpiEd5hxU8Y=";
             bundle = "${pkgs.fetchurl {
-                url = "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v7.3.0/CrealityPrint-Linux-flatpak_V7.3.0-Release_x86_64.flatpak";
-                sha256 = "sha256-UKKBrSHnPHEy7SDxMBrIzHyMtN++prfWr76t5qiFbZE=";
+                url = "https://github.com/Bowserinator/ls-paint/releases/download/v.0.1.1/LS_Paint-0.1.1-x86_64.flatpak";
+                sha256 = "sha256-Y549q/DpS8VVzIKortBFuJSebM+sfPRjSpiEd5hxU8Y=";
             }}";
         }
     ];

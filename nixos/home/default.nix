@@ -29,7 +29,7 @@
 
         freecad
         blender
-        #orca-slicer
+        orca-slicer
 
         simplescreenrecorder
         prismlauncher
