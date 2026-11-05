@@ -88,6 +88,7 @@
         --control-bgColor-active: #9768b5 !important;
         --fontStack-sansSerif: "MonaspiceAr Nerd Font Mono", monospace;
         --underlineNav-borderColor-active: #9768b6 !important;
+        --control-transparent-bgColor-hover: #412853 !important;
     }
 
     .Progress-item
