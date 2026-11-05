@@ -37,6 +37,7 @@
         hyfetch
         blesh
         tty-clock
+        cmus
 
     ];
     home.activation.makeDirectories = ''

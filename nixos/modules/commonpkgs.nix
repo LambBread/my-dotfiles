@@ -56,7 +56,6 @@
         pavucontrol
         xfce4-screenshooter
 
-        vifm
         wget
         git
 

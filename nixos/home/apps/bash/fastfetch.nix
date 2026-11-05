@@ -151,7 +151,7 @@ in
                 "type": "command",
                 "key": "󰖕 Weather",
                 "keyColor": "92",
-                "text": "curl 'https://wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%C%20%t&m'"
+                "text": "curl -s 'https://wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%C%20%t&m'"
             },
 
             "break",
