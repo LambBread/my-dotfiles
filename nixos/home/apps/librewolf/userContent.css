@@ -89,11 +89,35 @@
         --fontStack-sansSerif: "MonaspiceAr Nerd Font Mono", monospace;
         --underlineNav-borderColor-active: #9768b6 !important;
         --control-transparent-bgColor-hover: #412853 !important;
+        --bgColor-neutral-muted: #412853 !important;
     }
 
     .Progress-item
     {
         background-color: #9768b6 !important;
+    }
+}
+
+@-moz-document domain("mail.proton.me")
+{
+    *
+    {
+        --background-norm: #0c1315 !important;
+        --background-weak: #412853 !important;
+        --text-norm: #ece3d5 !important;
+        --text-weak: #ece3d4 !important;
+        --interaction-norm: #9768b5 !important;
+        --interaction-norm-major-1: #9768b6 !important;
+        --interaction-norm-major-2: #9768b6 !important;
+        --optional-background-lowered: #0c1315 !important;
+        --border-weak: #0c1315 !important;
+        --setting-font-family: "MonaspiceAr Nerd Font Mono";
+        --optional-font-family: monospace;
+    }
+
+    .bg-promotion
+    {
+        display: none !important;
     }
 }
 
