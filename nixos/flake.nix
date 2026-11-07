@@ -40,17 +40,10 @@
             ...
         }@inputs:
         let
-            personal = import ./personal.nix;
-            pkgs = import nixpkgs {
-                system = "x86_64-linux";
-            };
+            #personal = import ./personal.nix;
 
-            colors = import ./colors.nix {
-                inherit pkgs;
-                inherit inputs;
-            };
-
-            qogir-theme-pkg =
+            mkThemePkg =
+                system: colors:
                 (qogir-theme-fork.lib.mkTheme {
                     black = "#${colors.black}";
                     red = "#${colors.red}";
@@ -58,65 +51,54 @@
                     l_red = "#${colors.l_red}";
                     l_green = "#${colors.l_green}";
                     l_white = "#${colors.l_white}";
-                }).${pkgs.stdenv.hostPlatform.system};
+                }).${system};
+
+            mkSystem =
+                hostname: system:
+                let
+                    pkgs = import nixpkgs { inherit system; };
+                    personal = import ./personal.nix // {
+                        DESK_NAME = hostname;
+                    };
+                    colors = import ./colors.nix { inherit pkgs inputs; };
+                    qogir-theme-pkg = mkThemePkg system colors;
+                in
+                nixpkgs.lib.nixosSystem {
+                    inherit system;
+                    specialArgs = {
+                        inherit
+                            inputs
+                            personal
+                            colors
+                            qogir-theme-pkg
+                            ;
+                    };
+                    modules = [
+                        ./hosts/${hostname}
+                        ./modules
+                        home-manager.nixosModules.home-manager
+                        {
+                            home-manager.useGlobalPkgs = true;
+                            home-manager.useUserPackages = true;
+                            home-manager.backupFileExtension = "bak";
+                            home-manager.extraSpecialArgs = {
+                                inherit
+                                    inputs
+                                    personal
+                                    colors
+                                    qogir-theme-pkg
+                                    ;
+                            };
+                            home-manager.users.${personal.SHORT_NAME} = import ./hosts/${hostname}/home.nix;
+                        }
+                        nixvim.nixosModules.nixvim
+                        nix-flatpak.nixosModules.nix-flatpak
+                    ];
+                };
         in
         {
-            nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                specialArgs = {
-                    inherit inputs;
-                    inherit personal;
-                    inherit colors;
-                    inherit qogir-theme-pkg;
-                };
-                modules = [
-                    ./hosts/desktop
-                    ./modules
-                    home-manager.nixosModules.home-manager
-                    {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
-                        home-manager.backupFileExtension = "bak";
-                        home-manager.extraSpecialArgs = {
-                            inherit inputs;
-                            inherit personal;
-                            inherit colors;
-                            inherit qogir-theme-pkg;
-                        };
-                        home-manager.users.${personal.SHORT_NAME} = import ./hosts/desktop/home.nix;
-                    }
-                    nixvim.nixosModules.nixvim
-                    nix-flatpak.nixosModules.nix-flatpak
-                ];
-            };
-            nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                specialArgs = {
-                    inherit inputs;
-                    inherit personal;
-                    inherit colors;
-                    inherit qogir-theme-pkg;
-                };
-                modules = [
-                    ./hosts/laptop
-                    ./modules
-                    home-manager.nixosModules.home-manager
-                    {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
-                        home-manager.backupFileExtension = "bak";
-                        home-manager.extraSpecialArgs = {
-                            inherit inputs;
-                            inherit personal;
-                            inherit colors;
-                            inherit qogir-theme-pkg;
-                        };
-                        home-manager.users.${personal.SHORT_NAME} = import ./hosts/laptop/home.nix;
-                    }
-                    nixvim.nixosModules.nixvim
-                    nix-flatpak.nixosModules.nix-flatpak
-                ];
-            };
+            nixosConfigurations.desktop = mkSystem "desktop" "x86_64-linux";
+            nixosConfigurations.laptop = mkSystem "laptop" "x86_64-linux";
         };
 
 }

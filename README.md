@@ -73,7 +73,7 @@ These are my NixOS dotfiles for a riced bspwm setup.
 
 2. Clone this repo into `~/.dotfiles`.
 
-3. Replace the `hardware-configuration.nix` in `~/.dotfiles/nixos/hosts/` with your `/etc/nixos/hardware-configuration.nix`.
+3. Replace the `hardware-configuration.nix` in `nixos/hosts/` with your `/etc/nixos/hardware-configuration.nix`.
 
 4. Make a file in `~/.dotfiles/nixos/` named `personal.nix`.
 
@@ -83,7 +83,7 @@ Example:
 {
     SHORT_NAME = "name";
     LONG_NAME = "Full Name";
-    DESK_NAME = "desktop";
+    HOST_NAME = "my-desktop";
     USERNAME = "MyGithubUsername";
     EMAIL = "my.email@example.com";
     LOCATION =
@@ -92,16 +92,13 @@ Example:
         lon = "-120";
     };
     WEATHER_LINK = "https://weather.com";
-    MONITORS = [
-        "DP-5" "HDMI-0"
-    ];
+    MONITORS = ["DP-5" "HDMI-0"];
 }
 ```
 
 5. Delete or move `/etc/nixos` and symlink `~/.dotfiles/nixos/` to `/etc/nixos`.
 
-6. If on desktop, modify any user-specific details such as the default of
-NVIDIA drivers with a multi-monitor setup.
+6. Modify any user or system specific details.
 
 7. Add `personal.nix` to Git using `--intent-to-add`.
 

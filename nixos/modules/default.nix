@@ -62,7 +62,7 @@ in
         "nix-command"
         "flakes"
     ];
-    networking.hostName = "${personal.SHORT_NAME}-${personal.DESK_NAME}"; # Define your hostname.
+    networking.hostName = "${personal.HOST_NAME}"; # Define your hostname.
 
     # Set your time zone.
     time.timeZone = "America/Vancouver";
