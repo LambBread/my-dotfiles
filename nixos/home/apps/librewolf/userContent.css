@@ -52,6 +52,11 @@
         --chat-text-muted: #cfb793 !important;
         --control-secondary-text-default: #ece3d5 !important;
         --white: #ece3d5 !important;
+        --profile-gradient-modal-background-color: #0c1315 !important;
+        --profile-gradient-overlay-color: #41285399 !important;
+        --control-secondary-background-default: #9768b5 !important;
+        --control-secondary-background-hover: #9768b6 !important;
+        --badge-primary-background: #9768b6 !important;
         --radius-sm: 16px;
 
         }

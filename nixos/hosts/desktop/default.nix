@@ -48,7 +48,6 @@
     };
 
     environment.systemPackages = with pkgs; [
-        pince
         distrobox
     ];
 

@@ -89,6 +89,8 @@
         proton-vpn
         dnsmasq
 
+        pince
+
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
