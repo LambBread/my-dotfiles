@@ -52,13 +52,6 @@
         distrobox
     ];
 
-    programs.steam = {
-        enable = true;
-        extraPackages = with pkgs; [
-            simp1e-cursors
-        ];
-    };
-
     services.xserver.videoDrivers = [ "nvidia" ];
     services.xserver.dpi = 96;
     services.thermald.enable = true;

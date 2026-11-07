@@ -103,6 +103,13 @@
             thunar-volman
         ];
     };
+    programs.steam = {
+        enable = true;
+        extraPackages = with pkgs; [
+            simp1e-cursors
+        ];
+    };
+    services.gnome.games.enable = true;
     services.flatpak.enable = true;
     services.flatpak.remotes = [
         {
