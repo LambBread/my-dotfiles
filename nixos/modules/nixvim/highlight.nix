@@ -8,46 +8,74 @@
     programs.nixvim.colorscheme = "vim";
     programs.nixvim.highlightOverride = {
         "Normal".fg = "#${colors.l_white}";
-        "Comment".fg = "#${colors.magenta}";
-        "Comment".italic = true;
+        "Comment" = {
+            fg = "#${colors.magenta}";
+            italic = true;
+        };
 
         "String".fg = "#${colors.white}";
         "Constant".fg = "#${colors.l_cyan}";
         "Character".fg = "#${colors.white}";
         "Number".fg = "#${colors.l_cyan}";
-        "Boolean".fg = "#${colors.l_cyan}";
-        "Boolean".bold = true;
+        "Boolean" = {
+            fg = "#${colors.l_cyan}";
+            bold = true;
+        };
         "Special".fg = "#${colors.l_red}";
         "PreProc".fg = "#${colors.l_magenta}";
-        "Statement".fg = "#${colors.l_magenta}";
-        "Statement".bold = true;
+        "Statement" = {
+            fg = "#${colors.l_magenta}";
+            bold = true;
+        };
         "Identifier".fg = "#${colors.l_blue}";
         "Function".fg = "#${colors.l_green}";
-        "Type".fg = "#${colors.l_green}";
-        "Type".bold = true;
-        "VertSplit".fg = "#${colors.blue}";
+        "Type" = {
+            fg = "#${colors.l_green}";
+            bold = true;
+        };
+        "VertSplit".fg = "#${colors.magenta}";
         "Directory".fg = "#${colors.l_magenta}";
-        "Pmenu".bg = "#${colors.black}";
-        "Pmenu".fg = "#${colors.l_white}";
-        "PmenuSel".bg = "#${colors.magenta}";
-        "PmenuSel".fg = "#${colors.l_white}";
+        "Pmenu" = {
+            bg = "#${colors.black}";
+            fg = "#${colors.l_white}";
+        };
+        "PmenuSel" = {
+            bg = "#${colors.magenta}";
+            fg = "#${colors.l_white}";
+        };
         "DevIconC".fg = "#${colors.l_magenta}";
         "DevIconH".fg = "#${colors.magenta}";
-        "NeoTreeDotfile".fg = "#${colors.magenta}";
-        "NeoTreeDotfile".italic = true;
-        "NeoTreeFileStats".fg = "#${colors.l_black}";
-        "NeoTreeFileStats".italic = true;
-        "NeoTreeFileStatsHeader".fg = "#${colors.l_black}";
-        "NeoTreeFileStatsHeader".italic = true;
-        "NeoTreeFileStatsHeader".bold = true;
-        "NeoTreeGitConflict".bold = true;
-        "NeoTreeGitConflict".italic = true;
-        "NeoTreeGitConflict".fg = "#${colors.l_red}";
-
-        "Changed".fg = "#${colors.l_yellow}";
-        "Changed".italic = true;
-        "Removed".fg = "#${colors.l_red}";
-        "Removed".italic = true;
+        "DevIconNix".fg = "#${colors.cyan}";
+        "NeoTreeDotfile" = {
+            fg = "#${colors.magenta}";
+            italic = true;
+        };
+        "NeoTreeFileStats" = {
+            fg = "#${colors.l_black}";
+            italic = true;
+        };
+        "NeoTreeFileStatsHeader" = {
+            fg = "#${colors.l_black}";
+            italic = true;
+            bold = true;
+        };
+        "NeoTreeGitConflict" = {
+            fg = "#${colors.l_red}";
+            bold = true;
+            italic = true;
+        };
+        "NeoTreeGitUntracked" = {
+            fg = "#${colors.l_blue}";
+            italic = true;
+        };
+        "Changed" = {
+            fg = "#${colors.l_yellow}";
+            italic = true;
+        };
+        "Removed" = {
+            fg = "#${colors.l_red}";
+            italic = true;
+        };
         "Added".fg = "#${colors.l_green}";
         "DiffChange".bg = "#${colors.m_magenta}";
         "TodoBgTODO" = {
@@ -100,8 +128,10 @@
         "TodoSignTEST".fg = "#${colors.l_blue}";
         "TodoSignNOTE".fg = "#${colors.l_white}";
         "TodoSignPERF".fg = "#${colors.l_green}";
-        "Search".bg = "#${colors.l_green}";
-        "Search".fg = "#${colors.black_alt}";
+        "Search" = {
+            bg = "#${colors.l_green}";
+            fg = "#${colors.black_alt}";
+        };
         "CursorLine".bg = "#${colors.black}";
         "LineNr".fg = "#${colors.magenta}";
         "CursorLineNr" = {
@@ -110,17 +140,23 @@
             italic = true;
         };
         "NonText".fg = "#${colors.magenta}";
-        "Visual".bg = "#${colors.black}";
-        "Visual".fg = "#${colors.l_white}";
-        "WarningMsg".fg = "#${colors.l_red}";
-        "WarningMsg".italic = true;
+        "Visual" = {
+            bg = "#${colors.black}";
+            fg = "#${colors.l_white}";
+        };
+        "WarningMsg" = {
+            fg = "#${colors.l_red}";
+            italic = true;
+        };
         "ErrorMsg" = {
             bg = "#${colors.red}";
             fg = "#${colors.l_white}";
             italic = true;
             bold = true;
         };
-        "Title".fg = "#${colors.l_cyan}";
-        "Title".bold = true;
+        "Title" = {
+            fg = "#${colors.l_cyan}";
+            bold = true;
+        };
     };
 }

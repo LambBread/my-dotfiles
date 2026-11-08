@@ -18,7 +18,7 @@
         vSync = true;
         shadow = true;
         inactiveOpacity = 1.0;
-        activeOpacity = 1;
+        activeOpacity = 1.0;
         menuOpacity = 0.8;
         fade = true;
         fadeSteps = [
@@ -109,7 +109,7 @@
                 "${builtins.toString (2 * colors.corner_radius)}:class_g = 'Conky'"
             ];
             blur-method = "dual_kawase";
-            blur-strength = 10;
+            blur-strength = 12;
             inactive-dim = 0.1;
 
             blur-kern = "9x9gaussian";
@@ -148,20 +148,20 @@
               triggers = ["open", "show"];
               preset = "appear";
               direction = "up";
-              duration = 0.3;
+              duration = 0.25;
               scale = 0.6;
             },
             {
                 triggers = ["close", "hide"];
                 preset = "disappear";
                 direction = "up";
-                duration = 0.3;
+                duration = 0.25;
                 scale = 0.6;
             },
             {
                 triggers = ["geometry"];
                 preset = "geometry-change";
-                duration = 0.3;
+                duration = 0.25;
             });
 
         '';

@@ -78,10 +78,9 @@ rec {
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
     font = "MonaspiceAr Nerd Font Mono";
-    # font = "0xProto Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
     window_gap = 12;
-    corner_radius = 16;
+    corner_radius = 12;
     border_width = 2;
     bar_width = 32;
     gowallTheme = pkgs.writeText "gowall-config.yml" ''

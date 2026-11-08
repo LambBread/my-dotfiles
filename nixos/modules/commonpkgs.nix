@@ -94,7 +94,6 @@
     ];
     fonts.packages = with pkgs; [
         nerd-fonts.monaspace
-        # nerd-fonts._0xproto
         noto-fonts-color-emoji
         corefonts
     ];
@@ -156,6 +155,7 @@
     };
 
     nixpkgs.overlays = [
+        inputs.neovim-nightly-overlay.overlays.default
         (final: prev: {
             thunar-archive-plugin = prev.thunar-archive-plugin.overrideAttrs (old: {
                 postInstall = (old.postInstall or "") + ''

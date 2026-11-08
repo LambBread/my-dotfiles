@@ -15,6 +15,7 @@
     programs.nixvim = {
         enable = true;
         nixpkgs.pkgs = pkgs;
+        package = pkgs.neovim-unwrapped;
         defaultEditor = true;
         opts = {
             termguicolors = true;

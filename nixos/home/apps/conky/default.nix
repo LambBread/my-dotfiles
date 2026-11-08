@@ -49,7 +49,7 @@ in
                 color3 = '#${colors.l_magenta}',
                 own_window_transparent = false,            -- transparency
                 own_window_argb_visual = true,             -- transparency
-                own_window_argb_value = 85,               -- transparency [0 -255]
+                own_window_argb_value = 170,               -- transparency [0 -255]
                 own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
                 -- own_window_colour = '#121214',             -- bg color [comment to full transparency]
                 own_window_colour = '#${colors.black}',
