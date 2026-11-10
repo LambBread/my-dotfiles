@@ -4,17 +4,18 @@ These are my NixOS dotfiles for a riced bspwm setup.
 
 ## Preview
 
+### 2026-11-09
+
+![Preview 1](./preview/20261109_screenshot1.png)
+
+![Preview 2](./preview/20261109-screenshot2.png)
+
 ### 2026-10-14
 
 ![Preview 1](./preview/20261013_screenshot1.png)
 
 ![Preview 2](./preview/20261013_screenshot2.png)
 
-### 2026-09-11
-
-![Preview 1](./preview/20260911_screenshot1.png)
-
-![Preview 2](./preview/20260911_screenshot2.png)
 
 ## Important keybinds
 
