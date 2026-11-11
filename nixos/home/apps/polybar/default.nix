@@ -7,8 +7,8 @@
 }:
 let
     desktop = {
-        right-modules = "battery temperature cpu filesystem memory";
-        left-modules = "nixbtw-fly proton-status tray bspwm";
+        right-modules = "temperature cpu filesystem memory";
+        left-modules = "nixbtw-fly proton-status tray pulseaudio bluetooth-battery";
         width = (1920 - (2 * colors.window_gap)); # 1920 - 24
         interface-type = "wired";
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
@@ -24,10 +24,14 @@ let
         format-connected = "format-connected = %{T3}<ramp-signal>%{T1} <label-connected>";
         disconnected-symbol = "󰤮";
     };
-    leftWidth = 450;
+    selectedConfig = if personal.DESK_NAME == "desktop" then desktop else laptop;
+    leftWidth = 400;
     centerWidth = 250;
     rightWidth = 600;
-    selectedConfig = if personal.DESK_NAME == "desktop" then desktop else laptop;
+    flyWidth = 500;
+    centerOffset =
+        ((leftWidth + colors.window_gap) + (selectedConfig.width - rightWidth) - centerWidth) / 2;
+
 in
 {
     xdg.configFile."polybar/config.ini".text = ''
@@ -51,11 +55,7 @@ in
         module-margin-right = 1
         radius = ${builtins.toString colors.corner_radius}
         offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${
-            builtins.toString (
-                ((leftWidth + colors.window_gap) + (selectedConfig.width - rightWidth) - centerWidth) / 2
-            )
-        }
+        offset-x = ${builtins.toString centerOffset}
         # (leftWidth + window_gap + width - rightWidth) - centerWidth / 2 -
 
         [bar/left]
@@ -92,11 +92,36 @@ in
         padding = 2
         height = ${builtins.toString colors.bar_width}
         width = ${builtins.toString rightWidth}
-        module-margin-left = 1
-        module-margin-right = 1
+        module-margin-left = 2
+        module-margin-right = 2
         radius = ${builtins.toString colors.corner_radius}
         offset-y = ${builtins.toString colors.window_gap}
         offset-x = ${builtins.toString (selectedConfig.width - rightWidth)}
+
+        [bar/fly]
+        background = ''${colors.black}
+        foreground = ''${colors.l-white}
+        font-0 = "${colors.font}:size=10:weight=bold"
+        font-1 = "${colors.font}:size=18:weight=bold;3"
+        font-2 = "${colors.font}:size=14:weight=bold;2"
+        font-3 = "${colors.font}:size=6"
+        font-4 = "${colors.emoji_font}:size=18:scale=8;2"
+        font-5 = "${colors.font}:size=24:weight=bold;5"
+        modules-center = xwindow weather bspwm
+        underline-size = 2
+        padding = 2
+        height = ${builtins.toString colors.bar_width}
+        width = ${builtins.toString flyWidth}
+        module-margin-left = 2
+        module-margin-right = 0
+        radius = ${builtins.toString colors.corner_radius}
+        offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
+        offset-x = ${
+            builtins.toString (
+                (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2)
+            )
+        }
+        #override-redirect = true
 
 
 
@@ -156,8 +181,14 @@ in
         #!/bin/bash
         if pgrep -f 'polybar fly'; then
             pkill -f 'polybar fly'
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
+                builtins.toString (colors.bar_width + colors.window_gap)
+            }
         else
             polybar fly & 
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
+                builtins.toString (2 * (colors.bar_width + colors.window_gap))
+            }
         fi
     '';
 
@@ -202,27 +233,6 @@ in
         l-blue = #${colors.l_blue}
         l-magenta = #${colors.l_magenta}
         l-white = #${colors.l_white}
-
-        [bar/fly]
-        background = ''${colors.black}
-        foreground = ''${colors.l-white}
-        font-0 = "${colors.font}:size=10:weight=bold"
-        font-1 = "${colors.font}:size=18:weight=bold;3"
-        font-2 = "${colors.font}:size=14:weight=bold;2"
-        font-3 = "${colors.font}:size=6"
-        font-4 = "${colors.emoji_font}:size=18:scale=8;2"
-        font-5 = "${colors.font}:size=24:weight=bold;5"
-        modules-center = xwindow bluetooth-battery pulseaudio weather
-        underline-size = 2
-        padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = 450
-        module-margin-left = 2
-        module-margin-right = 0
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString (colors.bar_width + colors.window_gap)}
-        offset-x = ${builtins.toString colors.window_gap}
-        override-redirect = true
 
         [module/weather]
         type = custom/script

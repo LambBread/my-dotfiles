@@ -34,7 +34,7 @@ let
             pgrep -x greenclip || greenclip daemon &
             pkill conky
             (sleep 5; xdo lower -N Conky) &
-            pgrep -x polybar > /dev/null || polybar top &
+            ~/.config/sxhkd/polybarlaunch.sh
             feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
             nm-applet &
             protonvpn connect &
@@ -64,7 +64,7 @@ let
             pgrep -x greenclip || greenclip daemon &
             pkill conky
             (sleep 5; xdo lower -N Conky) &
-            pgrep -x polybar > /dev/null || polybar top &
+            ~/.config/sxhkd/polybarlaunch.sh
             feh --bg-fill ~/Pictures/wallpaper/wallpaper.png
             nm-applet &
         '';
@@ -90,7 +90,6 @@ in
             gapless_monocle = false;
             automatic_scheme = "longest_side";
             pointer_follows_focus = true;
-            top_padding = colors.bar_width + colors.window_gap;
             presel_feedback_color = "#${colors.white}";
             focused_border_color = "#${colors.l_green}";
             normal_border_color = "#${colors.l_black}";
@@ -111,6 +110,9 @@ in
             "Conky".manage = false;
         };
         extraConfig = ''
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
+                builtins.toString (colors.bar_width + colors.window_gap)
+            }
             notify-send "bspwm" "Configuration loaded";
         '';
     };
