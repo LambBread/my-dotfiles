@@ -103,7 +103,7 @@
             round-borders = 1;
             rounded-corners-exclude = [
                 "window_type = 'desktop'"
-                "class_g = 'Polybar'"
+                #"class_g = 'Polybar'"
             ];
             corner-radius-rules = [
                 "${builtins.toString (2 * colors.corner_radius)}:class_g = 'Conky'"

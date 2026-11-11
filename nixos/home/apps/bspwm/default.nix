@@ -76,7 +76,6 @@ in
     imports = [
         ./dunst.nix
         ./picom.nix
-        ./polybar.nix
         ./sxhkd.nix
     ];
     xsession.windowManager.bspwm = {

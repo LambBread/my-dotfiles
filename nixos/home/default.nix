@@ -14,6 +14,7 @@
         ./apps/gtk
         ./apps/bspwm
         ./apps/librewolf
+        ./apps/polybar
         ./apps/misc.nix
     ];
     home.packages = with pkgs; [

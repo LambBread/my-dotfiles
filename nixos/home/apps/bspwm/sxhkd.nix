@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+    config,
+    pkgs,
+    personal,
+    ...
+}:
 {
     systemd.user.services.sxhkd = {
         Unit = {
@@ -6,6 +11,13 @@
             PartOf = [ "bspwm-session.target" ];
         };
     };
+    xdg.configFile."sxhkd/polybarlaunch.sh".text = ''
+        #!/bin/sh
+        polybar left &
+        polybar center &
+        polybar right &
+    '';
+    xdg.configFile."sxhkd/polybarlaunch.sh".executable = true;
     services.sxhkd = {
         enable = true;
         keybindings = {
@@ -20,7 +32,8 @@
             "mod3 + l" = "dm-tool lock";
             "mod3 + {z,x,c}" = "xdotool click {1,3,2}";
             "mod3 + comma" = "pkill picom; sleep 1; picom -b";
-            "mod3 + period" = "pkill polybar; sleep 1; polybar top &";
+            "mod3 + period" =
+                "pkill polybar; sleep 1; /home/${personal.SHORT_NAME}/.config/sxhkd/polybarlaunch.sh";
             "mod3 + {Left,Down,Up,Right}" = "xdotool mousemove_relative {-- -40 0, 0 40, 0 -40, 40 0}";
             "mod3 + ctrl + {Left,Down,Up,Right}" = "xdotool mousemove_relative {-- -5 0, 0 5, 0 -5, 5 0}";
             "mod3 + shift + {Up,Down,Left,Right}" = "xdotool click {4,5,6,7}";
@@ -28,7 +41,7 @@
             "mod3 + ctrl + {z,x,c}" = "xdotool mouseup {1,3,2}";
             "mod3 + alt + q" = "bspc node -k";
             "mod3 + super + {q,r}" = "bspc {quit,wm -r}";
-            "mod3 + super + w" = "ghostty --command='sudo pkill kmscon'";
+            "mod3 + super + w" = "pkexec pkill kmscon";
             "Print" = "xfce4-screenshooter";
             "super + m" = "bspc desktop -l next";
             # send the newest marked node to the newest preselected node
