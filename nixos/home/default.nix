@@ -18,7 +18,6 @@
         ./apps/misc.nix
     ];
     home.packages = with pkgs; [
-        libreoffice
         ungoogled-chromium
 
         vlc

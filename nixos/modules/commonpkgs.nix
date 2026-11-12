@@ -23,6 +23,11 @@
         (polybar.override {
             pulseSupport = true;
         })
+    
+        libreoffice
+        hunspell
+        hunspellDicts.en_CA
+
 
         qogir-theme-pkg
         #(inputs.qogir-theme-fork.lib.mkTheme {
