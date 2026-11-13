@@ -8,7 +8,7 @@
 let
     desktop = {
         right-modules = "temperature cpu filesystem memory";
-        left-modules = "nixbtw-fly proton-status tray pulseaudio bluetooth-battery";
+        left-modules = "network proton-status tray pulseaudio bluetooth-battery";
         width = (1920 - (2 * colors.window_gap)); # 1920 - 24
         interface-type = "wired";
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
@@ -17,7 +17,7 @@ let
     };
     laptop = {
         right-modules = "battery cpu filesystem memory";
-        left-modules = "nixbtw-fly proton-status tray pulseaudio bluetooth-battery";
+        left-modules = "network proton-status tray pulseaudio bluetooth-battery";
         width = (1366 - (2 * colors.window_gap)); # 1366 - 24
         interface-type = "wireless";
         label-connected = "%local_ip%";
@@ -98,6 +98,33 @@ in
         offset-y = ${builtins.toString colors.window_gap}
         offset-x = ${builtins.toString (selectedConfig.width - rightWidth)}
 
+
+        [bar/fly-two]
+        background = ''${colors.black}
+        foreground = ''${colors.l-white}
+        font-0 = "${colors.font}:size=10:weight=bold"
+        font-1 = "${colors.font}:size=18:weight=bold;3"
+        font-2 = "${colors.font}:size=14:weight=bold;2"
+        font-3 = "${colors.font}:size=6"
+        font-4 = "${colors.emoji_font}:size=18:scale=8;2"
+        font-5 = "${colors.font}:size=24:weight=bold;5"
+        modules-center = media
+        underline-size = 2
+        padding = 2
+        height = ${builtins.toString colors.bar_width}
+        width = ${builtins.toString flyWidth}
+        module-margin-left = 2
+        module-margin-right = 0
+        radius = ${builtins.toString colors.corner_radius}
+        offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
+        offset-x = ${
+            builtins.toString (
+                (centerOffset + centerWidth)
+                + ((selectedConfig.width - rightWidth - centerOffset - centerWidth - flyWidth) / 2)
+            )
+        }
+        #override-redirect = true
+
         [bar/fly]
         background = ''${colors.black}
         foreground = ''${colors.l-white}
@@ -157,7 +184,6 @@ in
         ramp-signal-3 = 󰤨
         ${selectedConfig.format-connected}
         label-connected = ${selectedConfig.label-connected}
-        label-connected-underline = ''${colors.l-magenta}
         label-disconnected = %{T3}${selectedConfig.disconnected-symbol}%{T1} %{F#${colors.white}}Disconnected
     '';
 
@@ -176,21 +202,6 @@ in
                 "${colors.l_green}"
             ]
             (builtins.readFile ./scripts/batteryremaining.sh);
-
-    xdg.configFile."polybar/scripts/fly-toggle.sh".text = ''
-        #!/bin/bash
-        if pgrep -f 'polybar fly'; then
-            pkill -f 'polybar fly'
-            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
-                builtins.toString (colors.bar_width + colors.window_gap)
-            }
-        else
-            polybar fly & 
-            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
-                builtins.toString (2 * (colors.bar_width + colors.window_gap))
-            }
-        fi
-    '';
 
     xdg.configFile."polybar/scripts/proton-status.sh".text = ''
         #!/bin/sh
@@ -211,8 +222,9 @@ in
             protonvpn connect
         fi
     '';
+    xdg.configFile."polybar/scripts/cmus-polybar.sh".source = ./scripts/cmus-polybar.sh;
+    xdg.configFile."polybar/scripts/cmus-polybar.sh".executable = true;
     xdg.configFile."polybar/scripts/batteryremaining.sh".executable = true;
-    xdg.configFile."polybar/scripts/fly-toggle.sh".executable = true;
     xdg.configFile."polybar/scripts/proton-status.sh".executable = true;
     xdg.configFile."polybar/scripts/toggle-proton.sh".executable = true;
 
@@ -237,7 +249,7 @@ in
         [module/weather]
         type = custom/script
         exec = curl -s "wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%20%c%t&m"
-        interval = 120
+        interval = 1800
         exec-if = ping -c 1 wttr.in
         click-left = xdg-open "${personal.WEATHER_LINK}"
 

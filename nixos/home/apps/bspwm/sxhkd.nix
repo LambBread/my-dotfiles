@@ -2,6 +2,7 @@
     config,
     pkgs,
     personal,
+    colors,
     ...
 }:
 {
@@ -13,9 +14,23 @@
     };
     xdg.configFile."sxhkd/polybarlaunch.sh".text = ''
         #!/bin/sh
-        polybar left &
-        polybar center &
-        polybar right &
+        if pgrep -f -x 'polybar fly' > /dev/null; then
+            pkill -x polybar
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding 0
+        elif pgrep -x "polybar" > /dev/null; then
+            polybar fly &
+            polybar fly-two &
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
+                builtins.toString (2 * (colors.bar_width + colors.window_gap))
+            }
+        else
+            polybar left &
+            polybar center &
+            polybar right &
+            bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
+                builtins.toString (colors.bar_width + colors.window_gap)
+            }
+        fi
     '';
     xdg.configFile."sxhkd/polybarlaunch.sh".executable = true;
     services.sxhkd = {
@@ -32,8 +47,7 @@
             "mod3 + l" = "dm-tool lock";
             "mod3 + {z,x,c}" = "xdotool click {1,3,2}";
             "mod3 + comma" = "pkill picom; sleep 1; picom -b";
-            "mod3 + period" =
-                "pkill polybar; sleep 1; /home/${personal.SHORT_NAME}/.config/sxhkd/polybarlaunch.sh";
+            "mod3 + period" = "/home/${personal.SHORT_NAME}/.config/sxhkd/polybarlaunch.sh";
             "mod3 + {Left,Down,Up,Right}" = "xdotool mousemove_relative {-- -40 0, 0 40, 0 -40, 40 0}";
             "mod3 + ctrl + {Left,Down,Up,Right}" = "xdotool mousemove_relative {-- -5 0, 0 5, 0 -5, 5 0}";
             "mod3 + shift + {Up,Down,Left,Right}" = "xdotool click {4,5,6,7}";
