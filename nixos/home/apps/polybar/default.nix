@@ -6,7 +6,11 @@
     ...
 }:
 let
-    desktop = {
+    leftWidth = 400;
+    centerWidth = 250;
+    rightWidth = 600;
+    flyWidth = 500;
+    desktop = rec {
         right-modules = "temperature cpu filesystem memory";
         left-modules = "network proton-status tray pulseaudio bluetooth-battery";
         width = (1920 - (2 * colors.window_gap)); # 1920 - 24
@@ -14,8 +18,13 @@ let
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
         format-connected = "";
         disconnected-symbol = "󰈂";
+        centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
+        flyOffset =
+            (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
+        flyTwoOffset =
+            (centerOffset + centerWidth) + ((width - rightWidth - centerOffset - centerWidth - flyWidth) / 2);
     };
-    laptop = {
+    laptop = rec {
         right-modules = "battery cpu filesystem memory";
         left-modules = "network proton-status tray pulseaudio bluetooth-battery";
         width = (1366 - (2 * colors.window_gap)); # 1366 - 24
@@ -23,14 +32,12 @@ let
         label-connected = "%local_ip%";
         format-connected = "format-connected = %{T3}<ramp-signal>%{T1} <label-connected>";
         disconnected-symbol = "󰤮";
+        centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
+        flyOffset =
+            (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
+        flyTwoOffset = (width - rightWidth) + ((centerOffset + centerWidth) - (flyOffset + flyWidth));
     };
     selectedConfig = if personal.DESK_NAME == "desktop" then desktop else laptop;
-    leftWidth = 400;
-    centerWidth = 250;
-    rightWidth = 600;
-    flyWidth = 500;
-    centerOffset =
-        ((leftWidth + colors.window_gap) + (selectedConfig.width - rightWidth) - centerWidth) / 2;
 
 in
 {
@@ -55,7 +62,7 @@ in
         module-margin-right = 1
         radius = ${builtins.toString colors.corner_radius}
         offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${builtins.toString centerOffset}
+        offset-x = ${builtins.toString selectedConfig.centerOffset}
         # (leftWidth + window_gap + width - rightWidth) - centerWidth / 2 -
 
         [bar/left]
@@ -117,12 +124,7 @@ in
         module-margin-right = 0
         radius = ${builtins.toString colors.corner_radius}
         offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
-        offset-x = ${
-            builtins.toString (
-                (centerOffset + centerWidth)
-                + ((selectedConfig.width - rightWidth - centerOffset - centerWidth - flyWidth) / 2)
-            )
-        }
+        offset-x = ${builtins.toString (selectedConfig.flyTwoOffset)}
         #override-redirect = true
 
         [bar/fly]
@@ -143,11 +145,7 @@ in
         module-margin-right = 0
         radius = ${builtins.toString colors.corner_radius}
         offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
-        offset-x = ${
-            builtins.toString (
-                (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2)
-            )
-        }
+        offset-x = ${builtins.toString (selectedConfig.flyOffset)}
         #override-redirect = true
 
 
