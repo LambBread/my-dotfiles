@@ -77,6 +77,7 @@ rec {
     theme = "Qogir-Dark";
     icon_theme = "Rowaita-Lavender-Dark";
     cursor_theme = "Simp1e-Adw-Dark";
+    cursor_pkg = pkgs.simp1e-cursors;
     font = "MonaspiceAr Nerd Font Mono";
     emoji_font = "Noto Color Emoji";
     window_gap = 12;

@@ -6,7 +6,7 @@
     ...
 }:
 let
-    leftWidth = 400;
+    leftWidth = 500;
     centerWidth = 250;
     rightWidth = 600;
     flyWidth = 500;

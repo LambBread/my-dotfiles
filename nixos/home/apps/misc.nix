@@ -6,11 +6,33 @@
     qogir-theme-pkg,
     ...
 }:
+let
+qtctSettings = {
+    Appearance = {
+        style = "kvantum";
+        standard_dialogs = "default";
+    };
+    Fonts = {
+        general = "\"${colors.font},10,-1,5,50,0,0,0,0,0\"";
+        fixed = "\"${colors.font},10,-1,5,50,0,0,0,0,0\"";
+    };
+};
+in
 {
     qt = {
         enable = true;
-        platformTheme.name = "kvantum";
+        platformTheme.name = "qtct";
         style.name = "kvantum";
+        qt5ctSettings = qtctSettings;
+        qt6ctSettings = qtctSettings;
+    };
+
+    home.pointerCursor = {
+        name = "${colors.cursor_theme}";
+        package = colors.cursor_pkg;
+        size = 24;
+        gtk.enable = true;
+        x11.enable = true;
     };
 
     xdg.configFile."Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";

@@ -44,7 +44,7 @@
             l_white = "#${colors.l_white}";
         }).${pkgs.stdenv.hostPlatform.system}
 
-        simp1e-cursors
+        colors.cursor_pkg
         arc-kde-theme
         libsForQt5.qtstyleplugin-kvantum
         kdePackages.qtstyleplugin-kvantum
@@ -112,9 +112,9 @@
     };
     programs.steam = {
         enable = true;
-        extraPackages = with pkgs; [
-            simp1e-cursors
-        ];
+        # extraPackages = with pkgs; [
+        #     colors.cursor_pkg
+        # ];
     };
     services.gnome.games.enable = true;
     services.flatpak.enable = true;
