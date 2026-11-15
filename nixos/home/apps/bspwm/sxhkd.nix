@@ -57,6 +57,9 @@
             "mod3 + super + {q,r}" = "bspc {quit,wm -r}";
             "mod3 + super + w" = "pkexec pkill kmscon";
             "Print" = "xfce4-screenshooter";
+            "XF86Audio{Next,Prev,Play,Stop}" = "playerctl {next,previous,play-pause,stop}";
+            "XF86Audio{RaiseVolume,LowerVolume}" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%{+,-}";
+            "XF86AudioMute" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
             "super + m" = "bspc desktop -l next";
             # send the newest marked node to the newest preselected node
             "super + y" = "bspc node newest.marked.local -n newest.!automatic.local";

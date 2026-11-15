@@ -11,5 +11,5 @@ info=$(playerctl metadata --format '{{ artist }} - {{ title }}' 2>/dev/null)
 case "$status" in
     Playing) echo "$info" ;;
     Paused) echo "[Paused] $info" ;;
-    *) echo "" ;;
+    *) echo "[No song is playing]" ;;
 esac
