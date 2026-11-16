@@ -6,8 +6,7 @@
     ...
 }:
 let
-    leftWidth = 500;
-    centerWidth = 250;
+    centerWidth = 200;
     rightWidth = 600;
     flyWidth = 500;
     desktop = rec {
@@ -17,6 +16,7 @@ let
         interface-type = "wired";
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
         format-connected = "";
+        leftWidth = 500;
         disconnected-symbol = "󰈂";
         centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
         flyOffset =
@@ -32,6 +32,7 @@ let
         label-connected = "%local_ip%";
         format-connected = "format-connected = %{T3}<ramp-signal>%{T1} <label-connected>";
         disconnected-symbol = "󰤮";
+        leftWidth = 450;
         centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
         flyOffset =
             (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
@@ -78,7 +79,7 @@ in
         underline-size = 2
         padding = 2
         height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString leftWidth}
+        width = ${builtins.toString selectedConfig.leftWidth}
         module-margin-left = 1
         module-margin-right = 1
         radius = ${builtins.toString colors.corner_radius}
