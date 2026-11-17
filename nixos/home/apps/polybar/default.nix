@@ -16,13 +16,15 @@ let
         interface-type = "wired";
         label-connected = "%{T3}󰈀%{T1} %local_ip%";
         format-connected = "";
-        leftWidth = 500;
         disconnected-symbol = "󰈂";
+        leftWidth = 500;
         centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
-        flyOffset =
-            (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
-        flyTwoOffset =
-            (centerOffset + centerWidth) + ((width - rightWidth - centerOffset - centerWidth - flyWidth) / 2);
+        #flyOffset =
+        #    (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
+        flyOffset = (colors.window_gap);
+        flyTwoOffset = (width - flyWidth);
+        #flyTwoOffset =
+        #    (centerOffset + centerWidth) + ((width - rightWidth - centerOffset - centerWidth - flyWidth) / 2);
     };
     laptop = rec {
         right-modules = "battery cpu filesystem memory";
@@ -34,9 +36,11 @@ let
         disconnected-symbol = "󰤮";
         leftWidth = 450;
         centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
-        flyOffset =
-            (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
-        flyTwoOffset = (width - rightWidth) + ((centerOffset + centerWidth) - (flyOffset + flyWidth));
+        flyOffset = (colors.window_gap);
+        flyTwoOffset = (width - flyWidth);
+        #flyOffset =
+        #    (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
+        #flyTwoOffset = (width - rightWidth) + ((centerOffset + centerWidth) - (flyOffset + flyWidth));
     };
     selectedConfig = if personal.DESK_NAME == "desktop" then desktop else laptop;
 
