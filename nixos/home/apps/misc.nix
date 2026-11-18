@@ -13,8 +13,8 @@ qtctSettings = {
         standard_dialogs = "default";
     };
     Fonts = {
-        general = "\"${colors.font},10,-1,5,50,0,0,0,0,0\"";
-        fixed = "\"${colors.font},10,-1,5,50,0,0,0,0,0\"";
+        general = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
+        fixed = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
     };
 };
 in
@@ -35,10 +35,10 @@ in
         x11.enable = true;
     };
 
-    xdg.configFile."Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
+    xdg.configFile."Kvantum/ArcDarker".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDarker";
     xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=ArcDark
+        theme=ArcDarker
     '';
 
     programs.ssh = {
