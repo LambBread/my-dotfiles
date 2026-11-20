@@ -1,7 +1,7 @@
 {
     description = "A riced NixOS config with bspwm";
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
         nix-colorizer.url = "github:nutsalhan87/nix-colorizer";
         nix-flatpak.url = "github:gmodena/nix-flatpak";
         neovim-nightly-overlay = {
@@ -9,11 +9,11 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         home-manager = {
-            url = "github:nix-community/home-manager/release-26.05";
+            url = "github:nix-community/home-manager/master";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         nixvim = {
-            url = "github:nix-community/nixvim/nixos-26.05";
+            url = "github:nix-community/nixvim/main";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         firefox-addons = {

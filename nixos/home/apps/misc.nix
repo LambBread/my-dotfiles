@@ -28,6 +28,7 @@ in
     };
 
     home.pointerCursor = {
+        enable = true;
         name = "${colors.cursor_theme}";
         package = colors.cursor_pkg;
         size = 24;

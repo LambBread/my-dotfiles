@@ -106,7 +106,7 @@ in
         "udev.log_priority=3"
     ];
 
-    boot.initrd.systemd.enable = true;
+    # boot.initrd.systemd.enable = true;
 
     zramSwap = {
         enable = true;
