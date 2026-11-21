@@ -79,7 +79,8 @@ in
               {
                     "keys": "95",
                     "title": "95"
-              }
+              },
+              "disableLinewrap": true
           },
           // "logo": {
           //       "type": "auto",
@@ -101,15 +102,15 @@ in
             "break",
             {
                 "type": "os",
-                "key": " OS"
+                "key": " OS      "
             },
             {
                 "type": "host",
-                "key": " Host"
+                "key": " Host    "
             },
             {
                 "type": "kernel",
-                "key": " Kernel"
+                "key": " Kernel  "
             },
             {
                 "type": "packages",
@@ -122,37 +123,13 @@ in
             },
             {
                 "type": "shell",
-                "key": " Shell"
+                "key": " Shell   "
             },
-            {
-                "type": "localip",
-                "key": " Local IP"
-            },
-            
-            "break",
-            {
-                "type": "custom",
-                "key": "{#92}{#0}{#102}{#30}{#1}         MISC          {#0}{#92}"
-            },
-            "break",
-
             {
                 "type": "uptime",
-                "key": "󰥔 Uptime",
-                "keyColor": "92"
+                "key": "󰥔 Uptime  ",
             },
-            {
-                "type": "command",
-                "key": " OS Birthday",
-                "keyColor": "92",
-                "text": "date -d @$(stat -c %W /) '+%d %B %Y'"
-            },
-            {
-                "type": "command",
-                "key": "󰖕 Weather",
-                "keyColor": "92",
-                "text": "curl -s 'https://wttr.in/${personal.LOCATION.lat},${personal.LOCATION.lon}?format=%C%20%t&m'"
-            },
+            
 
             "break",
               {
@@ -163,37 +140,53 @@ in
             
             {
                 "type": "battery",
-                "key": " Battery",
+                "key": " Battery ",
                 "keyColor": "white"
             },
             {
                 "type": "memory",
-                "key": " RAM",
+                "key": " RAM     ",
+                "percent":
+                {
+                    "type": ["num", "bar"]
+                },
+                "format": "{percentage-bar}",
                 "keyColor": "white"
             },
             {
                 "type": "swap",
-                "key": " Swap",
+                "key": " Swap    ",
+                "percent":
+                {
+                    "type": ["num", "bar"]
+                },
+                "format": "{percentage-bar}",
                 "keyColor": "white"
             },
             {
                 "type": "disk",
-                "key": "󰋊 Disk ({mountpoint})",
+                "key": "󰋊 Disk    ",
+                "percent": {
+                    "type": ["num", "bar"]
+                },
+                "format": "{size-percentage-bar} {mountpoint} ({filesystem})",
                 "keyColor": "white"
             },
             {
                 "type": "cpu",
-                "key": " CPU",
+                "key": " CPU     ",
                 "keyColor": "white"
             },
             {
                 "type": "gpu",
-                "key": " GPU",
+                "key": " GPU     ",
+                "format": "{name}",
                 "keyColor": "white"
             },
             {
                 "type": "display",
-                "key": "󰍹 Display ({name})",
+                "key": "󰍹 Display ",
+                "format": "{name} {width}x{height} @ {refresh-rate}Hz",
                 "keyColor": "white"
             },
 
@@ -206,42 +199,22 @@ in
               "break",
             {
                 "type": "de",
-                "key": " DE",
+                "key": " DE      ",
                 "keyColor": "94"
             },
             {
                 "type": "wm",
-                "key": "󱂬 WM",
-                "keyColor": "94"
-            },
-            {
-                "type": "wmtheme",
-                "key": " WM Theme",
+                "key": "󱂬 WM      ",
                 "keyColor": "94"
             },
             {
                 "type": "theme",
-                "key": " Theme",
+                "key": " Theme   ",
                 "keyColor": "94"
             },
             {
                 "type": "icons",
-                "key": " Icons",
-                "keyColor": "94"
-            },
-            {
-                "type": "cursor",
-                "key": " Cursor",
-                "keyColor": "94"
-            },
-            {
-                "type": "font",
-                "key": " Font",
-                "keyColor": "94"
-            },
-            {
-                "type": "terminalfont",
-                "key": " Terminal Font",
+                "key": " Icons   ",
                 "keyColor": "94"
             },
             

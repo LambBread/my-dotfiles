@@ -91,10 +91,10 @@ in
             automatic_scheme = "longest_side";
             pointer_follows_focus = true;
             presel_feedback_color = "#${colors.white}";
-            focused_border_color = "#${colors.l_green}";
+            focused_border_color = "#${colors.l_white}";
             normal_border_color = "#${colors.l_black}";
-            active_border_color = "#${colors.l_magenta}";
-            urgent_border_color = "#${colors.red}";
+            active_border_color = "#${colors.magenta}";
+            urgent_border_color = "#${colors.l_red}";
         };
         rules = {
 

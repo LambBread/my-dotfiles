@@ -7,16 +7,16 @@
     ...
 }:
 let
-qtctSettings = {
-    Appearance = {
-        style = "kvantum";
-        standard_dialogs = "default";
+    qtctSettings = {
+        Appearance = {
+            style = "kvantum";
+            standard_dialogs = "default";
+        };
+        Fonts = {
+            general = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
+            fixed = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
+        };
     };
-    Fonts = {
-        general = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
-        fixed = "\"${colors.font},11,-1,5,50,0,0,0,0,0\"";
-    };
-};
 in
 {
     qt = {

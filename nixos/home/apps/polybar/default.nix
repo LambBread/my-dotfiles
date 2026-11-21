@@ -8,7 +8,6 @@
 let
     centerWidth = 200;
     rightWidth = 600;
-    flyWidth = 500;
     desktop = rec {
         right-modules = "temperature cpu filesystem memory";
         left-modules = "network proton-status tray pulseaudio bluetooth-battery";
@@ -22,7 +21,7 @@ let
         #flyOffset =
         #    (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
         flyOffset = (colors.window_gap);
-        flyTwoOffset = (width - flyWidth);
+        flyTwoOffset = (width - rightWidth);
         #flyTwoOffset =
         #    (centerOffset + centerWidth) + ((width - rightWidth - centerOffset - centerWidth - flyWidth) / 2);
     };
@@ -37,7 +36,7 @@ let
         leftWidth = 450;
         centerOffset = ((leftWidth + colors.window_gap) + (width - rightWidth) - centerWidth) / 2;
         flyOffset = (colors.window_gap);
-        flyTwoOffset = (width - flyWidth);
+        flyTwoOffset = (width - rightWidth);
         #flyOffset =
         #    (colors.window_gap + leftWidth) - (((flyWidth - centerOffset + colors.window_gap + leftWidth)) / 2);
         #flyTwoOffset = (width - rightWidth) + ((centerOffset + centerWidth) - (flyOffset + flyWidth));
@@ -124,7 +123,7 @@ in
         underline-size = 2
         padding = 2
         height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString flyWidth}
+        width = ${builtins.toString rightWidth}
         module-margin-left = 2
         module-margin-right = 0
         radius = ${builtins.toString colors.corner_radius}
@@ -145,7 +144,7 @@ in
         underline-size = 2
         padding = 2
         height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString flyWidth}
+        width = ${builtins.toString selectedConfig.leftWidth}
         module-margin-left = 2
         module-margin-right = 0
         radius = ${builtins.toString colors.corner_radius}
@@ -248,6 +247,7 @@ in
         l-blue = #${colors.l_blue}
         l-magenta = #${colors.l_magenta}
         l-white = #${colors.l_white}
+        m-magenta = #aa${colors.m_magenta}
 
         [module/weather]
         type = custom/script
