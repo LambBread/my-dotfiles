@@ -64,6 +64,12 @@ in
     ];
     networking.hostName = "${personal.HOST_NAME}"; # Define your hostname.
 
+    qt = {
+        enable = true;
+        platformTheme = "qt5ct";
+        style = "kvantum";
+    };
+
     # Set your time zone.
     time.timeZone = "America/Vancouver";
     i18n.defaultLocale = "en_CA.UTF-8";

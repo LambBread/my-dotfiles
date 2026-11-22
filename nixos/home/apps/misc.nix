@@ -36,10 +36,10 @@ in
         x11.enable = true;
     };
 
-    xdg.configFile."Kvantum/ArcDarker".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDarker";
+    xdg.configFile."Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
     xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=ArcDarker
+        theme=ArcDark
     '';
 
     programs.ssh = {
