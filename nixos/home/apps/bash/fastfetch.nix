@@ -222,7 +222,7 @@ in
             
             {
                 "type": "custom",
-                "key": "{#90} {#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}} {#30} {#38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}} {#35} {#95}"
+                "key": "{#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}} {#30} {#38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}} {#35} {#95} {#38;2;${colors.hexToRgbStr "#${colors.pink}" ";"}} {#38;2;${colors.hexToRgbStr "#${colors.l_pink}" ";"}}"
             },
             {
                 "type": "custom",
@@ -230,7 +230,7 @@ in
             },
             {
                 "type": "custom",
-                "key": "{#91} {#92} {#93} {#94} {#96} {#97}"
+                "key": "{#91} {#92} {#93} {#94} {#96} {#97} {#90}"
             }
             //{
             //    "type": "custom",

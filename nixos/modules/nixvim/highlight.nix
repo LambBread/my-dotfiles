@@ -9,9 +9,10 @@
     programs.nixvim.highlightOverride = {
         "Normal".fg = "#${colors.l_white}";
         "Comment" = {
-            fg = "#${colors.magenta}";
+            fg = "#${colors.l_pink}";
             italic = true;
         };
+        "@constructor.cpp".link = "Function";
 
         "String".fg = "#${colors.white}";
         "Constant".fg = "#${colors.l_cyan}";
@@ -30,7 +31,7 @@
         "Identifier".fg = "#${colors.l_blue}";
         "Function".fg = "#${colors.l_green}";
         "Type" = {
-            fg = "#${colors.l_green}";
+            fg = "#${colors.l_pink}";
             bold = true;
         };
         "VertSplit".fg = "#${colors.magenta}";
@@ -135,7 +136,7 @@
         "CursorLine".bg = "#${colors.black}";
         "LineNr".fg = "#${colors.magenta}";
         "CursorLineNr" = {
-            fg = "#${colors.l_green}";
+            fg = "#${colors.l_pink}";
             bold = true;
             italic = true;
         };
