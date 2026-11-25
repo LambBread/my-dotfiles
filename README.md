@@ -124,8 +124,7 @@ git update-index --skip-worktree nixos/personal.nix
   [sahaj-b](https://github.com/sahaj-b/ghostty-cursor-shaders) (MIT license) and 
   [qwerasd205](https://github.com/0xhckr/ghostty-shaders/blob/main/bloom.glsl).
 
-The default wallpaper fetched in the NixOS config was made by Reddit user u/Beginning-Advance336, 
-on their post ["Reflection of a Thousand Blossoms"](https://www.reddit.com/r/wallpapers/comments/1vmryqi/reflection_of_a_thousand_blossoms/).
+The default wallpaper is "Starry Sky", made by an unknown Reddit user on a [deleted post](https://www.reddit.com/r/wallpapers/comments/2w3h8ik/starry_sky_2560x1440/). 
 
 > “NixOS Logo” by [Simon Frankau](https://github.com/simon-frankau),
 > [Tim Cuthbertson](https://github.com/timbertson),
