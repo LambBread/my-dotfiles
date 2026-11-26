@@ -1,6 +1,4 @@
 {
-    config,
-    pkgs,
     personal,
     colors,
     ...
@@ -21,14 +19,14 @@
             polybar fly &
             polybar fly-two &
             bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
-                builtins.toString (2 * (colors.bar_width + colors.window_gap))
+                toString (2 * (colors.bar_width + colors.window_gap))
             }
         else
             polybar left &
             polybar center &
             polybar right &
             bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
-                builtins.toString (colors.bar_width + colors.window_gap)
+                toString (colors.bar_width + colors.window_gap)
             }
         fi
     '';

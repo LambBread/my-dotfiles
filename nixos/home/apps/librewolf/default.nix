@@ -1,7 +1,6 @@
 {
     pkgs,
     inputs,
-    lib,
     colors,
     ...
 }:
@@ -81,7 +80,7 @@
                         "${colors.white}"
                         "${colors.l_magenta}"
                         "${colors.l_red}"
-                        "${builtins.toString colors.corner_radius}px"
+                        "${toString colors.corner_radius}px"
                         "${colors.l_blue}"
                         "${colors.l_green}"
                         "${colors.l_yellow}"

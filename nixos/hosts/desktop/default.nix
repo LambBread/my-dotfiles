@@ -5,7 +5,6 @@
 {
     config,
     pkgs,
-    inputs,
     personal,
     ...
 }:
@@ -34,7 +33,7 @@
             "input"
             "libvirtd"
         ];
-        packages = with pkgs; [ ];
+        packages = [ ];
         initialPassword = "password123";
     };
 

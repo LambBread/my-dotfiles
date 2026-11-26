@@ -103,7 +103,7 @@ in
 
     xdg.configFile."gsimplecal/config".text = ''
         show_week_numbers = 1
-        mainwindow_yoffset = ${builtins.toString (colors.bar_width + colors.window_gap + 2)}
+        mainwindow_yoffset = ${toString (colors.bar_width + colors.window_gap + 2)}
     '';
 
     services.gammastep = {

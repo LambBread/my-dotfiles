@@ -1,6 +1,4 @@
 {
-    config,
-    lib,
     pkgs,
     colors,
     personal,
@@ -8,12 +6,12 @@
 }:
 let
     desktop = {
-        minimum_height = "${builtins.toString (1080 - (colors.bar_width + colors.window_gap))}";
+        minimum_height = "${toString (1080 - (colors.bar_width + colors.window_gap))}";
         width = "460";
         text = builtins.readFile ./conky.txt;
     };
     laptop = {
-        minimum_height = "${builtins.toString (768 - (colors.bar_width + colors.window_gap))}";
+        minimum_height = "${toString (768 - (colors.bar_width + colors.window_gap))}";
         width = "400";
         text = builtins.readFile ./conky_laptop.txt;
     };
@@ -32,7 +30,7 @@ in
             conky.config = {
                 alignment = 'top_left',
                 gap_x = 0,
-                gap_y = ${builtins.toString (colors.bar_width + colors.window_gap)},
+                gap_y = ${toString (colors.bar_width + colors.window_gap)},
                 minimum_height = ${selectedConfig.minimum_height},
                 minimum_width = ${selectedConfig.width},
                 maximum_width = ${selectedConfig.width},

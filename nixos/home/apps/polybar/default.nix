@@ -1,6 +1,4 @@
 {
-    config,
-    pkgs,
     colors,
     personal,
     ...
@@ -60,13 +58,13 @@ in
         modules-center = date
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString centerWidth}
+        height = ${toString colors.bar_width}
+        width = ${toString centerWidth}
         module-margin-left = 1
         module-margin-right = 1
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${builtins.toString selectedConfig.centerOffset}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString colors.window_gap}
+        offset-x = ${toString selectedConfig.centerOffset}
         # (leftWidth + window_gap + width - rightWidth) - centerWidth / 2 -
 
         [bar/left]
@@ -81,13 +79,13 @@ in
         modules-center = ${selectedConfig.left-modules}
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString selectedConfig.leftWidth}
+        height = ${toString colors.bar_width}
+        width = ${toString selectedConfig.leftWidth}
         module-margin-left = 1
         module-margin-right = 1
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${builtins.toString colors.window_gap}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString colors.window_gap}
+        offset-x = ${toString colors.window_gap}
 
         [bar/right]
         background = ''${colors.black}
@@ -101,13 +99,13 @@ in
         modules-center = ${selectedConfig.right-modules}
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString rightWidth}
+        height = ${toString colors.bar_width}
+        width = ${toString rightWidth}
         module-margin-left = 2
         module-margin-right = 2
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${builtins.toString (selectedConfig.width - rightWidth)}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString colors.window_gap}
+        offset-x = ${toString (selectedConfig.width - rightWidth)}
 
 
         [bar/fly-two]
@@ -122,13 +120,13 @@ in
         modules-center = media
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString rightWidth}
+        height = ${toString colors.bar_width}
+        width = ${toString rightWidth}
         module-margin-left = 2
         module-margin-right = 0
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
-        offset-x = ${builtins.toString (selectedConfig.flyTwoOffset)}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString (colors.bar_width + (2 * colors.window_gap))}
+        offset-x = ${toString (selectedConfig.flyTwoOffset)}
         #override-redirect = true
 
         [bar/fly]
@@ -143,13 +141,13 @@ in
         modules-center = xwindow weather bspwm
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString selectedConfig.leftWidth}
+        height = ${toString colors.bar_width}
+        width = ${toString selectedConfig.leftWidth}
         module-margin-left = 2
         module-margin-right = 0
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString (colors.bar_width + (2 * colors.window_gap))}
-        offset-x = ${builtins.toString (selectedConfig.flyOffset)}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString (colors.bar_width + (2 * colors.window_gap))}
+        offset-x = ${toString (selectedConfig.flyOffset)}
         #override-redirect = true
 
 
@@ -168,13 +166,13 @@ in
         modules-center = date
         underline-size = 2
         padding = 2
-        height = ${builtins.toString colors.bar_width}
-        width = ${builtins.toString selectedConfig.width}
+        height = ${toString colors.bar_width}
+        width = ${toString selectedConfig.width}
         module-margin-left = 1
         module-margin-right = 1
-        radius = ${builtins.toString colors.corner_radius}
-        offset-y = ${builtins.toString colors.window_gap}
-        offset-x = ${builtins.toString colors.window_gap}
+        radius = ${toString colors.corner_radius}
+        offset-y = ${toString colors.window_gap}
+        offset-x = ${toString colors.window_gap}
 
         [module/network]
         type = internal/network

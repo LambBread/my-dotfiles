@@ -1,7 +1,4 @@
 {
-    colors,
-    pkgs,
-    config,
     ...
 }:
 {

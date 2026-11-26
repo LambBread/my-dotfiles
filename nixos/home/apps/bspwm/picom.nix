@@ -1,6 +1,4 @@
 {
-    config,
-    pkgs,
     colors,
     ...
 }:
@@ -106,7 +104,7 @@
                 #"class_g = 'Polybar'"
             ];
             corner-radius-rules = [
-                "${builtins.toString (2 * colors.corner_radius)}:class_g = 'Conky'"
+                "${toString (2 * colors.corner_radius)}:class_g = 'Conky'"
             ];
             blur-method = "dual_kawase";
             blur-strength = 12;

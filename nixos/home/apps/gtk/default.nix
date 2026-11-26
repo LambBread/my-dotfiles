@@ -1,6 +1,4 @@
 {
-    config,
-    pkgs,
     colors,
     ...
 }:
@@ -47,7 +45,7 @@
             [ "MonaspiceAr Nerd Font Mono" "16px" ]
             [
                 "${colors.font}"
-                "${builtins.toString colors.corner_radius}px"
+                "${toString colors.corner_radius}px"
             ]
             (builtins.readFile ./gtk.css);
     #xdg.configFile."gtk-3.0/thunar.css".source = ./gtk-3.0/thunar.css;

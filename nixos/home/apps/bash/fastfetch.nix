@@ -1,9 +1,5 @@
 {
-    config,
-    lib,
-    pkgs,
     colors,
-    personal,
     ...
 }:
 let

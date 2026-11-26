@@ -1,7 +1,6 @@
 {
     pkgs,
     config,
-    colors,
     ...
 }:
 {
@@ -33,6 +32,11 @@
             load_doxygen_syntax = 1;
         };
 
+        lsp.servers = {
+            lua_ls.enable = true;
+            nixd.enable = true;
+        };
+
         plugins = {
             emmet.enable = true;
             visual-multi.enable = true;
@@ -41,6 +45,7 @@
             web-devicons.enable = true;
             nvim-autopairs.enable = true;
             todo-comments.enable = true;
+            lspconfig.enable = true;
             blink-cmp = {
                 enable = true;
                 settings = {

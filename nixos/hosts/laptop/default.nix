@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-    config,
-    pkgs,
-    inputs,
     personal,
     ...
 }:
@@ -31,13 +28,13 @@
             "video"
             "input"
         ];
-        packages = with pkgs; [ ];
+        packages = [ ];
         initialPassword = "password123";
     };
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
-    environment.systemPackages = with pkgs; [ ];
+    environment.systemPackages = [ ];
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

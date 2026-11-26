@@ -1,8 +1,4 @@
 {
-    config,
-    pkgs,
-    lib,
-    personal,
     ...
 }:
 {
@@ -11,7 +7,7 @@
     ];
 
     home.stateVersion = "26.05";
-    home.packages = with pkgs; [ ];
+    home.packages = [ ];
 
     home.file.".Xmodmap".text = ''
         clear Lock

@@ -1,6 +1,4 @@
 {
-    config,
-    pkgs,
     colors,
     personal,
     ...
@@ -111,7 +109,7 @@ in
         };
         extraConfig = ''
             bspc config -m ${builtins.elemAt personal.MONITORS 0} top_padding ${
-                builtins.toString (colors.bar_width + colors.window_gap)
+                toString (colors.bar_width + colors.window_gap)
             }
             notify-send "bspwm" "Configuration loaded";
         '';

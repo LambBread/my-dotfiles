@@ -1,7 +1,5 @@
 {
     colors,
-    pkgs,
-    config,
     ...
 }:
 {
@@ -20,7 +18,7 @@
                 "${colors.black}"
                 "${colors.magenta}"
                 "${colors.l_white}"
-                "border-radius: ${builtins.toString colors.corner_radius}px"
+                "border-radius: ${toString colors.corner_radius}px"
                 "${colors.font}"
                 "${colors.icon_theme}"
             ]
