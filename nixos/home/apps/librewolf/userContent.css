@@ -69,11 +69,14 @@
         --bgColor-default: #0c1315 !important;
         --bgColor-inset: #0c1315 !important;
         --bgColor-muted: #0c1315 !important;
+        --bgColor-danger-muted: #f085331d !important;
         --bgColor-accent-emphasis: #9768b6 !important;
         --bgColor-emphasis: #412853 !important;
         --fgColor-default: #ece3d5 !important;
         --fgColor-muted: #ece3d4 !important;
         --fgColor-accent: #bc9ed0 !important;
+        --fgColor-success: #9fd356 !important;
+        --fgColor-danger: #d07271 !important;
         --button-default-bgColor-rest: #412853 !important;
         --button-default-bgColor-hover: #9768b5 !important;
         --button-default-bgColor-active: #9768b6 !important;
@@ -92,9 +95,17 @@
         --overlay-bgColor: #0c1315 !important;
         --control-bgColor-active: #9768b5 !important;
         --fontStack-sansSerif: "MonaspiceAr Nerd Font Mono", monospace;
+        --fontStack-monospace: "MonaspiceAr Nerd Font Mono", monospace;
         --underlineNav-borderColor-active: #9768b6 !important;
         --control-transparent-bgColor-hover: #412853 !important;
         --bgColor-neutral-muted: #412853 !important;
+        --prettylights-syntax-markup-heading: #00ffff !important;
+        --prettylights-syntax-string: #cfb793 !important;
+        --prettylights-syntax-keyword: #bc9ed0 !important;
+        --prettylights-syntax-entity: #ff00ff !important;
+        --diffBlob-additionNum-bgColor: #9fd35673 !important;
+        --diffBlob-deletionNum-bgColor: #f085334d !important;
+
     }
 
     .Progress-item
@@ -169,6 +180,8 @@
         --color-downvote-background-hover: #659226 !important;
         --color-online: #9fd356 !important;
         --color-success-content: #9fd356 !important;
+        --button-border-color: #ff00ff !important;
+        --button-border-width: 0.5px !important;
 
     }
 

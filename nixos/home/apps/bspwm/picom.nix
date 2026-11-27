@@ -107,7 +107,7 @@
                 "${toString (2 * colors.corner_radius)}:class_g = 'Conky'"
             ];
             blur-method = "dual_kawase";
-            blur-strength = 12;
+            blur-strength = 10;
             inactive-dim = 0.1;
 
             blur-kern = "9x9gaussian";
@@ -160,6 +160,7 @@
                 triggers = ["geometry"];
                 preset = "geometry-change";
                 duration = 0.25;
+                curve = "ease-out";
             });
 
         '';
