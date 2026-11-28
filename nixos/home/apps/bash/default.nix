@@ -41,8 +41,9 @@
         };
         initExtra = ''
             eval "$(dircolors -b ~/.dircolors)"
-            PS1='\[\033[00;94m\]\[\033[00;01;104m\] \u\
-            \[\033[00;94;105m\]\[\033[00;01;105m\] \w \
+            PS1='\[\033[00;38;2;${colors.hexToRgbStr "#${colors.pink}" ";"}m\]\
+            \[\033[00;01;48;2;${colors.hexToRgbStr "#${colors.pink}" ";"}m\] \u\
+            \[\033[00;105;38;2;${colors.hexToRgbStr "#${colors.pink}" ";"}m\]\[\033[00;01;105m\] \w \
             \[\033[00;95;45m\]\[\033[35;48;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}m\]\
             \[\033[38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"};40m\]\
             \[\033[30;48;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}m\]\

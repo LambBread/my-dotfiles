@@ -72,6 +72,8 @@
                         "ece3d4"
                         "ff00ff"
                         "00ffff"
+                        "aa00aa"
+                        "770077"
                     ]
                     [
                         "${colors.magenta}"
@@ -93,6 +95,8 @@
                         "${colors.m_white}"
                         "${colors.l_pink}"
                         "${colors.l_cyan}"
+                        "${colors.pink}"
+                        "${colors.black_pink}"
                     ]
                     (builtins.readFile ./userContent.css);
 

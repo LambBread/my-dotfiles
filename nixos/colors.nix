@@ -17,27 +17,22 @@ rec {
     m_magenta = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${magenta}" 0.15);
     magenta = makeDarkShade "#${l_magenta}";
     pink = makeDarkShade "#${l_pink}";
-    l_magenta = "bc9ed0";
-    l_pink = "f5a9b8";
-    # red = makeDarkShade "#${l_red}";
-    red = "B8401F";
+    black_pink = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_pink}" 0.4);
     green = makeDarkShade "#${l_green}";
     yellow = makeDarkShade "#${l_yellow}";
     blue = makeDarkShade "#${l_blue}";
-    #cyan = makeDarkShade "#${l_cyan}";
-    cyan = "5bcefa";
     white = makeDarkShade "#${l_white}";
     m_white = pkgs.lib.removePrefix "#" (inputs.nix-colorizer.hex.darken "#${l_white}" 0.15);
-    l_black = "72647c";
-    # l_red = "#d07271";
     l_red = makeLightShade "#${red}";
+    l_cyan = makeLightShade "#${cyan}";
+    l_magenta = "bc9ed0";
+    l_pink = "f5a9b8";
+    red = "B8401F";
+    cyan = "5bcefa";
+    l_black = "72647c";
     l_green = "9fd356";
     l_yellow = "e0de4b";
     l_blue = "6ba1db";
-    # l_magenta = "d09eba";
-    # l_cyan = "36fcdb";
-    #l_cyan = "9BF2E4";
-    l_cyan = makeLightShade "#${cyan}";
     l_white = "ece3d5";
 
     # vga
@@ -113,6 +108,7 @@ rec {
               - "#${l_blue}"  
               - "#${l_cyan}" 
               - "#${l_white}"
+              - "#${black_pink}"
               - "#${l_pink}"
               - "#${pink}"'';
 

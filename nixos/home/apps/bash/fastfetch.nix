@@ -218,7 +218,7 @@ in
             
             {
                 "type": "custom",
-                "key": "{#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}} {#30} {#38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}} {#35} {#95} {#38;2;${colors.hexToRgbStr "#${colors.pink}" ";"}} {#38;2;${colors.hexToRgbStr "#${colors.l_pink}" ";"}}"
+                "key": "{#38;2;${colors.hexToRgbStr "#${colors.black_alt}" ";"}} {#30} {#38;2;${colors.hexToRgbStr "#${colors.m_magenta}" ";"}} {#35} {#95} {#38;2;${colors.hexToRgbStr "#${colors.black_pink}" ";"}} {#38;2;${colors.hexToRgbStr "#${colors.pink}" ";"}} {#38;2;${colors.hexToRgbStr "#${colors.l_pink}" ";"}}"
             },
             {
                 "type": "custom",
